@@ -1,8 +1,7 @@
 {
-	"name": "Uncertainty Dictionary",
-	"database": "uncertainty-dictionary",
-	"subdomain": "uncertainty",
-	"allowed_domains": ["uncertainty.io"],
+	"name": "City Accelerator Website",
+	"database": "city-accelerator-web",
+	"subdomain": "city",
 	"admin_nav": { 
 									"index": ["Index"]
 								}

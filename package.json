@@ -1,10 +1,10 @@
 {
-  "name": "starter-module",
-  "description": "EL Web Suite Starter Module",
+  "name": "city-accelerator-website",
+  "description": "City Accelerator Website",
   "version": "0.0.3",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/engagementgamelab/starter-module.git"
+    "url": "git+https://github.com/engagementgamelab/city-accelerator-website.git"
   },
   "main": "app.js",
   "dependencies": {

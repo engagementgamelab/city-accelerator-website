@@ -1,5 +1,5 @@
 /**
- * (Site name here) 
+ * City Accelerator Website
  * 
  * Category page Model
  * @module Category
