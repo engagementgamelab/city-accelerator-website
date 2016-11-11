@@ -27,6 +27,11 @@ keystone.pre('routes', middleware.initErrorHandlers);
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
 
+// Handle 404 errors
+keystone.set('404', function(req, res, next) {
+    res.notfound();
+});
+
 // TODO: Clickjacking protection
 /*keystone.pre('routes', function(req, res, next) {
 
@@ -46,6 +51,7 @@ exports = module.exports = function(app) {
 
     // Views
     app.get('/', routes.views.index);
+    app.get('/tool', routes.views.tool);
     app.get('/:category_id', routes.views.category);
     
     // NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
