@@ -1,0 +1,17 @@
+// Z-INDEX MAP
+// https://codepen.io/stowball/post/sassier-z-index-management-for-complex-layouts
+//
+// Simple usage:
+//
+// $wcss-z-indexes: (
+//   main: (
+//     foo,
+//     bar,
+//     tooltip
+//   ),
+//   header: (),
+//   modal: ()
+// );
+
+$wcss-z-indexes: (
+);
