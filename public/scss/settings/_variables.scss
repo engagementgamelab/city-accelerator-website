@@ -1,0 +1,10 @@
+// VARIABLES
+
+$wcss-base-font-size: 16px;
+$wcss-base-line-height: 1.6;
+
+$wcss-spacing-unit: $wcss-base-font-size * $wcss-base-line-height;
+$wcss-spacing-unit-tiny: $wcss-spacing-unit / 4;
+$wcss-spacing-unit-small: $wcss-spacing-unit / 2;
+$wcss-spacing-unit-large: $wcss-spacing-unit * 2;
+$wcss-spacing-unit-huge: $wcss-spacing-unit * 4;
