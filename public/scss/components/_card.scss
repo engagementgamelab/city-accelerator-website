@@ -1,0 +1,219 @@
+// CARD
+
+// Component-specific breakpoints
+
+$card-breakpoint-medium: 750px;
+$card-breakpoint-large: 1100px; 
+$card-mini-max-width: 300px;
+
+// BASE CARD STYLING
+// 1. Transition for card states
+// 2. Crop the content inside following border-radius
+// 3. Fix chrome bug where images don't get cropped with overflow: hidden;
+
+.c-card {
+  background: $color-black-100;
+  margin: $wcss-spacing-unit-large auto;
+  border-radius: 3px;
+  box-shadow: 0 20px 30px 0 rgba(#000, .10);
+  transition: $wcss-base-transition; // [1]
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden; // [2]
+  perspective: 1px; // [3]
+}
+
+.c-card__cover,
+.c-card__inner {
+  flex: 1 1 auto;
+  flex-basis: 100%;
+}
+
+// Cover
+// 1. Set up a positioning context to crop the image
+// 2. Assing a min-height value since our image is absolute-positioned
+// 3. Crop crop crop
+
+.c-card__cover {
+  position: relative; // [1]
+  min-height: 150px; // [2]
+  overflow: hidden; // [3]
+
+  @include wcss-media($card-breakpoint-medium) {
+    min-height: 250px;
+  }
+}
+
+// 1. Position cover image
+// 2. Make cover image fill the entire space
+
+.c-card__cover__img {
+  position: absolute; // [1]
+  top: 50%; // [1]
+  left: 50%; // [1]
+  transform: translate3d(-50%, -50%, 0); // [1]
+  max-width: none; // [2]
+  min-height: 100%; // [2]
+  min-width: 100%; // [2]
+}
+
+// Content
+// 1. Set up a positioning context for card icon
+
+.c-card__inner {
+  position: relative; // [1]
+}
+
+// Icon
+// 1. Card icon is stacked on mobile
+
+.c-card__icon {
+  position: relative; // [1]
+  display: block;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+// Helper Text
+
+.c-card__helper {
+  color: $color-black-67;
+
+  // Separator line on top of helper text
+  // 1. Make separator color the same as text color
+  // 2. Still make separator color a tad lighter
+
+  &:before {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: currentColor; // [1]
+    opacity: 0.5; // [2]
+    margin-bottom: $wcss-spacing-unit-small;
+    display: block;
+    position: relative;
+  }
+}
+
+// Actions
+// 1. Make items adjust automatically
+
+.c-card__actions {
+  display: flex;
+  flex-wrap: wrap;
+
+  > * {
+    flex: 1 1 auto; // [1]
+    border-radius: 0 !important; // [1]
+  }
+}
+
+// Card states
+
+.c-card.is-disabled {
+  opacity: 0.5;
+}
+
+
+// FULL CARD VARIANT
+
+.c-card--full {
+
+  > .c-card__cover {
+
+    @include wcss-media($card-breakpoint-medium) {
+      flex-basis: 35%;
+    }
+
+    @include wcss-media($card-breakpoint-large) {
+      flex-basis: 25%;
+    }
+  }
+
+  > .c-card__inner {
+
+    @include wcss-media($card-breakpoint-medium) {
+      flex-basis: 65%;
+    }
+
+    @include wcss-media($card-breakpoint-large) {
+      flex-basis: 75%;
+    }
+  }
+
+  // 1. Higher padding to make space for the card icon
+  .c-card__content {
+
+    padding: $wcss-spacing-unit;
+
+    @include wcss-media($card-breakpoint-medium) {
+      padding: $wcss-spacing-unit $wcss-spacing-unit-large * 1.5; // [1]
+    }
+  }
+
+  // 1. Compensate for card content padding
+  // 2. Align icon horizontally in the middle of cover/content
+
+  .c-card__icon {
+
+    @include wcss-media($card-breakpoint-medium) {
+      position: absolute;
+      top: $wcss-spacing-unit;
+      left: 0; // [3]
+      transform: translateX(-50%); // [3]
+    }
+  }
+
+  .c-card__title {
+    @include wcss-font-size(beta);
+
+    // Higher font size from medium-size and beyond
+    @include wcss-media($card-breakpoint-large) {
+      @include wcss-font-size(alpha);
+    }
+  }
+
+  .c-card__text {
+    @include wcss-font-size(epsilon);
+
+    // Higher font size from medium-size and beyond
+    @include wcss-media($card-breakpoint-large) {
+      @include wcss-font-size(delta);
+    }
+  }
+
+  .c-card__helper {
+    @include wcss-font-size(zeta);
+  }
+}
+
+
+
+
+
+// MINI CARD VARIANT
+// 1. This variant is not meant to have a cover
+
+.c-card--mini {
+
+  max-width: $card-mini-max-width;
+  overflow: visible;
+
+  .c-card__cover {
+    display: none; // [1]
+  }
+
+  .c-card__content {
+    padding: $wcss-spacing-unit-small;
+  }
+
+  .c-card__title {
+    @include wcss-font-size(delta);
+    margin-bottom: $wcss-spacing-unit-small;
+  }
+
+  .c-card__text,
+  .c-card__helper {
+    @include wcss-font-size(eta);
+  }
+}
