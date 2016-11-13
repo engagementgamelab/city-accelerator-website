@@ -1,0 +1,46 @@
+// WRAPPER
+
+// Page-level constraining and wrapping elements.
+
+$wcss-wrapper-width: 1200px !default;
+
+/* stylelint-disable */
+@if (type-of($wcss-wrapper-width) != number) {
+  @error "`#{$wcss-wrapper-width}` needs to be a number."
+}
+/* stylelint-enable */
+
+.o-wrapper {
+  @include wcss-clearfix();
+  padding-right: $wcss-spacing-unit;
+  padding-left:  $wcss-spacing-unit;
+  margin-right: auto;
+  margin-left:  auto;
+  max-width: $wcss-wrapper-width;
+}
+
+
+
+
+
+// SIZE VARIANTS
+
+.o-wrapper--tiny {
+  padding-right: $wcss-spacing-unit-tiny;
+  padding-left:  $wcss-spacing-unit-tiny;
+}
+
+.o-wrapper--small {
+  padding-right: $wcss-spacing-unit-small;
+  padding-left:  $wcss-spacing-unit-small;
+}
+
+.o-wrapper--large {
+  padding-right: $wcss-spacing-unit-large;
+  padding-left:  $wcss-spacing-unit-large;
+}
+
+.o-wrapper--huge {
+  padding-right: $wcss-spacing-unit-huge;
+  padding-left:  $wcss-spacing-unit-huge;
+}
