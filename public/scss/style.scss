@@ -3,7 +3,7 @@
 // Built by Mariano Miguel (mariano.io) from WEIRDO (weareweirdo.com)
 // Adapted for Engagement Lab.
 //
-// Credit where credit is due, this framework is heavily based on the work of:
+// Credit where credit is due, this framework is heavily based on the works of:
 //
 // [-] Nicole Sullivan (stubbornella.org) (OOCSS)
 // [-] Harry Roberts (csswizardry.net) & team (BEMIT, InuitCSS, ITCSS)
@@ -17,27 +17,53 @@
 
 // SETTINGS
 
-@import "settings/variables";
+@import "settings/colors";
+@import "settings/typography";
+@import "settings/spacing";
+@import "settings/breakpoints";
 @import "settings/z-index";
+@import "settings/radius";
+@import "settings/transitions";
 
 // TOOLS
 
-@import "tools/rem";
+@import "tools/typography";
+@import "tools/clearfix";
 @import "tools/z-index";
+@import "tools/media";
 
 // GENERIC
 
 @import "generic/normalize";
 @import "generic/reset";
 @import "generic/box-sizing";
+@import "generic/page";
 @import "generic/shared";
+@import "generic/images";
 
 // OBJECTS
 
-//@import "objects/layout";
+@import "objects/box";
+@import "objects/wrapper";
+@import "objects/layout";
+@import "objects/block";
+@import "objects/box";
+@import "objects/crop";
 
 // COMPONENTS
 
-// UTILITIES
+@import "components/card";
+@import "components/buttons";
+@import "components/icon";
 
 // THEMES
+
+// UTILITIES
+
+@import "utilities/spacing";
+@import "utilities/text";
+
+// QA
+
+// a11y
+// refactor tools
