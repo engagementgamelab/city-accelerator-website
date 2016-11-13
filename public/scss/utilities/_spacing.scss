@@ -1,0 +1,53 @@
+// SPACING
+
+// Utility classes to put specific spacing values onto elements. The below loop
+// will generate us a suite of classes like:
+//
+// .u-marg-top {}
+// .u-pad-left-large {}
+// .u-marg-right-small {}
+// .u-pad {}
+// .u-pad-right-none {}
+
+/* stylelint-disable string-quotes */
+
+$wcss-spacing-directions: (
+  null: null,
+  '-top': '-top',
+  '-right': '-right',
+  '-bottom': '-bottom',
+  '-left': '-left',
+) !default;
+
+$wcss-spacing-properties: (
+  'padding': 'pad',
+  'margin': 'marg',
+) !default;
+
+$wcss-spacing-sizes: (
+  null: $wcss-spacing-unit,
+  '-tiny': $wcss-spacing-unit-tiny,
+  '-small': $wcss-spacing-unit-small,
+  '-large': $wcss-spacing-unit-large,
+  '-huge': $wcss-spacing-unit-huge,
+  '-none': 0
+) !default;
+
+
+@each $property, $property-namespace in $wcss-spacing-properties {
+
+  @each $direction, $direction-namespace in $wcss-spacing-directions {
+
+    @each $size, $value in $wcss-spacing-sizes {
+
+      .u-#{$property-namespace}#{$direction-namespace}#{$size} {
+        #{$property}#{$direction}: $value !important;
+      }
+
+    }
+
+  }
+
+}
+
+/* stylelint-enable string-quotes */
