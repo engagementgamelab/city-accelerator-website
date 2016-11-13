@@ -1,0 +1,16 @@
+// PAGE
+
+// Page-level declarations
+
+html {
+  font-size: 85%;
+
+  @include wcss-media(medium) {
+    font-size: 100%;
+  }
+}
+
+body {
+  @include wcss-rem(font-size, $wcss-base-font-size);
+  line-height: $wcss-base-line-height;
+}
