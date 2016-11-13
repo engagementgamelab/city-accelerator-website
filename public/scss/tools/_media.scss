@@ -1,0 +1,26 @@
+// MEDIA QUERIES
+// You can pass either a numeric value or a breakpoint name.
+// Breakpoint names are defined im our $wcss-breakpoints map
+// defined in settings/breakpoints.
+//
+// .simple-usage {
+//   @include media(large) {
+//     
+//   }
+//
+//   @include media(400px) {
+//     
+//   }
+// }
+
+@mixin wcss-media($value) {
+	@if (type-of($value) == number) {
+		@media (min-width: #{$value}) {
+			@content;
+		}
+	} @else {
+		@media (min-width: map-get($wcss-breakpoints, $value)) {
+			@content;
+		}
+	}
+}
