@@ -1,0 +1,43 @@
+// BOX
+
+// The box object simply boxes off content. Extend with cosmetic styles in the
+// Components layer.
+//
+// 1. So we can apply the `.o-box` class to naturally-inline elements.
+
+.o-box {
+  @include wcss-clearfix();
+  display: block; // [1]
+  padding: $wcss-spacing-unit;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+
+
+
+// SIZE VARIANTS
+
+.o-box--flush {
+  padding: 0;
+}
+
+.o-box--tiny {
+  padding: $wcss-spacing-unit-tiny;
+}
+
+.o-box--small {
+  padding: $wcss-spacing-unit-small;
+}
+
+.o-box--large {
+  padding: $wcss-spacing-unit-large;
+}
+
+.o-box--huge {
+  padding: $wcss-spacing-unit-huge;
+}
