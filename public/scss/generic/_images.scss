@@ -1,0 +1,10 @@
+// IMAGES
+
+// 1. Responsive images
+// 2. Make images align more nicely when displayed inline
+
+img {
+  max-width: 100%; // [1]
+  height: auto; // [1]
+  vertical-align: middle; // [2]
+}
