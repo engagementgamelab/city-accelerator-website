@@ -1,0 +1,148 @@
+// LAYOUT
+
+// Provides a comprehensive grid system based on the flex display
+// property. The grid is mobile-first. If you do not provide an initial column
+// size, all elements will be given a 100% width.
+//
+// Basic usage:
+//
+// <div class="o-layout">
+//   <div class="o-layout__item o-layout__item--6/12@medium">
+//   </div>
+// </div>
+
+// You can specify multiple column fractions like:
+// $wcss-grid-column-fractions: 10 12 !default;
+
+$wcss-grid-column-fractions: 12 !default;
+$wcss-grid-gutter: $wcss-spacing-unit !default;
+$wcss-grid-gutter-compensation: ($wcss-spacing-unit * 0.5) * -1 !default;
+
+// ROWS
+
+.o-layout {
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: $wcss-grid-gutter-compensation;
+  margin-left: $wcss-grid-gutter-compensation;
+}
+
+@mixin wcss-layout-modifiers($breakpoint: null) {
+
+  .o-layout--reverse#{$breakpoint} {
+    flex-direction: row-reverse;
+  }
+
+  .o-layout--start#{$breakpoint} {
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .o-layout--center#{$breakpoint} {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .o-layout--end#{$breakpoint} {
+    justify-content: flex-end;
+    text-align: end;
+  }
+
+  .o-layout--top#{$breakpoint} {
+    align-items: flex-start;
+  }
+
+  .o-layout--middle#{$breakpoint} {
+    align-items: center;
+  }
+
+  .o-layout--bottom#{$breakpoint} {
+    align-items: flex-end;
+  }
+
+  .o-layout--around#{$breakpoint} {
+    justify-content: space-around;
+  }
+
+  .o-layout--between#{$breakpoint} {
+    justify-content: space-between;
+  }
+
+}
+
+
+
+
+
+// COLUMNS
+
+.o-layout__item {
+  box-sizing: border-box;
+  flex: 1 0 auto;
+  padding-right: $wcss-grid-gutter * 0.5;
+  padding-left: $wcss-grid-gutter * 0.5;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+@mixin wcss-column-modifiers($breakpoint: null) {
+
+  .o-layout__item--reverse#{$breakpoint} {
+   flex-direction: column-reverse;
+  }
+
+  .o-layout__item--first#{$breakpoint} {
+    order: -1;
+  }
+
+  .o-layout__item--last#{$breakpoint} {
+    order: 1;
+  }
+
+  .o-layout__item--reset#{$breakpoint} {
+    order: initial;
+  }
+}
+
+@mixin wcss-column-fractions($columns, $breakpoint: null) {
+
+  @each $denominator in $columns {
+    @for $numerator from 1 through $denominator {
+
+      /* stylelint-disable */
+      .o-layout__item--#{$numerator}\/#{$denominator}#{$breakpoint} {
+        flex-basis: ($numerator / $denominator) * 100%;
+        max-width: ($numerator / $denominator) * 100%;
+      }
+
+      .o-layout__item--offset-#{$numerator}\/#{$denominator}#{$breakpoint} {
+        margin-left: ($numerator / $denominator) * 100%;
+      }
+      /* stylelint-enable */
+    }
+  }
+}
+
+
+
+
+
+// CLASS OUTPUT
+
+// First for no-breakpoints
+@include wcss-layout-modifiers;
+@include wcss-column-modifiers;
+@include wcss-column-fractions($wcss-grid-column-fractions);
+
+// Then for each breakpoint
+
+@each $name, $value in $wcss-breakpoints {
+
+  @media (min-width: $value) {
+    @include wcss-layout-modifiers(\@#{$name});
+    @include wcss-column-modifiers(\@#{$name});
+    @include wcss-column-fractions($wcss-grid-column-fractions, \@#{$name});
+  }
+}
