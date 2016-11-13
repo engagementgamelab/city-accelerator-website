@@ -14,7 +14,7 @@
     @error "`#{$value}` needs to be a number.";
   }
 
-  @return $value / $inuit-global-font-size * 1rem;
+  @return $value / $wcss-base-font-size * 1rem;
 
 }
 
@@ -41,6 +41,21 @@
   // We provide a `px` fallback for old IEs not supporting `rem` values.
   #{$property}: $value;
 
-  #{$property}: inuit-rem($value);
+  #{$property}: wcss-rem($value);
 
+}
+
+// Mixin to create font-size declarations in rem units with pixel fallbacks.
+// Uses the typographic scale set in settings/typography.
+//
+// .simple-usage {
+//   @include wcss-font-size(alpha);
+// }
+
+@mixin wcss-font-size($name) {
+  @if (type-of($name) != string) {
+    @error "`#{$name}` needs to be a string.";
+  }
+
+  @include wcss-rem(font-size, map-get($wcss-typographic-scale, $name));
 }
