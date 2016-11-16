@@ -1,0 +1,34 @@
+<div class="c-card {{#if mini}}c-card--mini{{else}}c-card--full{{/if}}">
+  {{#if cover}}
+    <div class="c-card__cover">
+      <img src="{{ cover }}" alt="{{ title }}" class="c-card__cover__img">
+    </div>
+  {{/if}}
+  <div class="c-card__inner">
+    {{#if icon}}
+      <div class="c-card__icon c-icon">
+        <img src="{{ icon }}" alt="{{ title }}" class="c-icon__img">
+      </div>
+    {{/if}}
+    <div class="c-card__content">
+      <p class="c-card__current-card">Implementation &mdash; 7 of 7</p>
+      {{#if title}}
+        <p class="c-card__title">{{ title }}</p>
+      {{/if}}
+      {{#if text}}
+        <div class="c-card__text">{{{ text }}}</div>
+      {{/if}}
+      {{#if helper}}
+        <div class="c-card__helper">{{{ helper }}}</div>
+      {{/if}}
+    </div>
+    <div class="c-card__actions">
+      {{#if yesno}}
+        <button class="c-btn c-btn--secondary js-tool-no">No</button>
+        <button class="c-btn c-btn--primary js-tool-yes" on-click="clickedYes()">Yes</button>
+      {{else}}
+        <button class="c-btn c-btn--primary js-tool-next" on-click="clickedNext()">Next</button>
+      {{/if}}
+    </div>
+  </div>
+</div>
