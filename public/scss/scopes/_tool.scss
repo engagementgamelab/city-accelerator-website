@@ -1,0 +1,108 @@
+// TOOL
+
+.s-tool {
+
+  position: relative;
+  transition: $wcss-base-transition;
+
+  // Loading state change
+  >*:not(.s-tool__loading) {
+    opacity: 0;
+  }
+
+  &.is-loaded > * {
+    opacity: 1;
+  }
+
+  // Background themes
+  .t-blue & {
+    background: map-get($theme-blue, secondary);
+  }
+
+  .t-purple & {
+    background: map-get($theme-purple, secondary);
+  }
+
+  .t-green & {
+    background: map-get($theme-green, secondary);
+  }
+
+  .t-neutral & {
+    background: map-get($theme-neutral, secondary);
+  }
+}
+
+// Loading screen
+.s-tool__loading {
+  background: $color-white;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: $font-serif;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+
+  &__content {
+    margin: auto;
+  }
+
+  &__text {
+    @include wcss-font-size(beta);
+    color: map-get($theme-blue, tertiary);
+  }
+
+  &__spinner > svg {
+    width: 40px;
+  }
+  
+  .is-loaded & {
+    display: none;
+  }
+}
+
+.s-tool__main {
+  position: relative;
+  max-width: 80%;
+  margin: $wcss-spacing-unit auto;
+}
+
+// Step views
+
+.s-tool__view {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  display: none;
+
+  &.is-active {
+    display: block;
+  }
+}
+
+// CARD TRANSITIONS
+
+.js-card-in-enter-active, .js-card-in-leave-active,
+.js-card-out-enter-active, .js-card-out-leave-active{
+  transition: $wcss-base-transition;
+}
+
+.js-card-in-enter {
+  transform: translateX(200%);
+}
+
+.js-card-in-leave-active {
+  transform: translateX(-200%);
+}
+
+.js-card-out-enter {
+  transform: translateX(-200%);
+}
+
+.js-card-out-leave-active {
+  transform: translateX(200%);
+}
