@@ -1,0 +1,23 @@
+{
+  "name": "City Accelerator Website",
+  "homepage": "https://github.com/engagementgamelab/city-accelerator-website",
+  "authors": [
+    "Mariano Miguel <mariano@mariano.io>"
+  ],
+  "description": "Package.json for City Accel Website",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vue": "^2.0.5",
+    "jquery": "^2.2.4",
+    "vue-router": "^2.0.2"
+  }
+}
