@@ -10,18 +10,51 @@
 */
 --}}
 
+<script src="/js/modules/tool.js" defer></script>
 
-<div class="container-fluid home">
-    <div class="row">
-        
+<div class="s-tool js-tool">
+  <div class="s-tool__loading js-tool-loading">
+    <div class="s-tool__loading__content">
+      <div class="s-tool__loading__spinner">
+        <svg width='86px' height='86px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-default"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(0 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(30 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(60 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(90 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(120 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(150 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(180 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(210 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(240 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(270 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(300 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(330 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/></rect></svg>
+      </div>
+      <p class="s-tool__loading__text">Loading...</p>
     </div>
-
-    <div class="row">
-
-        <section id="sample">
-            <p>Tool Goes Here</p>
-        </section>
-        
+  </div>
+  <div class="s-tool__nav js-tool-steps-container">
+    <div class="o-wrapper">
+      {{> component-tool-steps}}
     </div>
-
-</div> <!-- .container-fluid -->
+  </div>
+  <div class="s-tool__main js-tool-main">
+    <div class="o-wrapper">
+      <div class="s-tool__view js-tool-view" data-step="1" data-sub-step="1" data-theme="t-blue">
+        {{>
+          component-tool-card
+            cover="http://placehold.it/500x500"
+            icon="http://placehold.it/50x50"
+            title="I am a card title"
+            text="<p>One paragraph supported</p><p>not anymore</p>"
+            helper="I am a card helper"
+            yesno=false
+            mini=false
+        }}
+      </div>
+      <div class="s-tool__view js-tool-view is-active" data-theme="t-neutral" data-step="1" data-sub-step="2">
+        {{> 
+          component-tool-card
+            cover="http://placehold.it/500x500"
+            icon="http://placehold.it/50x50"
+            title="I am a card title"
+            text="Lorem Ipsum Dolor Sit Amet"
+            helper="I am a card helper"
+            yesno=true
+            mini=false
+        }}
+      </div>
+    </div>
+  </div>
+  <div class="s-tool__prev js-tool-prev">
+    <button class="js-tool-back">Back</button>
+  </div>
+</div>
