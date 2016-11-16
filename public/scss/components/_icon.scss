@@ -5,12 +5,29 @@
 .c-icon {
   width: 91px;
   height: 91px;
-  border: 4px solid $color-black-100;
-  background: $color-black-29; // [1]
+  border: 4px solid $color-white;
+  background: $color-gray; // [1]
   position: relative;
   display: block;
-  box-shadow: 0 2px 3px 0 rgba(#000, 0.25);
+  box-shadow: 0 2px 3px 0 rgba($color-black, 0.25);
   border-radius: 100%;
+  transition: background 0.2s;
+
+  .t-blue & {
+    background: map-get($theme-blue, primary);
+  }
+
+  .t-green & {
+    background: map-get($theme-green, primary);
+  }
+
+  .t-neutral & {
+    background: map-get($theme-neutral, primary);
+  }
+
+  .t-purple & {
+    background: map-get($theme-purple, primary);
+  }
 }
 
 .c-icon__img {
