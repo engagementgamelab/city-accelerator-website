@@ -1,0 +1,148 @@
+.c-steps {
+  display: inline-block;
+  width: 100%;
+}
+
+.c-steps__list {
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  padding: $wcss-spacing-unit-small;
+  margin: $wcss-spacing-unit-small 0;
+}
+
+.c-steps__item {
+  flex: 1;
+  min-width: 150px;
+  padding-top: $wcss-spacing-unit-large;
+  position: relative;
+}
+
+.c-steps__item::before {
+  width: 100%;
+  height: 4px;
+  content: '';
+  top: 18px;
+  background: $color-black;
+  display: block;
+  position: absolute;
+  //box-shadow: inset 0 1px 2px $color-black;
+
+  .t-blue & {
+    background: map-get($theme-blue, primary);
+  }
+
+  .t-purple & {
+    background: map-get($theme-blue, primary);
+  }
+
+  .t-green & {
+    background: map-get($theme-green, primary);
+  }
+
+  .t-neutral & {
+    background: map-get($theme-blue, primary);
+  }
+}
+
+.c-steps__item::after {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  background: $color-black;
+  content: '';
+  display: block;
+  transform: translate3d(-50%, 0, 0) rotate(45deg);
+  border-radius: $wcss-base-radius;
+  //box-shadow: inset 0 1px 2px $color-black;
+
+  .t-blue & {
+    background: map-get($theme-blue, primary);
+  }
+
+  .t-purple & {
+    background: map-get($theme-purple, primary);
+  }
+
+  .t-green & {
+    background: map-get($theme-green, primary);
+  }
+
+  .t-neutral & {
+    background: map-get($theme-neutral, primary);
+  }
+}
+
+// Item Active State
+
+.c-steps__item.is-active::after {
+  background: $color-white;
+
+  // [1] Border is positioned 2px to the outside, 2px to the inside
+  .t-blue & {
+    border: 2px solid map-get($theme-blue, tertiary); // [1]
+    box-shadow: 0 0 0 2px map-get($theme-blue, tertiary); // [1]
+  }
+}
+
+.c-steps__title {
+  @include wcss-font-size(eta);
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+
+  .t-blue & {
+    color: rgba(map-get($theme-blue, primary), 0.5);
+    //text-shadow: 0px 1px 1px map-get($theme-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-blue, secondary);
+  }
+
+  .t-purple & {
+    color: rgba(map-get($theme-purple, primary), 0.5);
+    //text-shadow: 0px 1px 1px map-get($theme-purple, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-purple, secondary);
+  }
+
+  .t-neutral & {
+    color: rgba(map-get($theme-neutral, primary), 0.5);
+    //text-shadow: 0px 1px 1px map-get($theme-neutral, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-neutral, secondary);
+  }
+
+  .t-green & {
+    color: rgba(map-get($theme-green, primary), 0.5);
+    //text-shadow: 0px 1px 1px map-get($theme-green, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-green, secondary);
+  }
+}
+
+.c-steps__item:first-child > .c-steps__title {
+  padding-left: 0;
+  text-align: left;
+}
+
+.c-steps__item:first-child::after {
+  left: 0;
+  transform: rotate(45deg);
+}
+
+.c-steps__item:last-child > .c-steps__title {
+  padding-right: 0;
+  text-align: right;
+}
+
+.c-steps__item:last-child::after {
+  right: 0;
+  left: auto;
+  transform: rotate(45deg);
+}
+
+.c-steps__item.is-active > .c-steps__title {
+  color: $color-black;
+
+  .t-blue & {
+    color: map-get($theme-blue, tertiary);
+  }
+}
