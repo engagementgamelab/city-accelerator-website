@@ -1,16 +1,51 @@
 // TYPOGRAPHY
 
+$font-sans: 'HalisR', 'Helvetica Neue', Helvetica, sans-serif;
+$font-serif: 'Bodoni 72', Georgia, serif;
+
+$wcss-base-font-family: $font-sans;
 $wcss-base-font-size: 16px;
 $wcss-base-line-height: 1.5;
 
 // Typographic Scale
 
-$wcss-typographic-scale: (
-  alpha: 64px,
-  beta: 48px,
-  gamma: 36px,
-  delta: 24px,
-  epsilon: 18px,
-  zeta: 16px,
-  eta: 14px
+$wcss-typography-scale: (
+  alpha: (
+    min: 30px,
+    max: 64px,
+    lh: 1.2,
+  ),
+  beta: (
+    min: 24px,
+    max: 48px,
+    lh: 1.2,
+  ),
+  gamma: (
+    min: 20px,
+    max: 36px,
+    lh: 1.6,
+  ),
+  delta: (
+    min: 18px,
+    max: 24px,
+    lh: 1.6,
+  ),
+  epsilon: (
+    min: 18px,
+    max: 20px,
+    lh: 1.6,
+  ),
+  zeta: (
+    min: 16px,
+    max: 18px,
+    lh: 1.6,
+  ),
+  eta: (
+    min: 12px,
+    max: 14px,
+    lh: 1.6,
+  )
 );
+
+$wcss-typography-min-width: 300;
+$wcss-typography-max-width: 1200;
