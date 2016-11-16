@@ -12,15 +12,16 @@ $card-mini-max-width: 300px;
 // 3. Fix chrome bug where images don't get cropped with overflow: hidden;
 
 .c-card {
-  background: $color-black-100;
+  background: $color-white;
   margin: $wcss-spacing-unit-large auto;
   border-radius: 3px;
-  box-shadow: 0 20px 30px 0 rgba(#000, .10);
+  box-shadow: 0 20px 30px 0 rgba($color-black, .10);
   transition: $wcss-base-transition; // [1]
-  display: flex;
-  flex-wrap: wrap;
   overflow: hidden; // [2]
   perspective: 1px; // [3]
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .c-card__cover,
@@ -57,11 +58,44 @@ $card-mini-max-width: 300px;
   min-width: 100%; // [2]
 }
 
-// Content
+// Inner
 // 1. Set up a positioning context for card icon
 
 .c-card__inner {
   position: relative; // [1]
+}
+
+// Card Title
+
+.c-card__title {
+  font-family: $font-serif;
+  margin-bottom: $wcss-spacing-unit-small;
+
+  .t-blue & {
+    color: map-get($theme-blue, tertiary);
+  }
+
+  .t-green & {
+    color: map-get($theme-green, primary);
+  }
+
+  .t-purple & {
+    color: map-get($theme-purple, secondary);
+  }
+
+  .t-neutral & {
+    color: map-get($theme-neutral, tertiary);
+  }
+}
+
+// Current Card Text
+
+.c-card__current-card {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: $font-sans;
+  font-weight: bold;
+  @include wcss-font-size(eta);
 }
 
 // Icon
@@ -74,10 +108,24 @@ $card-mini-max-width: 300px;
   transform: translateY(-50%);
 }
 
+// Text
+
+.c-card__text {
+  margin-bottom: $wcss-spacing-unit;
+
+  > p {
+    margin-bottom: $wcss-spacing-unit-tiny;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 // Helper Text
 
 .c-card__helper {
-  color: $color-black-67;
+  color: $color-light-gray;
 
   // Separator line on top of helper text
   // 1. Make separator color the same as text color
@@ -165,21 +213,11 @@ $card-mini-max-width: 300px;
   }
 
   .c-card__title {
-    @include wcss-font-size(beta);
-
-    // Higher font size from medium-size and beyond
-    @include wcss-media($card-breakpoint-large) {
-      @include wcss-font-size(alpha);
-    }
+    @include wcss-font-size(alpha);
   }
 
   .c-card__text {
-    @include wcss-font-size(epsilon);
-
-    // Higher font size from medium-size and beyond
-    @include wcss-media($card-breakpoint-large) {
-      @include wcss-font-size(delta);
-    }
+    @include wcss-font-size(delta);
   }
 
   .c-card__helper {
@@ -192,7 +230,8 @@ $card-mini-max-width: 300px;
 
 
 // MINI CARD VARIANT
-// 1. This variant is not meant to have a cover
+// 1. This variant is not meant to have a cover.
+//    Let's hide it just in case.
 
 .c-card--mini {
 
