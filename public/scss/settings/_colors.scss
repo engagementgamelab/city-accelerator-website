@@ -1,12 +1,13 @@
-// COLORS
+// CHOICES
 
 // Neutral
-$color-black-100: #FFFFFF;
-$color-black-95: #F2F2F2;
-$color-black-68: #AEACA4;
-$color-black-67: #AAAAAA;
-$color-black-29: #494949;
-$color-black-13: #222222;
+$color-neutral-100: #FFFFFF;
+$color-neutral-95: #F2F2F2;
+$color-neutral-68: #AEACA4;
+$color-neutral-67: #AAAAAA;
+$color-neutral-55: #8B887D;
+$color-neutral-29: #494949;
+$color-neutral-13: #222222;
 
 // Green
 
@@ -24,3 +25,43 @@ $color-blue-47: #132C78;
 
 $color-purple-91: #D3D9E8;
 $color-purple-70: #6579B2;
+
+
+
+
+
+// DECISIONS
+
+$color-white: $color-neutral-100;
+$color-gray: $color-neutral-29;
+$color-light-gray: $color-neutral-67;
+$color-black: $color-neutral-13;
+
+
+
+
+
+// THEMES
+
+$theme-blue: (
+  primary: $color-blue-80,
+  secondary: $color-blue-90,
+  tertiary: $color-blue-56,
+);
+
+$theme-green: (
+  primary: $color-green-77,
+  secondary: $color-green-93,
+);
+
+$theme-purple: (
+  primary: $color-blue-56,
+  secondary: $color-purple-70,
+  tertiary: $color-purple-91
+);
+
+$theme-neutral: (
+  primary: $color-neutral-55,
+  secondary: $color-neutral-68,
+  tertiary: $color-neutral-29,
+);
