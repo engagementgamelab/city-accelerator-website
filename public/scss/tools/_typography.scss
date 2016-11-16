@@ -1,50 +1,3 @@
-// REM TOOLS
-
-// Convert any px value into its rem equivalent.
-
-@function wcss-rem($value) {
-
-  @if (type-of($value) == number) {
-
-    @if (unit($value) != "px") {
-      @error "`#{$value}` needs to be a pixel value.";
-    }
-
-  } @else {
-    @error "`#{$value}` needs to be a number.";
-  }
-
-  @return $value / $wcss-base-font-size * 1rem;
-
-}
-
-
-// Mixin to create a declaration whose value is a rem unit. Also provide pixel
-// fallback.
-//
-// .simple-usage {
-//   @include wcss-rem(padding, 10px);
-// }
-
-@mixin wcss-rem($property, $value) {
-
-  @if (type-of($value) == number) {
-
-    @if (unit($value) != "px") {
-      @error "`#{$value}` needs to be a pixel value.";
-    }
-
-  } @else {
-    @error "`#{$value}` needs to be a number.";
-  }
-
-  // We provide a `px` fallback for old IEs not supporting `rem` values.
-  #{$property}: $value;
-
-  #{$property}: wcss-rem($value);
-
-}
-
 // Mixin to create font-size declarations in rem units with pixel fallbacks.
 // Uses the typographic scale set in settings/typography.
 //
@@ -52,10 +5,21 @@
 //   @include wcss-font-size(alpha);
 // }
 
-@mixin wcss-font-size($name) {
+@mixin wcss-font-size($name, $enforce: false) {
+
+  $rule: null;
+  $max-size: strip-unit(map-deep-get($wcss-typography-scale, $name, "max"));
+  $min-size: strip-unit(map-deep-get($wcss-typography-scale, $name, "min"));
+
   @if (type-of($name) != string) {
     @error "`#{$name}` needs to be a string.";
   }
 
-  @include wcss-rem(font-size, map-get($wcss-typographic-scale, $name));
+  @if ($enforce == true) {
+    $rule: !important;
+  }
+
+  font-size: #{$max-size * 1px} $rule;
+  font-size: calc(#{$min-size * 1px} + (#{$max-size} - #{$min-size}) * (100vw - #{$wcss-typography-min-width*1px} ) / (#{$wcss-typography-max-width} - #{$wcss-typography-min-width}) ) #{$rule};
+  line-height: map-deep-get($wcss-typography-scale, $name, "lh");
 }
