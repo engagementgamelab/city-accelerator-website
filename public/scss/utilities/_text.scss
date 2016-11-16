@@ -1,6 +1,6 @@
 // TEXT UTILITIES
 
-@each $name, $value in $wcss-typographic-scale {
+@each $name, $value in $wcss-typography-scale {
   .u-text-#{$name} {
     @include wcss-font-size($name);
   }
