@@ -1,0 +1,27 @@
+<div class="c-modal js-tool-modal" aria-label="{{ title }}">
+  <header class="c-modal__header">
+    <div class="o-wrapper">
+      <div class="o-layout o-layout--middle">
+        <div class="o-layout__item o-layout__item--6/12@large">
+          <p class="c-modal__header__title">{{ title }}</p>
+          <div class="c-summary-block">
+            <div class="c-summary-block__item">
+              <img src="http://placehold.it/50x50" alt="Current Phase Icon">
+              <p class="c-summary-block__item__title">{{ current_phase }}</p>
+              <p class="c-summary-block__item__description">Current Phase</p>
+            </div>
+            <div class="c-summary-block__item">
+              <img src="http://placehold.it/50x50" alt="Activity Length Icon">
+              <p class="c-summary-block__item__title">{{ activity_length }}</p>
+              <p class="c-summary-block__item__description">Activity Length</p>
+            </div>
+          </div>
+        </div>
+        <div class="o-layout__item o-layout__item--6/12@large">
+          <p class="c-modal__header__description">{{ description }}</p>
+        </div>
+      </div>
+    </div>
+    <img class="c-modal__header__img" src="{{ cover }}" alt="{{ title }}">
+  </header>
+</div>
