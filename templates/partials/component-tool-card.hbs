@@ -1,4 +1,4 @@
-<div class="c-card {{#if mini}}c-card--mini{{else}}c-card--full{{/if}}">
+<div class="c-card js-tool-card {{#if mini}}c-card--mini{{else}}c-card--full{{/if}}">
   {{#if cover}}
     <div class="c-card__cover">
       <img src="{{ cover }}" alt="{{ title }}" class="c-card__cover__img">
@@ -11,7 +11,10 @@
       </div>
     {{/if}}
     <div class="c-card__content">
-      <p class="c-card__current-card">Implementation &mdash; 7 of 7</p>
+      {{#if mini }}
+      {{else}}
+        <p class="c-card__current-card js-breadcrumb"></p>
+      {{/if}}
       {{#if title}}
         <p class="c-card__title">{{ title }}</p>
       {{/if}}
@@ -23,11 +26,15 @@
       {{/if}}
     </div>
     <div class="c-card__actions">
-      {{#if yesno}}
-        <button class="c-btn c-btn--secondary js-tool-no">No</button>
-        <button class="c-btn c-btn--primary js-tool-yes" on-click="clickedYes()">Yes</button>
+      {{#if mini }}
+        <button class="c-btn c-btn--primary js-tool-more">See More</button>
       {{else}}
-        <button class="c-btn c-btn--primary js-tool-next" on-click="clickedNext()">Next</button>
+        {{#if yesno}}
+          <button class="c-btn c-btn--secondary js-tool-no">No</button>
+          <button class="c-btn c-btn--primary js-tool-yes">Yes</button>
+        {{else}}
+          <button class="c-btn c-btn--primary js-tool-next">Next</button>
+        {{/if}}
       {{/if}}
     </div>
   </div>
