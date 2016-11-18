@@ -17,37 +17,27 @@
 
 		{{!-- Load our CSS/docs --}}
 		{{> css environment=env}}
+
+		{{!-- Load our JS --}}
+		{{#ifeq env "development"}}
+			{{> script/development section=section subSection=sub_section}}
+		{{else}}
+			{{> script/production section=section}}
+		{{/ifeq}}
 		
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 		- only renders when user is logged in and admin--}}
 		{{!-- {{{isAdminEditorCSS user}}} --}}
-
-		{{!-- FontKit --}}
-		<script src="https://use.typekit.net/cau2rql.js"></script>
-		<script>try{Typekit.load({ async: true });}catch(e){}</script>
+		{{{isAdminEditorJS user}}}
 	</head>
 	
-	<body class="body">
+	<body>
 
 		{{> nav}}
-
-		<!-- page wrapper start -->
-		<!-- ================ -->
-		<div class="page-wrapper">
 			
-			<!-- BODY CONTENT START -->
-			{{{body}}}
+		{{{body}}}
 						
-			{{> footer}}
+		{{> footer}}
 
-			<!-- page-wrapper end -->
-			{{#ifeq env "development"}}
-				{{> script/development section=section subSection=sub_section}}
-			{{else}}
-				{{> script/production section=section}}
-			{{/ifeq}}
-
-			{{{isAdminEditorJS user}}}
-		</div>
 	</body>
 </html>
