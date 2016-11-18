@@ -6,26 +6,26 @@
 .c-steps__list {
   list-style: none;
   display: flex;
-  overflow-x: auto;
-  padding: $wcss-spacing-unit-small;
+  overflow-x: visible;
+  padding: 0;
   margin: $wcss-spacing-unit-small 0;
-}
-
-.c-steps__item {
-  flex: 1;
-  min-width: 150px;
-  padding-top: $wcss-spacing-unit-large;
   position: relative;
 }
 
-.c-steps__item::before {
-  width: 100%;
+// [1] Accomodate for .c-step__item's padding and .c-step__point height (eyeballed)
+.c-steps__list__progress,
+.c-steps__list__progress-complete, {
   height: 4px;
   content: '';
-  top: 18px;
-  background: $color-black;
+  left: 0;
+  top: ($wcss-spacing-unit-large + 7px); // [1]
   display: block;
   position: absolute;
+}
+
+.c-steps__list__progress {
+  width: 100%;
+  background: $color-black;
   //box-shadow: inset 0 1px 2px $color-black;
 
   .t-blue & {
@@ -33,7 +33,7 @@
   }
 
   .t-purple & {
-    background: map-get($theme-blue, primary);
+    background: map-get($theme-purple, primary);
   }
 
   .t-green & {
@@ -41,20 +41,36 @@
   }
 
   .t-neutral & {
-    background: map-get($theme-blue, primary);
+    background: map-get($theme-neutral, primary);
   }
 }
 
-.c-steps__item::after {
+.c-steps__list__progress-complete {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.c-steps__item {
+  flex: 1;
+  //min-width: 150px;
+  padding-top: $wcss-spacing-unit-large;
+  position: relative;
+  //text-align: center;
+
+  &:first-of-type {
+    text-align: left;
+  }
+
+  &:last-of-type {
+    text-align: right;
+  }
+}
+
+.c-steps__point {
   width: 16px;
   height: 16px;
-  position: absolute;
-  top: 12px;
-  left: 50%;
   background: $color-black;
-  content: '';
-  display: block;
-  transform: translate3d(-50%, 0, 0) rotate(45deg);
+  display: inline-block;
+  transform: rotate(45deg);
   border-radius: $wcss-base-radius;
   //box-shadow: inset 0 1px 2px $color-black;
 
@@ -92,10 +108,9 @@
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
-  padding: 10px;
-  display: inline-block;
+  margin: $wcss-spacing-unit-tiny 0;
   width: 100%;
-  text-align: center;
+  display: none;
 
   .t-blue & {
     color: rgba(map-get($theme-blue, primary), 0.5);
@@ -116,27 +131,10 @@
     color: rgba(map-get($theme-green, primary), 0.5);
     //text-shadow: 0px 1px 1px map-get($theme-green, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-green, secondary);
   }
-}
 
-.c-steps__item:first-child > .c-steps__title {
-  padding-left: 0;
-  text-align: left;
-}
-
-.c-steps__item:first-child::after {
-  left: 0;
-  transform: rotate(45deg);
-}
-
-.c-steps__item:last-child > .c-steps__title {
-  padding-right: 0;
-  text-align: right;
-}
-
-.c-steps__item:last-child::after {
-  right: 0;
-  left: auto;
-  transform: rotate(45deg);
+  @include wcss-media(medium) {
+    display: inline-block;
+  }
 }
 
 .c-steps__item.is-active > .c-steps__title {
