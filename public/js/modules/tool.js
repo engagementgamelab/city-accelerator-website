@@ -205,6 +205,7 @@
     var data = active_view.split('.');
     var step = data[0];
     var sub_step = data[1];
+    var max_sub_steps = $('.js-tool-step').eq(step).find('.js-tool-view').last().index();
     var nav_item = $('.js-tool-nav-item[data-linked-step="' + step + '"]');
 
     // If there's an actual nav item linked to this step
@@ -212,11 +213,22 @@
       $('.js-tool-nav-item').not(nav_item).removeClass('is-active');
       nav_item.addClass('is-active');
       var first_offset = $('.js-tool-nav-item').eq(0).find('.js-tool-nav-point').offset().left;
-      var active_offset = nav_item.find('.js-tool-nav-point').offset().left;
-
-      var new_width = active_offset - first_offset;
+      var active_offset_left = nav_item.find('.js-tool-nav-point').offset().left;
+      var new_width = 0;
+      console.log(+step+ +1);
+      if($('.js-tool-nav-item[data-linked-step="' + (+step + 1) + '"]').length) {
+        console.log('There is next');
+        var next_offset = $('.js-tool-nav-item[data-linked-step="' + +step +1 + '"]').find('.js-tool-nav-point').offset().left
+        new_width = (active_offset_left - first_offset) + (((next_offset - active_offset)/max_sub_steps) * sub_step);
+      } else {
+        console.log('There is no next');
+        new_width = (active_offset_left - first_offset);
+      }
 
       $('.js-tool-progress').velocity({ width: new_width });
+
+    } else {
+      $('.js-tool-nav-item').not(nav_item).removeClass('is-active');      
     }
   }
 
