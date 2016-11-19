@@ -86,11 +86,18 @@
 // Back button
 
 .s-tool__prev {
-  position: absolute;
+  @include wcss-font-size(eta);
+  position: fixed;
   left: 10px;
-  top: 50%;
+  top: 50vh;
   transform: translateY(-50%);
-  transition: opacity 0.2s; 
+  transition: opacity 0.2s;
+  border: 0;
+  background: transparent;
+  color: $color-white;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 0px 1px 1px rgba($color-black, 0.5);
 
   &.is-disabled {
     pointer-events: none;
@@ -99,6 +106,14 @@
 }
 
 // Step views
+
+.s-tool__views,
+.s-tool__sub-views {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 
 .s-tool__view {
   position: absolute;
@@ -119,11 +134,17 @@
   }
 }
 
+// Custom styling for cards inside views/steps
+
+.s-tool__view__card {
+  max-width: 80%;
+}
+
 // Grid
 
 .s-tool__grid__block {
 
-  padding: $wcss-spacing-unit;
+  padding: $wcss-spacing-unit-large $wcss-spacing-unit;
 
   &.t-blue {
     background: map-get($theme-blue, secondary);
@@ -143,13 +164,15 @@
 }
 
 .s-tool__grid__block__title {
+  @include wcss-font-size(beta);
   font-family: $font-serif;
   text-align: center;
+  font-weight: normal;
 
   @include wcss-media(large) {
     text-align: left;
   }
-  
+
   .t-blue & {
     color: map-get($theme-blue, tertiary);
   }
@@ -175,6 +198,17 @@
 
 @media print {
   
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  button {
+    display: none !important;
+  }
+
   body > *, 
   body > *::before, 
   body > *::after {
@@ -182,7 +216,7 @@
   }
 
   .s-tool,
-  .s-tool__print {
+  .js-tool-printable {
     display: block !important;
   }
 

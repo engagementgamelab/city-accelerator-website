@@ -1,0 +1,36 @@
+// SUMMARY BLOCK
+
+.c-summary-block {
+  display: block; 
+  margin-left: -$wcss-spacing-unit-small;
+}
+
+.c-summary-block__item,
+.c-summary-block__icon,
+.c-summary-block__content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.c-summary-block__item {
+  margin: $wcss-spacing-unit-small;
+}
+
+.c-summary-block__icon {
+  width: 30px;
+  margin-right: $wcss-spacing-unit-tiny;
+}
+
+.c-summary-block__title {
+  @include wcss-font-size(zeta);
+  font-weight: bold;
+  color: $color-white;
+  margin-bottom: 0;
+}
+
+.c-summary-block__description {
+  @include wcss-font-size(eta);
+  color: $color-light-gray;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}

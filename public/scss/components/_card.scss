@@ -89,6 +89,23 @@ $card-mini-max-width: 300px;
   }
 }
 
+.c-card__title--separated {
+  // Separator line at the bottom of card titles
+  // 1. Make separator color the same as text color
+  // 2. Still make separator color a tad lighter
+
+  &:after {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: currentColor; // [1]
+    opacity: 0.5; // [2]
+    margin: $wcss-spacing-unit 0;
+    display: block;
+    position: relative;
+  }
+}
+
 // Current Card Text
 
 .c-card__current-card {
@@ -224,7 +241,11 @@ $card-mini-max-width: 300px;
   }
 
   .c-card__text {
-    @include wcss-font-size(delta);
+    @include wcss-font-size(epsilon);
+
+    > * + * {
+      margin-top: $wcss-spacing-unit;
+    }
   }
 
   .c-card__helper {
@@ -237,17 +258,11 @@ $card-mini-max-width: 300px;
 
 
 // MINI CARD VARIANT
-// 1. This variant is not meant to have a cover.
-//    Let's hide it just in case.
 
 .c-card--mini {
 
   max-width: $card-mini-max-width;
   overflow: visible;
-
-  .c-card__cover {
-    display: none; // [1]
-  }
 
   .c-card__content {
     padding: $wcss-spacing-unit-small;

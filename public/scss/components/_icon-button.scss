@@ -1,0 +1,26 @@
+// ICON BUTTON
+
+.c-icon-button {
+  width: 60px;
+  height: 60px;
+  border-radius: $wcss-base-radius;
+  text-align: center;
+  border: 0;
+  box-shadow: 10px 15px 30px rgba($color-black, .5);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.c-icon-button__icon {
+  width: 24px;
+}
+
+.c-icon-button__text {
+  @include wcss-font-size(theta);
+  text-transform: uppercase;
+}
+
+.c-icon-button--primary {
+  background: $color-blue;
+  color: $color-white;
+}

@@ -1,4 +1,4 @@
-<div class="c-card js-tool-card {{#if mini}}c-card--mini{{else}}c-card--full{{/if}}">
+<div class="c-card js-tool-card {{#if mini}}c-card--mini{{else}}s-tool__view__card c-card--full{{/if}}">
   {{#if cover}}
     <div class="c-card__cover">
       <img src="{{ cover }}" alt="{{ title }}" class="c-card__cover__img">
@@ -12,11 +12,16 @@
     {{/if}}
     <div class="c-card__content">
       {{#if mini }}
+      {{else}} {{#if intro}}
       {{else}}
         <p class="c-card__current-card js-breadcrumb"></p>
-      {{/if}}
+      {{/if}}{{/if}}
       {{#if title}}
+        {{#if intro}}
+        <p class="c-card__title c-card__title--separated">{{ title }}</p>
+        {{else}}
         <p class="c-card__title">{{ title }}</p>
+        {{/if}}
       {{/if}}
       {{#if text}}
         <div class="c-card__text">{{{ text }}}</div>

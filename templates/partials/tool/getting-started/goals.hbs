@@ -1,0 +1,29 @@
+{{>
+  components/tool/card
+    cover="http://placehold.it/500x500"
+    icon="http://placehold.it/50x50"
+    title="Lorem Ipsum Dolor Sit Amet"
+    text="<p>One paragraph supported</p><p>not anymore</p>"
+    helper="I am a card helper"
+    yesno=true
+    mini=false
+}}
+<div class="s-tool__view__mini js-tool-view-mini">
+  {{> 
+    components/tool/card
+      icon="http://placehold.it/50x50"
+      title="Lorem Ipsum Super Long Title Blae"
+      text="Lorem Ipsum Dolor Sit Amet"
+      mini=true
+  }}
+</div>
+<div class="s-tool__view__contents js-tool-view-contents">
+  {{>
+    components/tool/modal
+      cover="http://placehold.it/500x500"
+      title="Partnerships"
+      current_phase="Getting Started"
+      activity_length="20 minutes"
+      description="Lorem Ipsum Dolor Sit Amet"
+  }}
+</div>

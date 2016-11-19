@@ -10,6 +10,8 @@
   pointer-events: none;
   z-index: -1;
   transform: translate(0, 200%);
+  will-change: transform;
+  transition: transform 0.2s;
   overflow: auto;
 }
 
@@ -34,10 +36,14 @@ html.is-modal-active {
 
 .c-modal__header {
   display: block;
-  padding: $wcss-spacing-unit-large 0;
+  padding: $wcss-spacing-unit-huge 0;
   background: linear-gradient(-180deg, rgba($color-black, 0) 0%, rgba($color-black, 0.7) 79%);
   position: relative;
   overflow: hidden;
+
+  @include wcss-media(large) {
+    padding: $wcss-spacing-unit-huge;
+  }
 }
 
 .c-modal__header__img {
@@ -54,4 +60,29 @@ html.is-modal-active {
   @include wcss-font-size(beta);
   font-family: $font-serif;
   color: $color-white;
+}
+
+.c-modal__header__description {
+  display: inline-block;
+  margin: $wcss-spacing-unit 0;
+  color: $color-light-gray;
+}
+
+
+// MODAL ACTIONS
+
+.c-modal__top-actions {
+  position: absolute;
+  width: 50%;
+  top: $wcss-spacing-unit-small;
+}
+
+.c-modal__top-actions--left {
+  left: $wcss-spacing-unit-small;
+  text-align: left;
+}
+
+.c-modal__top-actions--right {
+  right: $wcss-spacing-unit-small;
+  text-align: right;
 }

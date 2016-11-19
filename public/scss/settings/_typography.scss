@@ -36,15 +36,20 @@ $wcss-typography-scale: (
     lh: 1.6,
   ),
   zeta: (
-    min: 16px,
-    max: 18px,
+    min: 14px,
+    max: 16px,
     lh: 1.6,
   ),
   eta: (
     min: 12px,
     max: 14px,
     lh: 1.6,
-  )
+  ),
+  theta: (
+    min: 10px,
+    max: 12px,
+    lh: 1.6
+  ),
 );
 
 $wcss-typography-min-width: 300;

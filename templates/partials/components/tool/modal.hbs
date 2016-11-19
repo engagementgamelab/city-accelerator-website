@@ -1,0 +1,43 @@
+<div class="c-modal js-tool-modal" aria-label="{{ title }}">
+  <header class="c-modal__header">
+    <div class="o-wrapper">
+      <div class="o-layout o-layout--middle">
+        <div class="o-layout__item o-layout__item--6/12@large">
+          <p class="c-modal__header__title">{{ title }}</p>
+          <div class="c-summary-block">
+            <div class="c-summary-block__item">
+              <img class="c-summary-block__icon" src="http://placehold.it/50x50" alt="Current Phase Icon">
+              <div class="c-summary-block__content">
+                <p class="c-summary-block__title">{{ current_phase }}</p>
+                <p class="c-summary-block__description">Current Phase</p>
+              </div>
+            </div>
+            <div class="c-summary-block__item">
+              <img class="c-summary-block__icon" src="http://placehold.it/50x50" alt="Activity Length Icon">
+              <div class="c-summary-block__content">
+                <p class="c-summary-block__title">{{ activity_length }}</p>
+                <p class="c-summary-block__description">Activity Length</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-layout__item o-layout__item--6/12@large">
+          <p class="c-modal__header__description">{{ description }}</p>
+        </div>
+      </div>
+    </div>
+    <img class="c-modal__header__img" src="{{ cover }}" alt="{{ title }}">
+  </header>
+  <div class="c-modal__top-actions c-modal__top-actions--left">
+    <button class="c-icon-button c-icon-button--primary js-tool-modal-close">
+      <img src="http://placehold.it/30x30" alt="Icon" class="c-icon-button__icon">
+      <span class="c-icon-button__text">Close</span>
+    </button>
+  </div>
+  <div class="c-modal__top-actions c-modal__top-actions--right">
+    <button class="c-icon-button c-icon-button--primary js-tool-print">
+      <img src="http://placehold.it/30x30" alt="Icon" class="c-icon-button__icon">
+      <span class="c-icon-button__text">Print</span>
+    </button>
+  </div>
+</div>
