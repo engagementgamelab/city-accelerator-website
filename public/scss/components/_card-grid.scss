@@ -1,0 +1,29 @@
+// CARD GRID
+
+.c-card-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .c-card-grid__item {
+    width: 100%;
+    padding: $wcss-spacing-unit-small;
+    margin-top: $wcss-spacing-unit-large;
+
+    @include wcss-media(500px) {
+      width: 50%;
+    }
+
+    @include wcss-media(medium) {
+      width: 33.33%;
+    }
+
+    @include wcss-media(large) {
+      width: 25%;
+
+      // 1. First row of 4 has no margin-top
+      &:nth-child(-n+4) {
+        margin-top: 0; // [1]
+      }
+    }
+  }
+}
