@@ -12,6 +12,7 @@ $color-neutral-13: #222222;
 // Green
 
 $color-green-93: #D6EDDF;
+$color-green-85: #ACDABE;
 $color-green-77: #65C5B4;
 
 // Blue
@@ -45,14 +46,22 @@ $color-blue: $color-blue-47;
 // THEMES
 
 $theme-blue: (
+  primary: $color-blue-56,
+  secondary: $color-purple-91,
+  tertiary: $color-neutral-95,
+  quaternary: $color-neutral-67
+);
+
+$theme-light-blue: (
   primary: $color-blue-80,
   secondary: $color-blue-90,
   tertiary: $color-blue-56,
 );
 
 $theme-green: (
-  primary: $color-green-77,
+  primary: $color-green-85,
   secondary: $color-green-93,
+  tertiary: $color-green-77
 );
 
 $theme-purple: (
