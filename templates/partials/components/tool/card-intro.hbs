@@ -1,0 +1,45 @@
+{{!-- Set up both component and js-binding classes for each variant --}}
+<div class="c-card js-tool-card s-tool__view__card c-card--full">
+
+  {{!-- Only display a cover if we actually have specified one --}}
+  {{#if cover}}
+    <div class="c-card__cover">
+      <img src="{{ cover }}" alt="{{ title }}" class="c-card__cover__img">
+    </div>
+  {{/if}}
+  <div class="c-card__inner">
+
+    {{!-- Only display an icon if we actually have specified one --}}
+    {{#if icon}}
+      <div class="c-card__icon c-icon">
+        <img src="{{ icon }}" alt="{{ title }}" class="c-icon__img">
+      </div>
+    {{/if}}
+
+    <div class="c-card__content">
+
+      {{!-- (Chained If Blocks) Do NOT display the current step text if this is a mini-card
+      variant or an intro card--}}
+
+      {{!-- If there's a specified title --}}
+      {{#if title}}
+        <p class="c-card__title c-card__title--separated">{{ title }}</p>
+      {{/if}}
+
+      {{!-- If there's text specified --}}
+      {{#if text}}
+        <div class="c-card__text">{{{ text }}}</div>
+      {{/if}}
+
+      {{!-- If there's helper text specified --}}
+      {{#if helper}}
+        <div class="c-card__helper">{{{ helper }}}</div>
+      {{/if}}
+    </div>
+
+    {{!-- Card actions (buttons, etc) --}}
+    <div class="c-card__actions">
+        <button class="c-btn c-btn--primary js-tool-next">Next</button>
+    </div>
+  </div>
+</div>

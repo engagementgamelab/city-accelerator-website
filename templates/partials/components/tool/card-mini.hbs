@@ -1,0 +1,31 @@
+{{!-- Set up both component and js-binding classes for each variant --}}
+<div class="c-card js-tool-card c-card--mini">
+
+  <div class="c-card__inner">
+
+    {{!-- Only display an icon if we actually have specified one --}}
+    {{#if icon}}
+      <div class="c-card__icon c-icon">
+        <img src="{{ icon }}" alt="{{ title }}" class="c-icon__img">
+      </div>
+    {{/if}}
+
+    <div class="c-card__content">
+
+      {{!-- If there's a specified title --}}
+      {{#if title}}
+        <p class="c-card__title">{{ title }}</p>
+      {{/if}}
+
+      {{!-- If there's text specified --}}
+      {{#if text}}
+        <div class="c-card__text">{{{ text }}}</div>
+      {{/if}}
+    </div>
+
+    {{!-- Card actions (buttons, etc) --}}
+    <div class="c-card__actions">
+      <button class="c-btn c-btn--primary js-tool-more">See More</button>
+    </div>
+  </div>
+</div>
