@@ -34,14 +34,18 @@ $wcss-spacing-sizes: (
 ) !default;
 
 
-@each $property, $property-namespace in $wcss-spacing-properties {
+@mixin wcss-spacing-utilities($breakpoint: null){
 
-  @each $direction, $direction-namespace in $wcss-spacing-directions {
+  @each $property, $property-namespace in $wcss-spacing-properties {
 
-    @each $size, $value in $wcss-spacing-sizes {
+    @each $direction, $direction-namespace in $wcss-spacing-directions {
 
-      .u-#{$property-namespace}#{$direction-namespace}#{$size} {
-        #{$property}#{$direction}: $value !important;
+      @each $size, $value in $wcss-spacing-sizes {
+
+        .u-#{$property-namespace}#{$direction-namespace}#{$size}#{$breakpoint} {
+          #{$property}#{$direction}: $value !important;
+        }
+
       }
 
     }
@@ -49,5 +53,18 @@ $wcss-spacing-sizes: (
   }
 
 }
+
+@include wcss-spacing-utilities();
+
+@each $name, $value in $wcss-breakpoints {
+
+  @include wcss-media($name) {
+
+    @include wcss-spacing-utilities(\@#{$name});
+
+  }
+
+}
+
 
 /* stylelint-enable string-quotes */
