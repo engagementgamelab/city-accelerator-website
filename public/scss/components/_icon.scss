@@ -13,8 +13,12 @@
   border-radius: 100%;
   transition: background 0.2s;
 
-  .t-blue & {
+  .t-light-blue & {
     background: map-get($theme-blue, primary);
+  }
+
+  .t-light-blue & {
+    background: map-get($theme-light-blue, primary);
   }
 
   .t-green & {
@@ -30,10 +34,12 @@
   }
 }
 
+// 1. Make image inside our icon non-selectable
 .c-icon__img {
   max-width: 39px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  user-select: none; // [1]
 }
