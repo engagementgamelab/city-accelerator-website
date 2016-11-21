@@ -98,18 +98,12 @@
   left: $wcss-spacing-unit-tiny;
   top: 50vh;
   transform: translateY(-50%);
-  transition: opacity 0.2s;
   border: 0;
   background: transparent;
   color: $color-white;
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 0px 1px 1px rgba($color-black, 0.5);
-
-  &.is-disabled {
-    pointer-events: none;
-    opacity: 0;
-  }
 }
 
 // Step views
@@ -148,12 +142,6 @@
 }
 
 // Grid
-
-.s-tool__grid__action {
-  position: fixed;
-  bottom: $wcss-spacing-unit-tiny;
-  left: $wcss-spacing-unit-tiny;
-}
 
 .s-tool__grid__block {
 
@@ -216,6 +204,29 @@
   }
 }
 
+// General-purpose class used for actions tied to views (Like Print MVP)
+// [1] Make invisible & un-clickable when disabled
+
+.s-tool__action {
+  opacity: 0; // [1]
+  pointer-events: none; // [1]
+  transition: opacity 0.2s;
+
+  &.is-active {
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+// Print MVP action button
+
+.s-tool__print-mvp {
+  position: fixed;
+  bottom: $wcss-spacing-unit-tiny;
+  left: $wcss-spacing-unit-tiny;
+}
+
+
 // Printable MVP area. Modals are printed inside their own divs.
 
 .s-tool__mvp {
@@ -223,8 +234,12 @@
 }
 
 @media print {
+
+  html {
+    font-size: 62.5%;
+  }
   
-  * {
+  *, *:before, *:after {
     color-adjust: exact !important;
     -webkit-print-color-adjust: exact !important;
     box-shadow: none !important;
@@ -259,14 +274,18 @@
     display: none !important;
   }
 
-  // Create a page break after each block
   .s-tool__mvp__block {
+    margin: 0;
+    padding: 0;
+    page-break-before: avoid;
     page-break-after: always;
+    max-height: 100vh;
+    overflow: hidden;
   }
 
   // Remove page title & number in Chrome
   @page {
-    size: auto;
+    size: A4;
     margin: 0mm;
   }
 }
