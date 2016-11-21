@@ -48,7 +48,10 @@
   }
 
   function updateMainHeight() {
-    main.css('height', $('.js-tool-view.is-active').outerHeight());
+    // Update main height, and give spacing for the box shadow not to be cropped out
+    // Not cheap to animate. Experimental
+    main.velocity({ height: 48 + $('.js-tool-view.is-active').outerHeight()});
+    //main.css('height', 48 + + $('.js-tool-view.is-active').outerHeight());
   }
 
   function updateView() {
@@ -56,8 +59,7 @@
     var step = data[0];
     var sub_step = data[1];
 
-    updateMainHeight();
-
+    // Update theme according to step
     if (body.hasClass(active_theme)) {
       body.removeClass(active_theme);
     }
@@ -65,10 +67,24 @@
     active_theme = $('.js-tool-step').eq(step).attr('data-theme');
     body.addClass(active_theme);
 
+    // Update the progress bar
     updateProgress();
 
+
+    // Hide the back button if it's the first view
+
+    if(step == 0 && sub_step == 0) {
+      $('.js-tool-back').addClass('is-disabled');
+    } else {
+      $('.js-tool-back').removeClass('is-disabled')
+    }
+
+    // Remove old view, get the new one in
     transitionOut($('.js-tool-view.is-active'));
     transitionIn($('.js-tool-step').eq(step).find('.js-tool-view').eq(sub_step));
+
+    // Make container reflect card height
+    updateMainHeight();
   }
 
   function goPrevStep() {
@@ -78,11 +94,9 @@
 
     if($('.js-tool-step').eq(step).find('.js-tool-view').eq(+sub_step - +1).length && (+sub_step - +1 !== -1)) {
       sub_step = +sub_step - +1;
-      console.log('First');
     } else if($('.js-tool-step').eq(+step - +1).length && (+step - +1 !== -1)) {
       step = +step - +1;
       sub_step = $('.js-tool-step').eq(step).find('.js-tool-view').last().index();
-      console.log('Second');
     } else {
       return false;
     }
@@ -98,13 +112,10 @@
 
     if($('.js-tool-step').eq(step).find('.js-tool-view').eq(+sub_step + +1).length) {
       sub_step = +sub_step + +1;
-      console.log('First ' + sub_step);
     } else if($('.js-tool-step').eq(+step + +1).length) {
       step = +step + +1;
       sub_step = 0;
-      console.log('Second ' + step);
     } else {
-      console.log('Third ' + step + '.' + sub_step);
       return false;
     }
 
@@ -168,7 +179,7 @@
           if($(this).attr('data-grid-include') !== 'false') {
             new_item = item_template.clone().removeClass('js-tool-grid-template');
             var sub_step_mini = $(this).find('.js-tool-view-mini .js-tool-card');
-            sub_step_mini.appendTo(new_item);
+            sub_step_mini.css('cursor', 'pointer').appendTo(new_item);
             new_item.appendTo(new_block.find('.js-tool-grid-item-container'));
           }
 
@@ -205,7 +216,7 @@
     var data = active_view.split('.');
     var step = data[0];
     var sub_step = data[1];
-    var max_sub_steps = $('.js-tool-step').eq(step).find('.js-tool-view').last().index();
+    var max_sub_steps = $('.js-tool-step').eq(step).find('.js-tool-view').last().index() + 1;
     var nav_item = $('.js-tool-nav-item[data-linked-step="' + step + '"]');
 
     // If there's an actual nav item linked to this step
@@ -215,21 +226,36 @@
       var first_offset = $('.js-tool-nav-item').eq(0).find('.js-tool-nav-point').offset().left;
       var active_offset_left = nav_item.find('.js-tool-nav-point').offset().left;
       var new_width = 0;
-      console.log(+step+ +1);
       if($('.js-tool-nav-item[data-linked-step="' + (+step + 1) + '"]').length) {
-        console.log('There is next');
-        var next_offset = $('.js-tool-nav-item[data-linked-step="' + +step +1 + '"]').find('.js-tool-nav-point').offset().left
-        new_width = (active_offset_left - first_offset) + (((next_offset - active_offset)/max_sub_steps) * sub_step);
+        var next_offset = $('.js-tool-nav-item[data-linked-step="' + (+step + 1) + '"]').find('.js-tool-nav-point').offset().left
+        new_width = (active_offset_left - first_offset) + (((next_offset - active_offset_left)/max_sub_steps) * sub_step);
       } else {
-        console.log('There is no next');
         new_width = (active_offset_left - first_offset);
       }
 
       $('.js-tool-progress').velocity({ width: new_width });
 
+      // Mark past steps
+
+      $('.js-tool-nav-item').each(function() {
+        if($(this).attr('data-linked-step') >= step) {
+          $(this).removeClass('is-past');
+        } else {
+          $(this).addClass('is-past');
+        }
+      });
+
     } else {
       $('.js-tool-nav-item').not(nav_item).removeClass('is-active');      
     }
+  }
+
+  function updateScore() {
+    var max = $('.js-tool-question-card').length;
+    var no = $(print_array).size();
+    var yes = max - no;
+    var percentage = yes * 100 / max;
+    $('.js-tool-score').html(percentage + "%");
   }
 
   function updateGrid() {
@@ -278,27 +304,6 @@
 
     // Remove the loading screen
     container.addClass('is-loaded');
-  }
-
-    /*
-
-    assignStepPercentages();
-
-    addCardBreadcrumbs();
-
-    createGrid();
-
-    transitionOut(views.not(active_view));
-    updateView();
-
-    // Keyboard Binding
-    $("body").keydown(function(e) {
-      if(e.keyCode == 37) { // left
-        goPrevStep();
-      }
-    });
-    */
-
 
     $('.js-tool-next').click(function() {
       goNextStep();
@@ -310,23 +315,29 @@
 
     $('.js-tool-no').click(function() {
       addToPrintable(active_view);
+      updateScore();
       updateGrid();
       goNextStep();
     });
 
     $('.js-tool-yes').click(function() {
       removeFromPrintable(active_view);
+      updateScore();
       updateGrid();
       goNextStep();
     });
 
-    $('.js-tool-more').click(function() {
-      var parent_view = $(this).closest('[data-linked-step]');
-      var parent_sub_step = $(this).closest('[data-linked-sub-step]');
-      var modal = $('.js-tool-modal[data-linked-step="' + parent_step + '"][data-linked-sub-step="' + parent_sub_step + '"]');
+    $('.js-tool-more').click(function(event) {
+      event.stopPropagation();
+      parent_step = $(this).closest('.js-tool-card').attr('data-linked-step');
+      parent_sub_step = $(this).closest('.js-tool-card').attr('data-linked-sub-step');
+      console.log(parent_step);
+      console.log(parent_sub_step);
+      modal = $('.js-tool-modal[data-linked-step="' + parent_step + '"][data-linked-sub-step="' + parent_sub_step + '"]');
+      $('.js-tool-printable').removeClass('js-tool-printable');
       modal.addClass('is-active').addClass('js-tool-printable');
       $('html').addClass('is-modal-active');
-    })
+    });
 
     $('.js-tool-modal-close').click(function() {
       $('html').removeClass('is-modal-active');
@@ -337,7 +348,43 @@
       window.print();
     });
 
+    $('.js-tool-print-mvp').click(function() {
+
+      // Remove the printable class from other elements like modals
+      $('.js-tool-printable').removeClass('js-tool-printable');
+
+      // Add the printable class to the MVP area & empty it
+      $('.js-tool-mvp').addClass('js-tool-printable').empty();
+
+      // Grab the selected items and move them into the printable area
+      $('.js-tool-grid .js-tool-card:not(.is-disabled)').each(function() {
+        step = $(this).attr('data-linked-step');
+        sub_step = $(this).attr('data-linked-sub-step');
+        var new_block = $('.js-tool-modal[data-linked-step="' + step + '"][data-linked-sub-step="' + sub_step + '"]').clone();
+        new_block.removeClass().addClass('js-tool-mvp-block s-tool__mvp__block').appendTo('.js-tool-mvp');
+      });
+
+      window.print();
+    })
+
+    $('.js-tool-grid .js-tool-card').click(function(event) {
+      event.stopPropagation();
+      var step = $(this).attr('data-linked-step');
+      var sub_step = $(this).attr('data-linked-sub-step');
+      var view = step + "." + sub_step;
+
+      if($(this).hasClass('is-disabled')) {
+        $(this).removeClass('is-disabled');
+        addToPrintable(view);
+      } else {
+        $(this).addClass('is-disabled');
+        removeFromPrintable(view);
+      }
+    });
+
     $(window).on('resize', function() {
       updateMainHeight();
       updateProgress();
     });
+
+  }
