@@ -26,6 +26,10 @@
   font-weight: bold;
   color: $color-white;
   margin-bottom: 0;
+
+  @media print {
+    color: $color-gray;
+  }
 }
 
 .c-summary-block__description {
