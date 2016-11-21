@@ -50,14 +50,29 @@
   function updateMainHeight() {
     // Update main height, and give spacing for the box shadow not to be cropped out
     // Not cheap to animate. Experimental
-    main.velocity({ height: 48 + $('.js-tool-view.is-active').outerHeight()});
-    //main.css('height', 48 + + $('.js-tool-view.is-active').outerHeight());
+    main.velocity({ height: 64 + $('.js-tool-view.is-active').outerHeight()});
+    //main.css('height', 64 + + $('.js-tool-view.is-active').outerHeight());
   }
 
   function updateView() {
     var data = active_view.split('.');
+    var last_step = $('.js-tool-nav-item').last().attr('data-linked-step');
     var step = data[0];
     var sub_step = data[1];
+
+    // Hide the back button if it's the first view
+    if(step == 0 && sub_step == 0) {
+      $('.js-tool-back').removeClass('is-active');
+    } else {
+      $('.js-tool-back').addClass('is-active');
+    }
+
+    // Enable / Disable print MVP button on last step
+    if(step == last_step) {
+      $('.js-tool-print-mvp').addClass('is-active');
+    } else {
+      $('.js-tool-print-mvp').removeClass('is-active');
+    }
 
     // Update theme according to step
     if (body.hasClass(active_theme)) {
@@ -69,15 +84,6 @@
 
     // Update the progress bar
     updateProgress();
-
-
-    // Hide the back button if it's the first view
-
-    if(step == 0 && sub_step == 0) {
-      $('.js-tool-back').addClass('is-disabled');
-    } else {
-      $('.js-tool-back').removeClass('is-disabled')
-    }
 
     // Remove old view, get the new one in
     transitionOut($('.js-tool-view.is-active'));
@@ -250,12 +256,14 @@
     }
   }
 
+  // Update score
+  // 1. Make it so that it never comes round to 100s, which would show an empty chart
   function updateScore() {
     var max = $('.js-tool-question-card').length;
     var no = $(print_array).size();
     var yes = max - no;
-    var percentage = yes * 100 / max;
-    $('.js-tool-score').html(percentage + "%");
+    var percentage = (yes * 100 / max) - 0.001; // [1]
+    $('.js-tool-score').css("animation-delay", "-" + percentage + "s");
   }
 
   function updateGrid() {
@@ -269,6 +277,7 @@
       $('.js-tool-grid .js-tool-card[data-linked-step="' + step + '"][data-linked-sub-step="' + sub_step + '"]').removeClass('is-disabled');
     }
   }
+
 
 // Mother function. Initializes everything else
   window.onload = function() {
