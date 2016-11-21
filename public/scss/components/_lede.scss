@@ -1,0 +1,35 @@
+// LEDE
+
+.c-lede {
+  @include wcss-font-size(delta);
+  font-family: $font-serif;
+  color: $color-light-gray;
+  display: inline-block;
+
+  &:after {
+    content: '';
+    width: 80px;
+    height: 1px;
+    background: currentColor; // [1]
+    opacity: 0.5; // [2]
+    margin: $wcss-spacing-unit 0;
+    display: block;
+    position: relative;
+    clear: both;
+  }
+
+  @media print {
+    font-size: 14px;
+    line-height: 1.2;
+    margin: 0 0 $wcss-spacing-unit-small 0;
+  }
+}
+
+.c-lede--center {
+  text-align: center;
+
+  &:after {
+    margin: $wcss-spacing-unit auto;
+  }
+}
+
