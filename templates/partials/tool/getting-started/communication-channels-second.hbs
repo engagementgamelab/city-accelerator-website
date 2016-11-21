@@ -1,25 +1,23 @@
 {{>
-  components/tool/card
-    cover="http://placehold.it/500x500"
+  components/tool/card-question
+    cover="/images/map-light-blue.jpg"
+    icon="/images/icon-missed-call.svg"
     title="Communication Channels, Pt. II"
     text="Do you understand why some people might not be communicating with each other about civic issues?"
     helper="Where do social divisions exist? Why are some people talking on Facebook and others not? Why do some attend town hall meetings while others don’t?"
-    yesno=true
-    mini=false
 }}
 <div class="s-tool__view__mini js-tool-view-mini">
   {{> 
-    components/tool/card
-      icon="http://placehold.it/50x50"
+    components/tool/card-mini
+      icon="/images/icon-missed-call.svg"
       title="Communication Channels, Pt. II"
       text="Do you understand why some people might not be communicating with each other about civic issues?"
-      mini=true
   }}
 </div>
 <div class="s-tool__view__contents js-tool-view-contents">
   {{>
     components/tool/modal
-      cover="http://placehold.it/500x500"
+      cover="/images/map-light-blue.jpg"
       title="Communication Channels, Pt. II"
       current_phase="Getting Started"
       activity_length="20 minutes"

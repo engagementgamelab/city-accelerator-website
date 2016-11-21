@@ -1,25 +1,23 @@
 {{>
-  components/tool/card
-    cover="http://placehold.it/500x500"
+  components/tool/card-question
+    cover="/images/map-light-blue.jpg"
+    icon="/images/icon-report-card.svg"
     title="Priorities"
     text="Can you list the top 3 reasons you are doing this work?"
     helper="For example, are you primarily concerned with racial equity, the digital divide, reaching seniors and/or youth? Does your team share these values?"
-    yesno=true
-    mini=false
 }}
 <div class="s-tool__view__mini js-tool-view-mini">
   {{> 
-    components/tool/card
-      icon="http://placehold.it/50x50"
+    components/tool/card-mini
+      icon="/images/icon-report-card.svg"
       title="Priorities"
       text="Can you list the top 3 reasons you are doing this work?"
-      mini=true
   }}
 </div>
 <div class="s-tool__view__contents js-tool-view-contents">
   {{>
     components/tool/modal
-      cover="http://placehold.it/500x500"
+      cover="/images/map-light-blue.jpg"
       title="Priorities"
       current_phase="Getting Started"
       activity_length="20 minutes"
