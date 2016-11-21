@@ -51,6 +51,7 @@ $card-mini-max-width: 300px;
 
 // 1. Position cover image
 // 2. Make cover image fill the entire space
+// 3. Prevent images from stretching too much
 
 .c-card__cover__img {
   position: absolute; // [1]
@@ -60,6 +61,7 @@ $card-mini-max-width: 300px;
   max-width: none; // [2]
   min-height: 100%; // [2]
   min-width: 100%; // [2]
+  max-width: 250%; // [3]
 }
 
 // Inner
