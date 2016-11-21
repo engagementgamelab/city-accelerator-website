@@ -30,7 +30,11 @@
   //box-shadow: inset 0 1px 2px $color-black;
 
   .t-blue & {
-    background: map-get($theme-blue, primary);
+    background: map-get($theme-blue, quaternary);
+  }
+
+  .t-light-blue & {
+    background: map-get($theme-light-blue, primary);
   }
 
   .t-purple & {
@@ -48,6 +52,26 @@
 
 .c-steps__progress-complete {
   background: rgba(0, 0, 0, 0.5);
+
+  .t-blue & {
+    background: map-get($theme-blue, primary);
+  }
+
+  .t-light-blue & {
+    background: map-get($theme-light-blue, tertiary);
+  }
+
+  .t-purple & {
+    background: map-get($theme-purple, tertiary);
+  }
+
+  .t-green & {
+    background: map-get($theme-green, tertiary);
+  }
+
+  .t-neutral & {
+    background: map-get($theme-neutral, tertiary);
+  }
 }
 
 .c-steps__item {
@@ -69,14 +93,19 @@
 .c-steps__point {
   width: 16px;
   height: 16px;
-  background: $color-black;
+  //background: $color-black;
   display: inline-block;
   transform: rotate(45deg);
   border-radius: $wcss-base-radius;
+  //transition: $wcss-base-transition;
   //box-shadow: inset 0 1px 2px $color-black;
 
   .t-blue & {
-    background: map-get($theme-blue, primary);
+    background: map-get($theme-blue, quaternary);
+  }
+
+  .t-light-blue & {
+    background: map-get($theme-light-blue, primary);
   }
 
   .t-purple & {
@@ -92,32 +121,7 @@
   }
 }
 
-// Item Active State
-
-.c-steps__item.is-active {
-
-  > .c-steps__point {
-    background: $color-white;
-
-    // [1] Border is positioned 2px to the outside, 2px to the inside
-    .t-blue & {
-      border: 2px solid map-get($theme-blue, tertiary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-blue, tertiary); // [1]
-    }
-    .t-purple & {
-      border: 2px solid map-get($theme-purple, primary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-purple, primary); // [1]
-    }
-    .t-green & {
-      border: 2px solid map-get($theme-green, primary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-green, primary); // [1]
-    }
-    .t-neutral & {
-      border: 2px solid map-get($theme-neutral, tertiary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-neutral, tertiary); // [1]
-    }
-  }
-}
+// Step title 
 
 .c-steps__title {
   @include wcss-font-size(eta);
@@ -129,22 +133,27 @@
   display: none;
 
   .t-blue & {
-    color: rgba(map-get($theme-blue, primary), 0.5);
-    //text-shadow: 0px 1px 1px map-get($theme-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-blue, secondary);
+    color: rgba(map-get($theme-blue, quaternary), 1);
+    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
+  }
+
+  .t-light-blue & {
+    color: rgba(map-get($theme-light-blue, primary), 1);
+    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
   }
 
   .t-purple & {
-    color: rgba(map-get($theme-purple, primary), 0.5);
+    color: rgba(map-get($theme-purple, primary), 1);
     //text-shadow: 0px 1px 1px map-get($theme-purple, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-purple, secondary);
   }
 
   .t-neutral & {
-    color: rgba(map-get($theme-neutral, primary), 0.5);
+    color: rgba(map-get($theme-neutral, primary), 1);
     //text-shadow: 0px 1px 1px map-get($theme-neutral, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-neutral, secondary);
   }
 
   .t-green & {
-    color: rgba(map-get($theme-green, primary), 0.5);
+    color: darken(map-get($theme-green, primary), 5%);
     //text-shadow: 0px 1px 1px map-get($theme-green, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-green, secondary);
   }
 
@@ -153,10 +162,119 @@
   }
 }
 
-.c-steps__item.is-active > .c-steps__title {
-  color: $color-black;
 
-  .t-blue & {
-    color: map-get($theme-blue, tertiary);
+
+
+
+
+// Item Active State
+
+.c-steps__item.is-active {
+
+  > .c-steps__point {
+    background: $color-white;
+
+    // [1] Border is positioned 2px to the outside, 2px to the inside
+    .t-blue & {
+      border: 2px solid map-get($theme-blue, primary); // [1]
+      box-shadow: 0 0 0 2px map-get($theme-blue, primary); // [1]
+    }
+
+    .t-light-blue & {
+      border: 2px solid map-get($theme-light-blue, tertiary); // [1]
+      box-shadow: 0 0 0 2px map-get($theme-light-blue, tertiary); // [1]
+    }
+    .t-purple & {
+      border: 2px solid map-get($theme-purple, tertiary); // [1]
+      box-shadow: 0 0 0 2px map-get($theme-purple, tertiary); // [1]
+    }
+    .t-green & {
+      border: 2px solid map-get($theme-green, tertiary); // [1]
+      box-shadow: 0 0 0 2px map-get($theme-green, tertiary); // [1]
+    }
+    .t-neutral & {
+      border: 2px solid map-get($theme-neutral, tertiary); // [1]
+      box-shadow: 0 0 0 2px map-get($theme-neutral, tertiary); // [1]
+    }
   }
+
+  > .c-steps__title {
+
+    .t-blue & {
+      color: map-get($theme-blue, primary);
+    }
+
+    .t-purple & {
+      color: map-get($theme-purple, tertiary);
+    }
+
+    .t-light-blue & {
+      color: map-get($theme-light-blue, tertiary);
+    }
+
+    .t-green & {
+      color: map-get($theme-green, tertiary);
+    }
+
+    .t-neutral & {
+      color: map-get($theme-neutral, tertiary);
+    }
+  }
+}
+
+
+
+
+
+
+// Item Past State
+
+.c-steps__item.is-past {
+
+  > .c-steps__point {
+
+    .t-blue & {
+      background: map-get($theme-blue, primary);
+    }
+
+    .t-light-blue & {
+      background: map-get($theme-light-blue, tertiary);
+    }
+
+    .t-purple & {
+      background: map-get($theme-purple, tertiary);
+    }
+
+    .t-green & {
+      background: map-get($theme-green, tertiary); 
+    }
+
+    .t-neutral & {
+      background: map-get($theme-neutral, tertiary); 
+    }
+  }
+
+  > .c-steps__title {
+
+    .t-blue & {
+      color: map-get($theme-blue, primary);
+    }
+
+    .t-light-blue & {
+      color: map-get($theme-light-blue, tertiary);
+    }
+
+    .t-purple & {
+      color: map-get($theme-purple, tertiary);
+    }
+
+    .t-green & {
+      color: map-get($theme-green, tertiary);
+    }
+
+    .t-neutral & {
+      color: map-get($theme-neutral, tertiary);
+    }
+  }
+
 }
