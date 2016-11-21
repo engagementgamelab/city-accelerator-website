@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="43px" height="31px" viewBox="0 0 43 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Missed Call</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="29---MVP" transform="translate(-978.000000, -585.000000)">
+            <g id="Getting-Started" transform="translate(0.000000, 178.000000)">
+                <g id="Row-of-Cards" transform="translate(364.000000, 35.000000)">
+                    <g id="Card" transform="translate(528.000000, 340.000000)">
+                        <g id="Radar" filter="url(#filter-1)" transform="translate(62.000000, 0.000000)">
+                            <g id="Missed-Call" transform="translate(26.000000, 33.000000)">
+                                <g id="Group">
+                                    <g transform="translate(8.863636, 0.000000)" id="Shape" fill="#F44336">
+                                        <polygon points="16.2204545 2.57045455 10.6363636 8.15454545 3.27954545 0.797727273 0.797727273 3.27954545 10.6363636 13.1181818 18.7022727 5.05227273"></polygon>
+                                        <polygon points="21.2727273 7.97727273 13.2954545 0 21.2727273 0"></polygon>
+                                    </g>
+                                    <path d="M37.6704545,18.4363636 L35.5431818,16.3090909 C28.0090909,8.95227273 9.92727273,10.0159091 3.45681818,16.3090909 L1.32954545,18.4363636 C0.709090909,19.0568182 0.709090909,19.9431818 1.32954545,20.5636364 L5.58409091,24.7295455 C6.20454545,25.35 7.09090909,25.35 7.71136364,24.7295455 L12.4090909,20.2090909 L12.0545455,15.2454545 C13.5613636,13.7386364 25.4386364,13.7386364 26.9454545,15.2454545 L26.6795455,20.3863636 L31.2,24.7295455 C31.8204545,25.35 32.7068182,25.35 33.3272727,24.7295455 L37.5818182,20.5636364 C38.2909091,19.9431818 38.2909091,18.9681818 37.6704545,18.4363636 L37.6704545,18.4363636 Z" id="Shape" fill="#FFFCD1"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="46px" viewBox="0 0 48 46" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Mailbox With Letter</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="29---MVP" transform="translate(-710.000000, -578.000000)">
+            <g id="Getting-Started" transform="translate(0.000000, 178.000000)">
+                <g id="Row-of-Cards" transform="translate(364.000000, 35.000000)">
+                    <g id="Card" transform="translate(264.000000, 340.000000)">
+                        <g id="Radar" filter="url(#filter-1)" transform="translate(62.000000, 0.000000)">
+                            <g id="Mailbox-With-Letter" transform="translate(23.000000, 26.000000)">
+                                <g id="Group">
+                                    <g transform="translate(0.000000, 6.000000)" id="Shape" fill="#2196F3">
+                                        <path d="M42,24 L42,8 C42,3.582 38.418,0 34,0 L13,0 C8.582,0 5,3.582 5,8 L5,24 L42,24 L42,24 Z"></path>
+                                        <path d="M8,23 C8,23.552 7.552,24 7,24 L1,24 C0.448,24 0,23.552 0,23 L0,23 C0,22.448 0.448,22 1,22 L7,22 C7.552,22 8,22.448 8,23 L8,23 L8,23 Z"></path>
+                                    </g>
+                                    <path d="M13,8 C9.691,8 7,10.691 7,14 L7,28 L19,28 L19,14 C19,10.691 16.309,8 13,8 L13,8 Z" id="Shape" fill="#0D47A1"></path>
+                                    <g transform="translate(24.000000, 0.000000)" fill="#FF3D00">
+                                        <rect id="Rectangle-path" x="1" y="0" width="6" height="4"></rect>
+                                        <rect id="Rectangle-path" x="1" y="2" width="2" height="11"></rect>
+                                        <circle id="Oval" cx="2" cy="14" r="2"></circle>
+                                    </g>
+                                    <circle id="Oval" fill="#DD2C00" cx="26" cy="14" r="1"></circle>
+                                    <rect id="Rectangle-path" fill="#FFCC80" x="22" y="30" width="5" height="10"></rect>
+                                    <rect id="Rectangle-path" fill="#FFA726" x="22" y="30" width="5" height="2"></rect>
+                                    <path d="M10,17 L10,26 C10,27.025 10.975,28 12,28 L19,28 L19,15 L12,15 C10.975,15 10,15.975 10,17 L10,17 Z" id="Shape" fill="#CFD8DC"></path>
+                                    <path d="M10,17 L10,18 L19,25 L19,23 L10.218,16.169 C10.083,16.43 10,16.711 10,17 L10,17 Z" id="Shape" fill="#78909C"></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

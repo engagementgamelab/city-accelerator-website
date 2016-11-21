@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Workstation</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="29---MVP" transform="translate(-1241.000000, -988.000000)">
+            <g id="Project-Planning" transform="translate(0.000000, 928.000000)">
+                <g id="Card" transform="translate(1156.000000, 35.000000)">
+                    <g id="Radar" filter="url(#filter-1)" transform="translate(62.000000, 0.000000)">
+                        <g id="Workstation" transform="translate(26.000000, 26.000000)">
+                            <g id="Group">
+                                <rect id="Rectangle-path" fill="#546E7A" x="3.9" y="5.85" width="35.1" height="25.35"></rect>
+                                <rect id="Rectangle-path" fill="#BBDEFB" x="5.85" y="7.8" width="31.2" height="20.475"></rect>
+                                <g transform="translate(10.725000, 31.200000)" fill="#455A64">
+                                    <rect id="Rectangle-path" x="7.8" y="0" width="5.85" height="2.925"></rect>
+                                    <path d="M19.5,2.925 L1.95,2.925 C0,2.925 0,4.875 0,4.875 L0,5.85 L21.45,5.85 L21.45,4.875 C21.45,4.875 21.45,2.925 19.5,2.925 L19.5,2.925 Z" id="Shape"></path>
+                                </g>
+                                <rect id="Rectangle-path" fill="#3F51B5" x="0" y="0" width="17.55" height="39"></rect>
+                                <g transform="translate(1.950000, 1.950000)" id="Rectangle-path" fill="#9FA8DA">
+                                    <rect x="0" y="0" width="13.65" height="3.9"></rect>
+                                    <rect x="0" y="5.85" width="13.65" height="1.95"></rect>
+                                    <rect x="0" y="9.75" width="13.65" height="1.95"></rect>
+                                    <rect x="0" y="13.65" width="13.65" height="1.95"></rect>
+                                    <rect x="0" y="17.55" width="13.65" height="1.95"></rect>
+                                </g>
+                                <ellipse id="Oval" fill="#CDDC39" cx="8.775" cy="33.15" rx="1.95" ry="1.95"></ellipse>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="41px" height="45px" viewBox="0 0 41 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Report Card</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="29---MVP" transform="translate(-1243.000000, -238.000000)">
+            <g id="Getting-Started" transform="translate(0.000000, 178.000000)">
+                <g id="Row-of-Cards" transform="translate(364.000000, 35.000000)">
+                    <g id="Card" transform="translate(792.000000, 0.000000)">
+                        <g id="Radar" filter="url(#filter-1)" transform="translate(62.000000, 0.000000)">
+                            <g id="Report-Card" transform="translate(28.000000, 26.000000)">
+                                <g id="Group">
+                                    <rect id="Rectangle-path" fill="#E8EAF6" x="0" y="0" width="35" height="38.8888889"></rect>
+                                    <g transform="translate(3.888889, 9.722222)" id="Rectangle-path" fill="#3F51B5">
+                                        <rect x="0" y="0" width="15.5555556" height="1.94444444"></rect>
+                                        <rect x="0" y="10.6944444" width="15.5555556" height="1.94444444"></rect>
+                                        <rect x="0" y="21.3888889" width="15.5555556" height="1.94444444"></rect>
+                                    </g>
+                                    <g id="Rectangle-path" fill="#9FA8DA">
+                                        <rect x="0" y="4.86111111" width="1.94444444" height="33.0555556"></rect>
+                                        <rect x="21.3888889" y="5.83333333" width="0.972222222" height="31.1111111"></rect>
+                                        <rect x="33.0555556" y="4.86111111" width="1.94444444" height="33.0555556"></rect>
+                                        <rect x="0.972222222" y="26.25" width="33.0555556" height="0.972222222"></rect>
+                                        <rect x="0" y="36.9444444" width="35" height="1.94444444"></rect>
+                                        <rect x="0.972222222" y="15.5555556" width="33.0555556" height="0.972222222"></rect>
+                                        <rect x="0" y="0" width="35" height="5.83333333"></rect>
+                                    </g>
+                                    <g transform="translate(24.305556, 7.777778)" id="Rectangle-path" fill="#F50057">
+                                        <rect transform="translate(2.348358, 3.484084) rotate(45.008103) translate(-2.348358, -3.484084) " x="-0.000994728991" y="2.51187143" width="4.69870499" height="1.94442582"></rect>
+                                        <rect transform="translate(4.697964, 3.085094) rotate(134.991897) translate(-4.697964, -3.085094) " x="1.78132494" y="2.11239533" width="5.83327745" height="1.94539803"></rect>
+                                        <rect transform="translate(2.348455, 14.178432) rotate(45.008103) translate(-2.348455, -14.178432) " x="-0.000897506769" y="13.2062186" width="4.69870499" height="1.94442582"></rect>
+                                        <rect transform="translate(4.697866, 13.779830) rotate(134.991897) translate(-4.697866, -13.779830) " x="1.78122772" y="12.8071314" width="5.83327745" height="1.94539803"></rect>
+                                        <rect transform="translate(2.348455, 24.872876) rotate(45.008103) translate(-2.348455, -24.872876) " x="-0.000897506769" y="23.9006631" width="4.69870499" height="1.94442582"></rect>
+                                        <rect transform="translate(4.697769, 24.474567) rotate(134.991897) translate(-4.697769, -24.474567) " x="1.7811305" y="23.5018676" width="5.83327745" height="1.94539803"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

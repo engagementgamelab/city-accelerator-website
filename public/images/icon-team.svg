@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="43px" viewBox="0 0 45 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Teams</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="29---MVP" transform="translate(-713.000000, -239.000000)">
+            <g id="Getting-Started" transform="translate(0.000000, 178.000000)">
+                <g id="Row-of-Cards" transform="translate(364.000000, 35.000000)">
+                    <g id="Card" transform="translate(264.000000, 0.000000)">
+                        <g id="Radar" filter="url(#filter-1)" transform="translate(62.000000, 0.000000)">
+                            <g id="Teams" transform="translate(26.000000, 27.000000)">
+                                <g id="Group">
+                                    <path d="M36.702,11.357 C36.143,10.976 30.454,7.002 30.454,7.002 C30.454,7.002 29.067,10.799 24.748,9.906 C20.43,9.011 20.661,4.976 20.661,4.976 C20.661,4.976 13.863,6.371 13.199,6.497 C11.38,6.908 7.662,13.519 7.662,13.519 L12.255,16.003 L13.989,13.589 L9.941,33.175 L29,37 L33.326,17.807 L34,20 L39,20 C39,20 38.209,12.455 36.702,11.357 L36.702,11.357 Z" id="Shape" fill="#398E5F"></path>
+                                    <path d="M10.274,12.789 C10.563,12.265 10.896,11.676 11.261,11.074 L16.069,13.331 L15.083,15.031 L10.274,12.789 L10.274,12.789 Z" id="Shape" fill="#004D40"></path>
+                                    <path d="M10.99,0 C10.99,0 13.351,1 16,1 C18.649,1 21,0 21,0 L22,5 L10,5 L10.99,0 L10.99,0 Z" id="Shape" fill="#398E5F"></path>
+                                    <path d="M28,3.002 C27.375,2.742 21,0 21,0 C21,0 20.41,4 16,4 C11.59,4 11,0 11,0 C11,0 4.625,2.742 4,3 C2.302,3.769 0,11 0,11 L5,12.5 L6,10 L6,30 L26,30 L26,10 L27,12.502 L32,11 C32,11 29.698,3.771 28,3.002 L28,3.002 Z" id="Shape" fill="#5EC08F"></path>
+                                    <path d="M31.341,9.102 C31.135,8.541 30.894,7.909 30.624,7.258 L25.531,8.766 L26.25,10.594 L31.341,9.102 L31.341,9.102 Z" id="Shape" fill="#D4FFE7"></path>
+                                    <path d="M0.655,9.102 C0.861,8.539 1.102,7.907 1.372,7.258 L6.465,8.766 L5.746,10.594 L0.655,9.102 L0.655,9.102 Z" id="Shape" fill="#D4FFE7"></path>
+                                    <path d="M14.647,14.469 L15.849,14.469 C16.801,14.469 17.278,14.016 17.278,13.11 C17.278,12.756 17.164,12.469 16.937,12.247 C16.709,12.024 16.389,11.911 15.977,11.911 C15.639,11.911 15.345,12.009 15.096,12.198 C14.846,12.389 14.721,12.628 14.721,12.911 L12.174,12.911 C12.174,12.348 12.335,11.845 12.657,11.405 C12.979,10.964 13.428,10.62 13.999,10.372 C14.572,10.125 15.2,10 15.888,10 C17.112,10 18.075,10.273 18.775,10.816 C19.475,11.359 19.826,12.107 19.826,13.056 C19.826,13.519 19.682,13.952 19.391,14.361 C19.101,14.769 18.679,15.101 18.125,15.357 C18.709,15.562 19.167,15.874 19.5,16.292 C19.832,16.712 20,17.23 20,17.847 C20,18.804 19.621,19.566 18.864,20.14 C18.109,20.715 17.116,21 15.888,21 C15.165,21 14.497,20.867 13.879,20.6 C13.262,20.332 12.795,19.963 12.478,19.491 C12.16,19.018 12,18.48 12,17.877 L14.563,17.877 C14.563,18.206 14.7,18.49 14.971,18.73 C15.243,18.968 15.578,19.089 15.977,19.089 C16.424,19.089 16.783,18.968 17.049,18.726 C17.317,18.484 17.451,18.173 17.451,17.796 C17.451,17.257 17.311,16.874 17.035,16.65 C16.757,16.425 16.374,16.312 15.887,16.312 L14.647,16.312 L14.647,14.469 L14.647,14.469 Z" id="Shape" fill="#236640"></path>
+                                    <rect id="Rectangle-path" fill="#D4FFE7" x="6" y="26" width="20" height="2"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

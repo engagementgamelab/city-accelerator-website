@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="42px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Blueprint</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-1">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="1.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.25 0" type="matrix" in="shadowBlurOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+            <feMerge>
+                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+            </feMerge>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="29---MVP" transform="translate(-974.000000, -1743.000000)">
+            <g id="Implementation" transform="translate(0.000000, 1343.000000)">
+                <g id="Row-of-Cards" transform="translate(359.000000, 33.000000)">
+                    <g id="Card" transform="translate(528.000000, 340.000000)">
+                        <g id="Radar" filter="url(#filter-1)" transform="translate(62.000000, 0.000000)">
+                            <g id="Blueprint" transform="translate(28.000000, 28.000000)">
+                                <g id="Layer_1">
+                                    <rect id="Rectangle-path" fill="#1976D2" x="0" y="0" width="29" height="33"></rect>
+                                    <g id="Group" transform="translate(1.000000, 1.000000)" fill="#42A5F5">
+                                        <rect id="Rectangle-path" x="3" y="0" width="1" height="31"></rect>
+                                        <rect id="Rectangle-path" x="7" y="0" width="1" height="31"></rect>
+                                        <rect id="Rectangle-path" x="11" y="0" width="1" height="31"></rect>
+                                        <rect id="Rectangle-path" x="15" y="0" width="1" height="31"></rect>
+                                        <rect id="Rectangle-path" x="19" y="0" width="1" height="31"></rect>
+                                        <rect id="Rectangle-path" x="23" y="0" width="1" height="31"></rect>
+                                        <rect id="Rectangle-path" x="0" y="3" width="27" height="1"></rect>
+                                        <rect id="Rectangle-path" x="0" y="7" width="27" height="1"></rect>
+                                        <rect id="Rectangle-path" x="0" y="11" width="27" height="1"></rect>
+                                        <rect id="Rectangle-path" x="0" y="15" width="27" height="1"></rect>
+                                        <rect id="Rectangle-path" x="0" y="19" width="27" height="1"></rect>
+                                        <rect id="Rectangle-path" x="0" y="23" width="27" height="1"></rect>
+                                        <rect id="Rectangle-path" x="0" y="27" width="27" height="1"></rect>
+                                    </g>
+                                    <g id="Group" transform="translate(7.000000, 8.000000)" fill="#1565C0">
+                                        <polygon id="Shape" points="22 25 22 0.172 21.586 0.586 0.172 22 3.172 25"></polygon>
+                                        <polygon id="Shape" points="22 25 22 15 12 25 14.828 25"></polygon>
+                                    </g>
+                                    <rect id="Rectangle-path" fill="#FFA000" transform="translate(22.999246, 22.999646) rotate(-45.000000) translate(-22.999246, -22.999646) " x="8.85738207" y="18.7571871" width="28.2837288" height="8.48491863"></rect>
+                                    <g id="Group" transform="translate(12.000000, 11.000000)" fill="#9E6400">
+                                        <rect id="Rectangle-path" transform="translate(16.406454, 2.405919) rotate(45.000000) translate(-16.406454, -2.405919) " x="15.1249658" y="1.40592834" width="2.56297542" height="1.99998082"></rect>
+                                        <rect id="Rectangle-path" transform="translate(13.656631, 6.655846) rotate(135.000000) translate(-13.656631, -6.655846) " x="12.6566408" y="4.31336891" width="1.99998082" height="4.68495507"></rect>
+                                        <rect id="Rectangle-path" transform="translate(6.656631, 13.655946) rotate(135.000000) translate(-6.656631, -13.655946) " x="5.65664084" y="11.3134689" width="1.99998082" height="4.68495507"></rect>
+                                        <rect id="Rectangle-path" transform="translate(2.406581, 16.405946) rotate(135.000000) translate(-2.406581, -16.405946) " x="1.40659084" y="15.1244587" width="1.99998082" height="2.56297542"></rect>
+                                        <rect id="Rectangle-path" transform="translate(9.406681, 9.405846) rotate(135.000000) translate(-9.406681, -9.405846) " x="8.40669084" y="8.12435874" width="1.99998082" height="2.56297542"></rect>
+                                    </g>
+                                    <g id="Group" transform="translate(8.000000, 12.000000)" fill="#1976D2">
+                                        <polygon id="Shape" points="0.586 16.586 0 17.172 0 18.828 0.586 19.414 1 19.828 1 17 3 17 4 16 1.172 16"></polygon>
+                                        <polygon id="Shape" points="12 20 13 20 13 19"></polygon>
+                                        <polygon id="Shape" points="20 13 20 12 19 13"></polygon>
+                                        <polygon id="Shape" points="17 20 17 17 20 17 20 16 17 16 17 15 15 17 16 17 16 20"></polygon>
+                                        <polygon id="Shape" points="4 13.172 4 16 5 15 5 13 7 13 8 12 5.172 12"></polygon>
+                                        <polygon id="Shape" points="12 5.172 12 8 13 7 13 5 15 5 16 4 13.172 4"></polygon>
+                                        <polygon id="Shape" points="8 9.172 8 12 9 11 9 9 11 9 12 8 9.172 8"></polygon>
+                                        <polygon id="Shape" points="16 1.172 16 4 17 3 17 1 19 1 20 0 17.172 0"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
