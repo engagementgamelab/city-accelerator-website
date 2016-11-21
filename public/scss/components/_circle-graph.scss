@@ -1,0 +1,61 @@
+// CIRCLE GRAPH
+// Based on https://www.smashingmagazine.com/2015/07/designing-simple-pie-charts-with-css/
+
+.c-circle-graph {
+  display: inline-block;
+  position: relative;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: map-get($theme-blue, tertiary);
+  background-image: linear-gradient(to right, transparent 50%, $color-blue 0);
+  color: transparent;
+  text-align: center;
+  background-clip: padding-box;
+}
+
+@keyframes spin {
+  to { transform: rotate(.5turn); }
+}
+@keyframes bg {
+  50% { background: $color-blue; }
+}
+
+.c-circle-graph::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  border-radius: 0 100% 100% 0 / 50%;
+  background-color: inherit;
+  transform-origin: left;
+  animation: spin 50s linear infinite,
+             bg 100s step-end infinite;
+  animation-play-state: paused;
+  animation-delay: inherit;
+  background-clip: padding-box;
+}
+
+.c-circle-graph__content {
+  background: $color-white;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 230px;
+  height: 230px;
+  line-height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.c-circle-graph__title {
+  @include wcss-font-size(gamma);
+  font-family: $font-serif;
+  color: $color-blue;
+  margin: auto;
+}
