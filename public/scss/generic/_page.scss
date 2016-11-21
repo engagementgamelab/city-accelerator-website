@@ -2,8 +2,11 @@
 
 // Page-level declarations
 
+// [1] Better font rendering for OSX
 html {
   font-size: 85%;
+  -webkit-font-smoothing: antialiased; // [1]
+  -moz-osx-font-smoothing: grayscale; // [1]
 
   @include wcss-media(medium) {
     font-size: 100%;
@@ -12,5 +15,6 @@ html {
 
 body {
   @include wcss-rem(font-size, $wcss-base-font-size);
+  font-family: $wcss-base-font-family;
   line-height: $wcss-base-line-height;
 }
