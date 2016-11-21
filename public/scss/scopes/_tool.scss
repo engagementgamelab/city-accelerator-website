@@ -23,9 +23,15 @@
   }
 
   // Background themes
+
   &.t-blue,
   .t-blue & {
-    background: map-get($theme-blue, secondary);
+    background: map-get($theme-blue, tertiary);
+  }
+
+  &.t-light-blue,
+  .t-light-blue & {
+    background: map-get($theme-light-blue, secondary);
   }
 
   &.t-purple,
@@ -65,7 +71,7 @@
 
   &__text {
     @include wcss-font-size(beta);
-    color: map-get($theme-blue, tertiary);
+    color: map-get($theme-light-blue, tertiary);
   }
 
   &__spinner > svg {
@@ -81,6 +87,7 @@
   position: relative;
   //max-width: 80%;
   margin: $wcss-spacing-unit auto;
+  overflow: hidden;
 }
 
 // Back button
@@ -88,7 +95,7 @@
 .s-tool__prev {
   @include wcss-font-size(eta);
   position: fixed;
-  left: 10px;
+  left: $wcss-spacing-unit-tiny;
   top: 50vh;
   transform: translateY(-50%);
   transition: opacity 0.2s;
@@ -142,12 +149,26 @@
 
 // Grid
 
+.s-tool__grid__action {
+  position: fixed;
+  bottom: $wcss-spacing-unit-tiny;
+  left: $wcss-spacing-unit-tiny;
+}
+
 .s-tool__grid__block {
 
   padding: $wcss-spacing-unit-large $wcss-spacing-unit;
 
+  @include wcss-media(large) {
+    padding: $wcss-spacing-unit-large;    
+  }
+
   &.t-blue {
-    background: map-get($theme-blue, secondary);
+    background: map-get($theme-blue, tertiary);
+  }
+
+  &.t-light-blue {
+    background: map-get($theme-light-blue, secondary);
   }
 
   &.t-green {
@@ -168,31 +189,36 @@
   font-family: $font-serif;
   text-align: center;
   font-weight: normal;
+  transition: color 0.2s;
 
   @include wcss-media(large) {
     text-align: left;
   }
 
   .t-blue & {
-    color: map-get($theme-blue, tertiary);
+    color: map-get($theme-blue, primary);
+  }
+
+  .t-light-blue & {
+    color: map-get($theme-light-blue, tertiary);
   }
 
   .t-green & {
-    color: map-get($theme-green, primary);
+    color: map-get($theme-green, tertiary);
   }
 
   .t-purple & {
-    color: map-get($theme-purple, primary);
+    color: map-get($theme-purple, tertiary);
   }
 
   .t-neutral & {
-    color: map-get($theme-neutral, primary);
+    color: map-get($theme-neutral, tertiary);
   }
 }
 
-// Printable area
+// Printable MVP area. Modals are printed inside their own divs.
 
-.s-tool__print {
+.s-tool__mvp {
   display: none;
 }
 
@@ -215,12 +241,32 @@
     display: none !important;
   }
 
+  // We employ the .js-tool-printable class to tell JS
+  // which div we want to print. We move that class around between
+  // modals and the MVP area.
+  // 
+  // 1. Override the current theme's background 
+
   .s-tool,
   .js-tool-printable {
+    background: white !important; // [1]
     display: block !important;
   }
 
-  .s-tool__screen {
+  .s-tool__nav,
+  .s-tool__grid,
+  .s-tool__main {
     display: none !important;
+  }
+
+  // Create a page break after each block
+  .s-tool__mvp__block {
+    page-break-after: always;
+  }
+
+  // Remove page title & number in Chrome
+  @page {
+    size: auto;
+    margin: 0mm;
   }
 }
