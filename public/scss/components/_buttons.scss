@@ -42,12 +42,22 @@
 
   .t-blue & {
     background: map-get($theme-blue, primary);
-    //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px map-get($theme-blue, primary);
 
     &:hover,
     &:focus {
       background: darken(map-get($theme-blue, primary), 5%);
-      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-blue, primary), 5%);
+      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, primary), 5%);
+    }
+  }
+
+  .t-light-blue & {
+    background: map-get($theme-light-blue, primary);
+    //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, primary);
+
+    &:hover,
+    &:focus {
+      background: darken(map-get($theme-light-blue, primary), 5%);
+      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, primary), 5%);
     }
   }
 
@@ -93,17 +103,30 @@
 // SECONDARY BUTTONS + THEMES
 
 .c-btn--secondary {
-  
+
   .t-blue & {
     background: map-get($theme-blue, secondary);
     color: map-get($theme-blue, primary);
-    //color: rgba(map-get($theme-blue, primary), 0.5);
-    //text-shadow: 0px 1px 1px map-get($theme-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-blue, secondary);
+    //color: rgba(map-get($theme-light-blue, primary), 0.5);
+    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
 
     &:hover,
     &:focus {
       background: darken(map-get($theme-blue, secondary), 5%);
-      //text-shadow: 0px 1px 1px darken(map-get($theme-blue, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-blue, secondary), 5%);
+      //text-shadow: 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%);
+    }
+  }
+  
+  .t-light-blue & {
+    background: map-get($theme-light-blue, secondary);
+    color: map-get($theme-light-blue, primary);
+    //color: rgba(map-get($theme-light-blue, primary), 0.5);
+    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
+
+    &:hover,
+    &:focus {
+      background: darken(map-get($theme-light-blue, secondary), 5%);
+      //text-shadow: 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%);
     }
   }
 
