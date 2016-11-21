@@ -34,16 +34,16 @@
         <li class="s-tool__step js-tool-step" data-step-name="Introduction" data-grid-include="false" data-nav-include="false" data-theme="t-blue">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-              {{> tool/getting-started/intro }}
+              {{> tool/intro/intro-first }}
             </li>
-            <li class="s-tool__view js-tool-view">
-              {{> tool/getting-started/goals }}
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> tool/intro/intro-second }}
             </li>
           </ul>
         </li>
 
         <!-- Getting Started -->
-        <li class="s-tool__step js-tool-step" data-step-name="Getting Started" data-theme="t-green">
+        <li class="s-tool__step js-tool-step" data-step-name="Getting Started" data-theme="t-light-blue">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
               {{> tool/getting-started/intro }}
@@ -51,17 +51,62 @@
             <li class="s-tool__view js-tool-view">
               {{> tool/getting-started/goals }}
             </li>
+            <li class="s-tool__view js-tool-view">
+              {{> tool/getting-started/team }}
+            </li>
+            <li class="s-tool__view js-tool-view">
+              {{> tool/getting-started/field-scan }}
+            </li>
+            <li class="s-tool__view js-tool-view">
+              {{> tool/getting-started/priorities }}
+            </li>
+            <li class="s-tool__view js-tool-view">
+              {{> tool/getting-started/partnerships }}
+            </li>
+            <li class="s-tool__view js-tool-view">
+              {{> tool/getting-started/communication-channels-first }}
+            </li>
+            <li class="s-tool__view js-tool-view">
+              {{> tool/getting-started/communication-channels-second }}
+            </li>
+            <li class="s-tool__view js-tool-view">
+              {{> tool/getting-started/listening }}
+            </li>
           </ul>
         </li>
 
-        <!-- Getting Started -->
-        <li class="s-tool__step js-tool-step" data-step-name="Getting Started" data-theme="t-neutral">
+        <!-- Score -->
+        <li class="s-tool__step js-tool-step" data-step-name="Testing" data-theme="t-green">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-              {{> tool/getting-started/intro }}
+              {{> tool/score/score }}
             </li>
-            <li class="s-tool__view js-tool-view">
-              {{> tool/getting-started/goals }}
+          </ul>
+        </li>
+
+        <!-- Score -->
+        <li class="s-tool__step js-tool-step" data-step-name="Testing" data-theme="t-purple">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> tool/score/score }}
+            </li>
+          </ul>
+        </li>
+
+        <!-- Score -->
+        <li class="s-tool__step js-tool-step" data-step-name="Testing" data-theme="t-neutral">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> tool/score/score }}
+            </li>
+          </ul>
+        </li>
+
+        <!-- Score -->
+        <li class="s-tool__step js-tool-step" data-step-name="Testing" data-theme="t-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> tool/score/score }}
             </li>
           </ul>
         </li>
@@ -77,7 +122,11 @@
       </ul>
     </div>
     <button class="s-tool__prev js-tool-back">&larr; Back</button>
+    <button class="s-tool__grid__action c-icon-button c-icon-button--primary js-tool-print-mvp">
+        <img src="http://placehold.it/30x30" alt="Icon" class="c-icon-button__icon">
+        <span class="c-icon-button__text">Print MVP</span>
+    </button>
   </div>
-  <div class="s-tool__print js-tool-print">
+  <div class="s-tool__mvp js-tool-mvp">
   </div>
 </div>
