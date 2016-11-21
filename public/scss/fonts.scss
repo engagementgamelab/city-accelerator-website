@@ -1,0 +1,12 @@
+// FONTS
+// This stylesheet is meant to be loaded asynchronously to prevent
+// render-blocking while loading fonts.
+
+@import "tools/str-replace";
+@import "tools/font-face";
+
+@include wcss-font-face("bodoni", "../fonts/bodoni-regular", 400);
+@include wcss-font-face("bodoni", "../fonts/bodoni-bold", 700);
+
+@include wcss-font-face("halis", "../fonts/halis-regular", 400);
+@include wcss-font-face("halis", "../fonts/halis-bold", 700);
