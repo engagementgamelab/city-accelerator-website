@@ -44,6 +44,11 @@ html.is-modal-active {
   @include wcss-media(large) {
     padding: $wcss-spacing-unit-huge;
   }
+
+  @media print {
+    padding: $wcss-spacing-unit;
+    background: map-get($theme-blue, tertiary);
+  }
 }
 
 .c-modal__header__img {
@@ -54,18 +59,30 @@ html.is-modal-active {
   min-height: 100%;
   transform: translate(-50%, -50%);
   z-index: -1;
+
+  @media print {
+    display: none;
+  }
 }
 
 .c-modal__header__title {
   @include wcss-font-size(beta);
   font-family: $font-serif;
   color: $color-white;
+
+  @media print {
+    color: map-get($theme-blue, primary);
+  }
 }
 
 .c-modal__header__description {
   display: inline-block;
   margin: $wcss-spacing-unit 0;
   color: $color-light-gray;
+
+  @media print {
+    color: $color-gray;
+  }
 }
 
 
@@ -75,6 +92,10 @@ html.is-modal-active {
   position: absolute;
   width: 50%;
   top: $wcss-spacing-unit-small;
+
+  @media print {
+    display: none;
+  }
 }
 
 .c-modal__top-actions--left {
