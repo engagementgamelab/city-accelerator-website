@@ -10,10 +10,11 @@ $card-mini-max-width: 300px;
 // 1. Transition for card states
 // 2. Crop the content inside following border-radius
 // 3. Fix chrome bug where images don't get cropped with overflow: hidden;
+// 4. Make the card fill it's parent. Control layout with layout classes.
+// 5. Solve flickering issues in Chrome when enabled/disabled.
 
 .c-card {
   background: $color-white;
-  margin: $wcss-spacing-unit-large auto;
   border-radius: 3px;
   box-shadow: 0 20px 30px 0 rgba($color-black, .10);
   transition: $wcss-base-transition; // [1]
@@ -21,7 +22,10 @@ $card-mini-max-width: 300px;
   perspective: 1px; // [3]
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  margin: 0 auto;
+  width: 100%; // [4]
+  height: 100%; // [4]
+  backface-visibility: hidden; // [5]
 }
 
 .c-card__cover,
@@ -63,6 +67,8 @@ $card-mini-max-width: 300px;
 
 .c-card__inner {
   position: relative; // [1]
+  display: flex;
+  flex-direction: column;
 }
 
 // Card Title
@@ -71,13 +77,18 @@ $card-mini-max-width: 300px;
   font-family: $font-serif;
   font-weight: bold;
   margin-bottom: $wcss-spacing-unit-small;
+  transition: color 0.2s;
 
   .t-blue & {
-    color: map-get($theme-blue, tertiary);
+    color: map-get($theme-blue, primary);
+  }
+
+  .t-light-blue & {
+    color: map-get($theme-light-blue, tertiary);
   }
 
   .t-green & {
-    color: map-get($theme-green, primary);
+    color: map-get($theme-green, tertiary);
   }
 
   .t-purple & {
@@ -118,17 +129,13 @@ $card-mini-max-width: 300px;
 }
 
 // Icon
-// 1. Card icon is stacked on mobile
-// 2. TranslateY doesn't affect spacing so we compensate
 
-.c-card__icon {
-  position: relative; // [1]
+.c-card__icon.c-card__icon {
+  position: relative;
   display: block;
-  margin: 0 auto;
+  margin: -(91px/2) auto 0 auto;
   width: 91px;
   height: 91px;
-  margin-bottom: -(91px/2); // [2]
-  transform: translateY(-50%);
 }
 
 // Text
@@ -172,6 +179,7 @@ $card-mini-max-width: 300px;
 .c-card__actions {
   display: flex;
   flex-wrap: wrap;
+  margin-top: auto;
 
   > * {
     flex: 1 1 auto; // [1]
@@ -180,9 +188,13 @@ $card-mini-max-width: 300px;
 }
 
 // Card states
-
+// 1. Disable button clicks when disabled
 .c-card.is-disabled {
   opacity: 0.5;
+
+  .c-card__actions {
+    pointer-events: none; // [1]
+  }
 }
 
 
@@ -225,14 +237,16 @@ $card-mini-max-width: 300px;
 
   // 1. Compensate for card content padding
   // 2. Align icon horizontally in the middle of cover/content
+  // 3. Remove mobile top negative margin
 
   .c-card__icon {
 
     @include wcss-media($card-breakpoint-medium) {
       position: absolute;
-      top: $wcss-spacing-unit;
-      left: 0; // [3]
-      transform: translateX(-50%); // [3]
+      top: $wcss-spacing-unit; // [1]
+      left: 0; // [2]
+      transform: translateX(-50%); // [2]
+      margin: 0; // [3]
     }
   }
 
@@ -266,6 +280,12 @@ $card-mini-max-width: 300px;
 
   .c-card__content {
     padding: $wcss-spacing-unit-small;
+  }
+
+  .c-card__actions {
+    overflow: hidden;
+    border-bottom-left-radius: $wcss-base-radius;
+    border-bottom-right-radius: $wcss-base-radius;
   }
 
   .c-card__title {
