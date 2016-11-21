@@ -1,0 +1,28 @@
+{{>
+  components/tool/card
+    cover="http://placehold.it/500x500"
+    title="Team"
+    text="Public engagement is a team sport. Do you know your core team?"
+    helper="For example, you might be aiming to increase voter turnout in local elections or improve environmental sustainability practices throughout the city."
+    yesno=true
+    mini=false
+}}
+<div class="s-tool__view__mini js-tool-view-mini">
+  {{> 
+    components/tool/card
+      icon="http://placehold.it/50x50"
+      title="Team"
+      text="Public engagement is a team sport. Do you know your core team?"
+      mini=true
+  }}
+</div>
+<div class="s-tool__view__contents js-tool-view-contents">
+  {{>
+    components/tool/modal
+      cover="http://placehold.it/500x500"
+      title="Team"
+      current_phase="Getting Started"
+      activity_length="20 minutes"
+      description="Lorem Ipsum Dolor Sit Amet"
+  }}
+</div>
