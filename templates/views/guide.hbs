@@ -1,0 +1,44 @@
+{{!< default}}
+{{!--
+/**
+* Engagement Lab Web Suite
+* Developed by Engagement Lab, 2016
+* ==============
+*
+* Guide Page sample Template
+* ==========
+*/
+--}}
+
+
+<div class="container-fluid home">
+	<div class="row guide-top-nav">
+		
+	</div>
+
+
+	<div class="row">
+
+		<section id="section-one">
+			{{#each guides}}
+				{{#ifeq this.section 'one'}}
+					{{> guide_page this}}
+				{{/ifeq}}
+			{{/each}}
+		</section>
+
+		<section id="section-two">
+			{{#each guides}}
+				{{#ifeq this.section 'two'}}
+					{{> guide_page this}}
+				{{/ifeq}}
+			{{/each}}
+		</section>
+		
+	</div>
+
+	<div class="guide-side-nav">
+		
+	</div>
+
+</div> <!-- .container-fluid -->

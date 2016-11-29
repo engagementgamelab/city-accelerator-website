@@ -99,3 +99,49 @@ exports.initErrorHandlers = function(req, res, next) {
     next();
     
 };
+
+// Footer
+
+exports.Footer = function (req, res, next) {
+
+    var locals = res.locals;
+
+    var queryFooter = Footer.model.findOne({}, {}, {
+        sort: {
+            'createdAt': -1
+        }
+    })
+    .populate('links')
+    .populate('images');
+
+    queryFooter.exec(function(err, resultFooter) {
+        if (err) throw err;
+
+        locals.footer = resultFooter;
+        next(err);
+    });
+
+}
+
+// Main Top navigation
+
+exports.MainNav = function (req, res, next) {
+
+    var locals = res.locals;
+
+    var queryMainNav = MainNav.model.findOne({}, {}, {
+        sort: {
+            'createdAt': -1
+        }
+    })
+    .populate('links')
+    .populate('images');
+
+    queryMainNav.exec(function(err, resultNav) {
+        if (err) throw err;
+
+        locals.mainNav = resultNav;
+        next(err);
+    });
+
+}

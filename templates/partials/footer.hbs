@@ -7,12 +7,13 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2">
 						<div class="text-center padding-ver-clear">
-
+							{{#if footer.images}}
 							<div class="logos-footer center-block">
-								<img id="logo" src="/images/logos/logo_white.png" alt="Engagement Lab">
-								<img id="logo-emerson" src="/images/logos/emerson_name.png" alt="Emerson College">
+								{{#each footer.images}}
+									{{> image this=this}}
+								{{/each}}
 							</div>
-
+							{{/if}}
 							</div>
 						</div>
 					</div>

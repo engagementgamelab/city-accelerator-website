@@ -36,20 +36,20 @@ exports = module.exports = function(req, res) {
 
             locals.index = resultIndex;
 
-            var queryCategory = Category.model.find({}, {}, {
-                sort: {
-                    'createdAt': -1
-                }
-            });
+            // var queryCategory = Category.model.find({}, {}, {
+            //     sort: {
+            //         'createdAt': -1
+            //     }
+            // });
 
-            queryCategory.exec(function(err, resultCats) {
-                if (err) throw err;
+            // queryCategory.exec(function(err, resultCats) {
+            //     if (err) throw err;
 
-                locals.categories = resultCats;
+            //     locals.categories = resultCats;
                 
-                next();
+            //     next();
 
-            });
+            // });
 
         });
     });

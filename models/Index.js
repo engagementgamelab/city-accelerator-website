@@ -32,10 +32,13 @@ var Index = new keystone.List('Index',
  * @main Index
  */
 Index.add({
-	name: { type: String, default: "Index Page", hidden: true, required: true, initial: true },
-	intro: { type: Types.Markdown, label: "Intro Text",  initial: true, required: true },
-	// description: { type: Types.Textarea, label: "Description",  initial: true, required: true },
-	
+	name: { type: String, default: "Home Page", hidden: true, required: true, initial: true },
+	rationale: { type: Types.Markdown, label: "Homepage Rationale",  initial: true, required: true },
+	header: { type: Types.Markdown, label: "Header",  initial: true, required: true },
+	theToolkit: { type: Types.Markdown, label: "The Toolkit Blurb",  initial: true, required: true }, 
+	theGuide: { type: Types.Markdown, label: "The Guide Blurb",  initial: true, required: true },
+	theCaseStudies: { type: Types.Markdown, label: "The Case Studies Blurb",  initial: true, required: true },
+	theGame: { type: Types.Markdown, label: "The Game Blurb",  initial: true, required: true },
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
 
