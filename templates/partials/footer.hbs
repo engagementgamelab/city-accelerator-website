@@ -10,10 +10,20 @@
 							{{#if footer.images}}
 							<div class="logos-footer center-block">
 								{{#each footer.images}}
-									{{> image this=this}}
+									{{> image this}}
 								{{/each}}
 							</div>
 							{{/if}}
+							{{#if footer.links}}
+							<div class="row">
+								<li>
+								{{#each footer.links}}
+									{{> link this}}
+								{{/each}}
+								</li>
+							</div>
+							{{/if}}
+							{{{footer.description.html}}}
 							</div>
 						</div>
 					</div>

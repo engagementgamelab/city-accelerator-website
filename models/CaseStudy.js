@@ -21,10 +21,10 @@ var Types = keystone.Field.Types;
  */
 var CaseStudy = new keystone.List('CaseStudy', 
 	{
-		label: 'CaseStudies',
-		singular: 'CaseStudy',
+		label: 'Case Studies',
+		singular: 'Case Study',
 		track: true,
-		autokey: { path: 'key', from: 'name', unique: true },
+		autokey: { path: 'case_key', from: 'name', unique: true },
 	});
 
 /**
@@ -34,10 +34,20 @@ var CaseStudy = new keystone.List('CaseStudy',
 CaseStudy.add({
 
 	name: { type: String, label: 'Case Study Title', required: true, initial: true },
-	blurb: { type: Type.Markdown, label: 'Short Blurb Under Header', required: true, initial: true },
-	text: { type: Type.Markdown, label: 'Case Study Text', note: ''},
-	images: { type: Type.Markdown, label: 'Image(s)', ref: 'Image',many: true}
-	
+	blurb: { type: Types.Markdown, label: 'Short Blurb Under Header', required: true, initial: true },
+	text: { type: Types.Markdown, label: 'Case Study Text', note: ''},
+	image: { 
+		type: Types.Relationship, 
+		label: 'Background Image', 
+		ref: 'Image', 
+		many: false
+	},
+	logos: { 
+		type: Types.Relationship, 
+		label: 'Logo(s)', 
+		ref: 'Image', 
+		many: true
+	},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
 });

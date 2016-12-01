@@ -13,7 +13,7 @@
  */
 var keystone = require('keystone'),
     Index = keystone.list('Index'),
-    Category = keystone.list('Category'),
+    // Category = keystone.list('Category'),
     _ = require('underscore');
 
 exports = module.exports = function(req, res) {
@@ -35,6 +35,7 @@ exports = module.exports = function(req, res) {
             if (err) throw err;
 
             locals.index = resultIndex;
+            // console.log(locals.index);
 
             // var queryCategory = Category.model.find({}, {}, {
             //     sort: {
@@ -47,7 +48,7 @@ exports = module.exports = function(req, res) {
 
             //     locals.categories = resultCats;
                 
-            //     next();
+                next();
 
             // });
 

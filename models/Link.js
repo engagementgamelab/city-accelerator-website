@@ -13,7 +13,7 @@
 
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-
+var _ = require('underscore');
 /**
  * Link model
  * @constructor
@@ -35,15 +35,32 @@ Link.add({
 
 	name: { type: String, label: 'Link text', required: true, initial: true },
 	URL: { type: String, label: 'URL', required: true, initial: true },
-	// image: { 
-	// 	type: Types.Relationship, 
-	// 	label: 'Image', 
-	// 	note: 'Only upload image if the link is an image, NOT text', 
-	// 	ref: 'Image',
-	// 	many: false
-	// }
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
+
+});
+
+Link.schema.pre('remove', function(next) {
+
+	var models = [ 'Footer', 'Image', 'Activity', 'Game', 'CaseStudy', 'MainNav'];
+
+  // Remove resource from all that referenced it 
+  _.each(models, function(model, index){
+
+  	console.log(model);
+  	keystone.list(model).model.removeRef(this._id, function(err, removedCount) {
+
+		if(err)
+			console.error(err);
+    
+		if(removedCount > 0)
+			console.log("Removed " +  removedCount + " references to '"+ this._id + "'");
+
+		});
+  });
+	
+
+		next();
 
 });
 

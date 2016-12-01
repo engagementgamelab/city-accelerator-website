@@ -1,6 +1,7 @@
 @import "core/variables";
 @import "core/mixins";
 @import "core/functions";
+@import "core/fonts";
 
 @include font-face(Font-Name, 'https://path/to/cdn/font', null, null, eot woff ttf);
 
@@ -42,4 +43,14 @@
 
 	}
 
+}
+
+.activity-modal-wrapper {
+	height: 100%;
+	width: 100%;
+	background-color: blue;
+	position: fixed;
+	overflow-y: scroll;
+	top: 0;
+	z-index: 1000;
 }

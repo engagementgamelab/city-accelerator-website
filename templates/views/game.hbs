@@ -22,7 +22,7 @@
 		<section id="section-one">
 			{{#each guides}}
 				{{#ifeq this.section 'one'}}
-					{{> guidePage this}}
+					{{> guide_page this}}
 				{{/ifeq}}
 			{{/each}}
 		</section>
@@ -30,7 +30,7 @@
 		<section id="section-two">
 			{{#each guides}}
 				{{#ifeq this.section 'two'}}
-					{{> guidePage this}}
+					{{> guide_page this}}
 				{{/ifeq}}
 			{{/each}}
 		</section>

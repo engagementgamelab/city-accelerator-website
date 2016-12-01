@@ -1,0 +1,77 @@
+{{!< default}}
+{{!--
+/**
+* Engagement Lab Web Suite
+* Developed by Engagement Lab, 2016
+* ==============
+*
+* Guide Page sample Template
+* ==========
+*/
+--}}
+
+
+<div class="container-fluid home">
+
+	<div class="row" id="getting-started">
+		<h2>Getting Started</h2>
+		{{{startBlurb.html}}}
+
+		<section>
+			{{#each activities}}
+				{{#ifeq this.category 'start'}}
+					{{> activityCard this}}
+					{{> activityModal this}}
+				{{/ifeq}}
+			{{/each}}
+		</section>
+
+	</div>
+
+	<div class="row" id="project-planning">
+		<h2>Project Planning</h2>
+		{{{planBlurb.html}}}
+
+		<section>
+			{{#each activities}}
+				{{#ifeq this.category 'plan'}}
+					{{> activityCard this}}
+					{{> activityModal this}}
+				{{/ifeq}}
+			{{/each}}
+		</section>
+
+	</div>
+
+	<div class="row" id="implimentation">
+		<h2>Implimentation</h2>
+		{{{implimentBlurb.html}}}
+
+		<section>
+			{{#each activities}}
+				{{#ifeq this.category 'impliment'}}
+					{{> activityCard this}}
+					{{> activityModal this}}
+				{{/ifeq}}
+			{{/each}}
+		</section>
+
+	</div>
+
+	<div class="row" id="iteration">
+		<h2>Iteration</h2>
+		{{{iterateBlurb.html}}}
+
+		<section>
+			{{#each activities}}
+				{{#ifeq this.category 'iterate'}}
+					{{> activityCard this}}
+					{{> activityModal this}}
+				{{/ifeq}}
+			{{/each}}
+		</section>
+
+	</div>
+
+
+</div>

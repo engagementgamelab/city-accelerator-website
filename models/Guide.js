@@ -21,7 +21,7 @@ var Types = keystone.Field.Types;
  */
 var Guide = new keystone.List('Guide', 
 	{
-		label: 'Guide Pagess',
+		label: 'Guide Pages',
 		singular: 'Guide Page',
 		track: true,
 		autokey: { path: 'guide_key', from: 'name', unique: true },
@@ -33,15 +33,52 @@ var Guide = new keystone.List('Guide',
  */
 Guide.add({
 
-	name: { type: String, label: 'Guide Page Title', note: 'Think is the page\'s link title', required: true, initial: true },
+	name: { type: String, label: 'Guide Page Title', note: 'This is the page\'s link title', required: true, initial: true },
 	header: { type: String, label: 'Page Header', required: true, initial: true },
 	blurb: { type: Types.Markdown, label: 'Short Blurb Under Header', note: 'Keep it short!', required: true, initial: true },
 	text: { type: Types.Markdown, label: 'Text', required: true, initial: true },
-	section: { type: Types.Select, label: 'Guide Section', options: 'one, two, three' }
+	section: { type: Types.Select, label: 'Guide Section', options: 'one, two, three' },
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
 });
+
+// /**
+//  * Methods
+//  * =============
+//  */
+// // Remove a link or image reference if removed from database
+// Guide.schema.statics.removeLinkRef = function(filterId, callback) {
+
+//     Guide.model.update({
+//             $or: [{
+//                 'images'
+//             }, {
+//                 'links'
+//             }]
+//         },
+
+//         {
+//             $pull: {
+//                 'images',
+//                 'links'
+//             }
+//         },
+
+//         {
+//             multi: true
+//         },
+
+//         function(err, result) {
+
+//             callback(err, result);
+
+//             if (err)
+//                 console.error(err);
+//         }
+//     );
+
+// };
 
 /**
  * Model Registration

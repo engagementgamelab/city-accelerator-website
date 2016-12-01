@@ -1,0 +1,46 @@
+<div class="activity-modal-wrapper col-sm-12 col-lg-12 col-md-12" id="activity_{{this.key}}" style="display:none;">
+
+	<div class="buttons">
+	<a class="activity-close" data-id="activity_{{this.key}}">x</a>
+	{{!-- Share and Print/Save --}}
+
+	</div>
+
+	<div class="">
+		<h1>{{this.name}}</h1>
+		<h3>{{{this.blurb.html}}}</h3>
+		<p>Category: {{this.category}}</p>
+		<p>{{this.length}}</p>
+
+	</div>
+	<div class="row">
+		{{{this.question.html}}}
+	</div>
+
+	<div class="row">
+		{{{this.why.html}}}
+	</div>
+	<div class="row">
+		{{{this.steps.html}}}
+	</div>
+	<div class="row">
+		{{{this.tips.html}}}
+	</div>
+	<div class="row">
+		{{{this.materials.html}}}
+	</div>
+	<div class="row">
+		{{#if this.links}}
+			{{#each this.links}}
+				{{> link this}}
+			{{/each}}
+		{{/if}}
+
+		{{#if this.images}}
+			{{#each this.images}}
+				{{> image this}}
+			{{/each}}
+		{{/if}}
+	</div>
+
+</div>

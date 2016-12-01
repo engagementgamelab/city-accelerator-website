@@ -41,11 +41,43 @@ Image.add({
 		label: 'Image Link', 
 		note: 'Only if the image redirects to a link', 
 		many: false
-	}
+	},
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
 });
+
+/**
+ * Methods
+ * =============
+ */
+// Remove a link or image reference if removed from database
+Image.schema.statics.removeRef = function(refId, callback) {
+
+    Image.model.update({
+             'link': refId
+        },
+
+        {
+            $pull: {
+                'link': refId
+            }
+        },
+
+        {
+            multi: false
+        },
+
+        function(err, result) {
+
+            callback(err, result);
+
+            if (err)
+                console.error(err);
+        }
+    );
+
+};
 
 /**
  * Model Registration

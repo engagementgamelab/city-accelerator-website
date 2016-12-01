@@ -1,9 +1,11 @@
-<a id="menu-toggle" href="#" class="btn btn-lg toggle"><i class="icon"><img src="/images/menu.png" alt="menu" /></i></a>
+<a id="menu-toggle" href="#" data-toggle="sidebar-nav" class="btn btn-lg toggle"><i class="icon"><img src="/images/menu.png" alt="menu" /></i></a>
 <div id="sidebar-wrapper">
-  <ul class="sidebar-nav">
+  <ul class="sidebar-nav"  style="display:none;">
     <a id="menu-close" href="#" class="btn btn-lg pull-right toggle"><i class="icon"><img src="/images/menu.png" alt="menu" /></i></a>
     <li>
-      <a href="/">Home</a>
+    {{#each mainNav.links}}
+    	{{> link this=this}}
+    {{/each}}
     </li>
   </ul>
 </div>

@@ -21,8 +21,8 @@ var Types = keystone.Field.Types;
  */
 var MainNav = new keystone.List('MainNav', 
 	{
-		label: 'MainNav Page',
-		singular: 'MainNav Page',
+		label: 'Main Navigation',
+		singular: 'Main Navigation',
 		track: true,
 		nodelete: true
 	});
@@ -46,10 +46,12 @@ MainNav.add({
 		ref: 'Image', 
 		label: 'Logo', 
 		many: false
-	}
+	},
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
+
+
 
 /**
  * Model Registration

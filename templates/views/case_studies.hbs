@@ -1,0 +1,23 @@
+{{!< default}}
+{{!--
+/**
+* Engagement Lab Web Suite
+* Developed by Engagement Lab, 2016
+* ==============
+*
+* Guide Page sample Template
+* ==========
+*/
+--}}
+
+
+<div class="container-fluid home">
+{{#each caseStudies}}
+	<div class="row">
+
+			{{> caseStudyCard this}}
+
+	</div>
+{{/each}}
+
+</div> <!-- .container-fluid -->

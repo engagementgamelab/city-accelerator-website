@@ -1,2 +1,2 @@
-<img id="{{this.key}}" src="{{{cloudinaryUrl this.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}">
+	{{#if this.link}}<a href="{{URL}}" alt="{{name}}">{{/if}}<img id="{{this.key}}" src="{{{cloudinaryUrl this.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}">{{#if this.link}}</a>{{/if}}
 <!-- footer end -->

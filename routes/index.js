@@ -26,6 +26,8 @@ var importRoutes = keystone.importer(__dirname);
 keystone.pre('routes', middleware.initErrorHandlers);
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
+keystone.pre('render', middleware.Footer);
+keystone.pre('render', middleware.MainNav);
 
 // TODO: Clickjacking protection
 /*keystone.pre('routes', function(req, res, next) {
@@ -46,8 +48,13 @@ exports = module.exports = function(app) {
 
     // Views
     app.get('/', routes.views.index);
+    app.get('/game', routes.views.game);
+    app.get('/toolkit', routes.views.toolkit);
+    app.get('/case-studies', routes.views.case_studies);
+    app.get('/case-studies/:case_key', routes.views.case_study);
     app.get('/:category_id', routes.views.category);
     app.get('/guide/:guide_section/:guide_key', routes.views.guide);
+    app.get('/guide/:guide_section', routes.views.guide);
     
     // NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
     // app.get('/protected', middleware.requireUser, routes.views.protected);

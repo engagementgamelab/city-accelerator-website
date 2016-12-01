@@ -21,8 +21,8 @@ var Types = keystone.Field.Types;
  */
 var Index = new keystone.List('Index', 
 	{
-		label: 'Index Page',
-		singular: 'Index Page',
+		label: 'Home Page',
+		singular: 'Home Page',
 		track: true,
 		nodelete: true
 	});

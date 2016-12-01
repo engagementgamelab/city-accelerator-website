@@ -12,6 +12,8 @@
 
 var keystone = require('keystone');
 var _ = require('underscore');
+var Footer = keystone.list('Footer');
+var MainNav = keystone.list('MainNav');
 
 /**
 	Initialises the standard view locals
@@ -25,11 +27,11 @@ exports.initLocals = function(req, res, next) {
 
     var locals = res.locals;
 
-    locals.navLinks = [{
-        label: 'Home',
-        key: 'home',
-        href: '/'
-    }];
+    // locals.navLinks = [{
+    //     label: 'Home',
+    //     key: 'home',
+    //     href: '/'
+    // }];
 
     locals.user = req.user;
 
@@ -118,6 +120,7 @@ exports.Footer = function (req, res, next) {
         if (err) throw err;
 
         locals.footer = resultFooter;
+        // console.log(locals.footer);
         next(err);
     });
 
@@ -141,6 +144,7 @@ exports.MainNav = function (req, res, next) {
         if (err) throw err;
 
         locals.mainNav = resultNav;
+        // console.log(locals.mainNav);
         next(err);
     });
 

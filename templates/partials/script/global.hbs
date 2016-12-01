@@ -15,6 +15,38 @@
 	// var timeline = new TimelineMax();
 	$(document).ready(function() {
 
+		// Activity Card => Modal
+		$('.activity-open').on('click', function(){
+			console.log("click open");
+			var activityId = $(this).attr('data-id');
+			window.location.hash = activityId;
+			console.log(activityId);
+			$('#' + activityId).show();
+
+		});
+		$('.activity-close').on('click', function(){
+			console.log("click close");
+			var activityId = $(this).attr('data-id');
+			history.pushState('', document.title, window.location.pathname);
+
+			// window.location.href.split('#')[0];
+			$('#' + activityId).hide();
+
+		});
+
+		window.onpopstate = function(e) {
+			console.log(e);
+		    $('.activity-modal-wrapper').hide();
+		}
+
+		if(window.location.hash) {
+	    var hash = window.location.hash;
+	    $(hash).show();
+	  } else {
+	  	console.log("no hash");
+	  	$('.activity-modal-wrapper').hide();
+	  }
+
 		// Menu toggling
 	  $("#menu-close").click(function(e) {
 	    e.preventDefault();
