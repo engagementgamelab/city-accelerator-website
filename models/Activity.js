@@ -55,7 +55,11 @@ Activity.add({
     question: {
         type: Types.Markdown, 
         label: 'Question for Project Builder'
-    }
+    }, 
+    example: {
+        type: Types.Markdown, 
+        label: 'Example for Project Builder'
+    },
     why: {
         type: Types.Markdown,
         label: 'Rationale'

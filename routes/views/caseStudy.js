@@ -25,12 +25,14 @@ exports = module.exports = function(req, res) {
 
     view.on('init', function(next) {
 
-        var queryCaseStudy = CaseStudy.model.findOne({}, {}, {});
+        var queryCaseStudy = CaseStudy.model.findOne({
+            case_key: req.params.case_key
+        });
         queryCaseStudy.exec(function(err, resultCaseStudy) {
             if (err) throw err;
 
             if(resultCaseStudy === null)
-                return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
+                return res.notfound('Cannot find that case study', 'Sorry, but it looks like the case study you were looking for does not exist!');
 
             locals.caseStudy = resultCaseStudy;
 
