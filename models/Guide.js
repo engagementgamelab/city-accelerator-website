@@ -38,6 +38,12 @@ Guide.add({
 	blurb: { type: Types.Markdown, label: 'Short Blurb Under Header', note: 'Keep it short!', required: true, initial: true },
 	text: { type: Types.Markdown, label: 'Text', required: true, initial: true },
 	section: { type: Types.Select, label: 'Guide Section', options: 'one, two, three' },
+	next: { 
+		type: Types.Relationship, 
+		label: 'Next guide coming up', 
+		ref: 'Guide', 
+		many: false
+	},
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 

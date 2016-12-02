@@ -25,7 +25,9 @@ exports = module.exports = function(req, res) {
 
     view.on('init', function(next) {
 
-        var queryGuide = Guide.model.find({}, {}, {});
+        var queryGuide = Guide.model.find({})
+        .populate('next');
+
         queryGuide.exec(function(err, resultGuide) {
             if (err) throw err;
 

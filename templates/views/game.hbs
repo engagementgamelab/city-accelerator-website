@@ -12,33 +12,42 @@
 
 
 <div class="container-fluid home">
-	<div class="row guide-top-nav">
-		
-	</div>
-
 
 	<div class="row">
+		{{{game.name.html}}}
 
-		<section id="section-one">
-			{{#each guides}}
-				{{#ifeq this.section 'one'}}
-					{{> guide_page this}}
-				{{/ifeq}}
-			{{/each}}
-		</section>
+		{{> image game.logo}}
 
-		<section id="section-two">
-			{{#each guides}}
-				{{#ifeq this.section 'two'}}
-					{{> guide_page this}}
-				{{/ifeq}}
-			{{/each}}
-		</section>
-		
+		{{> link game.purchaseLink}}
+
 	</div>
 
-	<div class="guide-side-nav">
-		
+	<div class="row">
+	{{{game.text.html}}}
+	</div>
+
+	<div class="row">
+	{{{game.howToPlay.html}}}
+	</div>
+
+	<div class="row">
+	{{{game.text.html}}}
+	</div>
+
+	<div class="row">
+	{{> image game.featOneImage}}
+	{{{game.featOneTitle.html}}}
+	{{{game.featOneDescription.html}}}
+	</div>
+	<div class="row">
+	{{> image game.featTwoImage}}
+	{{{game.featTwoTitle.html}}}
+	{{{game.featTwoDescription.html}}}
+	</div>
+	<div class="row">
+	{{> image game.featThreeImage}}
+	{{{game.featThreeTitle.html}}}
+	{{{game.featThreeDescription.html}}}
 	</div>
 
 </div> <!-- .container-fluid -->

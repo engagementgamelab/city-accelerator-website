@@ -33,20 +33,37 @@ var Game = new keystone.List('Game',
  */
 Game.add({
 
-	name: { type: String, label: 'Game Page Title', note: 'Think is the page\'s link title', required: true, initial: true },
+	name: { type: String, label: 'Game Page Title', required: true, initial: true },
 	// header: { type: String, label: 'Page Header', required: true, initial: true },
-	text: { type: Types.Markdown, label: 'What is it?', required: true, initial: true },
-	howToPlay: { type: Types.Markdown, label: 'How To Play?', required: true, initial: true },
+	text: { type: Types.Markdown, label: 'What is it?'},
+	howToPlay: { type: Types.Markdown, label: 'How To Play?' },
 	featOneTitle: { type: Types.Markdown, label: 'Feature One Title' },
 	featOneDescription: { type: Types.Markdown, label: 'Feature One Decription' },
-	featOneImage: { type: Types.CloudinaryImage, label: 'Feature One Image', note: 'Square Format!!'},
+	featOneImage: { 
+		type: Types.Relationship, 
+		ref: 'Image', 
+		many:false, 
+		label: 'Feature One Image', 
+		note: 'Square Format!!'
+	},
 	featTwoTitle: { type: Types.Markdown, label: 'Feature Two Title' },
 	featTwoDescription: { type: Types.Markdown, label: 'Feature Two Decription' },
-	featTwoImage: { type: Types.CloudinaryImage, label: 'Feature Two Image', note: 'Square Format!!'},
+	featTwoImage: { 
+		type: Types.Relationship, 
+		ref: 'Image', 
+		many:false, 
+		label: 'Feature Two Image', 
+		note: 'Square Format!!'
+	},
 	featThreeTitle: { type: Types.Markdown, label: 'Feature Three Title' },
 	featThreeDescription: { type: Types.Markdown, label: 'Feature Three Decription' },
-	featThreeImage: { type: Types.CloudinaryImage, label: 'Feature Three Image', note: 'Square Format!!'},
-
+	featThreeImage: { 
+		type: Types.Relationship, 
+		ref: 'Image', 
+		many:false, 
+		label: 'Feature Three Image', 
+		note: 'Square Format!!'
+	},
 	purchaseLink: {
 		type: Types.Relationship, 
 		ref: 'Link',

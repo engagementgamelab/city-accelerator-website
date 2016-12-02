@@ -53,9 +53,10 @@ exports = module.exports = function(app) {
     app.get('/toolkit/builder', routes.views.builder);
     app.get('/caseStudies', routes.views.caseStudies);
     app.get('/caseStudies/:case_key', routes.views.caseStudy);
-    app.get('/:category_id', routes.views.category);
-    app.get('/guide/:guide_section/:guide_key', routes.views.guide);
-    app.get('/guide/:guide_section', routes.views.guide);
+    // app.get('/:category_id', routes.views.category);
+    app.get('/guide', routes.views.guide);
+    // app.get('/guide/:guide_section/:guide_key', routes.views.guide);
+    // app.get('/guide/:guide_section', routes.views.guide);
     
     // NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
     // app.get('/protected', middleware.requireUser, routes.views.protected);

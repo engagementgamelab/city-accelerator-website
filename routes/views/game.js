@@ -2,17 +2,17 @@
  * (Site name here)
  * Developed by Engagement Lab, 2016
  * ==============
- * Guide page view controller.
+ * Game page view controller.
  *
  * Help: http://keystonejs.com/docs/getting-started/#routesviews-firstview
  *
- * @class Guide
+ * @class Game
  * @author 
  *
  * ==========
  */
 var keystone = require('keystone'),
-    Guide = keystone.list('Guide'),
+    Game = keystone.list('Game'),
     _ = require('underscore');
 
 exports = module.exports = function(req, res) {
@@ -25,14 +25,18 @@ exports = module.exports = function(req, res) {
 
     view.on('init', function(next) {
 
-        var queryGuide = Guide.model.find({}, {}, {});
-        queryGuide.exec(function(err, resultGuide) {
+        var queryGame = Game.model.findOne({}, {}, {
+            sort: {
+                'createdAt': -1
+            }
+        });
+        queryGame.exec(function(err, resultGame) {
             if (err) throw err;
 
-            if(resultGuide === null)
-                return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
+            if(resultGame === null)
+                return res.notfound('Cannot find that game', 'Sorry, but it looks like the game page you were looking for does not exist!');
 
-            locals.guides = resultGuide;
+            locals.game = resultGame;
 
             next();
 
@@ -40,6 +44,6 @@ exports = module.exports = function(req, res) {
     });
 
     // Render the view
-    view.render('guide');
+    view.render('game');
 
 };
