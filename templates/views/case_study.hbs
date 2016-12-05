@@ -15,11 +15,29 @@
 
 	<div class="row">
 	{{{caseStudy.name}}}
-	{{{caseStudy.blurb}}}
+	{{{caseStudy.byline}}}
 
 	</div>
 	<div class="row">
-	{{{caseStudy.text}}}
+	{{#each caseStudy.modalities}}
+		{{> modality this}}
+	{{#each}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.phaseI.html}}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.phaseII.html}}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.funds.html}}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.text.html}}}
 	</div>
 
 	<div class="row">

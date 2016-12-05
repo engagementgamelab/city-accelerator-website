@@ -34,14 +34,22 @@ var CaseStudy = new keystone.List('CaseStudy',
 CaseStudy.add({
 
 	name: { type: String, label: 'Case Study Title', required: true, initial: true },
-	blurb: { type: Types.Markdown, label: 'Short Blurb Under Header', required: true, initial: true },
-	text: { type: Types.Markdown, label: 'Case Study Text', note: ''},
 	image: { 
 		type: Types.Relationship, 
 		label: 'Background Image', 
 		ref: 'Image', 
 		many: false
 	},
+	byline: { type: Types.Markdown, label: 'Short Byline Under Header', required: true, initial: true },
+	modalities: {
+		type: Types.Relationship, 
+		label: "Modalities Explored",
+		ref: 'Activity'
+	},
+	phaseI: { type: Types.Markdown, label: 'Phase I Implementation', note: ''},
+	phaseII: { type: Types.Markdown, label: 'Phase II Implementation', note: ''},
+	funds: { type: Types.Markdown, label: 'Fund Allocation', note: ''},
+	text: { type: Types.Markdown, label: 'Case Study Text', note: ''},
 	logos: { 
 		type: Types.Relationship, 
 		label: 'Logo(s)', 

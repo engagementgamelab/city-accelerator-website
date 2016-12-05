@@ -98,6 +98,31 @@ Activity.add({
 	}
 });
 
+Activity.schema.pre('remove', function(next) {
+
+    var models = [ 'CaseStudy' ];
+
+  // Remove resource from all that referenced it 
+  _.each(models, function(model, index){
+
+    console.log(model);
+    keystone.list(model).model.removeRef(this._id, function(err, removedCount) {
+
+        if(err)
+            console.error(err);
+    
+        if(removedCount > 0)
+            console.log("Removed " +  removedCount + " references to '"+ this._id + "'");
+
+        });
+  });
+    
+
+        next();
+
+});
+
+
 /**
  * Model Registration
  */

@@ -51,7 +51,42 @@ MainNav.add({
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
 
+/**
+ * Methods
+ * =============
+ */
+// Remove a link or image reference if removed from database
+MainNav.schema.statics.removeRef = function(refId, callback) {
 
+    MainNav.model.update({
+            $or: [{
+                'logo': refId
+            }, {
+                'links': refId
+            }]
+        },
+
+        {
+            $pull: {
+                'logo': refId,
+                'links': refId
+            }
+        },
+
+        {
+            multi: true
+        },
+
+        function(err, result) {
+
+            callback(err, result);
+
+            if (err)
+                console.error(err);
+        }
+    );
+
+};
 
 /**
  * Model Registration

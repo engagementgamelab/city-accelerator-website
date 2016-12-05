@@ -37,14 +37,8 @@ Guide.add({
 	header: { type: String, label: 'Page Header', required: true, initial: true },
 	blurb: { type: Types.Markdown, label: 'Short Blurb Under Header', note: 'Keep it short!', required: true, initial: true },
 	text: { type: Types.Markdown, label: 'Text', required: true, initial: true },
-	section: { type: Types.Select, label: 'Guide Section', options: 'one, two, three' },
-	next: { 
-		type: Types.Relationship, 
-		label: 'Next guide coming up', 
-		ref: 'Guide', 
-		many: false
-	},
-	
+	section: { type: Types.Select, label: 'Guide Section', options: 'Intro, Summary, Calibrating, Charting', note: 'Only One Guide Page should be assigned to Intro and Summary sections'},
+	isSection: { type: Boolean, label: 'Is this page the first page of a section?', note: 'ie: Executive Summary or Calibrating the Instruments'},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
 });
