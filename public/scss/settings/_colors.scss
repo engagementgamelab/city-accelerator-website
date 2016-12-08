@@ -3,6 +3,7 @@
 // Neutral
 $color-neutral-100: #FFFFFF;
 $color-neutral-95: #F2F2F2;
+$color-neutral-87: #DDDDDD;
 $color-neutral-68: #AEACA4;
 $color-neutral-67: #AAAAAA;
 $color-neutral-55: #8B887D;
@@ -45,33 +46,47 @@ $color-blue: $color-blue-47;
 
 // THEMES
 
-$theme-blue: (
-  primary: $color-blue-56,
-  secondary: $color-purple-91,
-  tertiary: $color-neutral-95,
-  quaternary: $color-neutral-67
+// Default Theme. Used as fallback.
+$theme-default: (
+  --primary: $color-blue-56,
+  --secondary: $color-neutral-95,
+  --tertiary: $color-blue-56,
 );
 
-$theme-light-blue: (
-  primary: $color-blue-80,
-  secondary: $color-blue-90,
-  tertiary: $color-blue-56,
-);
+// Programmatically generate fallback :root variables from the default theme
+:root {
+  @each $name, $value in $theme-default {
+     #{$name}: #{$value};
+  }
+}
 
-$theme-green: (
-  primary: $color-green-85,
-  secondary: $color-green-93,
-  tertiary: $color-green-77
-);
+// Blue
+.t-blue {
+  --primary: $color-blue-56;
+  --secondary: $color-neutral-95;
+  --tertiary: $color-blue-56;
+}
 
-$theme-purple: (
-  primary: $color-blue-56,
-  secondary: $color-purple-70,
-  tertiary: $color-purple-91
-);
+.t-light-blue {
+  --primary: $color-blue-80;
+  --secondary: $color-blue-90;
+  --tertiary: $color-blue-56;
+}
 
-$theme-neutral: (
-  primary: $color-neutral-55,
-  secondary: $color-neutral-68,
-  tertiary: $color-neutral-29,
-);
+.t-green {
+  --primary: $color-green-85;
+  --secondary: $color-green-93;
+  --tertiary: $color-green-77;
+}
+
+.t-purple {
+  --primary: $color-purple-70;
+  --secondary: $color-purple-91;
+  --tertiary: $color-blue-56;
+}
+
+.t-neutral {
+  --primary: $color-neutral-55;
+  --secondary: $color-neutral-68;
+  --tertiary: $color-neutral-29;
+}

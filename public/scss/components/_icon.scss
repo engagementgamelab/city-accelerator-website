@@ -12,26 +12,7 @@
   box-shadow: 0 2px 3px 0 rgba($color-black, 0.25);
   border-radius: 100%;
   transition: background 0.2s;
-
-  .t-light-blue & {
-    background: map-get($theme-blue, primary);
-  }
-
-  .t-light-blue & {
-    background: map-get($theme-light-blue, primary);
-  }
-
-  .t-green & {
-    background: map-get($theme-green, primary);
-  }
-
-  .t-neutral & {
-    background: map-get($theme-neutral, primary);
-  }
-
-  .t-purple & {
-    background: map-get($theme-purple, primary);
-  }
+  @include wcss-theme-var(background, --primary);
 }
 
 // 1. Make image inside our icon non-selectable

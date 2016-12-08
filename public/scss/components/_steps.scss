@@ -13,7 +13,7 @@
   position: relative;
 }
 
-// [1] Accomodate for .c-step__item's padding and .c-step__point height (eyeballed)
+// [1] Accomodate for .c-step__item's padding and .c-step__point's height (eyeballed)
 .c-steps__progress,
 .c-steps__progress-complete, {
   height: 4px;
@@ -27,51 +27,11 @@
 .c-steps__progress {
   width: 100%;
   background: $color-black;
-  //box-shadow: inset 0 1px 2px $color-black;
-
-  .t-blue & {
-    background: map-get($theme-blue, quaternary);
-  }
-
-  .t-light-blue & {
-    background: map-get($theme-light-blue, primary);
-  }
-
-  .t-purple & {
-    background: map-get($theme-purple, primary);
-  }
-
-  .t-green & {
-    background: map-get($theme-green, primary);
-  }
-
-  .t-neutral & {
-    background: map-get($theme-neutral, primary);
-  }
+  @include wcss-theme-var(background, --primary);
 }
 
 .c-steps__progress-complete {
-  background: rgba(0, 0, 0, 0.5);
-
-  .t-blue & {
-    background: map-get($theme-blue, primary);
-  }
-
-  .t-light-blue & {
-    background: map-get($theme-light-blue, tertiary);
-  }
-
-  .t-purple & {
-    background: map-get($theme-purple, tertiary);
-  }
-
-  .t-green & {
-    background: map-get($theme-green, tertiary);
-  }
-
-  .t-neutral & {
-    background: map-get($theme-neutral, tertiary);
-  }
+  @include wcss-theme-var(background, --tertiary);
 }
 
 .c-steps__item {
@@ -93,69 +53,23 @@
 .c-steps__point {
   width: 16px;
   height: 16px;
-  //background: $color-black;
   display: inline-block;
   transform: rotate(45deg);
   border-radius: $wcss-base-radius;
-  //transition: $wcss-base-transition;
-  //box-shadow: inset 0 1px 2px $color-black;
-
-  .t-blue & {
-    background: map-get($theme-blue, quaternary);
-  }
-
-  .t-light-blue & {
-    background: map-get($theme-light-blue, primary);
-  }
-
-  .t-purple & {
-    background: map-get($theme-purple, primary);
-  }
-
-  .t-green & {
-    background: map-get($theme-green, primary);
-  }
-
-  .t-neutral & {
-    background: map-get($theme-neutral, primary);
-  }
+  @include wcss-theme-var(background, --primary);
 }
 
 // Step title 
 
 .c-steps__title {
   @include wcss-font-size(eta);
+  @include wcss-theme-var(color, --primary);
   text-transform: uppercase;
   text-decoration: none;
   font-weight: bold;
   margin: $wcss-spacing-unit-tiny 0;
   width: 100%;
   display: none;
-
-  .t-blue & {
-    color: rgba(map-get($theme-blue, quaternary), 1);
-    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
-  }
-
-  .t-light-blue & {
-    color: rgba(map-get($theme-light-blue, primary), 1);
-    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
-  }
-
-  .t-purple & {
-    color: rgba(map-get($theme-purple, primary), 1);
-    //text-shadow: 0px 1px 1px map-get($theme-purple, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-purple, secondary);
-  }
-
-  .t-neutral & {
-    color: rgba(map-get($theme-neutral, primary), 1);
-    //text-shadow: 0px 1px 1px map-get($theme-neutral, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-neutral, secondary);
-  }
-
-  .t-green & {
-    color: darken(map-get($theme-green, primary), 5%);
-    //text-shadow: 0px 1px 1px map-get($theme-green, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-green, secondary);
-  }
 
   @include wcss-media(medium) {
     display: inline-block;
@@ -173,52 +87,12 @@
 
   > .c-steps__point {
     background: $color-white;
-
-    // [1] Border is positioned 2px to the outside, 2px to the inside
-    .t-blue & {
-      border: 2px solid map-get($theme-blue, primary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-blue, primary); // [1]
-    }
-
-    .t-light-blue & {
-      border: 2px solid map-get($theme-light-blue, tertiary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-light-blue, tertiary); // [1]
-    }
-    .t-purple & {
-      border: 2px solid map-get($theme-purple, tertiary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-purple, tertiary); // [1]
-    }
-    .t-green & {
-      border: 2px solid map-get($theme-green, tertiary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-green, tertiary); // [1]
-    }
-    .t-neutral & {
-      border: 2px solid map-get($theme-neutral, tertiary); // [1]
-      box-shadow: 0 0 0 2px map-get($theme-neutral, tertiary); // [1]
-    }
+    @include wcss-theme-var(border, --tertiary, 2px solid);
+    @include wcss-theme-var(box-shadow, --tertiary, 0 0 0 2px);
   }
 
   > .c-steps__title {
-
-    .t-blue & {
-      color: map-get($theme-blue, primary);
-    }
-
-    .t-purple & {
-      color: map-get($theme-purple, tertiary);
-    }
-
-    .t-light-blue & {
-      color: map-get($theme-light-blue, tertiary);
-    }
-
-    .t-green & {
-      color: map-get($theme-green, tertiary);
-    }
-
-    .t-neutral & {
-      color: map-get($theme-neutral, tertiary);
-    }
+    @include wcss-theme-var(color, --tertiary);
   }
 }
 
@@ -232,49 +106,11 @@
 .c-steps__item.is-past {
 
   > .c-steps__point {
-
-    .t-blue & {
-      background: map-get($theme-blue, primary);
-    }
-
-    .t-light-blue & {
-      background: map-get($theme-light-blue, tertiary);
-    }
-
-    .t-purple & {
-      background: map-get($theme-purple, tertiary);
-    }
-
-    .t-green & {
-      background: map-get($theme-green, tertiary); 
-    }
-
-    .t-neutral & {
-      background: map-get($theme-neutral, tertiary); 
-    }
+    @include wcss-theme-var(background, --tertiary);
   }
 
   > .c-steps__title {
-
-    .t-blue & {
-      color: map-get($theme-blue, primary);
-    }
-
-    .t-light-blue & {
-      color: map-get($theme-light-blue, tertiary);
-    }
-
-    .t-purple & {
-      color: map-get($theme-purple, tertiary);
-    }
-
-    .t-green & {
-      color: map-get($theme-green, tertiary);
-    }
-
-    .t-neutral & {
-      color: map-get($theme-neutral, tertiary);
-    }
+    @include wcss-theme-var(color, --tertiary);
   }
 
 }

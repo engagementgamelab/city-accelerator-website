@@ -1,0 +1,12 @@
+// Custom Variables for Theming
+
+@mixin wcss-theme-var($property: null, $variable: null, $rule: null) {
+  @if $property != null and $variable != null {
+    #{$property}: map-get($theme-default, $variable); // [1]
+    @if $rule != null {
+      #{$property}: $rule var($variable);
+    } @else {
+      #{$property}: var($variable);
+    }
+  }
+}

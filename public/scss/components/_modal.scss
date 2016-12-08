@@ -47,7 +47,7 @@ html.is-modal-active {
 
   @media print {
     padding: $wcss-spacing-unit;
-    background: map-get($theme-blue, tertiary);
+    background: $color-neutral-95;
   }
 }
 
@@ -71,7 +71,7 @@ html.is-modal-active {
   color: $color-white;
 
   @media print {
-    color: map-get($theme-blue, primary);
+    color: map-get($theme-default, --primary);
     font-size: 24px !important;
   }
 }

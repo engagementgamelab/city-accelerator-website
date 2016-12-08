@@ -80,7 +80,8 @@ $card-mini-max-width: 300px;
   font-weight: bold;
   margin-bottom: $wcss-spacing-unit-small;
   transition: color 0.2s;
-
+  @include wcss-theme-var(color, --tertiary);
+/*
   .t-blue & {
     color: map-get($theme-blue, primary);
   }
@@ -100,6 +101,7 @@ $card-mini-max-width: 300px;
   .t-neutral & {
     color: map-get($theme-neutral, tertiary);
   }
+*/
 }
 
 .c-card__title--separated {

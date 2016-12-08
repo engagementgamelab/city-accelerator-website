@@ -2,51 +2,14 @@
 
 .s-tool {
   position: relative;
-  //transition: $wcss-base-transition;
-  //transition-delay: 0.2s;
-
-  // Time transitions so that color changes occur
-  // after views have changed
-  *:not(.s-tool__loading):not(.s-tool__view),
-  *::before,
-  *::after {
-    //transition-delay: 0.2s !important;
-  }
-
+  @include wcss-theme-var(background, --secondary);
   // Loading state change
-  >*:not(.s-tool__loading) {
+  >*:not(.s-tool__loading):not(.c-acknowledge) {
     opacity: 0;
   }
 
-  &.is-loaded > * {
+  &.is-loaded > *:not(.c-acknowledge) {
     opacity: 1;
-  }
-
-  // Background themes
-
-  &.t-blue,
-  .t-blue & {
-    background: map-get($theme-blue, tertiary);
-  }
-
-  &.t-light-blue,
-  .t-light-blue & {
-    background: map-get($theme-light-blue, secondary);
-  }
-
-  &.t-purple,
-  .t-purple & {
-    background: map-get($theme-purple, secondary);
-  }
-
-  &.t-green,
-  .t-green & {
-    background: map-get($theme-green, secondary);
-  }
-
-  &.t-neutral,
-  .t-neutral & {
-    background: map-get($theme-neutral, secondary);
   }
 }
 
@@ -71,7 +34,7 @@
 
   &__text {
     @include wcss-font-size(beta);
-    color: map-get($theme-light-blue, tertiary);
+    color: map-get($theme-default, --primary);
   }
 
   &__spinner > svg {
@@ -145,35 +108,17 @@
 
 .s-tool__grid__block {
 
+  @include wcss-theme-var(background, --secondary);
   padding: $wcss-spacing-unit-large $wcss-spacing-unit;
 
   @include wcss-media(large) {
     padding: $wcss-spacing-unit-large;    
   }
-
-  &.t-blue {
-    background: map-get($theme-blue, tertiary);
-  }
-
-  &.t-light-blue {
-    background: map-get($theme-light-blue, secondary);
-  }
-
-  &.t-green {
-    background: map-get($theme-green, secondary);
-  }
-
-  &.t-purple {
-    background: map-get($theme-purple, secondary);
-  }
-
-  &.t-neutral {
-    background: map-get($theme-neutral, secondary);
-  }
 }
 
 .s-tool__grid__block__title {
   @include wcss-font-size(beta);
+  @include wcss-theme-var(color, --tertiary);
   font-family: $font-serif;
   text-align: center;
   font-weight: normal;
@@ -181,26 +126,6 @@
 
   @include wcss-media(large) {
     text-align: left;
-  }
-
-  .t-blue & {
-    color: map-get($theme-blue, primary);
-  }
-
-  .t-light-blue & {
-    color: map-get($theme-light-blue, tertiary);
-  }
-
-  .t-green & {
-    color: map-get($theme-green, tertiary);
-  }
-
-  .t-purple & {
-    color: map-get($theme-purple, tertiary);
-  }
-
-  .t-neutral & {
-    color: map-get($theme-neutral, tertiary);
   }
 }
 

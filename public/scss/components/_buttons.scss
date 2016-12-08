@@ -35,65 +35,8 @@
 // PRIMARY BUTTONS + THEMES
 
 .c-btn--primary {
-
-  // 1. Slightly transparent font color makes shadows visible, simulating "inset shadows"  
-  //color: rgba($color-white, 0.2); // [1]
+  @include wcss-theme-var(background, --primary);
   color: $color-white;
-
-  .t-blue & {
-    background: map-get($theme-blue, primary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-blue, primary), 5%);
-      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, primary), 5%);
-    }
-  }
-
-  .t-light-blue & {
-    background: map-get($theme-light-blue, primary);
-    //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, primary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-light-blue, primary), 5%);
-      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, primary), 5%);
-    }
-  }
-
-  .t-purple & {
-    background: map-get($theme-purple, primary);
-    //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px map-get($theme-purple, primary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-purple, primary), 5%);
-      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-purple, primary), 5%);
-    }
-  }
-
-  .t-green & {
-    background: map-get($theme-green, primary);
-    //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px map-get($theme-green, primary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-green, primary), 5%);
-      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-green, primary), 5%);
-    }
-  }
-
-  .t-neutral & {
-    background: map-get($theme-neutral, primary);
-    //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px map-get($theme-neutral, primary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-neutral, primary), 5%);
-      //text-shadow: 0px 1px 1px $color-white, 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-neutral, primary), 5%);
-    }
-  }
-
 }
 
 
@@ -103,69 +46,6 @@
 // SECONDARY BUTTONS + THEMES
 
 .c-btn--secondary {
-
-  .t-blue & {
-    background: map-get($theme-blue, secondary);
-    color: map-get($theme-blue, primary);
-    //color: rgba(map-get($theme-light-blue, primary), 0.5);
-    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-blue, secondary), 5%);
-      //text-shadow: 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%);
-    }
-  }
-  
-  .t-light-blue & {
-    background: map-get($theme-light-blue, secondary);
-    color: map-get($theme-light-blue, primary);
-    //color: rgba(map-get($theme-light-blue, primary), 0.5);
-    //text-shadow: 0px 1px 1px map-get($theme-light-blue, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-light-blue, secondary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-light-blue, secondary), 5%);
-      //text-shadow: 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-light-blue, secondary), 5%);
-    }
-  }
-
-  .t-purple & {
-    background: map-get($theme-purple, secondary);
-    color: map-get($theme-purple, primary);
-    //color: rgba(map-get($theme-purple, primary), 0.5);
-    //text-shadow: 0px 1px 1px map-get($theme-purple, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-purple, secondary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-purple, secondary), 5%);
-      //text-shadow: 0px 1px 1px darken(map-get($theme-purple, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-purple, secondary), 5%);
-    }
-  }
-
-  .t-green & {
-    background: map-get($theme-green, secondary);
-    color: map-get($theme-green, primary);
-    //color: rgba(map-get($theme-green, primary), 0.5);
-    //text-shadow: 0px 1px 1px map-get($theme-green, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-green, secondary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-green, secondary), 5%);
-      //text-shadow: 0px 1px 1px darken(map-get($theme-green, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-green, secondary), 5%);
-    }
-  }
-
-  .t-neutral & {
-    background: map-get($theme-neutral, secondary);
-    color: map-get($theme-neutral, primary);
-    //color: rgba(map-get($theme-neutral, primary), 0.5);
-    //text-shadow: 0px 1px 1px map-get($theme-neutral, secondary), 0 0 0 $color-black, 0px 1px 1px map-get($theme-neutral, secondary);
-
-    &:hover,
-    &:focus {
-      background: darken(map-get($theme-neutral, secondary), 5%);
-      //text-shadow: 0px 1px 1px darken(map-get($theme-neutral, secondary), 5%), 0 0 0 $color-black, 0px 1px 1px darken(map-get($theme-neutral, secondary), 5%);
-    }
-  }
+  @include wcss-theme-var(background, --secondary);
+  @include wcss-theme-var(color, --primary);
 }

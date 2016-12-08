@@ -7,7 +7,7 @@
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: map-get($theme-blue, tertiary);
+  background: $color-neutral-95;
   background-image: linear-gradient(to right, transparent 50%, $color-blue 0);
   color: transparent;
   text-align: center;
