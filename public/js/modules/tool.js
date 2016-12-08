@@ -1,3 +1,5 @@
+  // TOOLKIT JS
+
   // Initial variables
   body = $('body');
   container = "";
@@ -278,6 +280,56 @@
     }
   }
 
+  //This function will check if the current page has the query param of 'step' & call the modal
+  function checkParam() {
+    var requestedStep = getParameterByName('step');
+    if(requestedStep != "") {
+      console.log(requestedStep);
+      var data = requestedStep.split('.');
+      var step = data[0];
+      var sub_step = data[1];
+      modal = $('.js-tool-modal[data-linked-step="' + step + '"][data-linked-sub-step="' + sub_step + '"]');
+      console.log(modal);
+
+      if(modal.length) {
+
+        // Check if the document is loaded before loading the modal
+        var readyStateCheckInterval = setInterval(function() {
+          if (document.readyState === "complete") {
+            clearInterval(readyStateCheckInterval);
+            $('.js-tool-printable').removeClass('js-tool-printable');
+            modal.addClass('is-active').addClass('js-tool-printable');
+            $('html').addClass('is-modal-active');
+          }
+        }, 10);
+      } else {
+        $('html').removeClass('is-modal-active');
+        $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');   
+      }
+    } else {
+      window.history.pushState('City Accelerator Toolkit', 'City Accelerator Toolkit', location.pathname);
+      $('html').removeClass('is-modal-active');
+      $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');
+    }
+  }
+
+
+  //get URL query params
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\#&]" + name + "=([^&#]*)"),
+          results = regex.exec(location.hash);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+  function copyUrl() {
+    var temp = $("<input>");
+    $("body").append(temp);
+    temp.val(location.href).select();
+    document.execCommand("copy");
+    temp.remove();
+  }
+
 
 // Mother function. Initializes everything else
   window.onload = function() {
@@ -302,17 +354,15 @@
     createNav();
 
     // Add breadcrumbs (Step x of x) to cards
-
     addCardBreadcrumbs();
 
     // Initial state for velocity
     transitionOut(views.not(active_view));
 
-    // Update our view to reflect the initial state
-    updateView();
-
-    // Remove the loading screen
-    container.addClass('is-loaded');
+    $.when(updateView(), checkParam()).done(function() {
+      // Remove the loading screen
+      container.addClass('is-loaded');
+    });
 
     $('.js-tool-next').click(function() {
       goNextStep();
@@ -346,11 +396,23 @@
       $('.js-tool-printable').removeClass('js-tool-printable');
       modal.addClass('is-active').addClass('js-tool-printable');
       $('html').addClass('is-modal-active');
+      window.history.pushState('City Accelerator Toolkit', 'City Accelerator Toolkit', location.pathname + "#step=" + parent_step + '.' + parent_sub_step);
     });
 
     $('.js-tool-modal-close').click(function() {
+      window.history.pushState('City Accelerator Toolkit', 'City Accelerator Toolkit', location.pathname);
       $('html').removeClass('is-modal-active');
       $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');
+    });
+
+    window.onhashchange = function() {
+      checkParam();
+    }
+
+    $('.js-tool-share').click(function() {
+      $.when(copyUrl()).done(function() {
+        acknowledge('A link to this activity has been copied to your clipboard');
+      });
     });
 
     $('.js-tool-print').click(function() {
