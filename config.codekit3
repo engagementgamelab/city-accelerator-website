@@ -6143,6 +6143,22 @@
 		"sIE": 0,
 		"tEC": 0
 		},
+	"\/public\/css\/fonts.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/public\/css\/fonts-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/public\/css\/fonts.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/css\/fonts.css.map",
+		"oF": 0
+		},
 	"\/public\/css\/style.css": {
 		"aP": 0,
 		"bl": 0,
@@ -6159,11 +6175,425 @@
 		"oAP": "\/public\/css\/style.css.map",
 		"oF": 0
 		},
+	"\/public\/fonts\/bodoni-bold.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-bold.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/fonts\/bodoni-bold.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-bold.ttf",
+		"oF": 0
+		},
+	"\/public\/fonts\/bodoni-bold.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-bold.woff",
+		"oF": 0
+		},
+	"\/public\/fonts\/bodoni-bold.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-bold.woff2",
+		"oF": 0
+		},
+	"\/public\/fonts\/bodoni-regular.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-regular.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/fonts\/bodoni-regular.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-regular.ttf",
+		"oF": 0
+		},
+	"\/public\/fonts\/bodoni-regular.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-regular.woff",
+		"oF": 0
+		},
+	"\/public\/fonts\/bodoni-regular.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/bodoni-regular.woff2",
+		"oF": 0
+		},
+	"\/public\/fonts\/halis-bold.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-bold.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/fonts\/halis-bold.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-bold.ttf",
+		"oF": 0
+		},
+	"\/public\/fonts\/halis-bold.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-bold.woff",
+		"oF": 0
+		},
+	"\/public\/fonts\/halis-bold.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-bold.woff2",
+		"oF": 0
+		},
+	"\/public\/fonts\/halis-regular.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-regular.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/fonts\/halis-regular.ttf": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-regular.ttf",
+		"oF": 0
+		},
+	"\/public\/fonts\/halis-regular.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-regular.woff",
+		"oF": 0
+		},
+	"\/public\/fonts\/halis-regular.woff2": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/public\/fonts\/halis-regular.woff2",
+		"oF": 0
+		},
+	"\/public\/images\/icon-blueprint.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-blueprint.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-campfire.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-campfire.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-clock.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-clock.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-close-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-close-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-goal.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-goal.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-handshake.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-handshake.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-idea.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-idea.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-mailbox.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-mailbox.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-missed-call.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-missed-call.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-moon.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-moon.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-mute.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-mute.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-pie-chart.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-pie-chart.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-playground.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-playground.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-print-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-print-black.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-print-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-print-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-radar.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-radar.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-repeat.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-repeat.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-report-card.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-report-card.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-share-black.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-share-black.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-share-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-share-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-sms.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-sms.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-star.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-star.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-stones.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-stones.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-team.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-team.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-theatre-mask.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-theatre-mask.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-workstation.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-workstation.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/public\/images\/icon-world-map.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-world-map.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/public\/images\/logo_white.png": {
 		"ft": 32768,
 		"iS": 11632,
 		"oA": 0,
 		"oAP": "\/public\/images\/logo_white.png",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/map-green.jpg": {
+		"ft": 16384,
+		"iS": 248358,
+		"oA": 0,
+		"oAP": "\/public\/images\/map-green.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/map-light-blue.jpg": {
+		"ft": 16384,
+		"iS": 356120,
+		"oA": 0,
+		"oAP": "\/public\/images\/map-light-blue.jpg",
+		"oF": 0,
+		"opt": 1
+		},
+	"\/public\/images\/map-neutral.jpg": {
+		"ft": 16384,
+		"iS": 31065,
+		"oA": 0,
+		"oAP": "\/public\/images\/map-neutral.jpg",
+		"oF": 0,
+		"opt": 0
+		},
+	"\/public\/images\/map-purple.jpg": {
+		"ft": 16384,
+		"iS": 31065,
+		"oA": 0,
+		"oAP": "\/public\/images\/map-purple.jpg",
 		"oF": 0,
 		"opt": 0
 		},
@@ -6180,6 +6610,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/public\/js\/custom-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/public\/js\/modules\/acknowledge.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/public\/js\/modules\/acknowledge-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -6230,6 +6669,19 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/public\/scss\/components\/_acknowledge.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_acknowledge.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/public\/scss\/components\/_buttons.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -6243,6 +6695,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/public\/scss\/components\/_card-grid.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_card-grid.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/public\/scss\/components\/_card.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -6252,6 +6717,32 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/public\/scss\/css\/_card.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/components\/_circle-graph.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_circle-graph.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/components\/_footer.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_footer.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -6278,6 +6769,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/public\/scss\/css\/_icon.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/components\/_lede.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_lede.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -6317,6 +6821,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/public\/scss\/css\/_summary-block.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/fonts.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/public\/css\/fonts.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -6447,6 +6964,32 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/public\/scss\/css\/_layout.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/objects\/_list-bare.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_list-bare.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/objects\/_list-inline.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_list-inline.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -6594,6 +7137,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/public\/scss\/tools\/_font-face.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_font-face.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/public\/scss\/tools\/_maps.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -6629,6 +7185,32 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/public\/scss\/css\/_rem.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/tools\/_str-replace.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_str-replace.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/tools\/_theme-var.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_theme-var.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -6776,10 +7358,28 @@
 		"oAP": "\/templates\/layouts\/base.hbs",
 		"oF": 0
 		},
-	"\/templates\/partials\/components\/tool\/card.hbs": {
+	"\/templates\/partials\/components\/tool\/card-intro.hbs": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/partials\/components\/tool\/card.hbs",
+		"oAP": "\/templates\/partials\/components\/tool\/card-intro.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/components\/tool\/card-mini.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/components\/tool\/card-mini.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/components\/tool\/card-question.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/components\/tool\/card-question.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/components\/tool\/card-score.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/components\/tool\/card-score.hbs",
 		"oF": 0
 		},
 	"\/templates\/partials\/components\/tool\/modal.hbs": {
@@ -6836,6 +7436,24 @@
 		"oAP": "\/templates\/partials\/script\/production.hbs",
 		"oF": 0
 		},
+	"\/templates\/partials\/tool\/getting-started\/communication-channels-first.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/getting-started\/communication-channels-first.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/tool\/getting-started\/communication-channels-second.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/getting-started\/communication-channels-second.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/tool\/getting-started\/field-scan.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/getting-started\/field-scan.hbs",
+		"oF": 0
+		},
 	"\/templates\/partials\/tool\/getting-started\/goals.hbs": {
 		"ft": 8192,
 		"oA": 2,
@@ -6848,16 +7466,52 @@
 		"oAP": "\/templates\/partials\/tool\/getting-started\/intro.hbs",
 		"oF": 0
 		},
+	"\/templates\/partials\/tool\/getting-started\/listening.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/getting-started\/listening.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/tool\/getting-started\/partnerships.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/getting-started\/partnerships.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/tool\/getting-started\/priorities.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/getting-started\/priorities.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/tool\/getting-started\/team.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/getting-started\/team.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/tool\/intro\/intro-first.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/intro\/intro-first.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/tool\/intro\/intro-second.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/tool\/intro\/intro-second.hbs",
+		"oF": 0
+		},
 	"\/templates\/partials\/tool\/mvp\/grid.hbs": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/partials\/tool\/mvp\/grid.hbs",
 		"oF": 0
 		},
-	"\/templates\/partials\/tool\/test.hbs": {
+	"\/templates\/partials\/tool\/score\/score.hbs": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/templates\/partials\/tool\/test.hbs",
+		"oAP": "\/templates\/partials\/tool\/score\/score.hbs",
 		"oF": 0
 		},
 	"\/templates\/views\/errors\/404.hbs": {
