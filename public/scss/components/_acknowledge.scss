@@ -1,0 +1,45 @@
+// ACKNOWLEDGE
+// UI Component meant to let the user know that the action they
+// just invoked has been completed.
+// 
+// Markup & usage for this component can be found in 
+// js/modules/acknowledge.js
+
+.c-acknowledge {
+  opacity: 0;
+  animation-play-state: paused;
+  animation: acknowledge 2s infinite;
+  background: rgba($color-black, 0.8);
+  color: $color-white;
+  position: fixed;
+  bottom: $wcss-spacing-unit-small;
+  left: 50%;
+  z-index: 9999;
+  transform: translate(-50%, 0);
+  padding: $wcss-spacing-unit-small;
+  border-radius: $wcss-base-radius;
+  width: 90%;
+  text-align: center;
+}
+
+.c-acknowledge[aria-hidden="false"] {
+  animation-play-state: running;
+}
+
+@keyframes acknowledge {
+  0% {
+    opacity: 0;
+  }
+  
+  6.66% {
+    opacity: 1;
+  }
+
+  93.33% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: 0;
+  }
+}
