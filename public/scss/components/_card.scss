@@ -2,8 +2,8 @@
 
 // Component-specific breakpoints
 
-$card-breakpoint-medium: 750px;
-$card-breakpoint-large: 1100px; 
+$card-breakpoint-medium: 850px;
+$card-breakpoint-large: 1000px; 
 $card-mini-max-width: 300px;
 
 // BASE CARD STYLING
@@ -30,7 +30,7 @@ $card-mini-max-width: 300px;
 
 .c-card__cover,
 .c-card__inner {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   flex-basis: 100%;
 }
 
@@ -210,10 +210,12 @@ $card-mini-max-width: 300px;
 
     @include wcss-media($card-breakpoint-medium) {
       flex-basis: 35%;
+      width: 35%;
     }
 
     @include wcss-media($card-breakpoint-large) {
       flex-basis: 25%;
+      width: 25%;
     }
   }
 
@@ -221,10 +223,12 @@ $card-mini-max-width: 300px;
 
     @include wcss-media($card-breakpoint-medium) {
       flex-basis: 65%;
+      width: 65%;
     }
 
     @include wcss-media($card-breakpoint-large) {
       flex-basis: 75%;
+      width: 75%;
     }
   }
 
@@ -235,6 +239,10 @@ $card-mini-max-width: 300px;
     padding: $wcss-spacing-unit;
 
     @include wcss-media($card-breakpoint-medium) {
+      padding: $wcss-spacing-unit-large; // [1]
+    }
+
+    @include wcss-media($card-breakpoint-large) {
       padding: $wcss-spacing-unit-large $wcss-spacing-unit-large * 1.5 $wcss-spacing-unit $wcss-spacing-unit-large * 1.5; // [1]
     }
   }
