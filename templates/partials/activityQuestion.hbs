@@ -1,0 +1,45 @@
+{{!-- Set up both component and js-binding classes for each variant --}}
+<div class="c-card js-tool-card s-tool__view__card c-card--full js-tool-question-card">
+
+  {{!-- Only display a cover if we actually have specified one --}}
+  {{#if this.cover}}
+    <div class="c-card__cover">
+      <img src="{{ this.cover }}" alt="{{ this.name }}" class="c-card__cover__img">
+    </div>
+  {{/if}}
+  <div class="c-card__inner">
+
+    {{!-- Only display an icon if we actually have specified one --}}
+    {{#if this.thumbnail}}
+      <div class="c-card__icon c-icon">
+        <img src="{{ this.thumbnail }}" alt="{{ this.name }}" class="c-icon__img">
+      </div>
+    {{/if}}
+
+    <div class="c-card__content">
+
+      <p class="c-card__current-card js-breadcrumb"></p>
+
+      {{!-- If there's a specified title --}}
+      {{#if this.name}}
+        <p class="c-card__title">{{ this.name }}</p>
+      {{/if}}
+
+      {{!-- If there's text specified --}}
+      {{#if this.question.html}}
+        <div class="c-card__text">{{{this.question.html}}}</div>
+      {{/if}}
+
+      {{!-- If there's helper text specified --}}
+      {{#if this.example.html}}
+        <div class="c-card__helper">{{{this.example.html}}}</div>
+      {{/if}}
+    </div>
+
+    {{!-- Card actions (buttons, etc) --}}
+    <div class="c-card__actions">
+      <button class="c-btn c-btn--secondary js-tool-no">No</button>
+      <button class="c-btn c-btn--primary js-tool-yes">Yes</button>
+    </div>
+  </div>
+</div>

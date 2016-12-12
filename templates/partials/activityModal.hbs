@@ -1,0 +1,132 @@
+<div class="c-modal js-tool-modal" aria-label="{{ this.name }}">
+  <header class="c-modal__header">
+    <div class="o-wrapper">
+      <div class="o-layout o-layout--middle">
+        <div class="o-layout__item o-layout__item--6/12@large">
+          <p class="c-modal__header__title">{{ this.name }}</p>
+          <div class="c-summary-block">
+            <div class="c-summary-block__item">
+              <img class="c-summary-block__icon" src="/images/icon-moon.svg" alt="Current Phase Icon">
+              <div class="c-summary-block__content">
+                <p class="c-summary-block__title">{{ this.category }}</p>
+                <p class="c-summary-block__description">Current Phase</p>
+              </div>
+            </div>
+            <div class="c-summary-block__item">
+              <img class="c-summary-block__icon" src="/images/icon-clock.svg" alt="Activity Length Icon">
+              <div class="c-summary-block__content">
+                <p class="c-summary-block__title">{{ this.length }}</p>
+                <p class="c-summary-block__description">Activity Length</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="o-layout__item o-layout__item--6/12@large">
+          <div class="c-modal__header__description">{{{this.blurb.html}}}</div>
+        </div>
+      </div>
+    </div>
+    <img class="c-modal__header__img" src="{{ this.cover }}" alt="{{ this.name }}">
+  </header>
+  <div class="c-modal__content">
+    <div class="o-wrapper">
+
+      <div class="o-layout o-layout--center">
+        <div class="o-layout__item">
+          <p class="c-modal__intro c-lede c-lede--center">{{ this.intro }}</p>
+        </div>
+      </div>
+
+      <div class="o-layout">
+        <div class="o-layout__item o-layout__item--4/12@large">
+          <strong>Question</strong>
+        </div>
+        <div class="o-layout__item o-layout__item--8/12@large">
+          {{{this.question.html}}}
+        </div>
+      </div>
+
+      <div class="o-layout">
+        <div class="o-layout__item o-layout__item--4/12@large">
+          <strong>Why</strong>
+        </div>
+        <div class="o-layout__item o-layout__item--8/12@large">
+          {{{this.why.html}}}
+        </div>
+      </div>
+
+      <div class="o-layout">
+        <div class="o-layout__item o-layout__item--4/12@large">
+          <strong>Steps</strong>
+        </div>
+        <div class="o-layout__item o-layout__item--8/12@large">
+          {{{this.steps.html}}}
+        </div>
+      </div>
+
+      <div class="o-layout">
+        <div class="o-layout__item o-layout__item--4/12@large">
+          <strong>Tips</strong>
+        </div>
+        <div class="o-layout__item o-layout__item--8/12@large">
+          {{{this.tips.html}}}
+        </div>
+      </div>
+
+      <div class="o-layout">
+        <div class="o-layout__item o-layout__item--4/12@large">
+          <strong>Materials</strong>
+        </div>
+        <div class="o-layout__item o-layout__item--8/12@large">
+          {{{this.materials.html}}}
+        </div>
+      </div>
+
+      {{#if this.links}}
+      <div class="o-layout">
+        <div class="o-layout__item o-layout__item--4/12@large">
+          <strong>Links</strong>
+        </div>
+        <div class="o-layout__item o-layout__item--8/12@large">
+          <ul>
+            <li><a href="{{this.URL}}">{{this.name}}</a></li>
+          </ul>
+        </div>
+      </div>
+      {{/if}}
+
+      {{#if this.images}}
+      <div class="o-layout">
+        <div class="o-layout__item o-layout__item--4/12@large">
+          <strong>Images</strong>
+        </div>
+        <div class="o-layout__item o-layout__item--8/12@large">
+          <ul class="o-list-inline">
+          {{#each this.images}}
+            <li>{{#if this.link}}<a href="{{URL}}" alt="{{name}}">{{/if}}<img id="{{this.key}}" src="{{{cloudinaryUrl this.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}">{{#if this.link}}</a>{{/if}}</li>
+          {{/each}}
+          </ul>
+        </div>
+      </div>
+      {{/if}}
+
+    </div>
+  </div>
+  <div class="c-modal__top-actions c-modal__top-actions--left">
+    <button class="c-icon-button c-icon-button--primary js-tool-modal-close">
+      <img src="/images/icon-close-white.svg" alt="Icon" class="c-icon-button__icon">
+      <span class="c-icon-button__text">Close</span>
+    </button>
+  </div>
+  <div class="c-modal__top-actions c-modal__top-actions--right">
+    <button class="c-icon-button c-icon-button--primary u-marg-right-small js-tool-share">
+      <img src="/images/icon-share-white.svg" alt="Icon" class="c-icon-button__icon">
+      <span class="c-icon-button__text">Share</span>
+    </button>
+
+    <button class="c-icon-button c-icon-button--primary js-tool-print">
+      <img src="/images/icon-print-white.svg" alt="Icon" class="c-icon-button__icon">
+      <span class="c-icon-button__text">Print</span>
+    </button>
+  </div>
+</div>

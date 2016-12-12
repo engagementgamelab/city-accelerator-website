@@ -1,0 +1,132 @@
+{{!< default}}
+{{!--
+/**
+* Engagement Lab Web Suite
+* Developed by Engagement Lab, 2016
+* ==============
+*
+* Guide Page sample Template
+* ==========
+*/
+--}}
+
+<!-- Scripts are placed here temporarily, don't panic -->
+<script src="/js/vendor/velocity.js" defer></script>
+<script src="/js/modules/tool.js" defer></script>
+<script src="/js/modules/acknowledge.js" defer></script>
+
+<!-- Start Tool Scope -->
+<div class="s-tool js-tool">
+
+	<!-- Loading Screen -->
+  <div class="s-tool__loading js-tool-loading">
+    <div class="s-tool__loading__content">
+      <div class="s-tool__loading__spinner">
+        <svg width='86px' height='86px' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid" class="uil-default"><rect x="0" y="0" width="100" height="100" fill="none" class="bk"></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(0 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(30 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.08333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(60 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.16666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(90 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.25s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(120 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.3333333333333333s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(150 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.4166666666666667s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(180 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(210 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.5833333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(240 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.6666666666666666s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(270 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.75s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(300 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.8333333333333334s' repeatCount='indefinite'/></rect><rect  x='46.5' y='40' width='7' height='20' rx='5' ry='5' fill='#122b78' transform='rotate(330 50 50) translate(0 -30)'>  <animate attributeName='opacity' from='1' to='0' dur='1s' begin='0.9166666666666666s' repeatCount='indefinite'/></rect></svg>
+      </div>
+      <p class="s-tool__loading__text">Loading... <noscript><br><span class="u-text-epsilon u-marg-top-small">(Please enable Javascript to continue)</span></noscript></p>
+    </div>
+  </div>
+
+
+
+
+  <!-- Tool Navigation -->
+  <div class="s-tool__nav js-tool-steps-container">
+    <div class="o-wrapper">
+      {{> components/tool/steps}}
+    </div>
+  </div>
+
+
+
+
+	<!-- Start Main area -->
+  <div class="s-tool__main js-tool-main">
+
+  	<!-- Start Wrapper -->
+    <div class="o-wrapper">
+
+      <ul class="s-tool__views">
+        <!-- Intro -->
+        <li class="s-tool__step js-tool-step" data-step-name="Introduction" data-grid-include="false" data-nav-include="false" data-theme="t-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+							{{>
+							  components/tool/card-intro
+							    title="Mapping Your Public Engagement Process"
+							    text="<p>Public engagement is a non-linear and messy process as multiple stakeholders are consulted, input is reviewed and integrated, and relationships between the public and government are built over time.  There is no perfect roadmap to public engagement, but there are foundational planning pieces that can help determine your success.</p><p>This site helps you explore all the things you need to consider and provides useful exercises to bring a team of people into alignment. What are you waiting for? Get planning.</p>"
+							}}
+            </li>
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+							{{>
+							  components/tool/card-intro
+							    title="Mapping Your Public Engagement Process"
+							    text="<p>Based on how you answer the following questions, we will recommend a series of activities you may complete with your public engagement planning team. This is not an exhaustive list, but rather a series of prompts for a MVP: minimum viable process.</p>"
+							}}
+            </li>
+          </ul>
+        </li>
+
+        <!-- Getting Started -->
+        <!-- For each section we define a name, which will be used by the nav, and a UI theme / color palette -->
+
+        <li class="s-tool__step js-tool-step" data-step-name="Getting Started" data-theme="t-light-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+
+          	<!-- Intro card -->
+          	<!-- data-grid-include="false" means this card won't be considered for the final MVP -->
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+							{{>
+							  components/tool/card-intro
+							    title="Getting Started"
+							    text="<p>Public engagement happens at the speed of trust. So don’t rush it. Move slow and deliberately. Most importantly, understand what you already have, so you’re better able to understand what you need. We’ll call this “calibrating your instruments.”</p><p>What are your guiding values? Do you have an understanding of other similar efforts in the community? Do you understand who your partners are and what they want out of the process? And do you grasp all the communication channels people are using? Answers to these questions will be a good start.</p>"
+							}}
+            </li>
+
+						<!-- iterate through activities -->
+						{{#each activities}}
+							{{#ifeq this.category 'start'}}
+								{{> questionCard this}}
+								{{> activityCard this}}
+								{{> activityModal this}}
+							{{/ifeq}}
+						{{/each}}
+
+          </ul>
+        </li>
+
+        <!-- Score -->
+        <li class="s-tool__step js-tool-step" data-step-name="Engagement Score" data-grid-include="false" data-theme="t-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> tool/score/score }}
+            </li>
+          </ul>
+        </li>
+
+        <!-- MVP -->
+        <li class="s-tool__step js-tool-step" data-step-name="View MVP" data-grid-include="false" data-theme="t-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> tool/mvp/grid }}
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+    <!-- End Wrapper -->
+
+		<!-- Actions/Buttons -->
+    <button class="s-tool__prev s-tool__action js-tool-back">&larr; Back</button>
+    <button class="s-tool__action s-tool__print-mvp c-icon-button c-icon-button--primary js-tool-print-mvp">
+        <img src="/images/icon-print-white.svg" alt="Icon" class="c-icon-button__icon">
+        <span class="c-icon-button__text">Print MVP</span>
+    </button>
+
+  </div>
+  <!-- End Main Area -->
+
+</div>
+<!-- End Tool Scope -->

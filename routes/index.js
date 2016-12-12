@@ -26,6 +26,8 @@ var importRoutes = keystone.importer(__dirname);
 keystone.pre('routes', middleware.initErrorHandlers);
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
+keystone.pre('render', middleware.Footer);
+keystone.pre('render', middleware.MainNav);
 
 // Handle 404 errors
 keystone.set('404', function(req, res, next) {
@@ -51,8 +53,16 @@ exports = module.exports = function(app) {
 
     // Views
     app.get('/', routes.views.index);
+    app.get('/game', routes.views.game);
     app.get('/tool', routes.views.tool);
-    app.get('/:category_id', routes.views.category);
+    app.get('/toolkit', routes.views.toolkit);
+    app.get('/toolkit/builder', routes.views.builder);
+    app.get('/caseStudies', routes.views.caseStudies);
+    app.get('/caseStudies/:case_key', routes.views.caseStudy);
+    // app.get('/:category_id', routes.views.category);
+    app.get('/guide', routes.views.guide);
+    // app.get('/guide/:guide_section/:guide_key', routes.views.guide);
+    // app.get('/guide/:guide_section', routes.views.guide);
     
     // NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
     // app.get('/protected', middleware.requireUser, routes.views.protected);

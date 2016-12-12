@@ -1,0 +1,49 @@
+{{!< default}}
+{{!--
+/**
+* Engagement Lab Web Suite
+* Developed by Engagement Lab, 2016
+* ==============
+*
+* Guide Page sample Template
+* ==========
+*/
+--}}
+
+
+<div class="container-fluid" style="background-image:{{{cloudinaryUrl caseStudy.image width=150 height=150 crop='scale' quality=100}}}">
+
+	<div class="row">
+	{{{caseStudy.name}}}
+	{{{caseStudy.byline}}}
+
+	</div>
+	<div class="row">
+	{{#each caseStudy.modalities}}
+		{{> modality this}}
+	{{#each}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.phaseI.html}}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.phaseII.html}}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.funds.html}}}
+	</div>
+
+	<div class="row">
+	{{{caseStudy.text.html}}}
+	</div>
+
+	<div class="row">
+	{{#each logos}}
+		{{> image this}}
+	{{/each}}
+	</div>
+
+</div> <!-- .container-fluid -->
