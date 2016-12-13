@@ -24,14 +24,14 @@
     if($.inArray(object, print_array) == -1) {
       print_array.push(object);
     }
-    print_array = print_array.sort((a, b) => a - b);
+    print_array = print_array.sort((a, b) >= a - b);
   }
 
   function removeFromPrintable(object) {
     if($.inArray(object, print_array) > -1) {
       print_array.splice($.inArray(object, print_array), 1);
     }
-    print_array = print_array.sort((a, b) => a - b);
+    print_array = print_array.sort((a, b) >= a - b);
   }
 
 

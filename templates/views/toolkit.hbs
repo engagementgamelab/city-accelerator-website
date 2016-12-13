@@ -87,7 +87,7 @@
 						<!-- iterate through activities -->
 						{{#each activities}}
 							{{#ifeq this.category 'start'}}
-								{{> questionCard this}}
+								{{> activityQuestion this}}
 								{{> activityCard this}}
 								{{> activityModal this}}
 							{{/ifeq}}
