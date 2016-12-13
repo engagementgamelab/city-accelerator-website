@@ -4,7 +4,7 @@
 	"subdomain": "city",
 	"admin_nav": { 
 									"Home": ["Index", "Game", "Guide", "CaseStudy"], 
-									"Toolkit": ["Toolkit", "Activity", "Builder"],
+									"Toolkit": ["Card", "Activity", "Toolkit"],
 									"Navigation": ["MainNav", "Footer"],
 									"Resources": ["Image", "Link", "Category"]
 								}

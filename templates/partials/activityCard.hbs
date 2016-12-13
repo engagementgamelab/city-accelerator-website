@@ -4,9 +4,10 @@
   <div class="c-card__inner">
 
     {{!-- Only display an icon if we actually have specified one --}}
-    {{#if this.thumbnail}}
+    {{#if this.icon}}
       <div class="c-card__icon c-icon">
-        <img src="{{ this.thumbnail }}" alt="{{ this.name }}" class="c-icon__img">
+      {{> image this}}
+        {{!-- <img src="{{ this.thumbnail }}" alt="{{ this.name }}" class="c-icon__img"> --}}
       </div>
     {{/if}}
 

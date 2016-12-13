@@ -5,20 +5,18 @@
 * Developed by Engagement Lab, 2016
 * ==============
 *
-* Guide Page sample Template
+* Index Page sample Template
 * ==========
 */
 --}}
+
 
 <!-- Scripts are placed here temporarily, don't panic -->
 <script src="/js/vendor/velocity.js" defer></script>
 <script src="/js/modules/tool.js" defer></script>
 <script src="/js/modules/acknowledge.js" defer></script>
 
-<!-- Start Tool Scope -->
 <div class="s-tool js-tool">
-
-	<!-- Loading Screen -->
   <div class="s-tool__loading js-tool-loading">
     <div class="s-tool__loading__content">
       <div class="s-tool__loading__spinner">
@@ -27,72 +25,39 @@
       <p class="s-tool__loading__text">Loading... <noscript><br><span class="u-text-epsilon u-marg-top-small">(Please enable Javascript to continue)</span></noscript></p>
     </div>
   </div>
-
-
-
-
-  <!-- Tool Navigation -->
   <div class="s-tool__nav js-tool-steps-container">
     <div class="o-wrapper">
       {{> components/tool/steps}}
     </div>
   </div>
-
-
-
-
-	<!-- Start Main area -->
   <div class="s-tool__main js-tool-main">
-
-  	<!-- Start Wrapper -->
     <div class="o-wrapper">
-
       <ul class="s-tool__views">
         <!-- Intro -->
         <li class="s-tool__step js-tool-step" data-step-name="Introduction" data-grid-include="false" data-nav-include="false" data-theme="t-blue">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-							{{>
-							  components/tool/card-intro
-							    title="Mapping Your Public Engagement Process"
-							    text="<p>Public engagement is a non-linear and messy process as multiple stakeholders are consulted, input is reviewed and integrated, and relationships between the public and government are built over time.  There is no perfect roadmap to public engagement, but there are foundational planning pieces that can help determine your success.</p><p>This site helps you explore all the things you need to consider and provides useful exercises to bring a team of people into alignment. What are you waiting for? Get planning.</p>"
-							}}
+              {{> components/tool/card-intro introOne.[0]}}
+            
+            
             </li>
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-							{{>
-							  components/tool/card-intro
-							    title="Mapping Your Public Engagement Process"
-							    text="<p>Based on how you answer the following questions, we will recommend a series of activities you may complete with your public engagement planning team. This is not an exhaustive list, but rather a series of prompts for a MVP: minimum viable process.</p>"
-							}}
+              {{> components/tool/card-intro introTwo}}
             </li>
           </ul>
         </li>
 
         <!-- Getting Started -->
-        <!-- For each section we define a name, which will be used by the nav, and a UI theme / color palette -->
-
         <li class="s-tool__step js-tool-step" data-step-name="Getting Started" data-theme="t-light-blue">
           <ul class="s-tool__sub-views js-tool-sub-steps">
-
-          	<!-- Intro card -->
-          	<!-- data-grid-include="false" means this card won't be considered for the final MVP -->
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-							{{>
-							  components/tool/card-intro
-							    title="Getting Started"
-							    text="<p>Public engagement happens at the speed of trust. So don’t rush it. Move slow and deliberately. Most importantly, understand what you already have, so you’re better able to understand what you need. We’ll call this “calibrating your instruments.”</p><p>What are your guiding values? Do you have an understanding of other similar efforts in the community? Do you understand who your partners are and what they want out of the process? And do you grasp all the communication channels people are using? Answers to these questions will be a good start.</p>"
-							}}
+              {{> components/tool/card-intro startCard}}
             </li>
-
-						<!-- iterate through activities -->
-						{{#each activities}}
-							{{#ifeq this.category 'start'}}
-								{{> activityQuestion this}}
-								{{> activityCard this}}
-								{{> activityModal this}}
-							{{/ifeq}}
-						{{/each}}
-
+            {{#each startActivities}}
+            <li class="s-tool__view js-tool-view">
+              {{> activityToolkit this}}
+            </li>
+            {{/each}}
           </ul>
         </li>
 
@@ -114,19 +79,13 @@
           </ul>
         </li>
       </ul>
-
     </div>
-    <!-- End Wrapper -->
-
-		<!-- Actions/Buttons -->
     <button class="s-tool__prev s-tool__action js-tool-back">&larr; Back</button>
     <button class="s-tool__action s-tool__print-mvp c-icon-button c-icon-button--primary js-tool-print-mvp">
         <img src="/images/icon-print-white.svg" alt="Icon" class="c-icon-button__icon">
         <span class="c-icon-button__text">Print MVP</span>
     </button>
-
   </div>
-  <!-- End Main Area -->
-
+  <div class="s-tool__mvp js-tool-mvp">
+  </div>
 </div>
-<!-- End Tool Scope -->

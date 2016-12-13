@@ -14,6 +14,7 @@
 var keystone = require('keystone'),
     Activity = keystone.list('Activity'),
     Toolkit = keystone.list('Toolkit'),
+    Card = keystone.list('Card'),
     _ = require('underscore');
 
 exports = module.exports = function(req, res) {
@@ -25,29 +26,35 @@ exports = module.exports = function(req, res) {
     // locals.section = '';
 
     view.on('init', function(next) {
+        var categorize = function(val, cat) {
+            return val.filter(function(item) {
+                return item.category == cat;
+            });
+        };
 
-        var queryToolkit = Toolkit.model.findOne({}, {}, {
-            sort: {
-                'createdAt': -1
-            }
-        });
-
+        var queryCard = Card.model.find({}, {}, {});
 
         var queryActivity = Activity.model.find({}).sort([
             ['sortOrder', 'ascending']
         ])
         .populate('links')
         .populate('images')
-        .populate('thumbnail');
+        .populate('icon');
 
 
-        queryToolkit.exec(function(err, resultToolkit) {
+        queryCard.exec(function(err, result) {
             if (err) throw err;
 
-            if(resultToolkit === null)
-                return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
+            if(result === null)
+                return res.notfound('Cannot find that part of the toolki', 'Sorry, but it looks like the card you were looking for does not exist!');
 
-            locals.toolkit = resultToolkit;
+            locals.introOne = categorize(result, 'IntroOne');
+            console.log(locals.introOne);
+            locals.introTwo = categorize(result, 'IntroTwo');
+            locals.getStarted = categorize(result, 'Getting Started');
+            locals.projPlan = categorize(result, 'Project Planning');
+            locals.impliment = categorize(result, 'Implimentation');
+            locals.iterate = categorize(result, 'Iteration');
 
             queryActivity.exec(function(err, resultActivity) {
                 if (err) throw err;
@@ -55,9 +62,12 @@ exports = module.exports = function(req, res) {
                 if(resultActivity === null)
                     return res.notfound('Not found', 'Sorry, but it looks like the activity you were looking for does not exist!');
 
-                locals.activities = resultActivity;
+                // locals.activities = resultActivity;
+                locals.startActivities = categorize(resultActivity, 'Getting Started');
+                locals.planActivities = categorize(resultActivity, 'Project Planning');
+                locals.implimentActivities = categorize(resultActivity, 'Implimentation');
+                locals.iterateActivities = categorize(resultActivity, 'Iteration');
                 
-
                 next();
 
             });

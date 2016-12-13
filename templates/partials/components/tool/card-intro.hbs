@@ -23,17 +23,17 @@
 
       {{!-- If there's a specified title --}}
       {{#if title}}
-        <p class="c-card__title c-card__title--separated">{{ title }}</p>
+        <p class="c-card__title c-card__title--separated">{{ this.title }}</p>
       {{/if}}
 
       {{!-- If there's text specified --}}
       {{#if text}}
-        <div class="c-card__text">{{{ text }}}</div>
+        <div class="c-card__text">{{{ text.html }}}</div>
       {{/if}}
 
       {{!-- If there's helper text specified --}}
-      {{#if helper}}
-        <div class="c-card__helper">{{{ helper }}}</div>
+      {{#if example}}
+        <div class="c-card__helper">{{{ example.html }}}</div>
       {{/if}}
     </div>
 

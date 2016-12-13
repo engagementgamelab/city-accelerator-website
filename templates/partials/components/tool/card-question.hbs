@@ -5,6 +5,7 @@
   {{#if cover}}
     <div class="c-card__cover">
       <img src="{{ cover }}" alt="{{ title }}" class="c-card__cover__img">
+
     </div>
   {{/if}}
   <div class="c-card__inner">
@@ -12,7 +13,9 @@
     {{!-- Only display an icon if we actually have specified one --}}
     {{#if icon}}
       <div class="c-card__icon c-icon">
-        <img src="{{ icon }}" alt="{{ title }}" class="c-icon__img">
+        {{> image icon}}
+        {{!-- <img src="{{ icon }}" alt="{{ title }}" class="c-icon__img"> --}}
+        
       </div>
     {{/if}}
 
@@ -29,13 +32,13 @@
       {{/if}}
 
       {{!-- If there's text specified --}}
-      {{#if text}}
-        <div class="c-card__text">{{{ text }}}</div>
+      {{#if question}}
+        <div class="c-card__text">{{{ question.html }}}</div>
       {{/if}}
 
       {{!-- If there's helper text specified --}}
-      {{#if helper}}
-        <div class="c-card__helper">{{{ helper }}}</div>
+      {{#if example}}
+        <div class="c-card__helper">{{{ example.html }}}</div>
       {{/if}}
     </div>
 

@@ -8,21 +8,21 @@
             <div class="c-summary-block__item">
               <img class="c-summary-block__icon" src="/images/icon-moon.svg" alt="Current Phase Icon">
               <div class="c-summary-block__content">
-                <p class="c-summary-block__title">{{ current_phase }}</p>
+                <p class="c-summary-block__title">{{ category }}</p>
                 <p class="c-summary-block__description">Current Phase</p>
               </div>
             </div>
             <div class="c-summary-block__item">
               <img class="c-summary-block__icon" src="/images/icon-clock.svg" alt="Activity Length Icon">
               <div class="c-summary-block__content">
-                <p class="c-summary-block__title">{{ activity_length }}</p>
+                <p class="c-summary-block__title">{{ length }}</p>
                 <p class="c-summary-block__description">Activity Length</p>
               </div>
             </div>
           </div>
         </div>
         <div class="o-layout__item o-layout__item--6/12@large">
-          <p class="c-modal__header__description">{{ description }}</p>
+          <p class="c-modal__header__description">{{{ description.html }}}</p>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
 
       <div class="o-layout o-layout--center">
         <div class="o-layout__item">
-          <p class="c-modal__intro c-lede c-lede--center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque possimus culpa animi eos unde nobis, autem asperiores minima quaerat est ratione modi consequatur, illo laboriosam aperiam dicta vel aspernatur mollitia!</p>
+          <p class="c-modal__intro c-lede c-lede--center">{{{ question.html }}}</p>
         </div>
       </div>
 
@@ -42,7 +42,7 @@
           <strong>Why It's Helpful</strong>
         </div>
         <div class="o-layout__item o-layout__item--8/12@large">
-          <p>Design principles help clarify your mission by summarizing the key characteristics of your process and its fundamental goals. They can be useful references for when onboarding new team members or collaborators, reaching decision-making cross-roads, and communicating your value internally and to the public. For instance, a value of “designing for the margins” can inform the languages used in outreach materials, targeted communities for engagement events,  and the skillsets you bring onto your team.</p>
+          {{{ why.html }}}
         </div>
       </div>
 
@@ -51,7 +51,7 @@
           <strong>Suggested Materials</strong>
         </div>
         <div class="o-layout__item o-layout__item--8/12@large">
-          <p>Writing surfaces and instruments such as post-its, whiteboards, paper, pens, markers, etc. and/or digital notes.</p>
+          {{{ materials.html }}}
         </div>
       </div>
 
@@ -61,10 +61,7 @@
         </div>
         <div class="o-layout__item o-layout__item--8/12@large">
           <ol>
-            <li>Briefly review the ultimate goal of your process. For example: Springfield 2060 will guide a visioning process for the future of the city that is equitable, thriving, and resilient by meaningfully incorporating input from 35% of its residents into the comprehensive plan.</li>
-            <li>Have each such team member write down three important qualities (such as on a post-it each) that they feel are integral to the public engagement process. The values can apply to both internal and external communication and planning. Depending on where you are in planning process, values might be broad, such as- transparent documentation, creative experimentation, committed inclusivity, etc. or they might be specific, such as- youth-driven, or local leadership building.</li>
-            <li>Share your ideas and cluster any similar ones into groups.</li>
-            <li>Discuss each thematic cluster and record clear statements that represent each guiding design principle. 7-10 design principles are good to aim for in capturing your team’s core values, while keeping the list short enough to help internalize it.</li>
+           {{{ steps.html }}}
           </ol>
         </div>
       </div>

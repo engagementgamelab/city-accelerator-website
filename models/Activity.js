@@ -23,6 +23,7 @@ var Activity = new keystone.List('Activity',
 	{
 		label: 'Activities',
 		singular: 'Activity',
+        sortable: true,
 		track: true,
 		autokey: { path: 'activity_key', from: 'name', unique: true },
 	});
@@ -34,8 +35,20 @@ var Activity = new keystone.List('Activity',
 Activity.add({
 
 	name: { type: String, label: 'Activity Title', required: true, initial: true },
+    order: { type: Number, label: 'Sort Order', note: 'This is per category, so each category will have activities with numbers 1-n, with n being the number of activies in that category.'},
     length: { type: String, label: 'Activity Length' },
-	category: {type: Types.Select, label: 'Activity Category', options: 'start, plan, impliment, iterate', required:true, initial: true },
+	category: {type: Types.Select, label: 'Activity Category', options: 'Getting Started, Project Planning, Implimentation, Iteration', required:true, initial: true },
+    question: {
+        type: Types.Markdown,
+        label: 'Question',
+        note: 'Appears both on small activity card, toolkit, and full screen activity modal'
+    },
+    icon: {
+        type: Types.Relationship,
+        label: 'Activity Icon',
+        ref: 'Image',
+        many: false
+    },
     // toolImage: {
     //     type: Types.Relationship,
     //     label: 'Toolkit Card Image Background',
@@ -44,24 +57,11 @@ Activity.add({
     // },
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 },
-'Activity Card (Small)', {
-
-    blurb: {
-        type: Types.Markdown,
-        label: 'Blurb'
-    },
-    icon: {
-        type: Types.Relationship,
-        label: 'Activity Icon',
-        ref: 'Image',
-        many: false
-    }
-},
 'Activity Page (Big)', {
-    question: {
+    description: {
         type: Types.Markdown, 
-        label: 'Question for Project Builder'
-    }, 
+        label: 'Description for Project Builder'
+    },
     example: {
         type: Types.Markdown, 
         label: 'Example for Project Builder'
@@ -132,6 +132,6 @@ Activity.schema.pre('remove', function(next) {
 /**
  * Model Registration
  */
-Activity.defaultSort = '-createdAt';
+Activity.defaultSort = 'category';
 Activity.defaultColumns = 'name, updatedAt';
 Activity.register();
