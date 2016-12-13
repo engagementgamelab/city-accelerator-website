@@ -56,6 +56,7 @@ exports = module.exports = function(req, res) {
                     return res.notfound('Not found', 'Sorry, but it looks like the activity you were looking for does not exist!');
 
                 locals.activities = resultActivity;
+                
 
                 next();
 

@@ -36,6 +36,12 @@ Activity.add({
 	name: { type: String, label: 'Activity Title', required: true, initial: true },
     length: { type: String, label: 'Activity Length' },
 	category: {type: Types.Select, label: 'Activity Category', options: 'start, plan, impliment, iterate', required:true, initial: true },
+    // toolImage: {
+    //     type: Types.Relationship,
+    //     label: 'Toolkit Card Image Background',
+    //     ref: 'Image',
+    //     many: false
+    // },
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 },
 'Activity Card (Small)', {
@@ -44,9 +50,9 @@ Activity.add({
         type: Types.Markdown,
         label: 'Blurb'
     },
-    thumbnail: {
+    icon: {
         type: Types.Relationship,
-        label: 'Card Image',
+        label: 'Activity Icon',
         ref: 'Image',
         many: false
     }
