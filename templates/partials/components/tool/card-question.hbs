@@ -1,13 +1,10 @@
 {{!-- Set up both component and js-binding classes for each variant --}}
 <div class="c-card js-tool-card s-tool__view__card c-card--full js-tool-question-card">
 
-  {{!-- Only display a cover if we actually have specified one --}}
-  {{#if cover}}
-    <div class="c-card__cover">
-      <img src="{{ cover }}" alt="{{ title }}" class="c-card__cover__img">
-
-    </div>
-  {{/if}}
+  <div class="c-card__cover">
+    {{> map-vector}}
+  </div>
+  
   <div class="c-card__inner">
 
     {{!-- Only display an icon if we actually have specified one --}}
@@ -28,7 +25,7 @@
 
       {{!-- If there's a specified title --}}
       {{#if title}}
-        <p class="c-card__title">{{ title }}</p>
+        <p class="c-card__title js-tool-card-title">{{ title }}</p>
       {{/if}}
 
       {{!-- If there's text specified --}}
