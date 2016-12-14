@@ -1,0 +1,11 @@
+// CHECK LIST
+
+.c-check-list {
+  @extend %o-list-bare;
+
+  > li {
+    padding-left: $wcss-spacing-unit;
+    background: url(../images/icon-checkmark.svg) left center no-repeat;
+    background-size: 14px;
+  }
+}
