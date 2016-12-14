@@ -93,6 +93,33 @@
 		"rFN": 0,
 		"uCM": 0
 		},
+	"\/models\/Activity.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Activity-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Card.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Card-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/CaseStudy.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/CaseStudy-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/models\/Category.js": {
 		"ft": 64,
 		"mi": 1,
@@ -102,11 +129,83 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/models\/Footer.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Footer-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Game.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Game-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Guide.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Guide-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Image.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Image-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/models\/Index.js": {
 		"ft": 64,
-		"mi": 1,
-		"oA": 0,
+		"mi": 0,
+		"oA": 1,
 		"oAP": "\/models\/Index-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Link.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Link-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/MainNav.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/MainNav-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Score.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Score-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Toolkit.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Toolkit-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -122,6 +221,15 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/models\/User-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/models\/Video.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/models\/Video-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -6307,6 +6415,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/public\/images\/icon-checkmark.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/public\/images\/icon-checkmark.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/public\/images\/icon-clock.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -6583,7 +6701,7 @@
 		},
 	"\/public\/images\/map-neutral.jpg": {
 		"ft": 16384,
-		"iS": 31065,
+		"iS": 38577,
 		"oA": 0,
 		"oAP": "\/public\/images\/map-neutral.jpg",
 		"oF": 0,
@@ -6619,6 +6737,15 @@
 		"mi": 0,
 		"oA": 1,
 		"oAP": "\/public\/js\/modules\/acknowledge-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/public\/js\/modules\/off-canvas.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/public\/js\/modules\/off-canvas-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -6721,6 +6848,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/public\/scss\/components\/_check-list.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_check-list.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/public\/scss\/components\/_circle-graph.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -6795,6 +6935,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "\/public\/scss\/css\/_modal.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/public\/scss\/components\/_off-canvas.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "\/public\/scss\/css\/_off-canvas.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -7280,6 +7433,29 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/public\/styles\/core.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/public\/styles\/core-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/public\/styles\/core.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 1,
+		"oA": 0,
+		"oAP": "\/public\/css\/core.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/README.md": {
 		"cS": 0,
 		"eF": 1,
@@ -7300,8 +7476,8 @@
 		},
 	"\/routes\/index.js": {
 		"ft": 64,
-		"mi": 1,
-		"oA": 0,
+		"mi": 0,
+		"oA": 1,
 		"oAP": "\/routes\/index-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -7316,11 +7492,47 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/routes\/views\/caseStudies.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/routes\/views\/caseStudies-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/routes\/views\/caseStudy.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/routes\/views\/caseStudy-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/routes\/views\/category.js": {
 		"ft": 64,
 		"mi": 1,
 		"oA": 0,
 		"oAP": "\/routes\/views\/category-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/routes\/views\/game.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/routes\/views\/game-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/routes\/views\/guide.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/routes\/views\/guide-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -7343,6 +7555,15 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/routes\/views\/toolkit.js": {
+		"ft": 64,
+		"mi": 0,
+		"oA": 1,
+		"oAP": "\/routes\/views\/toolkit-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
 	"\/templates\/helpers\/index.js": {
 		"ft": 64,
 		"mi": 1,
@@ -7356,6 +7577,18 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/layouts\/base.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/activityToolkit.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/activityToolkit.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/caseStudyCard.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/caseStudyCard.hbs",
 		"oF": 0
 		},
 	"\/templates\/partials\/components\/tool\/card-intro.hbs": {
@@ -7406,6 +7639,36 @@
 		"oAP": "\/templates\/partials\/footer.hbs",
 		"oF": 0
 		},
+	"\/templates\/partials\/guidePage.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/guidePage.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/image.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/image.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/link.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/link.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/map-vector.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/map-vector.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/modality.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/modality.hbs",
+		"oF": 0
+		},
 	"\/templates\/partials\/nav.hbs": {
 		"ft": 8192,
 		"oA": 2,
@@ -7434,6 +7697,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/partials\/script\/production.hbs",
+		"oF": 0
+		},
+	"\/templates\/partials\/spinner-vector.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/spinner-vector.hbs",
 		"oF": 0
 		},
 	"\/templates\/partials\/tool\/getting-started\/communication-channels-first.hbs": {
@@ -7514,10 +7783,40 @@
 		"oAP": "\/templates\/partials\/tool\/score\/score.hbs",
 		"oF": 0
 		},
+	"\/templates\/partials\/toolkitSidebar.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/partials\/toolkitSidebar.hbs",
+		"oF": 0
+		},
+	"\/templates\/views\/case_studies.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/views\/case_studies.hbs",
+		"oF": 0
+		},
+	"\/templates\/views\/case_study.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/views\/case_study.hbs",
+		"oF": 0
+		},
 	"\/templates\/views\/errors\/404.hbs": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/views\/errors\/404.hbs",
+		"oF": 0
+		},
+	"\/templates\/views\/game.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/views\/game.hbs",
+		"oF": 0
+		},
+	"\/templates\/views\/guide.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/views\/guide.hbs",
 		"oF": 0
 		},
 	"\/templates\/views\/index.hbs": {
@@ -7530,6 +7829,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/templates\/views\/tool.hbs",
+		"oF": 0
+		},
+	"\/templates\/views\/toolkit.hbs": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/templates\/views\/toolkit.hbs",
 		"oF": 0
 		},
 	"\/uncertainty-dictionary.sublime-workspace": {
