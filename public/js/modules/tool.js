@@ -24,14 +24,14 @@
     if($.inArray(object, print_array) == -1) {
       print_array.push(object);
     }
-    print_array = print_array.sort((a, b) >= a - b);
+    print_array = print_array.sort(function(a, b){return a > b});
   }
 
   function removeFromPrintable(object) {
     if($.inArray(object, print_array) > -1) {
       print_array.splice($.inArray(object, print_array), 1);
     }
-    print_array = print_array.sort((a, b) >= a - b);
+    print_array = print_array.sort(function(a, b){return a > b});
   }
 
 
@@ -153,6 +153,7 @@
       var step = $(this).closest('.js-tool-step').index();
       var sub_step = $(this).index();
 
+      var theme = $(this).closest('.js-tool-step').attr('data-theme');
       var mini = $(this).find('.js-tool-view-mini .js-tool-card');
       var modal = $(this).find('.js-tool-view-contents .js-tool-modal');
 
@@ -161,6 +162,7 @@
 
       modal.attr('data-linked-step', step);
       modal.attr('data-linked-sub-step', sub_step);
+      modal.addClass(theme);
 
       // Send modals to the end of body
       modal.appendTo('body');
@@ -265,7 +267,23 @@
     var no = $(print_array).size();
     var yes = max - no;
     var percentage = (yes * 100 / max) - 0.001; // [1]
+    var title = "";
+    var description = "";
     $('.js-tool-score').css("animation-delay", "-" + percentage + "s");
+
+    if(no >= 10) {
+      title = "Knowledgeable Novice";
+      description = "Perhaps you understand the value of engagement but don’t know where to start or how to put all of the pieces of together. Review the suggested activities to create a thoughtful public engagement plan.";
+    } else if (no >= 5) {
+      title = "Prepared Practitioner";
+      description = "You’re not starting from scratch, however, you also may not have considered several key engagement planning components. Taking into account the suggested activities could help you prepare a more robust public engagement plan to share with multiple stakeholders.";
+    } else {
+      title = "Certified Public Engager";
+      description = "Congratulations! You’re on your way to a transparent, inclusive, and creative public engagement process. The suggested activities will help assure that you’re taking extra measures for a meaningful engagement process.";
+    }
+
+    $('.js-tool-score-title').html(title);
+    $('.js-tool-score-description').html(description);
   }
 
   function updateGrid() {
@@ -277,6 +295,30 @@
       var step = data[0];
       var sub_step = data[1];
       $('.js-tool-grid .js-tool-card[data-linked-step="' + step + '"][data-linked-sub-step="' + sub_step + '"]').removeClass('is-disabled');
+    }
+  }
+
+  function updateSidebar() {
+    var sidebar_html = "";
+    if($('.js-tool-grid-item').length) {
+      $('.js-tool-grid-block').each(function() {
+        var block_title = $(this).find('.js-tool-grid-block-title').html();
+        var items = $(this).find('.js-tool-grid-item .js-tool-card:not(.is-disabled)');
+
+        if(items.length) {
+          $('.js-tool-sidebar-empty').attr('aria-hidden', 'true');
+          sidebar_html = sidebar_html + '<h4 class="c-off-canvas__sub-title">' + block_title + '</h4>' + '<ul class="c-check-list">';
+          $(items).each(function() {
+            var item_title = $(this).find('.js-tool-card-title').html();
+            sidebar_html = sidebar_html + '<li>' + item_title + '</li>';
+          });
+          sidebar_html = sidebar_html + '</ul>';
+        }
+      });
+
+      $('.js-tool-sidebar-content').empty().html(sidebar_html);
+    } else {
+      $('.js-tool-sidebar-empty').attr('aria-hidden', 'false');
     }
   }
 
@@ -376,6 +418,7 @@
       addToPrintable(active_view);
       updateScore();
       updateGrid();
+      updateSidebar();
       goNextStep();
     });
 
@@ -383,6 +426,7 @@
       removeFromPrintable(active_view);
       updateScore();
       updateGrid();
+      updateSidebar();
       goNextStep();
     });
 
@@ -451,6 +495,8 @@
         $(this).addClass('is-disabled');
         removeFromPrintable(view);
       }
+
+      updateSidebar();
     });
 
     $(window).on('resize', function() {
