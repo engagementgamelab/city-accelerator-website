@@ -5,6 +5,7 @@
 
 .o-block {
   display: block;
+
   text-align: center;
 }
 
@@ -12,7 +13,6 @@
   margin-bottom: $wcss-spacing-unit;
 
   // Size Variants
-
   .o-block--flush > & {
     margin-bottom: 0;
   }
@@ -28,11 +28,10 @@
   .o-block--large > & {
     margin-bottom: $wcss-spacing-unit-large;
   }
-
+  
   .o-block--huge > & {
     margin-bottom: $wcss-spacing-unit-huge;
   }
-
 }
 
 .o-block__body {

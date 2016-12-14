@@ -1,7 +1,8 @@
 // SUMMARY BLOCK
 
 .c-summary-block {
-  display: block; 
+  display: block;
+
   margin-left: -$wcss-spacing-unit-small;
 }
 
@@ -9,6 +10,7 @@
 .c-summary-block__icon,
 .c-summary-block__content {
   display: inline-block;
+
   vertical-align: middle;
 }
 
@@ -26,25 +28,33 @@
 }
 
 .c-summary-block__title {
-  @include wcss-font-size(zeta);
   font-weight: bold;
-  color: $color-white;
+
   margin-bottom: 0;
+
+  color: $color-white;
+
+  @include wcss-font-size(zeta);
 
   @media print {
     font-size: 10px;
+
     color: $color-gray;
   }
 }
 
 .c-summary-block__description {
-  @include wcss-font-size(eta);
-  color: $color-light-gray;
-  text-transform: uppercase;
   margin-bottom: 0;
 
+  text-transform: uppercase;
+
+  color: $color-white;
+
+  @include wcss-font-size(eta);
+  
   @media print {
     font-size: 10px;
+
     color: $color-gray;
   }
 }

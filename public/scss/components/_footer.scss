@@ -1,14 +1,18 @@
 .c-footer {
-  background: $color-neutral-95;
-  text-align: center;
   width: 100%;
   padding: $wcss-spacing-unit-large 0;
+
+  text-align: center;
+
   border-top: 1px solid $color-neutral-87;
+  background: $color-neutral-95;
 }
 
 .c-footer__text {
-  @include wcss-font-size(eta);
   display: inline-block;
-  margin: $wcss-spacing-unit 0 0 0;
+
   max-width: 600px;
+  margin: $wcss-spacing-unit 0 0 0;
+
+  @include wcss-font-size(eta);
 }

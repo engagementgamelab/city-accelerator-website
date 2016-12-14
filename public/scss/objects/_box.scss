@@ -6,14 +6,15 @@
 // 1. So we can apply the `.o-box` class to naturally-inline elements.
 
 .o-box {
-  @include wcss-clearfix();
   display: block; // [1]
+
   padding: $wcss-spacing-unit;
 
+  @include wcss-clearfix();
+  
   > :last-child {
     margin-bottom: 0;
   }
-
 }
 
 

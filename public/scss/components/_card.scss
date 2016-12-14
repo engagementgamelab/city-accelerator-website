@@ -3,7 +3,7 @@
 // Component-specific breakpoints
 
 $card-breakpoint-medium: 850px;
-$card-breakpoint-large: 1000px; 
+$card-breakpoint-large: 1000px;
 $card-mini-max-width: 300px;
 
 // BASE CARD STYLING
@@ -14,17 +14,21 @@ $card-mini-max-width: 300px;
 // 5. Solve flickering issues in Chrome when enabled/disabled.
 
 .c-card {
-  background: $color-white;
-  border-radius: 3px;
-  box-shadow: 0 20px 30px 0 rgba($color-black, .10);
-  transition: $wcss-base-transition; // [1]
-  overflow: hidden; // [2]
-  perspective: 1px; // [3]
   display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
+  overflow: hidden; // [2]
+
   width: 100%; // [4]
   height: 100%; // [4]
+  margin: 0 auto;
+
+  transition: $wcss-base-transition; // [1]
+
+  border-radius: 3px;
+  background: $color-white;
+  box-shadow: 0 20px 30px 0 rgba($color-black, .10);
+
+  perspective: 1px; // [3]
+  flex-wrap: wrap;
   backface-visibility: hidden; // [5]
 }
 
@@ -41,8 +45,10 @@ $card-mini-max-width: 300px;
 
 .c-card__cover {
   position: relative; // [1]
-  min-height: 150px; // [2]
+
   overflow: hidden; // [3]
+
+  min-height: 150px; // [2]
 
   @include wcss-media($card-breakpoint-medium) {
     min-height: 250px;
@@ -53,15 +59,23 @@ $card-mini-max-width: 300px;
 // 2. Make cover image fill the entire space
 // 3. Prevent images from stretching too much
 
-.c-card__cover__img {
+.c-card__cover > img,
+.c-card__cover > svg {
   position: absolute; // [1]
   top: 50%; // [1]
   left: 50%; // [1]
-  transform: translate(-50%, -50%); // [1]
-  max-width: none; // [2]
-  min-height: 100%; // [2]
+
   min-width: 100%; // [2]
+  max-width: none; // [2]
   max-width: 250%; // [3]
+  min-height: 100%; // [2]
+
+  transform: translate(-50%, -50%); // [1]
+}
+
+.c-card__cover > svg * {
+  transition: $wcss-base-transition;
+  //transition-delay: 2s;
 }
 
 // Inner
@@ -69,6 +83,7 @@ $card-mini-max-width: 300px;
 
 .c-card__inner {
   position: relative; // [1]
+
   display: flex;
   flex-direction: column;
 }
@@ -78,57 +93,45 @@ $card-mini-max-width: 300px;
 .c-card__title {
   font-family: $font-serif;
   font-weight: bold;
+
   margin-bottom: $wcss-spacing-unit-small;
-  transition: color 0.2s;
+
+  transition: color .2s;
+
   @include wcss-theme-var(color, --tertiary);
-/*
-  .t-blue & {
-    color: map-get($theme-blue, primary);
-  }
-
-  .t-light-blue & {
-    color: map-get($theme-light-blue, tertiary);
-  }
-
-  .t-green & {
-    color: map-get($theme-green, tertiary);
-  }
-
-  .t-purple & {
-    color: map-get($theme-purple, secondary);
-  }
-
-  .t-neutral & {
-    color: map-get($theme-neutral, tertiary);
-  }
-*/
 }
 
 .c-card__title--separated {
   // Separator line at the bottom of card titles
   // 1. Make separator color the same as text color
   // 2. Still make separator color a tad lighter
-
   &:after {
-    content: '';
+    position: relative;
+
+    display: block;
+
     width: 80px;
     height: 1px;
-    background: currentColor; // [1]
-    opacity: 0.5; // [2]
     margin: $wcss-spacing-unit 0;
-    display: block;
-    position: relative;
+
+    content: '';
+
+    opacity: .5; // [2]
+    background: currentColor; // [1]
   }
 }
 
 // Current Card Text
 
 .c-card__current-card {
-  text-transform: uppercase;
-  letter-spacing: 1px;
   font-family: $font-sans;
   font-weight: bold;
+
   margin-bottom: $wcss-spacing-unit-small;
+
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
   @include wcss-font-size(eta);
 }
 
@@ -136,20 +139,20 @@ $card-mini-max-width: 300px;
 
 .c-card__icon.c-card__icon {
   position: relative;
+
   display: block;
-  margin: -(91px/2) auto 0 auto;
+
   width: 91px;
   height: 91px;
+  margin: -(91px/2) auto 0 auto;
 }
 
 // Text
 
 .c-card__text {
   margin-bottom: $wcss-spacing-unit;
-
   > p {
     margin-bottom: $wcss-spacing-unit-tiny;
-
     &:last-child {
       margin-bottom: 0;
     }
@@ -160,20 +163,22 @@ $card-mini-max-width: 300px;
 
 .c-card__helper {
   color: $color-light-gray;
-
   // Separator line on top of helper text
   // 1. Make separator color the same as text color
   // 2. Still make separator color a tad lighter
-
   &:before {
-    content: '';
+    position: relative;
+
+    display: block;
+
     width: 80px;
     height: 1px;
-    background: currentColor; // [1]
-    opacity: 0.5; // [2]
     margin-bottom: $wcss-spacing-unit-small;
-    display: block;
-    position: relative;
+
+    content: '';
+
+    opacity: .5; // [2]
+    background: currentColor; // [1]
   }
 }
 
@@ -182,19 +187,22 @@ $card-mini-max-width: 300px;
 
 .c-card__actions {
   display: flex;
-  flex-wrap: wrap;
+
   margin-top: auto;
 
+  flex-wrap: wrap;
+
   > * {
-    flex: 1 1 auto; // [1]
     border-radius: 0 !important; // [1]
+
+    flex: 1 1 auto; // [1]
   }
 }
 
 // Card states
 // 1. Disable button clicks when disabled
 .c-card.is-disabled {
-  opacity: 0.5;
+  opacity: .5;
 
   .c-card__actions {
     pointer-events: none; // [1]
@@ -209,33 +217,36 @@ $card-mini-max-width: 300px;
   > .c-card__cover {
 
     @include wcss-media($card-breakpoint-medium) {
-      flex-basis: 35%;
       width: 35%;
+
+      flex-basis: 35%;
     }
 
     @include wcss-media($card-breakpoint-large) {
-      flex-basis: 25%;
       width: 25%;
+
+      flex-basis: 25%;
     }
   }
 
   > .c-card__inner {
 
     @include wcss-media($card-breakpoint-medium) {
-      flex-basis: 65%;
       width: 65%;
+
+      flex-basis: 65%;
     }
 
     @include wcss-media($card-breakpoint-large) {
-      flex-basis: 75%;
       width: 75%;
+
+      flex-basis: 75%;
     }
   }
 
   // 1. Higher horizontal padding to make space for the card icon
   // 2. Higher top padding for aesthetic purposes
   .c-card__content {
-
     padding: $wcss-spacing-unit;
 
     @include wcss-media($card-breakpoint-medium) {
@@ -250,15 +261,16 @@ $card-mini-max-width: 300px;
   // 1. Compensate for card content padding
   // 2. Align icon horizontally in the middle of cover/content
   // 3. Remove mobile top negative margin
-
   .c-card__icon {
 
     @include wcss-media($card-breakpoint-medium) {
       position: absolute;
       top: $wcss-spacing-unit; // [1]
       left: 0; // [2]
-      transform: translateX(-50%); // [2]
+
       margin: 0; // [3]
+
+      transform: translateX(-50%); // [2]
     }
   }
 
@@ -286,9 +298,9 @@ $card-mini-max-width: 300px;
 // MINI CARD VARIANT
 
 .c-card--mini {
+  overflow: visible;
 
   max-width: $card-mini-max-width;
-  overflow: visible;
 
   .c-card__content {
     padding: $wcss-spacing-unit-small;
@@ -296,15 +308,17 @@ $card-mini-max-width: 300px;
 
   .c-card__actions {
     overflow: hidden;
-    border-bottom-left-radius: $wcss-base-radius;
+
     border-bottom-right-radius: $wcss-base-radius;
+    border-bottom-left-radius: $wcss-base-radius;
   }
 
   .c-card__title {
-    @include wcss-font-size(delta);
     margin-bottom: $wcss-spacing-unit-small;
-  }
 
+    @include wcss-font-size(delta);
+  }
+  
   .c-card__text,
   .c-card__helper {
     @include wcss-font-size(eta);

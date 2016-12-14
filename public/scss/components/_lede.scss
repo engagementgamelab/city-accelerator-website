@@ -1,35 +1,42 @@
 // LEDE
 
 .c-lede {
-  @include wcss-font-size(delta);
   font-family: $font-serif;
-  color: $color-light-gray;
+
   display: inline-block;
 
+  color: $color-light-gray;
+
+  @include wcss-font-size(delta);
+
   &:after {
-    content: '';
+    position: relative;
+
+    display: block;
+    clear: both;
+
     width: 80px;
     height: 1px;
-    background: currentColor; // [1]
-    opacity: 0.5; // [2]
     margin: $wcss-spacing-unit 0;
-    display: block;
-    position: relative;
-    clear: both;
+
+    content: '';
+
+    opacity: .5; // [2]
+    background: currentColor; // [1]
   }
 
   @media print {
     font-size: 14px;
     line-height: 1.2;
+
     margin: 0 0 $wcss-spacing-unit-small 0;
   }
 }
 
 .c-lede--center {
   text-align: center;
-
+  
   &:after {
     margin: $wcss-spacing-unit auto;
   }
 }
-

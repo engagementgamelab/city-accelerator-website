@@ -6,23 +6,26 @@
 // js/modules/acknowledge.js
 
 .c-acknowledge {
-  opacity: 0;
-  animation-play-state: paused;
-  animation: acknowledge 2s infinite;
-  background: rgba($color-black, 0.8);
-  color: $color-white;
   position: fixed;
+  z-index: 9999;
   bottom: $wcss-spacing-unit-small;
   left: 50%;
-  z-index: 9999;
-  transform: translate(-50%, 0);
-  padding: $wcss-spacing-unit-small;
-  border-radius: $wcss-base-radius;
+
   width: 90%;
+  padding: $wcss-spacing-unit-small;
+
+  transform: translate(-50%, 0);
+  animation: acknowledge 2s infinite;
+  animation-play-state: paused;
   text-align: center;
+
+  opacity: 0;
+  color: $color-white;
+  border-radius: $wcss-base-radius;
+  background: rgba($color-black, .8);
 }
 
-.c-acknowledge[aria-hidden="false"] {
+.c-acknowledge[aria-hidden='false'] {
   animation-play-state: running;
 }
 
@@ -30,7 +33,7 @@
   0% {
     opacity: 0;
   }
-  
+
   6.66% {
     opacity: 1;
   }
