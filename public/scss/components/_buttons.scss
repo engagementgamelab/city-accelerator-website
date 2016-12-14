@@ -8,44 +8,64 @@
 // 5. Force all button-styled elements to appear clickable.
 
 .c-btn {
-  display: inline-block; // [1]
-  vertical-align: middle; // [2]
   font: inherit; // [3]
-  text-align: center; // [4]
-  margin: 0; // [4]
-  cursor: pointer; // [5]
-  padding: $wcss-spacing-unit-small $wcss-spacing-unit;
-  transition: $wcss-base-transition;
-  border: 0;
-  text-transform: uppercase;
-  border-radius: $wcss-base-radius;
   font-weight: bold;
-  @include wcss-font-size(eta);
 
-  &:hover,
-  &:focus {
-    outline: 0;
-  }
+  display: inline-block; // [1]
+
+  margin: 0; // [4]
+  padding: $wcss-spacing-unit-small $wcss-spacing-unit;
+
+  cursor: pointer; // [5]
+  transition: $wcss-base-transition;
+  text-align: center; // [4]
+  vertical-align: middle; // [2]
+  text-transform: uppercase;
+
+  border: 0;
+  border-radius: $wcss-base-radius;
+
+  @include wcss-font-size(eta);
 }
 
 
 
 
 
-// PRIMARY BUTTONS + THEMES
+// PRIMARY BUTTON
 
 .c-btn--primary {
-  @include wcss-theme-var(background, --primary);
   color: $color-white;
+
+  @include wcss-theme-var(background, --primary);
 }
 
 
 
 
 
-// SECONDARY BUTTONS + THEMES
+// SECONDARY BUTTON
 
 .c-btn--secondary {
   @include wcss-theme-var(background, --secondary);
   @include wcss-theme-var(color, --primary);
+}
+
+
+
+
+// BLUE BUTTON
+
+.c-btn--blue {
+  color: $color-white;
+  background: $color-blue;
+}
+
+
+
+
+// FULL WIDTH BUTTON
+
+.c-btn--full {
+  width: 100%;
 }
