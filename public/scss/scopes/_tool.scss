@@ -2,12 +2,12 @@
 
 .s-tool {
   position: relative;
+
   @include wcss-theme-var(background, --secondary);
   // Loading state change
-  >*:not(.s-tool__loading):not(.c-acknowledge) {
+  > *:not(.s-tool__loading):not(.c-acknowledge) {
     opacity: 0;
   }
-
   &.is-loaded > *:not(.c-acknowledge) {
     opacity: 1;
   }
@@ -15,32 +15,39 @@
 
 // Loading screen
 .s-tool__loading {
-  background: $color-white;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
   font-family: $font-serif;
+
+  position: fixed;
   top: 0;
   left: 0;
+
+  display: flex;
+
   width: 100%;
   height: 100%;
+
+  text-align: center;
   pointer-events: none;
+
+  background: $color-white;
+
+  align-items: center;
+  flex-wrap: wrap;
 
   &__content {
     margin: auto;
   }
 
   &__text {
-    @include wcss-font-size(beta);
     color: map-get($theme-default, --primary);
+
+    @include wcss-font-size(beta);
   }
 
   &__spinner > svg {
     width: 40px;
   }
-  
+
   .is-loaded & {
     display: none;
   }
@@ -48,43 +55,54 @@
 
 .s-tool__main {
   position: relative;
-  //max-width: 80%;
-  margin: $wcss-spacing-unit auto;
+
   overflow: hidden;
+  //max-width: 80%;
+
+  margin: $wcss-spacing-unit auto;
 }
 
 // Back button
 
 .s-tool__prev {
-  @include wcss-font-size(eta);
+  font-weight: bold;
+
   position: fixed;
-  left: $wcss-spacing-unit-tiny;
   top: 50vh;
+  left: $wcss-spacing-unit-tiny;
+
   transform: translateY(-50%);
+  text-transform: uppercase;
+
+  color: $color-white;
   border: 0;
   background: transparent;
-  color: $color-white;
-  text-transform: uppercase;
-  font-weight: bold;
-  text-shadow: 0px 1px 1px rgba($color-black, 0.5);
+  text-shadow: 0 1px 1px rgba($color-black, .5);
+
+  @include wcss-font-size(eta);
 }
 
 // Step views
 
 .s-tool__views,
 .s-tool__sub-views {
-  list-style: none;
   margin: 0;
   padding: 0;
+
+  list-style: none;
 }
 
 
 .s-tool__view {
   position: absolute;
-  width: 100%;
   left: 0;
-  opacity: 0;
+
+  width: 100%;
+
   pointer-events: none;
+
+  opacity: 0;
+
   will-change: opacity, transform;
   //transform: translate3d(-200%, 0, 0);
 
@@ -107,22 +125,24 @@
 // Grid
 
 .s-tool__grid__block {
-
-  @include wcss-theme-var(background, --secondary);
   padding: $wcss-spacing-unit-large $wcss-spacing-unit;
 
+  @include wcss-theme-var(background, --secondary);
+
   @include wcss-media(large) {
-    padding: $wcss-spacing-unit-large;    
+    padding: $wcss-spacing-unit-large;
   }
 }
 
 .s-tool__grid__block__title {
+  font-family: $font-serif;
+  font-weight: normal;
+
+  transition: color .2s;
+  text-align: center;
+
   @include wcss-font-size(beta);
   @include wcss-theme-var(color, --tertiary);
-  font-family: $font-serif;
-  text-align: center;
-  font-weight: normal;
-  transition: color 0.2s;
 
   @include wcss-media(large) {
     text-align: left;
@@ -133,13 +153,15 @@
 // [1] Make invisible & un-clickable when disabled
 
 .s-tool__action {
-  opacity: 0; // [1]
+  transition: opacity .2s;
   pointer-events: none; // [1]
-  transition: opacity 0.2s;
 
+  opacity: 0; // [1]
+  
   &.is-active {
-    opacity: 1;
     pointer-events: all;
+
+    opacity: 1;
   }
 }
 
@@ -159,24 +181,27 @@
 }
 
 @media print {
-
+  
   html {
     font-size: 62.5%;
   }
-  
-  *, *:before, *:after {
-    color-adjust: exact !important;
-    -webkit-print-color-adjust: exact !important;
+
+  *,
+  *:before,
+  *:after {
     box-shadow: none !important;
     text-shadow: none !important;
+
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
   }
 
   button {
     display: none !important;
   }
 
-  body > *, 
-  body > *::before, 
+  body > *,
+  body > *::before,
   body > *::after {
     display: none !important;
   }
@@ -189,28 +214,33 @@
 
   .s-tool,
   .js-tool-printable {
-    background: white !important; // [1]
     display: block !important;
+
+    background: white !important; // [1]
   }
 
   .s-tool__nav,
   .s-tool__grid,
-  .s-tool__main {
+  .s-tool__main,
+  .s-tool__sidebar {
     display: none !important;
   }
 
   .s-tool__mvp__block {
+    overflow: hidden;
+
+    max-height: 100vh;
     margin: 0;
     padding: 0;
+
     page-break-before: avoid;
     page-break-after: always;
-    max-height: 100vh;
-    overflow: hidden;
   }
 
   // Remove page title & number in Chrome
   @page {
-    size: A4;
     margin: 0mm;
+
+    size: A4;
   }
 }
