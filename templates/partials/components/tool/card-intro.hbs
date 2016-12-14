@@ -4,7 +4,7 @@
   {{!-- Only display a cover if we actually have specified one --}}
   {{#if cover}}
     <div class="c-card__cover">
-      <img src="{{ cover }}" alt="{{ title }}" class="c-card__cover__img">
+      {{> map-vector}}
     </div>
   {{/if}}
   <div class="c-card__inner">
