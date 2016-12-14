@@ -1,21 +1,23 @@
 // ICON BUTTON
 
 .c-icon-button {
+  font-weight: bold;
+
   width: 55px;
   height: 55px;
-  border-radius: $wcss-base-radius;
-  text-align: center;
-  border: 0;
-  box-shadow: 10px 15px 30px rgba($color-black, .5);
-  font-weight: bold;
-  cursor: pointer;
   padding: 0;
+
+  cursor: pointer;
+  text-align: center;
+
+  border: 0;
+  border-radius: $wcss-base-radius;
+  box-shadow: 10px 15px 30px rgba($color-black, .5);
 
   @include wcss-media(medium) {
     width: 60px;
     height: 60px;
   }
-
   @include wcss-media(large) {
     width: 70px;
     height: 70px;
@@ -23,18 +25,31 @@
 }
 
 .c-icon-button__icon {
-  width: 24px;
   display: block;
+
+  width: 24px;
   margin: $wcss-spacing-unit-tiny auto;
 }
 
 .c-icon-button__text {
-  @include wcss-font-size(theta);
-  text-transform: uppercase;
   letter-spacing: -1px;
+  text-transform: uppercase;
+
+  @include wcss-font-size(theta);
 }
 
 .c-icon-button--primary {
-  background: $color-blue;
   color: $color-white;
+  background: $color-blue;
+}
+
+
+
+
+// BARE
+
+.c-icon-button--bare {
+  color: $color-white;
+  background: transparent;
+  box-shadow: none;
 }
