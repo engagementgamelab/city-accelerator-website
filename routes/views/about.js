@@ -13,7 +13,7 @@
  */
 var keystone = require('keystone'),
     About = keystone.list('About'),
-    Partner = ketstone.list('Partner'),
+    Partner = keystone.list('Partner'),
     // Category = keystone.list('Category'),
     _ = require('underscore');
 
@@ -32,15 +32,29 @@ exports = module.exports = function(req, res) {
                 'createdAt': -1
             }
         });
+
+        var queryPartners = Partner.model.find({
+            'enabled': true
+        });
+
         queryAbout.exec(function(err, resultAbout) {
             if (err) throw err;
 
             locals.about = resultAbout;
             
                 
+                // next();
+
+            queryPartners.exec(function(err, result) {
+                if (err) throw err;
+
+                locals.partners = result;
+                
+                    
                 next();
 
-            // });
+
+            });
 
         });
     });

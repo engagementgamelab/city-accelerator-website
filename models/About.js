@@ -44,7 +44,7 @@ About.add({
 		type: Types.Relationship, 
 		ref: 'Partner',
 		label: "Partners"
-	}
+	},
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
