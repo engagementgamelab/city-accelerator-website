@@ -49,7 +49,6 @@ exports = module.exports = function(req, res) {
                 return res.notfound('Cannot find that part of the toolki', 'Sorry, but it looks like the card you were looking for does not exist!');
 
             locals.introOne = categorize(result, 'IntroOne');
-            console.log(locals.introOne);
             locals.introTwo = categorize(result, 'IntroTwo');
             locals.getStarted = categorize(result, 'Getting Started');
             locals.projPlan = categorize(result, 'Project Planning');

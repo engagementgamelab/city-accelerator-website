@@ -34,28 +34,24 @@ var CaseStudy = new keystone.List('CaseStudy',
 CaseStudy.add({
 
 	name: { type: String, label: 'Case Study Title', required: true, initial: true },
+	enabled: { type: Boolean, label: 'Enable This Case Study?', note: 'If this case study is not enabled, it will not show up on the site!'},
 	image: { 
 		type: Types.Relationship, 
 		label: 'Background Image', 
 		ref: 'Image', 
 		many: false
 	},
-	byline: { type: Types.Markdown, label: 'Short Byline Under Header', required: true, initial: true },
+	byline: { type: Types.Markdown, label: 'Case Study Byline'},
 	modalities: {
 		type: Types.Relationship, 
-		label: "Modalities Explored",
+		label: "Modalities",
 		ref: 'Activity'
 	},
 	phaseI: { type: Types.Markdown, label: 'Phase I Implementation', note: ''},
 	phaseII: { type: Types.Markdown, label: 'Phase II Implementation', note: ''},
 	funds: { type: Types.Markdown, label: 'Fund Allocation', note: ''},
 	text: { type: Types.Markdown, label: 'Case Study Text', note: ''},
-	logos: { 
-		type: Types.Relationship, 
-		label: 'Logo(s)', 
-		ref: 'Image', 
-		many: true
-	},
+	team: { type: Types.Markdown, label: 'Team', note: ''},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
 });
