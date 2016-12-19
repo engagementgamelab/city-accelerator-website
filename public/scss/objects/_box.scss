@@ -5,13 +5,14 @@
 //
 // 1. So we can apply the `.o-box` class to naturally-inline elements.
 
-.o-box {
+.o-box,
+%o-box {
   display: block; // [1]
 
   padding: $wcss-spacing-unit;
 
   @include wcss-clearfix();
-  
+
   > :last-child {
     margin-bottom: 0;
   }
@@ -23,22 +24,27 @@
 
 // SIZE VARIANTS
 
-.o-box--flush {
+.o-box--flush,
+%o-box--flush {
   padding: 0;
 }
 
-.o-box--tiny {
+.o-box--tiny,
+%o-box--tiny {
   padding: $wcss-spacing-unit-tiny;
 }
 
-.o-box--small {
+.o-box--small,
+%o-box--small {
   padding: $wcss-spacing-unit-small;
 }
 
-.o-box--large {
+.o-box--large,
+%o-box--large {
   padding: $wcss-spacing-unit-large;
 }
 
-.o-box--huge {
+.o-box--huge,
+%o-box--huge {
   padding: $wcss-spacing-unit-huge;
 }
