@@ -47,7 +47,6 @@
 
 // OBJECTS
 
-@import "objects/box";
 @import "objects/wrapper";
 @import "objects/layout";
 @import "objects/block";
@@ -58,8 +57,10 @@
 
 // COMPONENTS
 
+@import "components/topnav";
 @import "components/card";
 @import "components/card-grid";
+@import "components/card-list";
 @import "components/buttons";
 @import "components/icon";
 @import "components/icon-button";
@@ -71,6 +72,8 @@
 @import "components/acknowledge";
 @import "components/off-canvas";
 @import "components/check-list";
+@import "components/box";
+@import "components/hero";
 @import "components/footer";
 
 // SCOPES
