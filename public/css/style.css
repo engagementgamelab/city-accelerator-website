@@ -981,6 +981,16 @@ img {
   transition: transform 0.2s;
   pointer-events: none;
   background: rgba(0, 181, 203, 0.8); }
+  @media (min-width: 1200px) {
+    .c-top-nav__menu {
+      visibility: visible;
+      position: relative;
+      flex: 1 1 50%;
+      width: auto;
+      height: auto;
+      transform: none;
+      pointer-events: all;
+      background: transparent; } }
 
 .c-top-nav__list {
   position: absolute;
@@ -992,10 +1002,23 @@ img {
   margin: 0;
   padding: 0;
   overflow: scroll; }
+  @media (min-width: 1200px) {
+    .c-top-nav__list {
+      position: relative;
+      width: auto;
+      height: auto;
+      top: 0;
+      left: 0;
+      transform: none;
+      overflow: hidden;
+      text-align: right; } }
 
 .c-top-nav__item {
   padding: 12px;
   text-align: center; }
+  @media (min-width: 1200px) {
+    .c-top-nav__item {
+      display: inline-block; } }
 
 .c-top-nav__link {
   font-size: 36px;
@@ -1004,6 +1027,16 @@ img {
   color: #FFFFFF;
   text-decoration: none;
   display: block; }
+  @media (min-width: 1200px) {
+    .c-top-nav__link {
+      font-size: 14px;
+      font-size: calc(12px + (14 - 12) * (100vw - 300px ) / (1200 - 300)) ;
+      line-height: 1.6;
+      text-transform: uppercase; } }
+
+@media (min-width: 1200px) {
+  .c-top-nav__toggle {
+    display: none; } }
 
 .c-top-nav__toggle[aria-expanded="true"] ~ .c-top-nav__menu[aria-hidden="false"] {
   visibility: visible;
@@ -1793,15 +1826,28 @@ html.is-modal-active {
   padding: 48px 0;
   text-align: center;
   border-top: 1px solid #DDDDDD;
-  background: #F2F2F2; }
+  background: transparent;
+  color: #494949; }
 
 .c-footer__text {
-  display: inline-block;
-  max-width: 600px;
-  margin: 24px 0 0 0;
   font-size: 14px;
   font-size: calc(12px + (14 - 12) * (100vw - 300px ) / (1200 - 300)) ;
-  line-height: 1.6; }
+  line-height: 1.6;
+  display: inline-block;
+  max-width: 600px;
+  margin: 24px 0 0 0; }
+  .c-footer__text > p:last-child {
+    margin-bottom: 0; }
+
+.c-footer__logo {
+  max-width: 100px;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: all 0.2s ease-in-out;
+  margin: 12px; }
+  .c-footer__logo:hover, .c-footer__logo:focus {
+    filter: grayscale(0%);
+    opacity: 1; }
 
 .s-tool {
   position: relative;
