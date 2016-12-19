@@ -21,11 +21,19 @@
   text-align: center; // [4]
   vertical-align: middle; // [2]
   text-transform: uppercase;
+  text-decoration: none;
 
   border: 0;
   border-radius: $wcss-base-radius;
 
   @include wcss-font-size(eta);
+
+  backface-visibility: hidden;
+
+  &:hover,
+  &:focus {
+    filter: brightness(110%);
+  }
 }
 
 
@@ -61,6 +69,15 @@
   background: $color-blue;
 }
 
+
+
+
+// LARGE BUTTON
+
+.c-btn--large {
+  @include wcss-font-size(epsilon);
+  padding: $wcss-spacing-unit-small $wcss-spacing-unit-large;
+}
 
 
 
