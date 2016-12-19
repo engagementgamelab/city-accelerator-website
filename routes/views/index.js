@@ -35,12 +35,12 @@ exports = module.exports = function(req, res) {
             if (err) throw err;
 
             locals.index = resultIndex;
-            locals.title = resultIndex.title;
-            locals.header = resultIndex.header;
-            locals.theToolkit = resultIndex.theToolkit;
-            locals.theCaseStudies = resultIndex.theCaseStudies;
-            locals.theGame = resultIndex.theGame;
-            locals.theGuide = resultIndex.theGuide;
+            locals.title = resultIndex.title.html;
+            locals.header = resultIndex.header.html;
+            locals.theToolkit = resultIndex.theToolkit.html;
+            locals.theCaseStudies = resultIndex.theCaseStudies.html;
+            locals.theGame = resultIndex.theGame.html;
+            locals.theGuide = resultIndex.theGuide.html;
                 
                 next();
 

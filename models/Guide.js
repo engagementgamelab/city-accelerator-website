@@ -35,9 +35,10 @@ Guide.add({
 
 	name: { type: String, label: 'Guide Page Link Name', note: 'This is the page\'s link title in the side navigation', required: true, initial: true },
 	header: { type: String, label: 'Page Title', note: 'This is the title of this section', required: true, initial: true },
+	
 	text: { type: Types.Markdown, label: 'Text', note: '', required: true, initial: true },
 
-	section: { type: Types.Select, label: 'Guide Section', options: 'Introduction, Executive Summary, Calibrating, Charting, Going Places', note: 'Only one Guide Page should be assigned to Intro and Summary sections'},
+	section: { type: Types.Select, label: 'Guide Section', options: 'Calibrating, Charting, Going Places', note: 'Only one Guide Page should be assigned to Intro and Summary sections'},
 	isSection: { type: Boolean, label: 'Is this page the first page of a section?', note: 'ie: Executive Summary or Calibrating the Instruments'},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 

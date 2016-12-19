@@ -27,7 +27,7 @@
 
       {{!-- If there's text specified --}}
       {{#if text}}
-        <div class="c-card__text">{{{ text }}}</div>
+        <div class="c-card__text">{{{ text.html }}}</div>
       {{/if}}
 
       {{!-- If there are links specified --}}
@@ -38,8 +38,8 @@
       {{/if}}
 
       {{!-- If there's helper text specified --}}
-      {{#if helper}}
-        <div class="c-card__helper">{{ helper }}</div>
+      {{#if example}}
+        <div class="c-card__helper">{{{ example.html }}}</div>
       {{/if}}
     </div>
 
