@@ -24,6 +24,7 @@ var Category = new keystone.List('Category',
 		label: 'Categories',
 		singular: 'Category',
 		track: true,
+		hidden: true,
 		autokey: { path: 'key', from: 'name', unique: true },
 	});
 

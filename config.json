@@ -6,6 +6,7 @@
 									"Home": ["Index", "Game", "Guide", "CaseStudy"], 
 									"Toolkit": ["Card", "Activity", "Toolkit"],
 									"Navigation": ["MainNav", "Footer"],
-									"Resources": ["Image", "Link", "Category"]
+									"About": ["About", "Partner"],
+									"Resources": ["Image", "Link"]
 								}
 }

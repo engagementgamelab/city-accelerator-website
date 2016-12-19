@@ -32,7 +32,13 @@ var MainNav = new keystone.List('MainNav',
  * @main MainNav
  */
 MainNav.add({
-	name: { type: String, default: "Nav Title", label: 'Navigation Title Text', required: true, initial: true },
+	name: { type: String, default: "Nav Title", label: 'Navigation Title Text', hidden: true, required: true, initial: true },
+	mainLink: { 
+		type: Types.Relationship, 
+		ref: 'Link',
+		label: 'Home Page Link', 
+		many: false
+	},
 	description: { type: Types.Markdown, label: "Description",  initial: true, required: true },
 	links: { 
 		type: Types.Relationship, 

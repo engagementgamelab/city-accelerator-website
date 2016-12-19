@@ -33,8 +33,8 @@ var Index = new keystone.List('Index',
  */
 Index.add({
 	name: { type: String, default: "Home Page", hidden: true, required: true, initial: true },
-	rationale: { type: Types.Markdown, label: "Homepage Rationale",  initial: true, required: true },
-	header: { type: Types.Markdown, label: "Header",  initial: true, required: true },
+	title: { type: Types.Markdown, label: "Homepage Title",  initial: true, required: true },
+	header: { type: Types.Markdown, label: "Homepage Header Description",  initial: true, required: true },
 	theToolkit: { type: Types.Markdown, label: "The Toolkit Blurb",  initial: true, required: true }, 
 	theGuide: { type: Types.Markdown, label: "The Guide Blurb",  initial: true, required: true },
 	theCaseStudies: { type: Types.Markdown, label: "The Case Studies Blurb",  initial: true, required: true },

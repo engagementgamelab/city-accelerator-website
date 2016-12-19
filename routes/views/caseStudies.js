@@ -13,6 +13,7 @@
  */
 var keystone = require('keystone'),
     CaseStudy = keystone.list('CaseStudy'),
+    CaseStudiesPage = keystone.list('CaseStudiesPage'),
     _ = require('underscore');
 
 exports = module.exports = function(req, res) {
@@ -26,15 +27,33 @@ exports = module.exports = function(req, res) {
     view.on('init', function(next) {
 
         var queryCaseStudy = CaseStudy.model.find({}, {}, {});
-        queryCaseStudy.exec(function(err, resultCaseStudy) {
+        var queryCaseStudiesPage = CaseStudiesPage.model.findOne({}, {}, {
+            sort: {
+                'createdAt': -1
+            }
+        });
+        
+        queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
 
             if(resultCaseStudy === null)
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
-            locals.caseStudies = resultCaseStudy;
+            locals.caseStudies = result;
 
-            next();
+            // next();
+            queryCaseStudiesPage.exec(function(err, result) {
+                if (err) throw err;
+
+                if(resultCaseStudy === null)
+                    return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
+
+                locals.title = result.title;
+                locals.text = result.text;
+
+                next();
+
+            });
 
         });
     });
