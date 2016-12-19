@@ -32,6 +32,7 @@ exports = module.exports = function(req, res) {
         };
 
         var queryGuide = Guide.model.find({});
+        
 
         queryGuide.exec(function(err, resultGuide) {
             if (err) throw err;
@@ -43,8 +44,6 @@ exports = module.exports = function(req, res) {
             locals.chartingGuides = categorize(resultGuide, 'Charting');
             locals.calibratingGuides = categorize(resultGuide, 'Calibrating');
             locals.goingGuides = categorize(resultGuide, 'Going Places');
-
-
 
             next();
 

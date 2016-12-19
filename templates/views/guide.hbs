@@ -15,45 +15,37 @@
 	<div class="row guide-top-nav">
 
 	{{#each guides}}
-		{{#ifeq this.section 'Intro'}}
+		{{#ifeq this.name 'Introduction'}}
 		<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
 		{{/ifeq}}
 	{{/each}}
 
 	{{#each guides}}
-		{{#ifeq this.section 'Summary'}}
+		{{#ifeq this.name 'Executive Summary'}}
 		<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
 		{{/ifeq}}
 	{{/each}}
 
-	{{#each guides}}
-		{{#ifeq this.section 'Calibrating'}}
+	{{#each calibratingGuides}}
 			{{#ifeq this.isSection true}}
 			<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
 			{{/ifeq}}
-		{{/ifeq}}
 	{{/each}}
-	{{#each guides}}
-		{{#ifeq this.section 'Calibrating'}}
+	{{#each calibratingGuides}}
 			{{#ifeq this.isSection false}}
 			<a href="/guides/{{this.guide_key}}">{{this.name}}</a>
 			{{/ifeq}}
-		{{/ifeq}}
 	{{/each}}
 
-	{{#each guides}}
-		{{#ifeq this.section 'Charting'}}
+	{{#each chartingGuides}}
 			{{#ifeq this.isSection true}}
 			<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
 			{{/ifeq}}
-		{{/ifeq}}
 	{{/each}}
-	{{#each guides}}
-		{{#ifeq this.section 'Charting'}}
+	{{#each chartingGuides}}
 			{{#ifeq this.isSection false}}
 			<a href="/guides/{{this.guide_key}}">{{this.name}}</a>
 			{{/ifeq}}
-		{{/ifeq}}
 	{{/each}}
 		
 	</div>
@@ -77,39 +69,29 @@
 			{{/each}}
 		</section>
 
-		<section id="section-summary">
-			{{#each guides}}
-				{{#ifeq this.section 'Calibrating'}}
-					{{#ifeq this.isSection true}}
+		<section id="section-calibrating">
+			{{#each calibratingGuides}}
+					{{!-- {{#ifeq this.isSection true}} --}}
 						{{> guidePage this}}
-					{{/ifeq}}
-				{{/ifeq}}
+					{{!-- {{/ifeq}} --}}
 			{{/each}}
 
-			{{#each guides}}
-				{{#ifeq this.section 'Calibrating'}}
-					{{#ifeq this.isSection false}}
+			
+		</section>
+
+		<section id="section-charting">
+			{{#each chartingGuides}}
+					{{!-- {{#ifeq this.isSection true}} --}}
 						{{> guidePage this}}
-					{{/ifeq}}
-				{{/ifeq}}
+					{{!-- {{/ifeq}} --}}
 			{{/each}}
 		</section>
 
-		<section id="section-summary">
-			{{#each guides}}
-				{{#ifeq this.section 'Charting'}}
-					{{#ifeq this.isSection true}}
+		<section id="section-going">
+			{{#each goingGuides}}
+					{{!-- {{#ifeq this.isSection true}} --}}
 						{{> guidePage this}}
-					{{/ifeq}}
-				{{/ifeq}}
-			{{/each}}
-
-			{{#each guides}}
-				{{#ifeq this.section 'Charting'}}
-					{{#ifeq this.isSection false}}
-						{{> guidePage this}}
-					{{/ifeq}}
-				{{/ifeq}}
+					{{!-- {{/ifeq}} --}}
 			{{/each}}
 		</section>
 		
