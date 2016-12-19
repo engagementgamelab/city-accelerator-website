@@ -27,12 +27,12 @@ exports = module.exports = function(req, res) {
 
         var categorize = function(val, cat) {
             return val.filter(function(item) {
-                return item.category == cat;
+                return item.section == cat;
             });
         };
 
         var queryGuide = Guide.model.find({});
-        
+
 
         queryGuide.exec(function(err, resultGuide) {
             if (err) throw err;
