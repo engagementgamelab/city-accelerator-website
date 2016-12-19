@@ -10,13 +10,6 @@
 */
 --}}
 
-
-<!-- Scripts are placed here temporarily, don't panic -->
-<script src="/js/vendor/velocity.js" defer></script>
-<script src="/js/modules/tool.js" defer></script>
-<script src="/js/modules/acknowledge.js" defer></script>
-<script src="/js/modules/off-canvas.js" defer></script>
-
 <div class="s-tool js-tool">
   <div class="s-tool__loading js-tool-loading">
     <div class="s-tool__loading__content">
@@ -39,8 +32,8 @@
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
               {{> components/tool/card-intro introOne.[0]}}
-            
-            
+
+
             </li>
             <li class="s-tool__view js-tool-view" data-grid-include="false">
               {{> components/tool/card-intro introTwo}}
@@ -91,3 +84,9 @@
   </div>
   {{> toolkitSidebar }}
 </div>
+
+<!-- Scripts are placed here temporarily, don't panic -->
+<script src="/js/vendor/velocity.js" defer></script>
+<script src="/js/modules/tool.js" defer></script>
+<script src="/js/modules/acknowledge.js" defer></script>
+<script src="/js/modules/off-canvas.js" defer></script>

@@ -1,11 +1,19 @@
-<a id="menu-toggle" href="#" data-toggle="sidebar-nav" class="btn btn-lg toggle"><i class="icon"><img src="/images/menu.png" alt="menu" /></i></a>
-<div id="sidebar-wrapper">
-  <ul class="sidebar-nav"  style="display:none;">
-    <a id="menu-close" href="#" class="btn btn-lg pull-right toggle"><i class="icon"><img src="/images/menu.png" alt="menu" /></i></a>
-    <li>
-    {{#each mainNav.links}}
-    	{{> link this=this}}
-    {{/each}}
-    </li>
-  </ul>
-</div>
+<header class="c-top-nav">
+  <div class="c-top-nav__wrapper o-wrapper">
+    <a class="c-top-nav__branding" href="/">
+      <h1 class="c-top-nav__title">Public Engagement Roadmap</h1>
+    </a>
+    <button class="c-top-nav__toggle js-top-nav-toggle" aria-expanded="false">Menu</button>
+    <nav class="c-top-nav__menu js-top-nav-menu" aria-hidden="true">
+      <ul class="c-top-nav__list">
+        {{#each mainNav.links}}
+          <li class="c-top-nav__item"><a class="c-top-nav__link" href="{{this.URL}}">{{this.name}}</a></li>
+        {{/each}}
+        <li class="c-top-nav__item"><a href="#" class="c-top-nav__link">Test</a></li>
+        <li class="c-top-nav__item"><a href="#" class="c-top-nav__link">Test</a></li>
+        <li class="c-top-nav__item"><a href="#" class="c-top-nav__link">Test</a></li>
+        <li class="c-top-nav__item"><a href="#" class="c-top-nav__link">Test</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
