@@ -30,7 +30,12 @@ $wcss-spacing-sizes: (
   '-small': $wcss-spacing-unit-small,
   '-large': $wcss-spacing-unit-large,
   '-huge': $wcss-spacing-unit-huge,
-  '-none': 0
+  '-none': 0,
+  '-negative': -$wcss-spacing-unit,
+  '-negative-tiny': -$wcss-spacing-unit-tiny,
+  '-negative-small': -$wcss-spacing-unit-small,
+  '-negative-large': -$wcss-spacing-unit-large,
+  '-negative-huge': -$wcss-spacing-unit-huge,
 ) !default;
 
 
