@@ -35,22 +35,14 @@ exports = module.exports = function(req, res) {
             if (err) throw err;
 
             locals.index = resultIndex;
-            // console.log(locals.index);
-
-            // var queryCategory = Category.model.find({}, {}, {
-            //     sort: {
-            //         'createdAt': -1
-            //     }
-            // });
-
-            // queryCategory.exec(function(err, resultCats) {
-            //     if (err) throw err;
-
-            //     locals.categories = resultCats;
+            locals.title = resultIndex.title;
+            locals.header = resultIndex.header;
+            locals.theToolkit = resultIndex.theToolkit;
+            locals.theCaseStudies = resultIndex.theCaseStudies;
+            locals.theGame = resultIndex.theGame;
+            locals.theGuide = resultIndex.theGuide;
                 
                 next();
-
-            // });
 
         });
     });

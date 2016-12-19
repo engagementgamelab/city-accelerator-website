@@ -41,8 +41,11 @@ exports = module.exports = function(req, res) {
             if (err) throw err;
 
             locals.about = resultAbout;
+            locals.pageTitle = resultAbout.title;
+            locals.pageHeader = resultAbout.header;
+            locals.description = resultAbout.description;
+            locals.programGoals = resultAbout.programGoals;
             
-                
                 // next();
 
             queryPartners.exec(function(err, result) {
@@ -60,6 +63,6 @@ exports = module.exports = function(req, res) {
     });
 
     // Render the view
-    view.render('index');
+    view.render('about');
 
 };

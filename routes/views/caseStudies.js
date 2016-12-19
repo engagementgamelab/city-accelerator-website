@@ -26,7 +26,11 @@ exports = module.exports = function(req, res) {
 
     view.on('init', function(next) {
 
-        var queryCaseStudy = CaseStudy.model.find({}, {}, {});
+        var queryCaseStudy = CaseStudy.model.find({}, {}, {
+            sort: {
+                'orderNo': -1
+            }
+        });
         var queryCaseStudiesPage = CaseStudiesPage.model.findOne({}, {}, {
             sort: {
                 'createdAt': -1
@@ -48,8 +52,8 @@ exports = module.exports = function(req, res) {
                 if(resultCaseStudy === null)
                     return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
-                locals.title = result.title;
-                locals.text = result.text;
+                locals.pageTitle = result.title;
+                locals.pageText = result.text;
 
                 next();
 

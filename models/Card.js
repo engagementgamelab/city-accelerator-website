@@ -43,6 +43,12 @@ Card.add({
         options: 'IntroOne, IntroTwo, Getting Started, Project Planning, Implimentation, Iteration',
         note: 'There should only be one card per category.'
     },
+    // links: {
+    //     type: Types.Relationship, 
+    //     ref: 'Link',
+    //     label: 'Any Links',
+    //     many: true
+    // },
     createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
 

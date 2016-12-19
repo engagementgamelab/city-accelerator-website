@@ -33,11 +33,11 @@ var Guide = new keystone.List('Guide',
  */
 Guide.add({
 
-	name: { type: String, label: 'Guide Page Title', note: 'This is the page\'s link title', required: true, initial: true },
-	header: { type: String, label: 'Page Header', required: true, initial: true },
-	blurb: { type: Types.Markdown, label: 'Short Blurb Under Header', note: 'Keep it short!', required: true, initial: true },
-	text: { type: Types.Markdown, label: 'Text', required: true, initial: true },
-	section: { type: Types.Select, label: 'Guide Section', options: 'Intro, Summary, Calibrating, Charting', note: 'Only One Guide Page should be assigned to Intro and Summary sections'},
+	name: { type: String, label: 'Guide Page Link Name', note: 'This is the page\'s link title in the side navigation', required: true, initial: true },
+	header: { type: String, label: 'Page Title', note: 'This is the title of this section', required: true, initial: true },
+	text: { type: Types.Markdown, label: 'Text', note: '', required: true, initial: true },
+
+	section: { type: Types.Select, label: 'Guide Section', options: 'Introduction, Executive Summary, Calibrating, Charting, Going Places', note: 'Only one Guide Page should be assigned to Intro and Summary sections'},
 	isSection: { type: Boolean, label: 'Is this page the first page of a section?', note: 'ie: Executive Summary or Calibrating the Instruments'},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
