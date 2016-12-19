@@ -25,7 +25,7 @@ $card-mini-max-width: 300px;
 
   border-radius: 3px;
   background: $color-white;
-  box-shadow: 0 20px 30px 0 rgba($color-black, .10);
+  box-shadow: 0 0 30px 0 rgba($color-black, .10);
 
   perspective: 1px; // [3]
   flex-wrap: wrap;
@@ -182,6 +182,26 @@ $card-mini-max-width: 300px;
   }
 }
 
+// Links
+.c-card__links {
+  display: inline-block;
+  width: 100%;
+  margin: $wcss-spacing-unit 0;
+  text-align: right;
+
+  > .c-card__link {
+    @include wcss-font-size(eta);
+    @include wcss-theme-var(color, --tertiary);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    width: 100%;
+  }
+}
+
+
+
 // Actions
 // 1. Make items adjust automatically
 
@@ -275,11 +295,11 @@ $card-mini-max-width: 300px;
   }
 
   .c-card__title {
-    @include wcss-font-size(alpha);
+    @include wcss-font-size(beta);
   }
 
   .c-card__text {
-    @include wcss-font-size(epsilon);
+    @include wcss-font-size(zeta);
 
     > * + * {
       margin-top: $wcss-spacing-unit;
@@ -318,9 +338,19 @@ $card-mini-max-width: 300px;
 
     @include wcss-font-size(delta);
   }
-  
+
   .c-card__text,
   .c-card__helper {
     @include wcss-font-size(eta);
   }
+}
+
+
+
+
+
+// REVERSE VARIANT
+
+.c-card--reverse {
+  flex-direction: row-reverse;
 }
