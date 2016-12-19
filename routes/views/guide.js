@@ -25,6 +25,12 @@ exports = module.exports = function(req, res) {
 
     view.on('init', function(next) {
 
+        var categorize = function(val, cat) {
+            return val.filter(function(item) {
+                return item.category == cat;
+            });
+        };
+
         var queryGuide = Guide.model.find({});
 
         queryGuide.exec(function(err, resultGuide) {
@@ -34,6 +40,11 @@ exports = module.exports = function(req, res) {
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
             locals.guides = resultGuide;
+            locals.chartingGuides = categorize(resultGuide, 'Charting');
+            locals.calibratingGuides = categorize(resultGuide, 'Calibrating');
+            locals.goingGuides = categorize(resultGuide, 'Going Places');
+
+
 
             next();
 

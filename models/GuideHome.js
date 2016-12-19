@@ -21,7 +21,7 @@ var Types = keystone.Field.Types;
  */
 var GuideHome = new keystone.List('GuideHome', 
 	{
-		label: 'GuideHome Pages',
+		label: 'Guide Home Page',
 		singular: 'GuideHome Page',
 		track: true
 		// autokey: { path: 'guide_key', from: 'name', unique: true },

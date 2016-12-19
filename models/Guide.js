@@ -34,52 +34,13 @@ var Guide = new keystone.List('Guide',
 Guide.add({
 
 	name: { type: String, label: 'Guide Page Link Name', note: 'This is the page\'s link title in the side navigation', required: true, initial: true },
-	header: { type: String, label: 'Page Title', note: 'This is the title of this section', required: true, initial: true },
-	
-	text: { type: Types.Markdown, label: 'Text', note: '', required: true, initial: true },
-
-	section: { type: Types.Select, label: 'Guide Section', options: 'Calibrating, Charting, Going Places', note: 'Only one Guide Page should be assigned to Intro and Summary sections'},
+	header: { type: String, label: 'Page Title', note: 'This is the title of this section', required: true, initial: true },	
 	isSection: { type: Boolean, label: 'Is this page the first page of a section?', note: 'ie: Executive Summary or Calibrating the Instruments'},
+	text: { type: Types.Markdown, label: 'Text for this page', note: '', required: true, initial: true },
+	section: { type: Types.Select, label: 'Section', options: 'Calibrating, Charting, Going Places', note: 'Introduction or Executive Summary don\'t get a category!'},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
 });
-
-// /**
-//  * Methods
-//  * =============
-//  */
-// // Remove a link or image reference if removed from database
-// Guide.schema.statics.removeLinkRef = function(filterId, callback) {
-
-//     Guide.model.update({
-//             $or: [{
-//                 'images'
-//             }, {
-//                 'links'
-//             }]
-//         },
-
-//         {
-//             $pull: {
-//                 'images',
-//                 'links'
-//             }
-//         },
-
-//         {
-//             multi: true
-//         },
-
-//         function(err, result) {
-
-//             callback(err, result);
-
-//             if (err)
-//                 console.error(err);
-//         }
-//     );
-
-// };
 
 /**
  * Model Registration

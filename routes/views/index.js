@@ -37,10 +37,10 @@ exports = module.exports = function(req, res) {
             locals.index = resultIndex;
             locals.title = resultIndex.title.html;
             locals.header = resultIndex.header.html;
-            locals.theToolkit = resultIndex.theToolkit.html;
-            locals.theCaseStudies = resultIndex.theCaseStudies.html;
-            locals.theGame = resultIndex.theGame.html;
-            locals.theGuide = resultIndex.theGuide.html;
+            locals.theToolkit = resultIndex.theToolkit;
+            locals.theCaseStudies = resultIndex.theCaseStudies;
+            locals.theGame = resultIndex.theGame;
+            locals.theGuide = resultIndex.theGuide;
                 
                 next();
 
