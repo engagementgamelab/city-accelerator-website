@@ -44,6 +44,7 @@ exports = module.exports = function(req, res) {
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
             locals.caseStudies = result;
+            locals.title = result.name;
 
             // next();
             queryCaseStudiesPage.exec(function(err, result) {

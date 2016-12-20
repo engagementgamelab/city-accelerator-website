@@ -12,9 +12,17 @@
 
 <div class="container-fluid home">
 
-  <button>{{builderButton}}</button>
+<a href="/toolkit-builder">{{builderButton}}</a>
+
+    <li class="s-tool__step js-tool-step" data-step-name="View MVP" data-grid-include="false" data-theme="t-blue">
+      <ul class="s-tool__sub-views js-tool-sub-steps">
+        <li class="s-tool__view js-tool-view" data-grid-include="false">
+          {{> tool/mvp/grid }}
+        </li>
+      </ul>
+    </li>
   
-  <div class="toolkit-get-started">
+  {{!-- <div class="toolkit-get-started">
     <div class="toolkit-home-card">
       <h1>{{startTitle}}</h1>
       <h4>{{{startBlurb}}}</h4>
@@ -26,6 +34,7 @@
       {{this.name}}
       {{{this.question.html}}}
       </div>
+      {{> components/tool/modal this}}
     {{/each}}
   </div>
 
@@ -72,5 +81,5 @@
       {{{this.question.html}}}
       </div>
     {{/each}}
-  </div>
+  </div> --}}
 </div> <!-- .container-fluid -->
