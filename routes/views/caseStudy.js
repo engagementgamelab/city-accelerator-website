@@ -41,7 +41,6 @@ exports = module.exports = function(req, res) {
             locals.backgroundImage = result.image;
             locals.title = result.name;
             locals.byline = result.byline.html;
-            locals.modalities = result.modalities;
             locals.phaseI = result.phaseI.html;
             locals.phaseII = result.phaseII.html;
             locals.funds = result.funds.html;

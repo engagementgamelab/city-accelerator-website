@@ -31,7 +31,8 @@ exports = module.exports = function(req, res) {
                 'orderNo': -1
             }
         })
-        .populate('image');
+        .populate('image')
+        .populate('modalities');
 
         var queryCaseStudiesPage = CaseStudiesPage.model.findOne({}, {}, {
             sort: {

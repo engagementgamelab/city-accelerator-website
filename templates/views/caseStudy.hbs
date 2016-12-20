@@ -20,8 +20,10 @@
 	</div>
 
 	<div class="row">
-	{{#each modalities}}
+	{{#each caseStudy.modalities}}
+		{{jsonPrint this}}
 		{{> modality this}}
+
 	{{/each}}
 	</div>
 
