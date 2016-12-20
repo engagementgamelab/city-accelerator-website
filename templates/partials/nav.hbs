@@ -1,9 +1,13 @@
+{{#if contrast}}
+<header class="c-top-nav c-top-nav--contrast">
+{{else}}
 <header class="c-top-nav">
+{{/if}}
   <div class="c-top-nav__wrapper o-wrapper">
     <a class="c-top-nav__branding" href="/">
       <h1 class="c-top-nav__title">Public Engagement Roadmap</h1>
     </a>
-    <button class="c-top-nav__toggle js-top-nav-toggle" aria-expanded="false">Menu</button>
+    <button class="c-top-nav__toggle js-top-nav-toggle c-btn c-btn--ghost" aria-expanded="false">Menu</button>
     <nav class="c-top-nav__menu js-top-nav-menu" aria-hidden="true">
       <ul class="c-top-nav__list">
         {{#each mainNav.links}}
