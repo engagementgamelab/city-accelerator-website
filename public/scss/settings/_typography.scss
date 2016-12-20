@@ -10,6 +10,11 @@ $wcss-base-line-height: 1.5;
 // Typographic Scale
 
 $wcss-typography-scale: (
+  mega: (
+    min: 30px,
+    max: 75px,
+    lh: 1.1,
+  ),
   alpha: (
     min: 30px,
     max: 64px,
