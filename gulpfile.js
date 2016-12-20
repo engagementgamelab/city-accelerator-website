@@ -8,12 +8,10 @@ var cssnano = require('cssnano');
 var pxtorem = require('postcss-pxtorem');
 var parker = require('gulp-parker');
 
-var cssstats = require('postcss-cssstats');
-
 gulp.task('css', function () {
     var processors = [
         autoprefixer,
-        cssnano,
+        cssnano({discardUnused: {fontFace: false}}),
         pxtorem({
             replace: true,
             propWhiteList: ['font', 'font-size', 'line-height', 'letter-spacing', 'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left', 'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left', 'width', 'max-width', 'height', 'max-height', 'box-shadow']
