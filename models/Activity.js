@@ -37,7 +37,7 @@ Activity.add({
 	name: { type: String, label: 'Activity Title', required: true, initial: true },
     order: { type: Number, label: 'Sort Order', note: 'This is per category, so each category will have activities with numbers 1-n, with n being the number of activies in that category.'},
     length: { type: String, label: 'Activity Length' },
-	category: {type: Types.Select, label: 'Activity Category', options: 'Getting Started, Project Planning, Implimentation, Iteration', required:true, initial: true },
+	category: {type: Types.Select, label: 'Activity Category', options: 'Getting Started, Project Planning, Implementation, Iteration', required:true, initial: true },
     question: {
         type: Types.Markdown,
         label: 'Question',
