@@ -15,5 +15,17 @@
     "keystone": "0.3.15",
     "node-sass-middleware": "^0.9.7",
     "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "cssnano": "^3.9.1",
+    "gulp": "^3.9.1",
+    "gulp-louis": "^2.4.0",
+    "gulp-parker": "^0.1.4",
+    "gulp-postcss": "^6.2.0",
+    "gulp-sass": "^3.0.0",
+    "gulp-stylelint": "^3.7.0",
+    "postcss-pxtorem": "^3.3.1",
+    "stylelint-selector-bem-pattern": "^1.0.0"
   }
 }
