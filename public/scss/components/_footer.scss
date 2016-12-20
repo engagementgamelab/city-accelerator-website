@@ -4,7 +4,7 @@
 
   text-align: center;
 
-  border-top: 1px solid $color-neutral-87;
+  border-top: 1px solid rgba($color-black, 0.1);
   background: transparent;
 
   color: $color-gray;
@@ -21,6 +21,14 @@
   > p:last-child {
     margin-bottom: 0;
   }
+}
+
+.c-footer__link {
+  @include wcss-font-size(eta);
+  color: $color-gray;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: $wcss-spacing-unit-small;
 }
 
 .c-footer__logo {
