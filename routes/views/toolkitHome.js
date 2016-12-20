@@ -54,7 +54,7 @@ exports = module.exports = function(req, res) {
 
             locals.startActivities = categorize(result, 'Getting Started');
             locals.planActivities = categorize(result, 'Project Planning');
-            locals.implimentActivities = categorize(result, 'Implimentation');
+            locals.implementActivities = categorize(result, 'Implementation');
             locals.iterateActivities = categorize(result, 'Iteration');
 
             queryHome.exec(function(err, result) {
@@ -67,8 +67,8 @@ exports = module.exports = function(req, res) {
                 locals.startBlurb = result.startBlurb.html;
                 locals.planTitle = result.planTitle;
                 locals.planBlurb = result.planBlurb.html;
-                locals.implimentTitle = result.implimentTitle;
-                locals.implimentBlurb = result.implimentBlurb.html;
+                locals.implementTitle = result.implementTitle;
+                locals.implementBlurb = result.implementBlurb.html;
                 locals.iterateTitle = result.iterateTitle;
                 locals.iterateBlurb = result.iterateBlurb.html;
                 locals.builderButton = result.builderButton;
