@@ -7,7 +7,7 @@
  * Help: http://keystonejs.com/docs/getting-started/#routesviews-firstview
  *
  * @class Guide
- * @author 
+ * @author
  *
  * ==========
  */
@@ -36,7 +36,7 @@ exports = module.exports = function(req, res) {
             locals.title = result.name;
             locals.byline = result.byline;
             locals.buttons = result.buttons;
-            
+
             next();
 
         });

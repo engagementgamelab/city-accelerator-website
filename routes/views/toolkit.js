@@ -50,10 +50,10 @@ exports = module.exports = function(req, res) {
 
             locals.introOne = categorize(result, 'IntroOne');
             locals.introTwo = categorize(result, 'IntroTwo');
-            locals.getStarted = categorize(result, 'Getting Started');
-            locals.projPlan = categorize(result, 'Project Planning');
-            locals.impliment = categorize(result, 'Implimentation');
-            locals.iterate = categorize(result, 'Iteration');
+            locals.startCard = categorize(result, 'Getting Started');
+            locals.planCard = categorize(result, 'Project Planning');
+            locals.implementCard = categorize(result, 'Implementation');
+            locals.iterateCard = categorize(result, 'Iteration');
 
             queryActivity.exec(function(err, resultActivity) {
                 if (err) throw err;
@@ -64,7 +64,7 @@ exports = module.exports = function(req, res) {
                 // locals.activities = resultActivity;
                 locals.startActivities = categorize(resultActivity, 'Getting Started');
                 locals.planActivities = categorize(resultActivity, 'Project Planning');
-                locals.implimentActivities = categorize(resultActivity, 'Implimentation');
+                locals.implementActivities = categorize(resultActivity, 'Implementation');
                 locals.iterateActivities = categorize(resultActivity, 'Iteration');
                 
                 next();

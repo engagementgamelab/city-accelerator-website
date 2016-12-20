@@ -27,14 +27,25 @@ exports = module.exports = function(req, res) {
 
         var queryCaseStudy = CaseStudy.model.findOne({
             case_key: req.params.case_key
-        });
-        queryCaseStudy.exec(function(err, resultCaseStudy) {
+        })
+        .populate('modalities')
+        .populate('image');
+
+        queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
 
-            if(resultCaseStudy === null)
+            if(result === null)
                 return res.notfound('Cannot find that case study', 'Sorry, but it looks like the case study you were looking for does not exist!');
 
-            locals.caseStudy = resultCaseStudy;
+            locals.caseStudy = result;
+            locals.backgroundImage = result.image;
+            locals.title = result.name;
+            locals.byline = result.byline.html;
+            locals.phaseI = result.phaseI.html;
+            locals.phaseII = result.phaseII.html;
+            locals.funds = result.funds.html;
+            locals.text = result.text.html;
+            locals.team = result.team.html;
 
             next();
 
@@ -42,6 +53,6 @@ exports = module.exports = function(req, res) {
     });
 
     // Render the view
-    view.render('case_study');
+    view.render('caseStudy');
 
 };
