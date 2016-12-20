@@ -33,9 +33,9 @@ var GuideHome = new keystone.List('GuideHome',
  */
 GuideHome.add({
 	name: { type: String, default: 'Guide Home Page', hidden: true, required: true, initial: true },
-	title: { type: Types.Markdown, label: 'Guide Home Page Title', required: true, initial: true }
+	title: { type: Types.Markdown, label: 'Guide Home Page Title', required: true, initial: true },
 	byline: { type: Types.Markdown, label: 'Page Byline', required: true, initial: true },
-	buttons: { type: Types.TextArray, label: 'Buttons', note: 'These refer to the button text.'}
+	buttons: { type: Types.TextArray, label: 'Buttons', note: 'These refer to the button text.'},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
 

@@ -59,7 +59,8 @@ exports = module.exports = function(app) {
     app.get('/case-studies', routes.views.caseStudies);
     app.get('/case-studies/:case_key', routes.views.caseStudy);
     // app.get('/:category_id', routes.views.category);
-    app.get('/guide', routes.views.guide);
+    app.get('/guide', routes.views.guidePages);
+    app.get('/guide-home', routes.views.guideHome);
     // app.get('/guide/:guide_section/:guide_key', routes.views.guide);
     // app.get('/guide/:guide_section', routes.views.guide);
     
