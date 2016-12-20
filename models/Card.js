@@ -40,7 +40,7 @@ Card.add({
 	category: {
         type: Types.Select, 
         label: 'Card Category', 
-        options: 'IntroOne, IntroTwo, Getting Started, Project Planning, Implimentation, Iteration',
+        options: 'IntroOne, IntroTwo, Getting Started, Project Planning, Implementation, Iteration',
         note: 'There should only be one card per category.'
     },
     // links: {
