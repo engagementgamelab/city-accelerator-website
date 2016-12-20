@@ -1,3 +1,8 @@
+.c-box {
+  display: inline-block;
+  width: 100%;
+}
+
 .c-box--city {
   background: url("../images/bg-city.jpg") bottom no-repeat;
   background-size: cover;
@@ -7,4 +12,8 @@
 .c-box--map {
   background: url("../images/bg-map.jpg") top no-repeat;
   background-size: cover;
+}
+
+.c-box--green {
+  background: linear-gradient(top, #d4ecde, #b8d6c4);
 }
