@@ -5,14 +5,34 @@
   text-align: center;
 
   border-top: 1px solid $color-neutral-87;
-  background: $color-neutral-95;
+  background: transparent;
+
+  color: $color-gray;
 }
 
 .c-footer__text {
+  @include wcss-font-size(eta);
+
   display: inline-block;
 
   max-width: 600px;
   margin: $wcss-spacing-unit 0 0 0;
 
-  @include wcss-font-size(eta);
+  > p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-footer__logo {
+  max-width: 100px;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  transition: $wcss-base-transition;
+  margin: $wcss-spacing-unit-small;
+
+  &:hover,
+  &:focus {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
 }

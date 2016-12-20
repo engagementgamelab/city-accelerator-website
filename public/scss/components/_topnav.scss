@@ -50,6 +50,17 @@ $top-nav-height: 90px;
   transition: transform 0.2s;
   pointer-events: none;
   background: rgba($color-blue-80, 0.8);
+
+  @include wcss-media(large) {
+    visibility: visible;
+    position: relative;
+    flex: 1 1 50%;
+    width: auto;
+    height: auto;
+    transform: none;
+    pointer-events: all;
+    background: transparent;
+  }
 }
 
 .c-top-nav__list {
@@ -63,11 +74,26 @@ $top-nav-height: 90px;
   margin: 0;
   padding: 0;
   overflow: scroll;
+
+  @include wcss-media(large) {
+    position: relative;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    overflow: hidden;
+    text-align: right;
+  }
 }
 
 .c-top-nav__item {
   padding: $wcss-spacing-unit-small;
   text-align: center;
+
+  @include wcss-media(large) {
+    display: inline-block;
+  }
 }
 
 .c-top-nav__link {
@@ -75,6 +101,18 @@ $top-nav-height: 90px;
   color: $color-white;
   text-decoration: none;
   display: block;
+
+  @include wcss-media(large) {
+    @include wcss-font-size(eta);
+    text-transform: uppercase;
+  }
+}
+
+.c-top-nav__toggle {
+
+  @include wcss-media(large) {
+    display: none;
+  }
 }
 
 .c-top-nav__toggle[aria-expanded="true"] ~ .c-top-nav__menu[aria-hidden="false"] {
