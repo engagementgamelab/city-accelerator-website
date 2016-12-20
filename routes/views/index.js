@@ -7,7 +7,7 @@
  * Help: http://keystonejs.com/docs/getting-started/#routesviews-firstview
  *
  * @class Index
- * @author 
+ * @author
  *
  * ==========
  */
@@ -33,7 +33,7 @@ exports = module.exports = function(req, res) {
         });
         queryIndex.exec(function(err, resultIndex) {
             if (err) throw err;
-
+/*
             locals.index = resultIndex;
             locals.title = resultIndex.title.html;
             locals.header = resultIndex.header.html;
@@ -41,7 +41,7 @@ exports = module.exports = function(req, res) {
             locals.theCaseStudies = resultIndex.theCaseStudies;
             locals.theGame = resultIndex.theGame;
             locals.theGuide = resultIndex.theGuide;
-                
+*/          
                 next();
 
         });
