@@ -5,3 +5,19 @@
     @include wcss-font-size($name);
   }
 }
+
+.u-text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.u-text-sans {
+  font-family: $font-sans !important;
+}
+
+.u-text-serif {
+  font-family: $font-serif !important;
+}
+
+.u-text-bold {
+  font-weight: bold !important;
+}
