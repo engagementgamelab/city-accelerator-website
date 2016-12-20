@@ -4,14 +4,10 @@
 
 // [1] Better font rendering for OSX
 html {
-  font-size: 85%;
+  font-size: 100%;
 
   -webkit-font-smoothing: antialiased; // [1]
   -moz-osx-font-smoothing: grayscale; // [1]
-
-  @include wcss-media(medium) {
-    font-size: 100%;
-  }
 
   @include wcss-media(extra-large) {
     font-size: 1.2vw;
