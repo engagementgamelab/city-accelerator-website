@@ -28,13 +28,13 @@ exports = module.exports = function(req, res) {
         var queryCaseStudy = CaseStudy.model.findOne({
             case_key: req.params.case_key
         });
-        queryCaseStudy.exec(function(err, resultCaseStudy) {
+        queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
 
-            if(resultCaseStudy === null)
+            if(result === null)
                 return res.notfound('Cannot find that case study', 'Sorry, but it looks like the case study you were looking for does not exist!');
 
-            locals.caseStudy = resultCaseStudy;
+            locals.caseStudy = result;
 
             next();
 
@@ -42,6 +42,6 @@ exports = module.exports = function(req, res) {
     });
 
     // Render the view
-    view.render('case_study');
+    view.render('caseStudy');
 
 };

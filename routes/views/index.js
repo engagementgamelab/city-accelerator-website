@@ -34,13 +34,21 @@ exports = module.exports = function(req, res) {
         queryIndex.exec(function(err, resultIndex) {
             if (err) throw err;
 
+            if(resultIndex === null)
+                return res.notfound('Cannot find that home page -- check your database!', 'Sorry, but it looks like the home page you were looking for does not exist!');
+
+
             locals.index = resultIndex;
             locals.title = resultIndex.title.html;
             locals.header = resultIndex.header.html;
             locals.theToolkit = resultIndex.theToolkit;
+            locals.toolkitLink = resultIndex.toolkitLink;
             locals.theCaseStudies = resultIndex.theCaseStudies;
+            locals.caseLink = resultIndex.caseLink;
             locals.theGame = resultIndex.theGame;
+            locals.gameLink = resultIndex.gameLink;
             locals.theGuide = resultIndex.theGuide;
+            locals.guideLink = resultIndex.guideLink;
                 
                 next();
 

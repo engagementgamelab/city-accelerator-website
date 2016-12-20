@@ -31,12 +31,12 @@
         <li class="s-tool__step js-tool-step" data-step-name="Introduction" data-grid-include="false" data-nav-include="false" data-theme="t-blue">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-              {{> components/tool/card-intro introOne.[0]}}
+              {{> components/tool/card-intro introOne}}
 
 
             </li>
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-              {{> components/tool/card-intro introTwo.[0]}}
+              {{> components/tool/card-intro introTwo}}
             </li>
           </ul>
         </li>
@@ -48,6 +48,48 @@
               {{> components/tool/card-intro startCard}}
             </li>
             {{#each startActivities}}
+            <li class="s-tool__view js-tool-view">
+              {{> activityToolkit this}}
+            </li>
+            {{/each}}
+          </ul>
+        </li>
+
+        <!-- Project Planning -->
+        <li class="s-tool__step js-tool-step" data-step-name="Project Planning" data-theme="t-light-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> components/tool/card-intro planCard}}
+            </li>
+            {{#each planActivities}}
+            <li class="s-tool__view js-tool-view">
+              {{> activityToolkit this}}
+            </li>
+            {{/each}}
+          </ul>
+        </li>
+
+        <!-- Implementation -->
+        <li class="s-tool__step js-tool-step" data-step-name="Implementation" data-theme="t-light-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> components/tool/card-intro implementCard}}
+            </li>
+            {{#each implementActivities}}
+            <li class="s-tool__view js-tool-view">
+              {{> activityToolkit this}}
+            </li>
+            {{/each}}
+          </ul>
+        </li>
+
+        <!-- Iteration -->
+        <li class="s-tool__step js-tool-step" data-step-name="Iteration" data-theme="t-light-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> components/tool/card-intro iterateCard}}
+            </li>
+            {{#each iterateActivities}}
             <li class="s-tool__view js-tool-view">
               {{> activityToolkit this}}
             </li>

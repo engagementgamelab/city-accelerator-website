@@ -14,14 +14,15 @@
 <div class="container-fluid" style="background-image:{{{cloudinaryUrl caseStudy.image width=150 height=150 crop='scale' quality=100}}}">
 
 	<div class="row">
-	{{{caseStudy.name}}}
-	{{{caseStudy.byline}}}
+	{{{caseStudy.name.html}}}
+	{{{caseStudy.byline.html}}}
 
 	</div>
+
 	<div class="row">
 	{{#each caseStudy.modalities}}
 		{{> modality this}}
-	{{#each}}
+	{{/each}}
 	</div>
 
 	<div class="row">
@@ -41,9 +42,13 @@
 	</div>
 
 	<div class="row">
-	{{#each logos}}
+	{{{caseStudy.team.html}}}
+	</div>
+
+	<div class="row">
+	{{#each caseStudy.logos}}
 		{{> image this}}
 	{{/each}}
 	</div>
 
-</div> <!-- .container-fluid -->
+</div>

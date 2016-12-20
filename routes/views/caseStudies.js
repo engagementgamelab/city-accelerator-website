@@ -40,7 +40,7 @@ exports = module.exports = function(req, res) {
         queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
 
-            if(resultCaseStudy === null)
+            if(result === null)
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
             locals.caseStudies = result;
@@ -49,7 +49,7 @@ exports = module.exports = function(req, res) {
             queryCaseStudiesPage.exec(function(err, result) {
                 if (err) throw err;
 
-                if(resultCaseStudy === null)
+                if(result === null)
                     return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
                 locals.pageTitle = result.title;
@@ -63,6 +63,6 @@ exports = module.exports = function(req, res) {
     });
 
     // Render the view
-    view.render('case_studies');
+    view.render('caseStudies');
 
 };
