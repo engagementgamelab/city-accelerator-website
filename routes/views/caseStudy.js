@@ -27,7 +27,10 @@ exports = module.exports = function(req, res) {
 
         var queryCaseStudy = CaseStudy.model.findOne({
             case_key: req.params.case_key
-        });
+        })
+        .populate('modalities')
+        .populate('image');
+
         queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
 
@@ -35,6 +38,15 @@ exports = module.exports = function(req, res) {
                 return res.notfound('Cannot find that case study', 'Sorry, but it looks like the case study you were looking for does not exist!');
 
             locals.caseStudy = result;
+            locals.backgroundImage = result.image;
+            locals.title = result.name;
+            locals.byline = result.byline.html;
+            locals.modalities = result.modalities;
+            locals.phaseI = result.phaseI.html;
+            locals.phaseII = result.phaseII.html;
+            locals.funds = result.funds.html;
+            locals.text = result.text.html;
+            locals.team = result.team.html;
 
             next();
 

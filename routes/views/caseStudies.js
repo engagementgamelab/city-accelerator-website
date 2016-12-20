@@ -30,12 +30,15 @@ exports = module.exports = function(req, res) {
             sort: {
                 'orderNo': -1
             }
-        });
+        })
+        .populate('image');
+
         var queryCaseStudiesPage = CaseStudiesPage.model.findOne({}, {}, {
             sort: {
                 'createdAt': -1
             }
-        });
+        })
+        .populate('caseStudies');
         
         queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
@@ -44,7 +47,6 @@ exports = module.exports = function(req, res) {
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
             locals.caseStudies = result;
-            locals.title = result.name;
 
             // next();
             queryCaseStudiesPage.exec(function(err, result) {
