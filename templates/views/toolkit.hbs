@@ -49,9 +49,51 @@
         <li class="s-tool__step js-tool-step" data-step-name="Getting Started" data-theme="t-light-blue">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
-              {{> components/tool/card-intro startCard}}
+              {{> components/tool/card-intro startCard.[0]}}
             </li>
             {{#each startActivities}}
+            <li class="s-tool__view js-tool-view">
+              {{> activityToolkit this}}
+            </li>
+            {{/each}}
+          </ul>
+        </li>
+
+        <!-- Project Planning -->
+        <li class="s-tool__step js-tool-step" data-step-name="Project Planning" data-theme="t-light-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> components/tool/card-intro planCard.[0]}}
+            </li>
+            {{#each planActivities}}
+            <li class="s-tool__view js-tool-view">
+              {{> activityToolkit this}}
+            </li>
+            {{/each}}
+          </ul>
+        </li>
+
+        <!-- Implementation -->
+        <li class="s-tool__step js-tool-step" data-step-name="Implementation" data-theme="t-light-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> components/tool/card-intro implementCard.[0]}}
+            </li>
+            {{#each implementActivities}}
+            <li class="s-tool__view js-tool-view">
+              {{> activityToolkit this}}
+            </li>
+            {{/each}}
+          </ul>
+        </li>
+
+        <!-- Iteration -->
+        <li class="s-tool__step js-tool-step" data-step-name="Iteration" data-theme="t-light-blue">
+          <ul class="s-tool__sub-views js-tool-sub-steps">
+            <li class="s-tool__view js-tool-view" data-grid-include="false">
+              {{> components/tool/card-intro iterateCard.[0]}}
+            </li>
+            {{#each iterateActivities}}
             <li class="s-tool__view js-tool-view">
               {{> activityToolkit this}}
             </li>
