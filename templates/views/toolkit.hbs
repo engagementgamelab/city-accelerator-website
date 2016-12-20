@@ -11,6 +11,7 @@
 --}}
 
 <div class="s-tool js-tool">
+
   <div class="s-tool__loading js-tool-loading">
     <div class="s-tool__loading__content">
       <div class="s-tool__loading__spinner">
@@ -19,6 +20,9 @@
       <p class="s-tool__loading__text">Loading... <noscript><br><span class="u-text-epsilon u-marg-top-small">(Please enable Javascript to continue)</span></noscript></p>
     </div>
   </div>
+
+  {{> nav contrast="true"}}
+
   <div class="s-tool__nav js-tool-steps-container">
     <div class="o-wrapper">
       {{> components/tool/steps}}
@@ -82,11 +86,14 @@
   </div>
   <div class="s-tool__mvp js-tool-mvp">
   </div>
+
   {{> toolkitSidebar }}
+
+  {{> footer}}
+
 </div>
 
 <!-- Scripts are placed here temporarily, don't panic -->
 <script src="/js/vendor/velocity.js" defer></script>
 <script src="/js/modules/tool.js" defer></script>
 <script src="/js/modules/acknowledge.js" defer></script>
-<script src="/js/modules/off-canvas.js" defer></script>

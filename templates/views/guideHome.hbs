@@ -10,12 +10,15 @@
 */
 --}}
 
+{{> nav}}
 
 <div class="container-fluid home">
-	
+
 	<h1>{{title}}</h1>
 	<h4>{{byline}}</h4>
 	{{#each buttons}}
 	<button>{{this}}</button>
 	{{/each}}
 </div> <!-- .container-fluid -->
+
+{{> footer}}
