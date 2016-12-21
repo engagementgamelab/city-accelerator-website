@@ -52,8 +52,8 @@
   function updateMainHeight() {
     // Update main height, and give spacing for the box shadow not to be cropped out
     // Not cheap to animate. Experimental
-    main.velocity({ height: 64 + $('.js-tool-view.is-active').outerHeight()});
-    //main.css('height', 64 + + $('.js-tool-view.is-active').outerHeight());
+    //main.velocity({ height: 64 + $('.js-tool-view.is-active').outerHeight()});
+    main.css('height', 64 + + $('.js-tool-view.is-active').outerHeight());
   }
 
   function updateView() {
