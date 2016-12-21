@@ -2,39 +2,40 @@
 
 	<button class="c-off-canvas__toggle js-off-canvas-toggle" data-expanded="Hide Window" data-collapsed="Table Of Contents">Table Of Contents</button>
 
+{{!-- {{{jsonPrint this.calibratingGuides}}} --}}
 	<div class="c-off-canvas__content">
 		<h3 class="c-off-canvas__title">Accelerating Public Engagement</h3>
 		{{#each guides}}
 			{{#ifeq this.name 'Introduction'}}
-			<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
+			<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a></h4>
 			{{/ifeq}}
 		{{/each}}
 
 		{{#each guides}}
 			{{#ifeq this.name 'Executive Summary'}}
-			<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
+			<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a></h4>
 			{{/ifeq}}
 		{{/each}}
 
 		{{#each calibratingGuides}}
-				{{#ifeq this.isSection true}}
-				<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
-				{{/ifeq}}
+				{{#if this.isSection}}
+				<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a></h4>
+				{{/if}}
 		{{/each}}
 		{{#each calibratingGuides}}
 				{{#ifeq this.isSection false}}
-				<a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a>
+				<a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a>
 				{{/ifeq}}
 		{{/each}}
 
 		{{#each chartingGuides}}
-				{{#ifeq this.isSection true}}
-				<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
-				{{/ifeq}}
+				{{#if this.isSection}}
+				<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a></h4>
+				{{/if}}
 		{{/each}}
 		{{#each chartingGuides}}
 				{{#ifeq this.isSection false}}
-				<a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a>
+				<a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a>
 				{{/ifeq}}
 		{{/each}}
 	</div>
