@@ -322,36 +322,54 @@
   }
 
   //This function will check if the current page has the query param of 'step' & call the modal
+  //or a param of grid and show the MVP grid directly
+
   function checkParam() {
+
     var requestedStep = getParameterByName('step');
+
     if(requestedStep != "") {
-      console.log(requestedStep);
-      var data = requestedStep.split('.');
-      var step = data[0];
-      var sub_step = data[1];
-      modal = $('.js-tool-modal[data-linked-step="' + step + '"][data-linked-sub-step="' + sub_step + '"]');
-      console.log(modal);
 
-      if(modal.length) {
+      // If user is asking for the MVP Grid
+      if(requestedStep = "grid") {
 
-        // Check if the document is loaded before loading the modal
-        var readyStateCheckInterval = setInterval(function() {
-          if (document.readyState === "complete") {
-            clearInterval(readyStateCheckInterval);
-            $('.js-tool-printable').removeClass('js-tool-printable');
-            modal.addClass('is-active').addClass('js-tool-printable');
-            $('html').addClass('is-modal-active');
-          }
-        }, 10);
+        active_view = $('.js-tool-step:last-child').index() + '.0';
+        $('.js-tool-back').remove();
+        $('.js-tool-steps-container').remove();
+        updateView();
+        updateSidebar();
+
+      // If user is asking for an activity modal
       } else {
-        $('html').removeClass('is-modal-active');
-        $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');
+        var data = requestedStep.split('.');
+        var step = data[0];
+        var sub_step = data[1];
+        modal = $('.js-tool-modal[data-linked-step="' + step + '"][data-linked-sub-step="' + sub_step + '"]');
+
+        if(modal.length) {
+
+          // Check if the document is loaded before loading the modal
+          var readyStateCheckInterval = setInterval(function() {
+            if (document.readyState === "complete") {
+              clearInterval(readyStateCheckInterval);
+              $('.js-tool-printable').removeClass('js-tool-printable');
+              modal.addClass('is-active').addClass('js-tool-printable');
+              $('html').addClass('is-modal-active');
+            }
+          }, 10);
+        } else {
+          $('html').removeClass('is-modal-active');
+          $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');
+        }
       }
+
     } else {
       window.history.pushState('City Accelerator Toolkit', 'City Accelerator Toolkit', location.pathname);
       $('html').removeClass('is-modal-active');
       $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');
     }
+
+
   }
 
 

@@ -7,7 +7,7 @@ $top-nav-height: 90px;
   color: $color-white;
 }
 
-.c-top-nav + * {
+.c-top-nav.c-top-nav + * {
   @include wcss-rem(padding-top, $top-nav-height);
 }
 
