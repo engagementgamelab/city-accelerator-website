@@ -31,18 +31,16 @@
     </div>
     <div class="c-article__content c-article__content--full">
       <div class="s-gallery">
-        <img src="http://placehold.it/500x500" alt="Alt">
-        <img src="http://placehold.it/500x500" alt="Alt">
+
+		    {{!-- IMAGES --}}
+		    {{#each images}}
+
+		    	<img src="{{secure_url}}" height="{{height}}" width="{{width}}" />
+
+		    {{/each}}
+
       </div>
     </div>
-
-    {{!-- IMAGES --}}
-    {{#each images}}
-
-    	<img src="{{secure_url}}" height="{{height}}" width="{{width}}" />
-
-    {{/each}}
-
     {{!-- PROGRAM GOALS --}}
 		<div class="c-article__content c-article__content--medium">
 			<div class="o-layout">
