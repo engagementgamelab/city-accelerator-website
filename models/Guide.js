@@ -46,5 +46,5 @@ Guide.add({
  * Model Registration
  */
 Guide.defaultSort = '-createdAt';
-Guide.defaultColumns = 'name, updatedAt';
+Guide.defaultColumns = 'name, isSection, section, updatedAt';
 Guide.register();

@@ -30,7 +30,7 @@ exports = module.exports = function(req, res) {
         queryGuideHome.exec(function(err, result) {
             if (err) throw err;
 
-            if(resultGuide === null)
+            if(!result)
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
             locals.title = result.name;
