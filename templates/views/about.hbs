@@ -15,43 +15,63 @@
   {{> nav contrast="true"}}
 
   <div class="c-article__header c-article__header--bg-repeater">
-    <h1 class="c-article__title">The Cohort on Public Engagement</h1>
+    <h1 class="c-article__title">{{pageTitle}}</h1>
+  </div>
+
+  {{!-- need style --}}
+  <div class="c-article__main">
+    <div class="c-article__content">
+        <p class="c-article__intro">{{pageHeader}}</p>
+    </div>
   </div>
 
   <div class="c-article__main">
     <div class="c-article__content">
-        <p class="c-article__intro">5 cities + $100,000 + 18 months to create projects that engage lower income residents</p>
-        <p>As local government resources are contracting and challenges ranging from economic inequality to infrastructure are compounding, cities must design new and more effective responses. Cities are increasingly looking for ways to implement promising innovations that will have a significant impact in the lives of their residents, especially those with low incomes.</p>
-				<p>City Accelerator is an initiative of Living Cities and the Citi Foundation that explores best practices for engaging lower income residents and effective city government structures. Over an 18-month period, cities outlined the progress that they intended to make in advancing innovative practice over the duration of the cohort and used a number of program elements to accelerate progress on their work, including: an innovation guidebook that highlights how leading practices can be concretely adapted; coaching, technical assistance, and implementation resources to advance strategy and overcome barriers. Each city came together multiple times throughout the project to share how they used these resources to advance strategy and overcome barriers.</p>
+        <p class="c-article__intro">{{{description.html}}}</p>
     </div>
     <div class="c-article__content c-article__content--full">
       <div class="s-gallery">
-        <img src="http://placehold.it/500x500" alt="Alt">
-        <img src="http://placehold.it/500x500" alt="Alt">
+
+		    {{!-- IMAGES --}}
+		    {{#each images}}
+
+		    	<img src="{{secure_url}}" height="{{height}}" width="{{width}}" />
+
+		    {{/each}}
+
       </div>
     </div>
-    <div class="c-article__content">
-      <h1>Heading 1</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime eum architecto saepe recusandae neque laborum, quia commodi non ab, nobis quis illum quasi nemo fugit voluptates pariatur. Quasi, temporibus?</p>
-			<h2>Heading 2</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime eum architecto saepe recusandae neque laborum, quia commodi non ab, nobis quis illum quasi nemo fugit voluptates pariatur. Quasi, temporibus?</p>
-			<h3>Heading 3</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime eum architecto saepe recusandae neque laborum, quia commodi non ab, nobis quis illum quasi nemo fugit voluptates pariatur. Quasi, temporibus?</p>
-			<h4>Heading 4</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime eum architecto saepe recusandae neque laborum, quia commodi non ab, nobis quis illum quasi nemo fugit voluptates pariatur. Quasi, temporibus?</p>
-			<h5>Heading 5</h5>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime eum architecto saepe recusandae neque laborum, quia commodi non ab, nobis quis illum quasi nemo fugit voluptates pariatur. Quasi, temporibus?</p>
-			<h6>Heading 6</h6>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam maxime eum architecto saepe recusandae neque laborum, quia commodi non ab, nobis quis illum quasi nemo fugit voluptates pariatur. Quasi, temporibus?</p>
-			<a href="#">Hi I'm a Link</a>
-    </div>
+    {{!-- PROGRAM GOALS --}}
 		<div class="c-article__content c-article__content--medium">
 			<div class="o-layout">
 				<div class="o-layout__item o-layout__item--3/12@medium">
 					<h2 class="u-text-zeta u-text-uppercase u-text-bold u-text-sans">Program Goals</h2>
 				</div>
 				<div class="o-layout__item o-layout__item--9/12@medium">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex accusantium facilis in consequuntur. Quidem nesciunt repudiandae debitis optio, quo maxime possimus inventore autem repellendus vitae, adipisci, voluptatibus nostrum culpa, itaque.</p>
+					<p>{{{programGoals.html}}}</p>
+				</div>
+			</div>
+		</div>
+
+    {{!-- READ MORE --}}
+		<div class="c-article__content c-article__content--medium">
+			<div class="o-layout">
+				<div class="o-layout__item o-layout__item--3/12@medium">
+					<h2 class="u-text-zeta u-text-uppercase u-text-bold u-text-sans">Read More About The Cohort</h2>
+				</div>
+				<div class="o-layout__item o-layout__item--9/12@medium">
+					<p>{{{cohort.html}}}</p>
+				</div>
+			</div>
+
+    {{!-- PUBLIC ENGAGEMENT ARTICLES --}}
+		<div class="c-article__content c-article__content--medium">
+			<div class="o-layout">
+				<div class="o-layout__item o-layout__item--3/12@medium">
+					<h2 class="u-text-zeta u-text-uppercase u-text-bold u-text-sans">Articles About the Public Engagement Today</h2>
+				</div>
+				<div class="o-layout__item o-layout__item--9/12@medium">
+					<p>{{{public.html}}}</p>
 				</div>
 			</div>
 		</div>
