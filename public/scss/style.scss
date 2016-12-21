@@ -74,16 +74,19 @@
 @import "components/check-list";
 @import "components/box";
 @import "components/hero";
+@import "components/article";
 @import "components/footer";
 
 // SCOPES
 
 @import "scopes/tool";
+@import "scopes/gallery";
 
 // UTILITIES
 
 @import "utilities/spacing";
 @import "utilities/text";
+@import "utilities/transform";
 
 // QA
 

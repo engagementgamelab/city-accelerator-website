@@ -141,8 +141,10 @@
   transition: color .2s;
   text-align: center;
 
-  @include wcss-font-size(beta);
+  @include wcss-font-size(gamma);
   @include wcss-theme-var(color, --tertiary);
+
+  word-wrap: break-word;
 
   @include wcss-media(large) {
     text-align: left;
@@ -157,7 +159,7 @@
   pointer-events: none; // [1]
 
   opacity: 0; // [1]
-  
+
   &.is-active {
     pointer-events: all;
 
@@ -181,7 +183,7 @@
 }
 
 @media print {
-  
+
   html {
     font-size: 62.5%;
   }
@@ -209,8 +211,8 @@
   // We employ the .js-tool-printable class to tell JS
   // which div we want to print. We move that class around between
   // modals and the MVP area.
-  // 
-  // 1. Override the current theme's background 
+  //
+  // 1. Override the current theme's background
 
   .s-tool,
   .js-tool-printable {

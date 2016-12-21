@@ -1,0 +1,12 @@
+.s-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+
+  > * {
+    flex: 0 1 250px;
+    padding: $wcss-spacing-unit;
+    margin: auto;
+  }
+}

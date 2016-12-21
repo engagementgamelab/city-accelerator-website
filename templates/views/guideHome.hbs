@@ -19,54 +19,13 @@
 			<h1 class="c-hero__title u-text-mega">{{title}}</h1>
 			<h2 class="u-text-serif u-text-uppercase u-text-epsilon">{{byline}}</h2>
 			<p class="u-text-serif u-text-epsilon">by Eric Gordon</p>
-			{{#each buttons}}
-				<a href="#" class="c-btn c-btn--large c-btn--green u-marg-top-small u-marg-bottom u-marg-right-small u-marg-left-small">{{this}}</a>
-			{{/each}}
+			<a href="#" class="c-btn c-btn--large c-btn--green u-marg-top-small u-marg-bottom u-marg-right-small u-marg-left-small">Start Reading</a>
+			<a href="#" class="c-btn c-btn--large c-btn--ghost u-marg-top-small u-marg-bottom u-marg-right-small u-marg-left-small">Download Guide</a>
 		</div>
 	</div>
 
 	{{> footer}}
 
-</div>
+	{{> guideSidebar}}
 
-<div class="c-off-canvas js-off-canvas" aria-hidden="true">
-
-	<button class="c-off-canvas__toggle js-off-canvas-toggle" data-expanded="Hide Window" data-collapsed="Table Of Contents">Table Of Contents</button>
-
-	<div class="c-off-canvas__content">
-		<h3 class="c-off-canvas__title">Accelerating Public Engagement</h3>
-		{{#each guides}}
-			{{#ifeq this.name 'Introduction'}}
-			<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
-			{{/ifeq}}
-		{{/each}}
-
-		{{#each guides}}
-			{{#ifeq this.name 'Executive Summary'}}
-			<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
-			{{/ifeq}}
-		{{/each}}
-
-		{{#each calibratingGuides}}
-				{{#ifeq this.isSection true}}
-				<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
-				{{/ifeq}}
-		{{/each}}
-		{{#each calibratingGuides}}
-				{{#ifeq this.isSection false}}
-				<a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a>
-				{{/ifeq}}
-		{{/each}}
-
-		{{#each chartingGuides}}
-				{{#ifeq this.isSection true}}
-				<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a></h4>
-				{{/ifeq}}
-		{{/each}}
-		{{#each chartingGuides}}
-				{{#ifeq this.isSection false}}
-				<a class="c-off-canvas__link" href="/guides/{{this.guide_key}}">{{this.name}}</a>
-				{{/ifeq}}
-		{{/each}}
-	</div>
 </div>
