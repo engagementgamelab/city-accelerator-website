@@ -45,8 +45,6 @@ exports = module.exports = function(req, res) {
             locals.pageHeader = resultAbout.header;
             locals.description = resultAbout.description;
             locals.programGoals = resultAbout.programGoals;
-            
-                // next();
 
             queryPartners.exec(function(err, result) {
                 if (err) throw err;
