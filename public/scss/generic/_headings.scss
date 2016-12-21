@@ -1,0 +1,23 @@
+h1 {
+  @include wcss-font-size(alpha);
+}
+
+h2 {
+  @include wcss-font-size(beta);
+}
+
+h3 {
+  @include wcss-font-size(gamma);
+}
+
+h4 {
+  @include wcss-font-size(delta);
+}
+
+h5 {
+  @include wcss-font-size(epsilon);
+}
+
+h6 {
+  @include wcss-font-size(zeta);
+}

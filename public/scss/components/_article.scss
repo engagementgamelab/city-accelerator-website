@@ -14,7 +14,6 @@
   font-family: $font-serif;
   margin: 0;
   transform: translateY(50%);
-  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -27,6 +26,18 @@
   max-width: 600px;
   margin: 0 auto;
   color: $color-gray;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $font-serif;
+  }
+
+  a {
+    @include wcss-theme-var(color, --tertiary);
+  }
+}
+
+.c-article__content--medium {
+  max-width: 1000px;
 }
 
 .c-article__content--full {
@@ -34,7 +45,7 @@
 }
 
 * + .c-article__content {
-  margin-top: $wcss-spacing-unit;
+  margin-top: $wcss-spacing-unit-large;
 }
 
 .c-article__intro {
