@@ -2,7 +2,7 @@
 
 @each $name, $value in $wcss-typography-scale {
   .u-text-#{$name} {
-    @include wcss-font-size($name);
+    @include wcss-font-size($name, true);
   }
 }
 
