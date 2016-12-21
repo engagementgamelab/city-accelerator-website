@@ -1,0 +1,46 @@
+.c-article {
+
+}
+
+.c-article__header {
+  text-align: center;
+  background: var(--primary) linear-gradient(to top, var(--primary), rgba(white, 0.5));
+  padding-top: $wcss-spacing-unit-huge*1.5;
+}
+
+.c-article__title {
+  @include wcss-font-size(alpha);
+  @include wcss-theme-var(color, --tertiary);
+  font-family: $font-serif;
+  margin: 0;
+  transform: translateY(50%);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.c-article__main {
+  padding: $wcss-spacing-unit-large $wcss-spacing-unit-small;
+  position: relative;
+}
+
+.c-article__content {
+  max-width: 600px;
+  margin: 0 auto;
+  color: $color-gray;
+}
+
+.c-article__content--full {
+  max-width: 100%;
+}
+
+* + .c-article__content {
+  margin-top: $wcss-spacing-unit;
+}
+
+.c-article__intro {
+  @include wcss-font-size(epsilon);
+  text-align: center;
+  font-weight: bold;
+  color: $color-black;
+  margin-bottom: $wcss-spacing-unit;
+}
