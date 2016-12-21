@@ -256,7 +256,7 @@
       });
 
     } else {
-      $('.js-tool-nav-item').not(nav_item).removeClass('is-active');      
+      $('.js-tool-nav-item').not(nav_item).removeClass('is-active');
     }
   }
 
@@ -307,12 +307,11 @@
 
         if(items.length) {
           $('.js-tool-sidebar-empty').attr('aria-hidden', 'true');
-          sidebar_html = sidebar_html + '<h4 class="c-off-canvas__sub-title">' + block_title + '</h4>' + '<ul class="c-check-list">';
+          sidebar_html = sidebar_html + '<h4 class="c-off-canvas__sub-title"><p class="c-off-canvas__link">' + block_title + '</p></h4>';
           $(items).each(function() {
             var item_title = $(this).find('.js-tool-card-title').html();
-            sidebar_html = sidebar_html + '<li>' + item_title + '</li>';
+            sidebar_html = sidebar_html + '<p class="c-off-canvas__link">' + item_title + '</p>';
           });
-          sidebar_html = sidebar_html + '</ul>';
         }
       });
 
@@ -346,7 +345,7 @@
         }, 10);
       } else {
         $('html').removeClass('is-modal-active');
-        $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');   
+        $('.js-tool-modal').removeClass('is-active').removeClass('js-tool-printable');
       }
     } else {
       window.history.pushState('City Accelerator Toolkit', 'City Accelerator Toolkit', location.pathname);

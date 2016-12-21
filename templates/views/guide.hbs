@@ -10,46 +10,9 @@
 */
 --}}
 
+{{> nav}}
 
-<div class="container-fluid home">
-	<div class="row guide-top-nav">
-
-	{{#each guides}}
-		{{#ifeq this.name 'Introduction'}}
-		<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
-		{{/ifeq}}
-	{{/each}}
-
-	{{#each guides}}
-		{{#ifeq this.name 'Executive Summary'}}
-		<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
-		{{/ifeq}}
-	{{/each}}
-
-	{{#each calibratingGuides}}
-			{{#ifeq this.isSection true}}
-			<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
-			{{/ifeq}}
-	{{/each}}
-	{{#each calibratingGuides}}
-			{{#ifeq this.isSection false}}
-			<a href="/guides/{{this.guide_key}}">{{this.name}}</a>
-			{{/ifeq}}
-	{{/each}}
-
-	{{#each chartingGuides}}
-			{{#ifeq this.isSection true}}
-			<a href="/guides/{{this.guide_key}}"><bold>{{this.name}}</bold></a>
-			{{/ifeq}}
-	{{/each}}
-	{{#each chartingGuides}}
-			{{#ifeq this.isSection false}}
-			<a href="/guides/{{this.guide_key}}">{{this.name}}</a>
-			{{/ifeq}}
-	{{/each}}
-		
-	</div>
-
+<div>
 
 	<div class="row">
 
@@ -76,7 +39,7 @@
 					{{!-- {{/ifeq}} --}}
 			{{/each}}
 
-			
+
 		</section>
 
 		<section id="section-charting">
@@ -94,7 +57,9 @@
 					{{!-- {{/ifeq}} --}}
 			{{/each}}
 		</section>
-		
+
 	</div>
 
 </div> <!-- .container-fluid -->
+
+{{> footer}}

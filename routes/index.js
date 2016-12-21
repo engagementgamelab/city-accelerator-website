@@ -54,7 +54,8 @@ exports = module.exports = function(app) {
     // Views
     app.get('/', routes.views.index);
     app.get('/game', routes.views.game);
-    app.get('/toolkit', routes.views.toolkit);
+    app.get('/toolkit-builder', routes.views.toolkit);
+    app.get('/toolkit', routes.views.toolkitHome);
     app.get('/about', routes.views.about);
     app.get('/case-studies', routes.views.caseStudies);
     app.get('/case-studies/:case_key', routes.views.caseStudy);

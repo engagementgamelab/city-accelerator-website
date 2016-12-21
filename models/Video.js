@@ -53,10 +53,6 @@ Video.schema.pre('save', function(next) {
 
 });
 
-Video.schema.post('save', function(next) {   
-
-});
-
 
 /**
  * Model Registration

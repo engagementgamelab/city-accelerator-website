@@ -12,7 +12,7 @@
     {{!-- Only display an icon if we actually have specified one --}}
     {{#if icon}}
       <div class="c-card__icon c-icon">
-        <img src="{{ icon }}" alt="{{ title }}" class="c-icon__img">
+        {{> cardImage icon}}
       </div>
     {{/if}}
 

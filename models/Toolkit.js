@@ -38,10 +38,11 @@ Toolkit.add({
 	startBlurb: { type: Types.Markdown, label: "Getting Started Blurb" },
 	planTitle: { type: String, label: "Project Planning Title", default: 'Project Planning' },
 	planBlurb: { type: Types.Markdown, label: "Project Planning Blurb" },
-	implimentTitle: { type: String, label: "Implimentation Title", default: 'Implimentation' },
-	implimentBlurb: { type: Types.Markdown, label: "Implimentation Blurb" },
+	implementTitle: { type: String, label: "Implementation Title", default: 'Implementation' },
+	implementBlurb: { type: Types.Markdown, label: "Implementation Blurb" },
 	iterateTitle: { type: String, label: "Iteration Title", default: 'Getting Started' },
 	iterateBlurb: { type: Types.Markdown, label: "Iteration Blurb" },
+	builderButton: { type: String, label: "Builder Button Text" },
 	// category: {type: Types.Select, label: 'Toolkit Category', options: 'start, plan, impliment, iterate', required:true, initial: true },
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });

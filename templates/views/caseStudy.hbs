@@ -10,34 +10,42 @@
 */
 --}}
 
+{{> nav}}
 
-<div class="container-fluid" style="background-image:{{{cloudinaryUrl caseStudy.image width=150 height=150 crop='scale' quality=100}}}">
+<div class="container-fluid" style="background-image:{{{cloudinaryUrl backgroundImage width=150 height=150 crop='scale' quality=100}}}">
 
 	<div class="row">
-	{{{caseStudy.name}}}
-	{{{caseStudy.byline}}}
+	{{title}}
+	{{{byline}}}
 
 	</div>
+
 	<div class="row">
 	{{#each caseStudy.modalities}}
+		{{jsonPrint this}}
 		{{> modality this}}
-	{{#each}}
+
+	{{/each}}
 	</div>
 
 	<div class="row">
-	{{{caseStudy.phaseI.html}}}
+	{{{phaseI}}}
 	</div>
 
 	<div class="row">
-	{{{caseStudy.phaseII.html}}}
+	{{{phaseII}}}
 	</div>
 
 	<div class="row">
-	{{{caseStudy.funds.html}}}
+	{{{funds}}}
 	</div>
 
 	<div class="row">
-	{{{caseStudy.text.html}}}
+	{{{text}}}
+	</div>
+
+	<div class="row">
+	{{{team}}}
 	</div>
 
 	<div class="row">
@@ -47,3 +55,5 @@
 	</div>
 
 </div> <!-- .container-fluid -->
+
+{{> footer}}

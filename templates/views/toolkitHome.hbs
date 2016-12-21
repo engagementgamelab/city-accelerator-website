@@ -1,0 +1,85 @@
+{{!< default}}
+{{!--
+/**
+* Engagement Lab Web Suite
+* Developed by Engagement Lab, 2016
+* ==============
+*
+* Index Page sample Template
+* ==========
+*/
+--}}
+
+<div class="container-fluid home">
+
+<a href="/toolkit-builder">{{builderButton}}</a>
+
+    <li class="s-tool__step js-tool-step" data-step-name="View MVP" data-grid-include="false" data-theme="t-blue">
+      <ul class="s-tool__sub-views js-tool-sub-steps">
+        <li class="s-tool__view js-tool-view" data-grid-include="false">
+          {{> tool/mvp/grid }}
+        </li>
+      </ul>
+    </li>
+  
+  {{!-- <div class="toolkit-get-started">
+    <div class="toolkit-home-card">
+      <h1>{{startTitle}}</h1>
+      <h4>{{{startBlurb}}}</h4>
+    
+    </div>
+    {{#each startActivities}}
+      <div class="toolkit-card">
+      {{> image this.icon}}
+      {{this.name}}
+      {{{this.question.html}}}
+      </div>
+      {{> components/tool/modal this}}
+    {{/each}}
+  </div>
+
+  <div class="toolkit-proj-plan">
+    <div class="toolkit-home-card">
+      <h1>{{planTitle}}</h1>
+      <h4>{{{planBlurb}}}</h4>
+    
+    </div>
+    {{#each planActivities}}
+      <div class="toolkit-card">
+      {{> image this.icon}}
+      {{this.name}}
+      {{{this.question.html}}}
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="toolkit-implement">
+    <div class="toolkit-home-card">
+      <h1>{{implementTitle}}</h1>
+      <h4>{{{implementBlurb}}}</h4>
+    
+    </div>
+    {{#each implementActivities}}
+      <div class="toolkit-card">
+      {{> image this.icon}}
+      {{this.name}}
+      {{{this.question.html}}}
+      </div>
+    {{/each}}
+  </div>
+
+  <div class="toolkit-iterate">
+    <div class="toolkit-home-card">
+      <h1>{{iterateTitle}}</h1>
+      <h4>{{{iterateBlurb}}}</h4>
+    
+    </div>
+    {{#each iterateActivities}}
+      <div class="toolkit-card">
+      {{> image this.icon}}
+      {{this.name}}
+      {{{this.question.html}}}
+      </div>
+    {{/each}}
+  </div> --}}
+</div> <!-- .container-fluid -->
