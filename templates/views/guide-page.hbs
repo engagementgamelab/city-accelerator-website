@@ -1,0 +1,42 @@
+{{!< default}}
+{{!--
+/**
+* Engagement Lab Web Suite
+* Developed by Engagement Lab, 2016
+* ==============
+*
+* Guide Page sample Template
+* ==========
+*/
+--}}
+
+<article class="c-article t-green">
+
+  {{> nav contrast="true"}}
+
+  <div class="c-article__header c-article__header--bg-repeater">
+    <h1 class="c-article__title">{{content.header}}</h1>
+  </div>
+
+  <div class="c-article__main">
+{{!--     <div class="c-article__content">
+        <p class="c-article__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos saepe nulla eligendi excepturi, id in ullam, eum consectetur amet atque deserunt placeat labore dicta nihil magni. Ipsa et voluptates nesciunt.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam iusto fuga, nisi officia minus maxime repellat est consectetur sequi voluptatem inventore accusamus molestias cupiditate, neque animi in necessitatibus vitae.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nobis voluptatum cumque ipsum, vero expedita aliquam inventore minus numquam nulla voluptas iste labore eum autem temporibus. A, harum aut repellendus?</p>
+    </div>
+    <div class="c-article__content c-article__content--full">
+      <div class="s-gallery">
+        <img src="http://placehold.it/500x500" alt="Alt">
+        <img src="http://placehold.it/500x500" alt="Alt">
+      </div>
+    </div> --}}
+    <div class="c-article__content">
+      <p>{{{content.text.html}}}</p>
+    </div>
+  </div>
+
+</article>
+
+{{> guideSidebar}}
+
+{{> footer}}
