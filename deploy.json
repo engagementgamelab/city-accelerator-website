@@ -23,6 +23,19 @@
         "NODE_ENV": "staging"
       }
     },
+
+    "web-production" : {
+      "user": "node",
+      "host": "199.94.80.32",
+      "repo": "git@github.com:engagementgamelab/EL-Website.git",
+      "ref": "origin/master",
+      "path": "/srv/website",
+      "pre-deploy-local" : "echo 'Cloning and running npm install. Be patient.';",
+      "post-deploy" : "npm i ; grunt compile --sites=engagement-lab-home,boston-civic-media,city-accelerator-website ; pm2 restart 0 --env production",
+      "env": {
+        "NODE_ENV": "staging"
+      }
+    },
     
     "staging" : {
     
@@ -37,6 +50,20 @@
         "NODE_ENV": "staging"
       }
 
+    },
+    
+    "production" : {
+    
+      "user": "node",
+      "host": "199.94.80.32",
+      "repo": "git@github.com:engagementgamelab/city-accelerator-website.git",
+      "ref": "origin/production",
+      "path": "/srv/city-accelerator-website",
+      "pre-deploy-local" : "echo 'Cloning and running npm install. Be patient.'",
+      "post-deploy" : "npm i ; cd /srv/website/current/; npm link /srv/city-accelerator-website/current ; grunt compile --sites=city-accelerator-website ; pm2 restart 'server' --env production",
+      "env": {
+        "NODE_ENV": "staging"
+      }
     }
 
   }
