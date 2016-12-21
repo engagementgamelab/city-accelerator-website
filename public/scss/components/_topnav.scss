@@ -5,6 +5,7 @@ $top-nav-height: 90px;
   display: inline-block;
   width: 100%;
   color: $color-white;
+  z-index: 10;
 }
 
 .c-top-nav.c-top-nav + * {
@@ -134,7 +135,6 @@ $top-nav-height: 90px;
   pointer-events: all;
   z-index: 10;
 }
-
 
 
 

@@ -59,3 +59,15 @@
   color: $color-black;
   margin-bottom: $wcss-spacing-unit;
 }
+
+
+
+// Backgrounds
+
+.c-article__header--bg-repeater {
+  background-color: var(--secondary);
+  background-image: url(../images/bg-repeater.png);
+  background-repeat: repeat;
+  background-size: 25%;
+  background-blend-mode: luminosity;
+}
