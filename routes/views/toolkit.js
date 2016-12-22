@@ -46,7 +46,7 @@ exports = module.exports = function(req, res) {
             if (err) throw err;
 
             if(result === null)
-                return res.notfound('Cannot find that part of the toolki', 'Sorry, but it looks like the card you were looking for does not exist!');
+                return res.notfound('Cannot find that part of the toolkit', 'Sorry, but it looks like the card you were looking for does not exist!');
 
             locals.introOne = categorize(result, 'IntroOne');
             locals.introTwo = categorize(result, 'IntroTwo');

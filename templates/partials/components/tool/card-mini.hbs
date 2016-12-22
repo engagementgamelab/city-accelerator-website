@@ -13,13 +13,13 @@
     <div class="c-card__content">
 
       {{!-- If there's a specified title --}}
-      {{#if title}}
-        <p class="c-card__title js-tool-card-title">{{ title }}</p>
+      {{#if name}}
+        <p class="c-card__title js-tool-card-title">{{ name }}</p>
       {{/if}}
 
       {{!-- If there's text specified --}}
-      {{#if text}}
-        <div class="c-card__text">{{{ text.html }}}</div>
+      {{#if question}}
+        <div class="c-card__text">{{{ question.html }}}</div>
       {{/if}}
     </div>
 

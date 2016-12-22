@@ -57,11 +57,11 @@ exports = module.exports = function(app) {
     app.get('/toolkit-builder', routes.views.toolkit);
     app.get('/toolkit', routes.views.toolkitHome);
     app.get('/about', routes.views.about);
-    
+
     app.get('/case-studies', routes.views.caseStudies);
     app.get('/case-studies/:case_key', routes.views.caseStudy);
 
-    app.get('/guide-home', routes.views.guideHome);
+    app.get('/guide', routes.views.guideHome);
     app.get('/guide/:guide_key', routes.views.guidePage);
 
     // app.get('/:category_id', routes.views.category);
