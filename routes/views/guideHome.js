@@ -25,7 +25,7 @@ exports = module.exports = function(req, res) {
 
     view.on('init', function(next) {
 
-        var queryGuideHome = GuideHome.model.find({});
+        var queryGuideHome = GuideHome.model.findOne({});
 
         queryGuideHome.exec(function(err, result) {
             if (err) throw err;
