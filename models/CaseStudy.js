@@ -36,16 +36,20 @@ CaseStudy.add({
 	name: { type: String, label: 'Case Study Title', required: true, initial: true },
 	enabled: { type: Boolean, label: 'Enable This Case Study?', note: 'If this case study is not enabled, it will not show up on the site!'},
 	image: { 
-		type: Types.Relationship, 
-		label: 'Background Image', 
-		ref: 'Image', 
-		many: false
+		type: Types.CloudinaryImage, 
+		label: 'Blurb Image', 
+		note: 'The image showing on the case studies landing page.',
+    folder: 'city-accelerator-website/case-studies',
+    autoCleanup: true
 	},
 	byline: { type: Types.Markdown, label: 'Case Study Byline'},
 	modalities: {
 		type: Types.Relationship, 
 		label: "Modalities",
-		ref: 'Activity'
+		ref: 'Activity',
+		many: true,
+		required: true,
+		initial: true
 	},
 	phaseI: { type: Types.Markdown, label: 'Phase I Implementation', note: ''},
 	phaseII: { type: Types.Markdown, label: 'Phase II Implementation', note: ''},
