@@ -10,76 +10,48 @@
 */
 --}}
 
-<div class="container-fluid home">
+<article class="c-box c-box--repeater c-article t-light-blue">
 
-<a href="/toolkit-builder">{{builderButton}}</a>
+  {{> nav contrast="true"}}
 
-    <li class="s-tool__step js-tool-step" data-step-name="View MVP" data-grid-include="false" data-theme="t-blue">
-      <ul class="s-tool__sub-views js-tool-sub-steps">
-        <li class="s-tool__view js-tool-view" data-grid-include="false">
-          {{> tool/mvp/grid }}
-        </li>
-      </ul>
-    </li>
-  
-  {{!-- <div class="toolkit-get-started">
-    <div class="toolkit-home-card">
-      <h1>{{startTitle}}</h1>
-      <h4>{{{startBlurb}}}</h4>
-    
-    </div>
-    {{#each startActivities}}
-      <div class="toolkit-card">
-      {{> image this.icon}}
-      {{this.name}}
-      {{{this.question.html}}}
-      </div>
-      {{> components/tool/modal this}}
-    {{/each}}
+  <div class="c-article__header c-article__header--bg-repeater">
+    <h1 class="c-article__title">Two roads to take!</h1>
   </div>
 
-  <div class="toolkit-proj-plan">
-    <div class="toolkit-home-card">
-      <h1>{{planTitle}}</h1>
-      <h4>{{{planBlurb}}}</h4>
-    
-    </div>
-    {{#each planActivities}}
-      <div class="toolkit-card">
-      {{> image this.icon}}
-      {{this.name}}
-      {{{this.question.html}}}
+  <div class="c-article__main u-marg-top-large u-marg-bottom">
+    <div class="c-article__content c-article__content--medium">
+
+			<div class="c-card-list c-card-list--overlapped">
+				<div class="c-card-list__item">
+					<div class="c-card c-card--full c-card--reverse">
+					  <div class="c-card__inner">
+					    <div class="c-card__content">
+				        <h2 class="c-card__title">Process Builder</h2>
+				        <div class="c-card__text">
+                  <p>Use our interactive public engagement process builder! We'll ask you some questions to help determine what to include in your roadmap!</p>
+                  <a class="c-btn c-btn--primary" href="/toolkit-builder">Launch process builder</a>
+                </div>
+					  	</div>
+						</div>
+		    	</div>
+				</div>
+
+				<div class="c-card-list__item">
+					<div class="c-card c-card--full">
+					  <div class="c-card__inner">
+					    <div class="c-card__content">
+				        <h2 class="c-card__title">Browse and select</h2>
+				        <div class="c-card__text">Know what you are looking for? Just browse, select activities and add them to your roadmap!</div>
+                <a class="c-btn c-btn--primary" href="/toolkit-builder#step=grid">Browse and select</a>
+					  	</div>
+						</div>
+		    	</div>
+				</div>
+
       </div>
-    {{/each}}
+
+		</div>
   </div>
 
-  <div class="toolkit-implement">
-    <div class="toolkit-home-card">
-      <h1>{{implementTitle}}</h1>
-      <h4>{{{implementBlurb}}}</h4>
-    
-    </div>
-    {{#each implementActivities}}
-      <div class="toolkit-card">
-      {{> image this.icon}}
-      {{this.name}}
-      {{{this.question.html}}}
-      </div>
-    {{/each}}
-  </div>
-
-  <div class="toolkit-iterate">
-    <div class="toolkit-home-card">
-      <h1>{{iterateTitle}}</h1>
-      <h4>{{{iterateBlurb}}}</h4>
-    
-    </div>
-    {{#each iterateActivities}}
-      <div class="toolkit-card">
-      {{> image this.icon}}
-      {{this.name}}
-      {{{this.question.html}}}
-      </div>
-    {{/each}}
-  </div> --}}
-</div> <!-- .container-fluid -->
+  {{> footer}}
+</article>

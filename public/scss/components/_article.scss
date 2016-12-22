@@ -4,7 +4,7 @@
 
 .c-article__header {
   text-align: center;
-  background: var(--primary) linear-gradient(to top, var(--primary), rgba(white, 0.5));
+  background: transparent;
   padding-top: $wcss-spacing-unit-huge*1.5;
 }
 
@@ -18,6 +18,8 @@
 }
 
 .c-article__main {
+  display: inline-block;
+  width: 100%;
   padding: $wcss-spacing-unit-large $wcss-spacing-unit-small;
   position: relative;
 }
@@ -27,15 +29,15 @@
   margin: 0 auto;
   color: $color-gray;
 
-  * + * {
+  > * + * {
     margin-top: $wcss-spacing-unit;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  > h1, > h2, > h3, > h4, > h5, > h6 {
     font-family: $font-serif;
   }
 
-  a {
+  > a {
     @include wcss-theme-var(color, --tertiary);
   }
 }
@@ -63,6 +65,10 @@
 
 
 // Backgrounds
+
+.c-article__header--bg-gradient {
+  background: var(--primary) linear-gradient(to top, var(--primary), rgba(white, 0.5));
+}
 
 .c-article__header--bg-repeater {
   background-color: var(--secondary);

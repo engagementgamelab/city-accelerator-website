@@ -10,17 +10,34 @@
 */
 --}}
 
-{{> nav}}
+<article class="c-article t-purple">
 
-<div class="container-fluid home">
-{{#each caseStudies}}
-	<div class="row">
+  {{> nav contrast="true"}}
 
-			{{> caseStudyCard this}}
+  <div class="c-article__header c-article__header--bg-repeater">
+    <h1 class="c-article__title">Case Studies</h1>
+  </div>
 
-	</div>
-{{/each}}
+  <div class="c-article__main">
+    <div class="c-article__content">
+        <p class="c-article__intro">Five cities. 18 months. Real impact.</p>
+				<p>Over an 18-month period, these five cities worked alongside the Engagement Lab at Emerson College to incorporate public participation into government processes in order to help cities run more effectively. These case studies reflect the progress they made in innovating their problem space using the public engagement roadmap framework.</p>
+    </div>
+    <div class="c-article__content">
 
-</div> <!-- .container-fluid -->
+			<div class="c-card-list c-card-list--overlapped">
+
+				{{#each caseStudies}}
+
+					{{> caseStudyCard this}}
+
+				{{/each}}
+
+			</div>
+
+		</div>
+  </div>
+
+</article>
 
 {{> footer}}

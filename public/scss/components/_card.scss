@@ -5,6 +5,7 @@
 $card-breakpoint-medium: 850px;
 $card-breakpoint-large: 1000px;
 $card-mini-max-width: 300px;
+$card-thumb-max-width: 400px;
 
 // BASE CARD STYLING
 // 1. Transition for card states
@@ -36,6 +37,7 @@ $card-mini-max-width: 300px;
 .c-card__inner {
   flex: 1 0 auto;
   flex-basis: 100%;
+  margin: 0;
 }
 
 // Cover
@@ -344,6 +346,48 @@ $card-mini-max-width: 300px;
     @include wcss-font-size(eta);
   }
 }
+
+
+
+// THUMB VARIANT
+
+.c-card--thumb.c-card--thumb {
+  overflow: hidden;
+  max-width: $card-thumb-max-width;
+  color: $color-white;
+
+  > a {
+    text-decoration: none;
+    color: currentColor;
+  }
+
+  .c-card__content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: $wcss-spacing-unit;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .c-card__title {
+    @include wcss-font-size(delta);
+    color: currentColor;
+  }
+
+  .c-card__text {
+    margin-top: auto;
+  }
+
+  .c-card__cover {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 
 
 
