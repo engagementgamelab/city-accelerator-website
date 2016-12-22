@@ -80,7 +80,17 @@ Activity.add({
     },
     materials: {
         type: Types.Markdown,
-        label: 'Suggested Materials'
+        label: 'Suggested Materials',
+        dependsOn: {
+            category: ['Getting Started', 'Implementation', 'Iteration']
+        }
+    },
+    sampleUseCase: {
+        type: Types.Markdown,
+        label: 'Sample Use Case',
+        dependsOn: {
+            category: ['Project Planning']
+        }
     }
 },
 'Resources', {
@@ -133,5 +143,5 @@ Activity.schema.pre('remove', function(next) {
  * Model Registration
  */
 Activity.defaultSort = 'category';
-Activity.defaultColumns = 'name, updatedAt';
+Activity.defaultColumns = 'name, category, updatedAt';
 Activity.register();

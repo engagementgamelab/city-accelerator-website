@@ -1,9 +1,9 @@
-<div class="c-modal js-tool-modal" aria-label="{{ title }}">
+<div class="c-modal js-tool-modal" aria-label="{{ name }}">
   <header class="c-modal__header">
     <div class="o-wrapper">
       <div class="o-layout o-layout--middle">
         <div class="o-layout__item o-layout__item--6/12@large">
-          <p class="c-modal__header__title">{{ title }}</p>
+          <p class="c-modal__header__title">{{ name }}</p>
           <div class="c-summary-block">
             <div class="c-summary-block__item">
               <img class="c-summary-block__icon" src="/images/icon-moon.svg" alt="Current Phase Icon">
@@ -48,18 +48,45 @@
         </div>
       </div>
 
+      {{#ifnoteq category 'Project Planning'}}
+
+        <div class="o-layout">
+          <div class="o-layout__item o-layout__item--4/12@large">
+            <strong>Suggested Materials</strong>
+          </div>
+          <div class="o-layout__item o-layout__item--8/12@large">
+            {{{ materials.html }}}
+          </div>
+        </div>
+
+      {{else}}
+
+        <div class="o-layout">
+          <div class="o-layout__item o-layout__item--4/12@large">
+            <strong>Sample Use Case</strong>
+          </div>
+          <div class="o-layout__item o-layout__item--8/12@large">
+            {{{ sampleUseCase.html }}}
+          </div>
+        </div>
+
+
+      {{/ifnoteq}}
+
       <div class="o-layout">
         <div class="o-layout__item o-layout__item--4/12@large">
-          <strong>Suggested Materials</strong>
+          <strong>Activity</strong>
         </div>
         <div class="o-layout__item o-layout__item--8/12@large">
-          {{{ materials.html }}}
+          <ol>
+           {{{ steps.html }}}
+          </ol>
         </div>
       </div>
 
       <div class="o-layout">
         <div class="o-layout__item o-layout__item--4/12@large">
-          <strong>Activity</strong>
+          <strong>Resources</strong>
         </div>
         <div class="o-layout__item o-layout__item--8/12@large">
           <ol>
