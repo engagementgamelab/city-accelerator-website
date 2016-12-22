@@ -53,6 +53,17 @@
   }
 }
 
+// Nav
+
+.s-tool__nav.is-hidden {
+  height: 0;
+  overflow: hidden;
+}
+
+
+
+// Main
+
 .s-tool__main {
   position: relative;
 
@@ -63,13 +74,18 @@
   padding: $wcss-spacing-unit-large 0;
 }
 
+.c-top-nav + .s-tool__main {
+  padding-top: 0;
+  transform: translateY(90px); // Bad. Topnav height here.
+}
+
 // Back button
 
 .s-tool__prev {
   font-weight: bold;
 
   position: fixed;
-  top: 50vh;
+  top: 60vh;
   left: $wcss-spacing-unit-tiny;
 
   transform: translateY(-50%);

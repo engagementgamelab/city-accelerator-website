@@ -1,6 +1,11 @@
-<div class="case-study-card" id="caseStudy_{{this.case_key}}">
-<a href="/case-studies/{{this.case_key}}">
-	<h1>{{this.name}}</h1>
-	{{{this.byline.html}}}
-{{> image this.image}}
+<div class="c-card-list__item">
+	<div class="c-card c-card--thumb">
+		<a href="/case-studies/{{this.case_key}}" class="c-card__content">
+			<h1 class="c-card__title">{{this.name}}</h1>
+			<div class="c-card__text">
+				{{{this.byline.html}}}
+			</div>
+		</a>
+		<img class="c-card__cover" src="{{{cloudinaryUrl this.image width=400 height=400 crop='scale' quality=100}}}" alt="{{this.name}}">
+	</div>
 </div>

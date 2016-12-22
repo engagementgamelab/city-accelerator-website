@@ -1,0 +1,25 @@
+// COLOR UTILITIES
+
+.u-color-primary {
+  @include wcss-theme-var(color, --primary);
+}
+
+.u-color-secondary {
+  @include wcss-theme-var(color, --secondary);
+}
+
+.u-color-tertiary {
+  @include wcss-theme-var(color, --tertiary);
+}
+
+.u-bg-primary {
+  @include wcss-theme-var(background, --primary);
+}
+
+.u-bg-secondary {
+  @include wcss-theme-var(background, --secondary);
+}
+
+.u-bg-tertiary {
+  @include wcss-theme-var(background, --tertiary);
+}
