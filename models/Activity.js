@@ -96,26 +96,6 @@ Activity.add({
             category: ['Project Planning']
         }
     }
-},
-'Resources', {
-	images: {
-		type: Types.Relationship,
-        label: 'Resource Images',
-        ref: 'Image',
-        many: true
-	}, 
-	links: {
-		type: Types.Relationship,
-	    label: 'Resource Links',
-        ref: 'Link',
-	    many: true
-    },
-	vidoes: {
-		type: Types.Relationship,
-        ref: 'Video',
-        label: 'Resource Videos',
-        many: true
-	}
 });
 
 Activity.schema.pre('remove', function(next) {
