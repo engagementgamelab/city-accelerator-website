@@ -60,11 +60,11 @@ Activity.add({
 'Activity Page (Big)', {
     description: {
         type: Types.Markdown, 
-        label: 'Description for Project Builder'
+        label: 'Description of activity'
     },
     example: {
         type: Types.Markdown, 
-        label: 'Example for Project Builder'
+        label: 'Additional context for Project Builder'
     },
     why: {
         type: Types.Markdown,
@@ -77,6 +77,10 @@ Activity.add({
     tips: {
         type: Types.Markdown,
         label: 'Tips'
+    },
+    resourceLinks: {
+        type: Types.Markdown,
+        label: 'Resources'
     },
     materials: {
         type: Types.Markdown,
