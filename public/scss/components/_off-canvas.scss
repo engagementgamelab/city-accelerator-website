@@ -19,6 +19,8 @@
   will-change: transform;
   backface-visibility: hidden;
 
+  z-index: 1;
+
   &[aria-hidden='true'] {
     transform: translate3d(-100%, 0, 0);
     box-shadow: 5px 0 40px rgba(#000, .0);
@@ -55,20 +57,44 @@
   color: $color-gray;
   font-weight: bold;
   outline: 0;
+  width: 100vw;
 
+  top: auto;
   position: absolute;
-  top: $wcss-spacing-unit-huge;
+  bottom: 0;
   right: 0;
-  transform: translate3d(100%, 0, 0);
+
   background: $color-white;
   border: 0;
   padding: $wcss-spacing-unit-small $wcss-spacing-unit;
-  box-shadow: 10px 0px 20px rgba(#000, .15);
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
 
   cursor: pointer;
-  transition: $wcss-base-transition;
+
+  &[aria-pressed="false"] {
+    box-shadow: 10px 0px 20px rgba(#000, .15);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  &[aria-pressed="true"] {
+    width: 100%;
+    left: 0;
+  }
+
+  @include wcss-media(medium) {
+    top: $wcss-spacing-unit-huge;
+    bottom: auto;
+    width: auto;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    transition: $wcss-base-transition;
+    box-shadow: 10px 0px 20px rgba(#000, .15);
+    transform: translate3d(100%, 0, 0);
+
+    &[aria-pressed="true"] {
+      width: auto;
+      left: auto;
+    }
+  }
 }
 
 .c-off-canvas__link {
@@ -97,4 +123,9 @@
 
 .c-off-canvas__actions {
   margin-top: auto;
+  padding-bottom: $wcss-spacing-unit;
+
+  @include wcss-media(medium) {
+    padding-bottom: 0;
+  }
 }
