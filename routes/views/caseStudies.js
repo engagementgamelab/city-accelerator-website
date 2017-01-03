@@ -31,7 +31,6 @@ exports = module.exports = function(req, res) {
                 'orderNo': -1
             }
         })
-        .populate('image')
         .populate('modalities');
 
         var queryCaseStudiesPage = CaseStudiesPage.model.findOne({}, {}, {
@@ -49,7 +48,6 @@ exports = module.exports = function(req, res) {
 
             locals.caseStudies = result;
 
-            // next();
             queryCaseStudiesPage.exec(function(err, result) {
                 if (err) throw err;
 

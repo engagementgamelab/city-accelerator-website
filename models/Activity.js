@@ -60,11 +60,11 @@ Activity.add({
 'Activity Page (Big)', {
     description: {
         type: Types.Markdown, 
-        label: 'Description for Project Builder'
+        label: 'Description of activity'
     },
     example: {
         type: Types.Markdown, 
-        label: 'Example for Project Builder'
+        label: 'Additional context for Project Builder'
     },
     why: {
         type: Types.Markdown,
@@ -78,30 +78,24 @@ Activity.add({
         type: Types.Markdown,
         label: 'Tips'
     },
+    resourceLinks: {
+        type: Types.Markdown,
+        label: 'Resources'
+    },
     materials: {
         type: Types.Markdown,
-        label: 'Suggested Materials'
-    }
-},
-'Resources', {
-	images: {
-		type: Types.Relationship,
-        label: 'Resource Images',
-        ref: 'Image',
-        many: true
-	}, 
-	links: {
-		type: Types.Relationship,
-	    label: 'Resource Links',
-        ref: 'Link',
-	    many: true
+        label: 'Suggested Materials',
+        dependsOn: {
+            category: ['Getting Started', 'Implementation', 'Iteration']
+        }
     },
-	vidoes: {
-		type: Types.Relationship,
-        ref: 'Video',
-        label: 'Resource Videos',
-        many: true
-	}
+    sampleUseCase: {
+        type: Types.Markdown,
+        label: 'Sample Use Case',
+        dependsOn: {
+            category: ['Project Planning']
+        }
+    }
 });
 
 Activity.schema.pre('remove', function(next) {
@@ -133,5 +127,5 @@ Activity.schema.pre('remove', function(next) {
  * Model Registration
  */
 Activity.defaultSort = 'category';
-Activity.defaultColumns = 'name, updatedAt';
+Activity.defaultColumns = 'name, category, updatedAt';
 Activity.register();
