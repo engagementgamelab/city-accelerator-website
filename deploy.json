@@ -1,6 +1,6 @@
 {
   "apps" : [{
-    "name": "Emerging Citizens",
+    "name": "City Accelerator",
     "script": "server.js",
     "env_production": {
       "NODE_ENV": "production"
@@ -31,7 +31,7 @@
       "ref": "origin/master",
       "path": "/srv/website",
       "pre-deploy-local" : "echo 'Cloning and running npm install. Be patient.';",
-      "post-deploy" : "npm i ; grunt compile --sites=engagement-lab-home,boston-civic-media,city-accelerator-website ; pm2 restart 0 --env production",
+      "post-deploy" : "npm i ; grunt compile --sites=city-accelerator-website ; pm2 restart 0 --env production",
       "env": {
         "NODE_ENV": "staging"
       }
