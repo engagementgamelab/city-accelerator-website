@@ -10,38 +10,49 @@ $wcss-wrapper-width: 1200px !default;
 }
 /* stylelint-enable */
 
-.o-wrapper {
-  @include wcss-clearfix();
-  padding-right: $wcss-spacing-unit;
-  padding-left:  $wcss-spacing-unit;
-  margin-right: auto;
-  margin-left:  auto;
-  width: 100%;
-  max-width: $wcss-wrapper-width;
+@mixin wcss-wrapper($breakpoint: null) {
+
+  .o-wrapper#{$breakpoint} {
+    @include wcss-clearfix();
+    padding-right: $wcss-spacing-unit;
+    padding-left:  $wcss-spacing-unit;
+    margin-right: auto;
+    margin-left:  auto;
+    width: 100%;
+    max-width: $wcss-wrapper-width;
+  }
+
+
+
+
+
+  // SIZE VARIANTS
+
+  .o-wrapper--tiny#{$breakpoint} {
+    padding-right: $wcss-spacing-unit-tiny;
+    padding-left:  $wcss-spacing-unit-tiny;
+  }
+
+  .o-wrapper--small#{$breakpoint} {
+    padding-right: $wcss-spacing-unit-small;
+    padding-left:  $wcss-spacing-unit-small;
+  }
+
+  .o-wrapper--large#{$breakpoint} {
+    padding-right: $wcss-spacing-unit-large;
+    padding-left:  $wcss-spacing-unit-large;
+  }
+
+  .o-wrapper--huge#{$breakpoint} {
+    padding-right: $wcss-spacing-unit-huge;
+    padding-left:  $wcss-spacing-unit-huge;
+  }
 }
 
+@include wcss-wrapper();
 
-
-
-
-// SIZE VARIANTS
-
-.o-wrapper--tiny {
-  padding-right: $wcss-spacing-unit-tiny;
-  padding-left:  $wcss-spacing-unit-tiny;
-}
-
-.o-wrapper--small {
-  padding-right: $wcss-spacing-unit-small;
-  padding-left:  $wcss-spacing-unit-small;
-}
-
-.o-wrapper--large {
-  padding-right: $wcss-spacing-unit-large;
-  padding-left:  $wcss-spacing-unit-large;
-}
-
-.o-wrapper--huge {
-  padding-right: $wcss-spacing-unit-huge;
-  padding-left:  $wcss-spacing-unit-huge;
+@each $name, $value in $wcss-breakpoints {
+  @include wcss-media($name) {
+    @include wcss-wrapper(\@#{$name});
+  }
 }
