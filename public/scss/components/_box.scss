@@ -4,13 +4,13 @@
 }
 
 .c-box--city {
-  background: url("../images/bg-city.jpg") bottom no-repeat;
+  background: url("https://res.cloudinary.com/engagement-lab-home/image/upload/c_scale,f_auto,w_1425/v1483562376/city-accelerator-website/images/bg-city.jpg") bottom no-repeat;
   background-size: cover;
   //background-blend-mode: overlay;
 }
 
 .c-box--map {
-  background: url("../images/bg-map.jpg") top no-repeat;
+  background: url("https://res.cloudinary.com/engagement-lab-home/image/upload/f_auto/v1483562375/city-accelerator-website/images/bg-map.jpg") top no-repeat;
   background-size: cover;
 }
 
@@ -20,7 +20,7 @@
 
 .c-box--repeater {
   background-color: var(--secondary);
-  background-image: url(../images/bg-repeater.png);
+  background-image: url(https://res.cloudinary.com/engagement-lab-home/image/upload/c_scale,f_auto,w_360/v1483562375/city-accelerator-website/images/bg-repeater.png);
   background-repeat: repeat;
   background-size: 25%;
   background-blend-mode: luminosity;

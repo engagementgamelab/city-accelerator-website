@@ -35,6 +35,7 @@ About.add({
 	name: { type: String, default: "About Page", hidden: true, required: true, initial: true },
 	title: { type: Types.Textarea, label: "Title", required: true, initial: true },
 	header: { type: Types.Textarea, label: "Header", note: 'Will display below the title.'},
+	headerImages: { type: Types.CloudinaryImages, label: 'Header Images', note: 'These display below header.'},
 	images: { type: Types.CloudinaryImages, label: 'Images', note: 'These display below about blurb.'},
 	description: { type: Types.Markdown, label: "General About description" },
 	programGoals: { type: Types.Markdown, label: "Program Goals" },

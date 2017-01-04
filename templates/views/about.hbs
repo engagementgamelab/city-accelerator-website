@@ -25,6 +25,18 @@
     </div>
   </div>
 
+  {{!-- need style --}}
+  <div>
+
+	    {{!-- HEADER IMAGES --}}
+	    {{#each headerImages}}
+
+	    	<img src="{{cloudinaryUrl this width=300}}" />
+
+	    {{/each}}
+
+	</div>
+
   <div class="c-article__main">
     <div class="c-article__content">
         <p class="c-article__intro">{{{description.html}}}</p>
@@ -72,6 +84,22 @@
 				</div>
 				<div class="o-layout__item o-layout__item--9/12@medium">
 					<p>{{{public.html}}}</p>
+				</div>
+			</div>
+		</div>
+
+    {{!-- PARTNERS --}}
+		<div class="c-article__content c-article__content--medium">
+			<div class="o-layout">
+				<div class="o-layout__item o-layout__item--3/12@medium">
+					<h2 class="u-text-zeta u-text-uppercase u-text-bold u-text-sans">Partners</h2>
+				</div>
+				<div class="o-layout__item o-layout__item--9/12@medium">
+			    {{#each partners}}
+
+			    	{{{description.html}}}
+
+			    {{/each}}
 				</div>
 			</div>
 		</div>
