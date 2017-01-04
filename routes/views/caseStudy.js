@@ -28,8 +28,7 @@ exports = module.exports = function(req, res) {
         var queryCaseStudy = CaseStudy.model.findOne({
             case_key: req.params.case_key
         })
-        .populate('modalities')
-        .populate('image');
+        .populate('modalities');
 
         queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
@@ -46,6 +45,7 @@ exports = module.exports = function(req, res) {
             locals.funds = result.funds.html;
             locals.text = result.text.html;
             locals.team = result.team.html;
+            locals.readMore = result.readMore.html;
 
             next();
 

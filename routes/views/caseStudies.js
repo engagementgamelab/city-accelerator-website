@@ -43,7 +43,7 @@ exports = module.exports = function(req, res) {
         queryCaseStudy.exec(function(err, result) {
             if (err) throw err;
 
-            if(result === null)
+            if(!result)
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
             locals.caseStudies = result;
@@ -51,9 +51,10 @@ exports = module.exports = function(req, res) {
             queryCaseStudiesPage.exec(function(err, result) {
                 if (err) throw err;
 
-                if(result === null)
-                    return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
+                if(!result)
+                    return res.notfound('Cannot find the case studies index content', 'Sorry, but it looks like case studies content is missing!');
 
+                locals.pageName = result.name;
                 locals.pageTitle = result.title;
                 locals.pageText = result.text;
 

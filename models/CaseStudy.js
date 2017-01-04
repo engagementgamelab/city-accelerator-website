@@ -55,6 +55,7 @@ CaseStudy.add({
 	phaseII: { type: Types.Markdown, label: 'Phase II Implementation', note: ''},
 	funds: { type: Types.Markdown, label: 'Fund Allocation', note: ''},
 	text: { type: Types.Markdown, label: 'Case Study Text', note: ''},
+	readMore: { type: Types.Markdown, label: 'Read More Text'},
 	team: { type: Types.Markdown, label: 'Team', note: ''},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 
