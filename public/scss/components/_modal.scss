@@ -96,7 +96,7 @@ html.is-modal-active {
 
   margin: $wcss-spacing-unit 0;
 
-  color: $color-light-gray;
+  color: $color-white;
 
   @media print {
     color: $color-gray;
@@ -123,7 +123,7 @@ html.is-modal-active {
   top: $wcss-spacing-unit-small;
 
   width: 50%;
-  
+
   @media print {
     display: none;
   }
