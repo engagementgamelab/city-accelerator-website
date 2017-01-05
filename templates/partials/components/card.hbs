@@ -38,7 +38,11 @@
       {{!-- If there are links specified --}}
       {{#if link-anchor}}
         <div class="c-card__links">
-          <a class="c-card__link" href="{{link-url}}">{{link-anchor}} ></a>
+          <a class="c-card__link" href="{{link-url}}">{{{removePara link-anchor}}} ></a>
+
+          {{#if link-secondary}}
+            <a class="c-card__link" href="{{link-secondaryUrl}}">{{{removePara link-secondary}}} ></a>
+          {{/if}}
         </div>
       {{/if}}
 

@@ -40,7 +40,8 @@ Index.add({
 }, 
 'The Toolkit Card', {
 	theToolkit: { type: Types.Markdown, label: "The Toolkit Blurb",  initial: true, required: true },
-	toolkitLink: { type: Types.Markdown, label: "Text for the toolkit page link",  initial: true, required: true }
+	toolkitLink: { type: Types.Markdown, label: "Text for the toolkit builder link",  initial: true, required: true },
+	toolkitBrowseLink: { type: Types.Markdown, label: "Text for the toolkit browse/select link",  initial: true, required: true }
 }, 
 'The Guide Card', {
 	theGuide: { type: Types.Markdown, label: "The Guide Blurb",  initial: true, required: true },

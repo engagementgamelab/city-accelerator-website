@@ -32,7 +32,7 @@ var Partner = new keystone.List('Partner',
  */
 Partner.add({
 	name: { type: String, label: "Partner Name", required: true, initial: true },
-	text: { type: Types.Textarea, label: "Text"},
+	description: { type: Types.Markdown, label: "Description"},
 	image: { type: Types.CloudinaryImage, label: "Partner Logo"},
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });

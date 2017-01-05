@@ -29,7 +29,10 @@ exports = module.exports = function(req, res) {
             sort: {
                 'createdAt': -1
             }
-        });
+        })
+        .populate('featOneImage')
+        .populate('featTwoImage')
+        .populate('featThreeImage');
         queryGame.exec(function(err, resultGame) {
             if (err) throw err;
 

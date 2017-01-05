@@ -31,11 +31,8 @@ exports = module.exports = function(req, res) {
             sort: {
                 'createdAt': -1
             }
-        });
-
-        var queryPartners = Partner.model.find({
-            'enabled': true
-        });
+        })
+        .populate('partners');
 
         queryAbout.exec(function(err, resultAbout) {
             if (err) throw err;
@@ -48,17 +45,10 @@ exports = module.exports = function(req, res) {
             locals.cohort = resultAbout.aboutTheCohort;
             locals.public = resultAbout.aboutPublic;
             locals.images = resultAbout.images;
+            locals.headerImages = resultAbout.headerImages;
+            locals.partners = resultAbout.partners;
 
-            queryPartners.exec(function(err, result) {
-                if (err) throw err;
-
-                locals.partners = result;
-                
-                    
-                next();
-
-
-            });
+            next();
 
         });
     });

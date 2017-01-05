@@ -42,13 +42,14 @@ exports = module.exports = function(req, res) {
             locals.title = resultIndex.title.html;
             locals.header = resultIndex.header.html;
             locals.theToolkit = resultIndex.theToolkit;
-            locals.toolkitLink = resultIndex.toolkitLink;
+            locals.toolkitLink = resultIndex.toolkitLink.html;
+            locals.toolkitBrowseLink = resultIndex.toolkitBrowseLink.html;
             locals.theCaseStudies = resultIndex.theCaseStudies;
-            locals.caseLink = resultIndex.caseLink;
+            locals.caseLink = resultIndex.caseLink.html;
             locals.theGame = resultIndex.theGame;
-            locals.gameLink = resultIndex.gameLink;
+            locals.gameLink = resultIndex.gameLink.html;
             locals.theGuide = resultIndex.theGuide;
-            locals.guideLink = resultIndex.guideLink;
+            locals.guideLink = resultIndex.guideLink.html;
             
                 next();
 

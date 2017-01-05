@@ -34,8 +34,8 @@ var Game = new keystone.List('Game',
 Game.add({
 
 	name: { type: String, label: 'Game Page Title', required: true, initial: true },
-	// header: { type: String, label: 'Page Header', required: true, initial: true },
 	text: { type: Types.Markdown, label: 'What is it?'},
+	upperDescription: { type: String, label: 'Upper Description', required: true, initial: true },
 	howToPlay: { type: Types.Markdown, label: 'How To Play?' },
 	featOneTitle: { type: Types.Markdown, label: 'Feature One Title' },
 	featOneDescription: { type: Types.Markdown, label: 'Feature One Decription' },
@@ -64,6 +64,7 @@ Game.add({
 		label: 'Feature Three Image', 
 		note: 'Square Format!!'
 	},
+	footerImage: { type: Types.CloudinaryImage, label: 'Footer Image'},
 	purchaseLink: {
 		type: Types.Relationship, 
 		ref: 'Link',
