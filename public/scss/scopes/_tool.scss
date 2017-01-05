@@ -202,7 +202,7 @@
 @media print {
 
   html {
-    font-size: 62.5%;
+    font-size: 75%;
   }
 
   *,
@@ -215,13 +215,10 @@
     -webkit-print-color-adjust: exact !important;
   }
 
-  button {
-    display: none !important;
-  }
-
   body > *,
   body > *::before,
-  body > *::after {
+  body > *::after,
+  button  {
     display: none !important;
   }
 
@@ -233,8 +230,7 @@
 
   .s-tool,
   .js-tool-printable {
-    display: block !important;
-
+    display: inline !important;
     background: white !important; // [1]
   }
 
@@ -246,20 +242,26 @@
   }
 
   .s-tool__mvp__block {
-    overflow: hidden;
+    //overflow: hidden;
 
-    max-height: 100vh;
     margin: 0;
     padding: 0;
 
     page-break-before: avoid;
-    page-break-after: always;
+    page-break-inside: avoid;
+    page-break-after: avoid;
+  }
+
+  p, img, table {
+    page-break-inside: avoid;
+    overflow: visible;
+    display: inline;
   }
 
   // Remove page title & number in Chrome
   @page {
-    margin: 0mm;
-
-    size: A4;
+    margin: 10mm 10mm 20mm 10mm;
+    //padding: 0 0 $wcss-spacing-unit-large 0;
+    size: auto;
   }
 }
