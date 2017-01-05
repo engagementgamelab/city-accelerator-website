@@ -25,7 +25,7 @@
 
 .c-footer__link {
   @include wcss-font-size(eta);
-  color: $color-gray;
+  color: currentColor;
   text-decoration: none;
   text-transform: uppercase;
   padding: $wcss-spacing-unit-small;
@@ -43,4 +43,11 @@
     filter: grayscale(0%);
     opacity: 1;
   }
+}
+
+
+// WHITE TEXT VARIANT
+
+.c-footer--contrast {
+  color: $color-white;
 }

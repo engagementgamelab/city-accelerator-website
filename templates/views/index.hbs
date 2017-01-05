@@ -12,18 +12,16 @@
 
 {{> nav}}
 
-<div class="o-box c-box c-box--city">
-	<div class="c-hero">
+<div class="o-box c-box c-box--blue-map">
+	<div class="c-hero u-text-left">
 		<div class="o-wrapper">
-			<h1 class="c-hero__title">{{{title}}}</h1>
+			<h1 class="c-hero__title u-text-serif">{{{title}}}</h1>
 			<p class="c-hero__sub-title">{{{header}}}</p>
 			<a href="/toolkit" class="c-btn c-btn--large c-btn--blue">Get Started</a>
 		</div>
 	</div>
-</div>
 
-<div class="o-box c-box c-box--map u-pad-top-large u-pad-bottom-large">
-	<div class="c-card-list c-card-list--overlapped">
+	<div class="c-card-list c-card-list--overlapped u-pad-top-large u-pad-bottom-large">
 		<div class="o-wrapper o-wrapper--large">
 			<div class="c-card-list__item t-light-blue">
 				{{> components/card
@@ -32,6 +30,7 @@
 						text=theToolkit.html
 						link-anchor = "build your public engagement process"
 						link-url = "/toolkit"
+						cover = "/images/cover-toolkit-blue.jpg"
 				}}
 			</div>
 			<div class="c-card-list__item t-green">
@@ -40,6 +39,7 @@
 						text=theGuide.html
 						link-anchor = "read or download the guide"
 						link-url = "/guide"
+						cover = "/images/cover-guide-green.jpg"
 				}}
 			</div>
 			<div class="c-card-list__item t-neutral">
@@ -49,6 +49,7 @@
 						text=theGame.html
 						link-anchor = "Learn more about chart the course"
 						link-url = "/game"
+						cover = "/images/cover-game-neutral.jpg"
 				}}
 			</div>
 			<div class="c-card-list__item t-purple">
@@ -57,12 +58,14 @@
 						text=theCaseStudies.html
 						link-anchor = "read the case studies"
 						link-url = "/case-studies"
+						cover = "/images/cover-case-studies-purple.jpg"
 				}}
 			</div>
 		</div>
 	</div>
-</div>
 
-{{> footer}}
+	{{> footer contrast=true}}
+
+</div>
 
 </div> <!-- .container-fluid -->

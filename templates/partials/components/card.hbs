@@ -5,9 +5,14 @@
 <div class="c-card c-card--full">
 {{/if}}
 
+  {{#if cover}}
+  <div class="c-card__cover" style="background: url({{cover}}) center no-repeat; background-size: cover;">
+  </div>
+  {{else}}
   <div class="c-card__cover">
     {{> map-vector}}
   </div>
+  {{/if}}
 
   <div class="c-card__inner">
 
