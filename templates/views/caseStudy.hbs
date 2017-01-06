@@ -17,10 +17,10 @@
 		<div class="o-wrapper u-pad-top-large u-pad-bottom-large">
 			<div class="o-layout">
 				<div class="o-layout__item o-layout__item--6/12@large">
-					<h1 class="u-text-serif u-text-beta u-color-primary">{{title}}</h1>
-					<strong>{{{byline}}}</strong>
+					<h1 class="u-text-serif u-text-beta u-color-primary u-marg-bottom-none">{{title}}</h1>
+					<p class="u-text-epsilon">{{{byline}}}</p>
 					{{#each caseStudy.modalities}}
-						{{> modality this}}
+						<p class="u-marg-bottom-tiny u-text-bold">{{this.name}}</p>
 					{{/each}}
 					<p class="u-color-primary u-text-uppercase u-text-eta u-text-bold">Modalities Explored</p>
 				</div>
