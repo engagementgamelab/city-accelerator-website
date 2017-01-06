@@ -38,5 +38,16 @@
 				<a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a>
 				{{/ifeq}}
 		{{/each}}
+
+		{{#each goingGuides}}
+				{{#if this.isSection}}
+				<h4 class="c-off-canvas__sub-title"><a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a></h4>
+				{{/if}}
+		{{/each}}
+		{{#each goingGuides}}
+				{{#ifeq this.isSection false}}
+				<a class="c-off-canvas__link" href="/guide/{{this.guide_key}}">{{this.name}}</a>
+				{{/ifeq}}
+		{{/each}}
 	</div>
 </div>
