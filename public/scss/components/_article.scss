@@ -74,6 +74,11 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+
+  &:last-child {
+    margin-top: 0;
+    margin-bottom: $wcss-spacing-unit-large;
+  }
 }
 
 .c-article__nav + .c-article__main {
