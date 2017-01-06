@@ -31,7 +31,7 @@
 	    {{!-- HEADER IMAGES --}}
 	    {{#each headerImages}}
 
-	    	<img src="{{cloudinaryUrl this height=400}}" />
+	    	<img src="{{cloudinaryUrl this height=1000}}" />
 
 	    {{/each}}
 
@@ -47,7 +47,7 @@
 		    {{!-- IMAGES --}}
 		    {{#each images}}
 
-		    	<img src="{{secure_url}}" height="{{height}}" width="{{width}}" />
+		    	<img src="{{cloudinaryUrl this width=1000}}">
 
 		    {{/each}}
 
