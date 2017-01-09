@@ -103,6 +103,8 @@
   text-decoration: none;
   color: $color-gray;
   padding-left: $wcss-spacing-unit-small;
+  display: block;
+  margin: $wcss-spacing-unit-small 0;
 }
 
 .c-off-canvas__text {

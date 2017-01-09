@@ -53,6 +53,10 @@
   margin-top: $wcss-spacing-unit-large;
 }
 
+
+
+
+
 .c-article__intro {
   @include wcss-font-size(epsilon);
   text-align: center;
@@ -61,6 +65,60 @@
   margin-bottom: $wcss-spacing-unit;
 }
 
+
+
+
+
+.c-article__nav {
+  margin: $wcss-spacing-unit-large $wcss-spacing-unit 0 $wcss-spacing-unit;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  &:last-child {
+    margin-top: 0;
+    margin-bottom: $wcss-spacing-unit-large;
+  }
+}
+
+.c-article__nav + .c-article__main {
+  padding-top: 0;
+}
+
+.c-article__nav__item {
+  flex: 1 1 auto;
+  text-align: center;
+  margin-bottom: $wcss-spacing-unit-small;
+
+  @include wcss-media(medium) {
+    flex: 0 auto;
+    margin-bottom: 0;
+    text-align: left;
+
+    &.c-article__nav__item--next {
+      margin-left: auto;
+      text-align: right;
+    }
+  }
+}
+
+.c-article__nav__link {
+  text-decoration: none;
+  color: $color-gray;
+}
+
+.c-article__nav__title {
+  @include wcss-font-size(epsilon);
+  font-family: $font-serif;
+  font-style: italic;
+  display: block;
+}
+
+.c-article__nav__role {
+  @include wcss-font-size(eta);
+  text-transform: uppercase;
+  display: block;
+}
 
 
 // Backgrounds

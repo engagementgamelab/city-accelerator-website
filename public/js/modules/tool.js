@@ -328,10 +328,10 @@
 
     var requestedStep = getParameterByName('step');
 
-    if(requestedStep != "") {
+    if(requestedStep !== "") {
 
       // If user is asking for the MVP Grid
-      if(requestedStep = "grid") {
+      if(requestedStep == "grid") {
 
         active_view = $('.js-tool-step:last-child').index() + '.0';
         $('.js-tool-back').remove();
