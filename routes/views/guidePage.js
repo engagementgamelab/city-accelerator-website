@@ -34,6 +34,7 @@ exports = module.exports = function(req, res) {
         var queryGuidePage = Guide.model.findOne({
             guide_key: req.params.guide_key
         });
+
         var queryTOC = Guide.model.find({}, 'name guide_key section isSection');
 
         queryGuidePage.exec(function(err, resultGuide) {
@@ -43,6 +44,7 @@ exports = module.exports = function(req, res) {
                 return res.notfound('Cannot find that part of the guide', 'Sorry, but it looks like the guide page you were looking for does not exist!');
 
             locals.content = resultGuide;
+            locals.page_key = resultGuide.guide_key;
 
             queryTOC.exec(function(errTOC, resultTOC) {
 
@@ -53,6 +55,10 @@ exports = module.exports = function(req, res) {
                 locals.calibratingGuides = categorize(resultTOC, 'Calibrating');
                 locals.goingGuides = categorize(resultTOC, 'Going Places');
 
+                var pages = _.pluck(locals.guides, 'guide_key');
+                var ind = _.indexOf(pages, req.params.guide_key);
+                locals.pages = {'next': locals.guides[ind + 1], 'back': locals.guides[ind - 1]};
+                console.log(locals.pages);
                 next();
 
             });
