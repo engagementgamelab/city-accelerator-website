@@ -68,5 +68,5 @@ Link.schema.pre('remove', function(next) {
  * Model Registration
  */
 Link.defaultSort = '-createdAt';
-Link.defaultColumns = 'name, updatedAt';
+Link.defaultColumns = 'name, URL, updatedAt';
 Link.register();

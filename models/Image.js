@@ -81,5 +81,5 @@ Image.schema.statics.removeRef = function(refId, callback) {
  * Model Registration
  */
 Image.defaultSort = '-createdAt';
-Image.defaultColumns = 'name, updatedAt';
+Image.defaultColumns = 'name, link, updatedAt';
 Image.register();
