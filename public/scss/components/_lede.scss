@@ -25,9 +25,13 @@
     background: currentColor; // [1]
   }
 
+  &:empty {
+    display: none;
+  }
+
   @media print {
-    font-size: 14px;
-    line-height: 1.2;
+    //font-size: 14px;
+    //line-height: 1.2;
 
     margin: 0 0 $wcss-spacing-unit-small 0;
   }
@@ -35,7 +39,7 @@
 
 .c-lede--center {
   text-align: center;
-  
+
   &:after {
     margin: $wcss-spacing-unit auto;
   }

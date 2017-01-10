@@ -54,9 +54,9 @@ html.is-modal-active {
     padding: $wcss-spacing-unit-huge;
   }
   @media print {
-    padding: $wcss-spacing-unit;
+    padding: $wcss-spacing-unit-large $wcss-spacing-unit 0 $wcss-spacing-unit;
 
-    background: $color-neutral-95;
+    background: transparent;
   }
 }
 
@@ -85,8 +85,7 @@ html.is-modal-active {
   @include wcss-font-size(beta);
 
   @media print {
-    font-size: 24px !important;
-
+    margin: 0;
     color: map-get($theme-default, --primary);
   }
 }
@@ -99,6 +98,8 @@ html.is-modal-active {
   color: $color-white;
 
   @media print {
+    margin: 0;
+    font-weight: bold;
     color: $color-gray;
   }
 }
