@@ -39,8 +39,15 @@ CaseStudy.add({
 		type: Types.CloudinaryImage, 
 		label: 'Blurb Image', 
 		note: 'The image showing on the case studies landing page.',
-    folder: 'city-accelerator-website/case-studies',
-    autoCleanup: true
+    	folder: 'city-accelerator-website/case-studies',
+    	autoCleanup: true
+	},
+	teamImage: { 
+		type: Types.CloudinaryImage, 
+		label: 'Team image', 
+		note: 'the image of the team. appears below header.',
+    	folder: 'city-accelerator-website/case-studies',
+    	autoCleanup: true
 	},
 	byline: { type: Types.Markdown, label: 'Case Study Byline'},
 	modalities: {
