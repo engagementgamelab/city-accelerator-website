@@ -18,6 +18,13 @@
   background: $color-white;
 
   will-change: transform;
+
+  @media print {
+    position: relative;
+    transform: none;
+    overflow: visible;
+    height: auto;
+  }
 }
 
 .c-modal.is-active {
