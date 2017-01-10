@@ -1,14 +1,18 @@
 <ul class="c-article__nav">
+  {{#if back}}
   <li class="c-article__nav__item c-article__nav__item--prev">
-    <a href="#" class="c-article__nav__link">
-      <span class="c-article__nav__title">Page Title</span>
+    <a href="/guide/{{back.guide_key}}" class="c-article__nav__link">
+      <span class="c-article__nav__title">{{back.name}}</span>
       <span class="c-article__nav__role">Back</span>
     </a>
   </li>
+  {{/if}}
+  {{#if next}}
   <li class="c-article__nav__item c-article__nav__item--next">
-    <a href="#" class="c-article__nav__link">
-      <span class="c-article__nav__title">Page Title</span>
+    <a href="/guide/{{next.guide_key}}" class="c-article__nav__link">
+      <span class="c-article__nav__title">{{next.name}}</span>
       <span class="c-article__nav__role">Next</span>
     </a>
   </li>
+  {{/if}}
 </ul>

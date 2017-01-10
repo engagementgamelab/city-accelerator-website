@@ -14,6 +14,8 @@ var keystone = require('keystone');
 var _ = require('underscore');
 var Footer = keystone.list('Footer');
 var MainNav = keystone.list('MainNav');
+var Images = keystone.list('Image');
+var Links = keystone.list('Link');
 
 /**
 	Initialises the standard view locals
@@ -115,12 +117,13 @@ exports.Footer = function (req, res, next) {
     })
     .populate('links')
     .populate('images');
+    
 
     queryFooter.exec(function(err, resultFooter) {
         if (err) throw err;
 
         locals.footer = resultFooter;
-        // console.log(locals.footer);
+
         next(err);
     });
 

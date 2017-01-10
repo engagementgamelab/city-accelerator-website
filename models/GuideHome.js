@@ -22,7 +22,7 @@ var Types = keystone.Field.Types;
 var GuideHome = new keystone.List('GuideHome', 
 	{
 		label: 'Guide Home Page',
-		singular: 'GuideHome Page',
+		singular: 'Guide Home Page',
 		track: true
 		// autokey: { path: 'guide_key', from: 'name', unique: true },
 	});

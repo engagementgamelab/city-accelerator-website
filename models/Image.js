@@ -36,11 +36,9 @@ Image.add({
 	name: { type: String, label: 'Image Title', note: 'Make it unique!',required: true, initial: true },
 	image: { type: Types.CloudinaryImage, label: 'Image', note: 'Do not leave without uploading an image!'},
 	link: {
-		type: Types.Relationship, 
-		ref: 'Link',
+		type: String, 
 		label: 'Image Link', 
-		note: 'Only if the image redirects to a link', 
-		many: false
+		note: 'Only if the image redirects to a link' 
 	},
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
@@ -83,5 +81,5 @@ Image.schema.statics.removeRef = function(refId, callback) {
  * Model Registration
  */
 Image.defaultSort = '-createdAt';
-Image.defaultColumns = 'name, updatedAt';
+Image.defaultColumns = 'name, link, updatedAt';
 Image.register();

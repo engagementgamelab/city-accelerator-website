@@ -23,6 +23,7 @@ var Guide = new keystone.List('Guide',
 	{
 		label: 'Guide Pages',
 		singular: 'Guide Page',
+		sortable: true,
 		track: true,
 		autokey: { path: 'guide_key', from: 'name', unique: true },
 	});
@@ -45,6 +46,6 @@ Guide.add({
 /**
  * Model Registration
  */
-Guide.defaultSort = '-createdAt';
+// Guide.defaultSort = '-createdAt';
 Guide.defaultColumns = 'name, isSection, section, updatedAt';
 Guide.register();

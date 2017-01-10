@@ -3,17 +3,20 @@
 {{else}}
 <footer class="c-footer">
 {{/if}}
+
 	<div class="o-wrapper">
 		{{#if footer.images}}
 		<ul class="o-list-inline">
 			{{#each footer.images}}
+
 			<li>
-				{{#if this.link}}<a class="c-footer__link" href="{{URL}}" alt="{{name}}">{{/if}}<img class="c-footer__logo" src="{{{cloudinaryUrl this.image width=200 crop='scale' quality=100}}}" alt="{{this.name}}">{{#if this.link}}</a>{{/if}}
+				{{#if this.link}}<a class="c-footer__link" href="{{this.link}}" alt="{{this.name}}">{{/if}}<img class="c-footer__logo" src="{{{cloudinaryUrl this.image width=200 crop='scale' quality=100}}}" alt="{{this.name}}">{{#if this.link}}</a>{{/if}}
 			</li>
 			{{/each}}
 		</ul>
 		{{/if}}
 		{{#if footer.links}}
+
 		<ul class="o-list-inline u-marg-top u-marg-bottom">
 			{{#each footer.links}}
 			<li><a class="c-footer__link" href="{{this.URL}}">{{this.name}}</a></li>
