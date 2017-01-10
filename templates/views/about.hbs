@@ -23,19 +23,20 @@
     <div class="c-article__content">
         <p class="c-article__intro">{{pageHeader}}</p>
     </div>
-  </div>
-
-  {{!-- need style --}}
-  <div class="s-gallery">
+  
+    <div class="c-article__content c-article__content--full">
+ 		<div class="s-gallery">
 
 	    {{!-- HEADER IMAGES --}}
 	    {{#each headerImages}}
 
-	    	<img src="{{cloudinaryUrl this height=1000}}" />
+	    	<img src="{{cloudinaryUrl this width=1000}}" />
 
 	    {{/each}}
 
+		</div>
 	</div>
+   </div>
 
   <div class="c-article__main">
     <div class="c-article__content">
