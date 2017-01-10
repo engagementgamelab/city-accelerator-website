@@ -338,6 +338,7 @@
         $('.js-tool-steps-container').remove();
         updateView();
         updateSidebar();
+        $('.js-tool-print-mvp').addClass('is-active');
 
       // If user is asking for an activity modal
       } else {
