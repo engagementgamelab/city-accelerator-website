@@ -1,11 +1,10 @@
 <div class="c-card-list__item">
-	<div class="c-card c-card--thumb">
+	<div class="c-card c-card--thumb" style="background: url({{{cloudinaryUrl this.image width=500 crop='thumb' g='center' quality=100}}}) center no-repeat; background-size: cover;">
 		<a href="/case-studies/{{this.case_key}}" class="c-card__content">
 			<h1 class="c-card__title">{{this.name}}</h1>
 			<div class="c-card__text">
 				{{{this.byline.html}}}
 			</div>
 		</a>
-		<img class="c-card__cover" src="{{{cloudinaryUrl this.image width=400 crop='thumb' g='center' quality=100}}}" alt="{{this.name}}">
 	</div>
 </div>
