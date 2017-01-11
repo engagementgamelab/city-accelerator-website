@@ -46,6 +46,6 @@ Guide.add({
 /**
  * Model Registration
  */
-// Guide.defaultSort = '-createdAt';
+Guide.defaultSort = 'sortOrder';
 Guide.defaultColumns = 'name, isSection, section, updatedAt';
 Guide.register();
