@@ -188,8 +188,12 @@
 
 .s-tool__print-mvp {
   position: fixed;
-  bottom: $wcss-spacing-unit-tiny;
+  bottom: $wcss-spacing-unit-large;
   left: $wcss-spacing-unit-tiny;
+
+  @include wcss-media(large) {
+    bottom: $wcss-spacing-unit-tiny;
+  }
 }
 
 
@@ -202,12 +206,14 @@
 @media print {
 
   html {
-    font-size: 75%;
+    font-size: 82.5%;
   }
 
   *,
   *:before,
   *:after {
+    //all: initial;
+    //page-break-inside: avoid;
     box-shadow: none !important;
     text-shadow: none !important;
 
@@ -215,6 +221,20 @@
     -webkit-print-color-adjust: exact !important;
   }
 
+  .o-layout {
+    page-break-inside: avoid;
+  }
+
+  img, table {
+    overflow: visible;
+    display: inline;
+  }
+
+  p, strong, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: $wcss-spacing-unit;
+  }
+
+  head *,
   body > *,
   body > *::before,
   body > *::after,
@@ -237,7 +257,9 @@
   .s-tool__nav,
   .s-tool__grid,
   .s-tool__main,
-  .s-tool__sidebar {
+  .s-tool__sidebar,
+  .c-top-nav,
+  .c-footer {
     display: none !important;
   }
 
@@ -248,14 +270,7 @@
     padding: 0;
 
     page-break-before: avoid;
-    page-break-inside: avoid;
     page-break-after: avoid;
-  }
-
-  p, img, table {
-    page-break-inside: avoid;
-    overflow: visible;
-    display: inline;
   }
 
   // Remove page title & number in Chrome
