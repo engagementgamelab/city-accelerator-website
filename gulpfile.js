@@ -14,7 +14,7 @@ gulp.task('css', function () {
         cssnano({discardUnused: {fontFace: false}}),
         pxtorem({
             replace: true,
-            propWhiteList: ['font', 'font-size', 'line-height', 'letter-spacing', 'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left', 'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left', 'width', 'max-width', 'height', 'max-height', 'box-shadow']
+            propWhiteList: ['font', 'font-size', 'line-height', 'letter-spacing', 'margin', 'margin-top', 'margin-right', 'margin-bottom', 'margin-left', 'padding', 'padding-top', 'padding-right', 'padding-bottom', 'padding-left', 'width', 'max-width', 'height', 'max-height', 'box-shadow', 'top', 'left', 'right', 'bottom', 'transform']
         })
     ];
     return gulp.src('./public/scss/*.scss')
