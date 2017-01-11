@@ -5,6 +5,7 @@
 $card-breakpoint-medium: 850px;
 $card-breakpoint-large: 1000px;
 $card-mini-max-width: 300px;
+$card-thumb-min-height: 250px;
 $card-thumb-max-width: 400px;
 
 // BASE CARD STYLING
@@ -69,7 +70,7 @@ $card-thumb-max-width: 400px;
 
   min-width: 100%; // [2]
   max-width: none; // [2]
-  max-width: 250%; // [3]
+  max-width: 200%; // [3]
   min-height: 100%; // [2]
 
   transform: translate(-50%, -50%); // [1]
@@ -353,6 +354,7 @@ $card-thumb-max-width: 400px;
 
 .c-card--thumb.c-card--thumb {
   overflow: hidden;
+  min-height: $card-thumb-min-height;
   max-width: $card-thumb-max-width;
   color: $color-white;
 
@@ -371,6 +373,7 @@ $card-thumb-max-width: 400px;
     padding: $wcss-spacing-unit;
     display: flex;
     flex-direction: column;
+    background: rgba(0, 0, 0, 0.3);
   }
 
   .c-card__title {
