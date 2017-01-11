@@ -35,7 +35,12 @@ exports = module.exports = function(req, res) {
             guide_key: req.params.guide_key
         });
 
-        var queryTOC = Guide.model.find({}, 'name guide_key section isSection');
+        var queryTOC = Guide.model.find({}, {}, {
+           sort: {
+                'orderNo': -1
+            } 
+        });
+            
 
         queryGuidePage.exec(function(err, resultGuide) {
             if (err) throw err;
