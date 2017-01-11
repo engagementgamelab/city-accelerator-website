@@ -35,9 +35,9 @@ exports = module.exports = function(req, res) {
             guide_key: req.params.guide_key
         });
 
-        var queryTOC = Guide.model.find({}, {}, {
+        var queryTOC = Guide.model.find({}, 'name guide_key section isSection', {
            sort: {
-                'orderNo': -1
+                'sortOrder': 1
             } 
         });
             
@@ -56,6 +56,7 @@ exports = module.exports = function(req, res) {
                 if (errTOC) throw errTOC;
 
                 locals.guides = resultTOC;
+                console.log(locals.guides);
                 locals.chartingGuides = categorize(resultTOC, 'Charting');
                 locals.calibratingGuides = categorize(resultTOC, 'Calibrating');
                 locals.goingGuides = categorize(resultTOC, 'Going Places');
