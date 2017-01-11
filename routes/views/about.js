@@ -25,6 +25,7 @@ exports = module.exports = function(req, res) {
     // Init locals
     locals.section = 'about';
 
+
     view.on('init', function(next) {
 
         var queryAbout = About.model.findOne({}, {}, {

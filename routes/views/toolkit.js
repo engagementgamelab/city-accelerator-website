@@ -23,7 +23,7 @@ exports = module.exports = function(req, res) {
         locals = res.locals;
 
     // Init locals
-    // locals.section = '';
+    locals.section = 'toolkit';
 
     view.on('init', function(next) {
         var categorize = function(val, cat) {

@@ -14,6 +14,7 @@ var keystone = require('keystone');
 var _ = require('underscore');
 var Footer = keystone.list('Footer');
 var MainNav = keystone.list('MainNav');
+var Meta = keystone.list('Meta');
 var Images = keystone.list('Image');
 var Links = keystone.list('Link');
 
@@ -40,6 +41,7 @@ exports.initLocals = function(req, res, next) {
     next();
 
 };
+
 
 /**
 	Fetches and clears the flashMessages before a view is rendered
@@ -102,6 +104,23 @@ exports.initErrorHandlers = function(req, res, next) {
     
     next();
     
+};
+
+
+exports.metaProperties = function(req, res, next) {
+
+    var locals = res.locals;
+
+    var queryMeta = Meta.model.find({}, {}, {});
+    
+    queryMeta.exec(function(err, resultMeta) {
+        if (err) throw err;
+
+        locals.meta = resultMeta;
+
+        next(err);
+    });
+
 };
 
 // Footer

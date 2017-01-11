@@ -21,7 +21,8 @@ exports = module.exports = function(req, res) {
         locals = res.locals;
 
     // Init locals
-    // locals.section = '';
+    locals.section = req.params.guide_key;
+    console.log(locals.section);
 
     var categorize = function(val, cat) {
          return val.filter(function(item) {

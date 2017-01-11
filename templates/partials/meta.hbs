@@ -1,0 +1,12 @@
+{{#each data}}
+	{{#ifeq this.metaSection ../section}}
+		{{!-- <meta property="og:image" content="http://res.cloudinary.com/engagement-lab-home/image/upload/v1455896685/site/about/logo_color.png" /> --}}
+
+		<meta property="og:description" content="{{this.description}}" />
+
+		{{!-- <meta property="og:url" content="" /> --}}
+
+		<meta property="og:title" content="{{this.name}}" />
+	{{/ifeq}}
+{{/each}}
+

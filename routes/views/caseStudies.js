@@ -22,7 +22,7 @@ exports = module.exports = function(req, res) {
         locals = res.locals;
 
     // Init locals
-    // locals.section = '';
+    locals.section = 'caseStudies';
 
     view.on('init', function(next) {
 

@@ -24,7 +24,7 @@ var CaseStudy = new keystone.List('CaseStudy',
 		label: 'Case Studies',
 		singular: 'Case Study',
 		track: true,
-		autokey: { path: 'case_key', from: 'name', unique: true },
+		autokey: { path: 'case_key', from: 'name', unique: true }
 	});
 
 /**

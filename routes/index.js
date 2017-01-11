@@ -26,6 +26,7 @@ var importRoutes = keystone.importer(__dirname);
 keystone.pre('routes', middleware.initErrorHandlers);
 keystone.pre('routes', middleware.initLocals);
 keystone.pre('render', middleware.flashMessages);
+keystone.pre('render', middleware.metaProperties);
 keystone.pre('render', middleware.Footer);
 keystone.pre('render', middleware.MainNav);
 
