@@ -5,6 +5,7 @@ $top-nav-height: 90px;
   display: inline-block;
   width: 100%;
   color: $color-white;
+  z-index: 1;
 }
 
 .c-top-nav.c-top-nav + * {
