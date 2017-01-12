@@ -58,7 +58,7 @@
         </li>
 
         <!-- Project Planning -->
-        <li class="s-tool__step js-tool-step" data-step-name="{{planTitle}}" data-theme="t-neutral">
+        <li class="s-tool__step js-tool-step" data-step-name="{{planTitle}}" data-step-text="{{{planBlurb}}}" data-theme="t-neutral">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
               {{> components/tool/card-intro planCard.[0]}}
@@ -72,7 +72,7 @@
         </li>
 
         <!-- Implementation -->
-        <li class="s-tool__step js-tool-step" data-step-name="{{implementTitle}}" data-theme="t-green">
+        <li class="s-tool__step js-tool-step" data-step-name="{{implementTitle}}" data-step-text="{{{implementBlurb}}}" data-theme="t-green">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
               {{> components/tool/card-intro implementCard.[0]}}
@@ -86,7 +86,7 @@
         </li>
 
         <!-- Iteration -->
-        <li class="s-tool__step js-tool-step" data-step-name="{{iterateTitle}}" data-theme="t-purple">
+        <li class="s-tool__step js-tool-step" data-step-name="{{iterateTitle}}" data-step-text="{{{iterateBlurb}}}" data-theme="t-purple">
           <ul class="s-tool__sub-views js-tool-sub-steps">
             <li class="s-tool__view js-tool-view" data-grid-include="false">
               {{> components/tool/card-intro iterateCard.[0]}}
