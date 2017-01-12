@@ -15,7 +15,7 @@
   {{> nav contrast="true"}}
 
   <div class="c-article__header c-article__header--bg-repeater">
-    <h1 class="c-article__title">Two roads to take!</h1>
+    <h1 class="c-article__title">{{{header.html}}}</h1>
   </div>
 
   <div class="c-article__main u-marg-top-large u-marg-bottom">
@@ -26,10 +26,10 @@
 					<div class="c-card c-card--full c-card--reverse">
 					  <div class="c-card__inner">
 					    <div class="c-card__content">
-				        <h2 class="c-card__title">Process Builder</h2>
+				        <h2 class="c-card__title">{{{builderTitle.html}}}</h2>
 				        <div class="c-card__text">
-                  <p>Use our interactive public engagement process builder! We'll ask you some questions to help determine what to include in your roadmap!</p>
-                  <a class="c-btn c-btn--primary" href="/toolkit-builder">Launch process builder</a>
+                  <p>{{{builderText.html}}}</p>
+                  <a class="c-btn c-btn--primary" href="/toolkit-builder">{{builderButton}}</a>
                 </div>
 					  	</div>
 						</div>
@@ -40,9 +40,11 @@
 					<div class="c-card c-card--full">
 					  <div class="c-card__inner">
 					    <div class="c-card__content">
-				        <h2 class="c-card__title">Browse and select</h2>
-				        <div class="c-card__text">Know what you are looking for? Just browse, select activities and add them to your roadmap!</div>
-                <a class="c-btn c-btn--primary" href="/toolkit-builder#step=grid">Browse and select</a>
+				        <h2 class="c-card__title">{{{browseTitle.html}}}</h2>
+				        <div class="c-card__text">
+					        <p>{{{browseText.html}}}</p>
+				          <a class="c-btn c-btn--primary" href="/toolkit-builder#step=grid">{{browseButton}}</a>
+								</div>
 					  	</div>
 						</div>
 		    	</div>

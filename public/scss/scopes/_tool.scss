@@ -168,6 +168,24 @@
   }
 }
 
+.s-tool__grid__block__text {
+  font-family: $font-serif;
+  font-weight: normal;
+
+  transition: color .2s;
+  text-align: left;
+  line-height: 1.2 !important;
+
+  @include wcss-font-size(zeta);
+  @include wcss-theme-var(color, --tertiary);
+
+  word-wrap: break-word;
+
+  @include wcss-media(large) {
+    text-align: left;
+  }
+}
+
 // General-purpose class used for actions tied to views (Like Print MVP)
 // [1] Make invisible & un-clickable when disabled
 

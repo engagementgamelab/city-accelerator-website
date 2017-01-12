@@ -61,17 +61,15 @@ exports = module.exports = function(req, res) {
                 if (err) throw err;
 
                 if(result === null)
-                    return res.notfound('Cannot find that part of the toolki', 'Sorry, but it looks like the card you were looking for does not exist!');
+                    return res.notfound('Cannot find that part of the toolkit', 'Sorry, but it looks like the card you were looking for does not exist!');
 
-                locals.startTitle = result.startTitle;
-                locals.startBlurb = result.startBlurb.html;
-                locals.planTitle = result.planTitle;
-                locals.planBlurb = result.planBlurb.html;
-                locals.implementTitle = result.implementTitle;
-                locals.implementBlurb = result.implementBlurb.html;
-                locals.iterateTitle = result.iterateTitle;
-                locals.iterateBlurb = result.iterateBlurb.html;
+                locals.header = result.header;
+                locals.browseTitle = result.browseTitle;
+                locals.browseText = result.browseText;
+                locals.browseButton = result.browseButton;
+                locals.builderTitle = result.builderTitle;
                 locals.builderButton = result.builderButton;
+                locals.builderText = result.builderText;
 
                 next();
             });

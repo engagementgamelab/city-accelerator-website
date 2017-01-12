@@ -174,11 +174,13 @@
     $('.js-tool-step').each(function() {
       var step = $(this).index();
       var title = $(this).attr('data-step-name');
+      var text = $(this).attr('data-step-text');
       var new_block = "";
 
       if($(this).attr('data-grid-include') !== 'false') {
         var new_block = template.clone().removeClass('js-tool-grid-template').attr('data-linked-step', step);
         new_block.find('.js-tool-grid-block-title').html(title);
+        new_block.find('.js-tool-grid-block-text').html(text);
 
         var theme = $(this).attr('data-theme');
         new_block.addClass(theme);
