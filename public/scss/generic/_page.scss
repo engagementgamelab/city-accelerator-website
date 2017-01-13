@@ -25,3 +25,7 @@ body {
 .is-scroll-locked body {
   overflow: hidden;
 }
+
+.hidden-el {
+    display: none !important;
+  }

@@ -1,9 +1,5 @@
-{{#if contrast}}
-<footer class="c-footer c-footer--contrast">
-{{else}}
-<footer class="c-footer">
-{{/if}}
 
+<footer class="c-footer {{#if contrast}}c-footer--contrast{{/if}} {{#ifeq hidden true}}hidden-el{{/ifeq}}">
 	<div class="o-wrapper">
 		{{#if footer.images}}
 		<ul class="o-list-inline">

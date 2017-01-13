@@ -10,49 +10,6 @@
 */
 --}}
 
-{{!--
-<div class="container-fluid home">
-
-	<div class="row">
-		{{{game.name.html}}}
-
-		{{> image game.logo}}
-
-		{{> link game.purchaseLink}}
-
-	</div>
-
-	<div class="row">
-	{{{game.text.html}}}
-	</div>
-
-	<div class="row">
-	{{{game.howToPlay.html}}}
-	</div>
-
-	<div class="row">
-	{{{game.text.html}}}
-	</div>
-
-	<div class="row">
-	{{> image game.featOneImage}}
-	{{{game.featOneTitle.html}}}
-	{{{game.featOneDescription.html}}}
-	</div>
-	<div class="row">
-	{{> image game.featTwoImage}}
-	{{{game.featTwoTitle.html}}}
-	{{{game.featTwoDescription.html}}}
-	</div>
-	<div class="row">
-	{{> image game.featThreeImage}}
-	{{{game.featThreeTitle.html}}}
-	{{{game.featThreeDescription.html}}}
-	</div>
-
-</div>
---}}
-
 <article class="c-article t-neutral">
 
   {{> nav contrast="true"}}
@@ -72,7 +29,7 @@
 				<div class="c-card-list__item">
 					<div class="c-card c-card--full c-card--reverse">
 					  <div class="c-card__cover">
-					    <img src="{{cloudinaryUrl game.featOneImage.image crop=scale width=200}}" alt="Image">
+					    <img src="{{{cloudinaryUrl game.featOneImage.image crop=scale width=200}}}" alt="Image">
 					  
 					  </div>
 					  <div class="c-card__inner">
@@ -101,7 +58,7 @@
 				<div class="c-card-list__item">
 					<div class="c-card c-card--full">
 					  <div class="c-card__cover">
-					    <img src="{{cloudinaryUrl game.featThreeImage.image}}" alt="Image">
+					    <img src="{{{cloudinaryUrl game.featThreeImage.image crop=scale width=200}}}" alt="Image">
 					  </div>
 					  <div class="c-card__inner">
 					    <div class="c-card__content">
@@ -116,7 +73,7 @@
 
 		</div>
     <div class="c-article__content">
-	    <img src="{{cloudinaryUrl game.footerImage}}" alt="Lower Image">
+	    <img src="{{{cloudinaryUrl game.footerImage crop=scale width=200}}}" alt="Lower Image">
       <h2>How to play</h2>
 			<p>{{{removePara game.howToPlay.html}}}</p>
     </div>

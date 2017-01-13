@@ -18,6 +18,7 @@
     translateX: '-200%',
   };
 
+  
 
 
   function addToPrintable(object) {
@@ -69,10 +70,18 @@
       $('.js-tool-back').addClass('is-active');
     }
 
-    // Enable / Disable print MVP button on last step
+    // Enable / Disable print MVP button, Footer, and Step Navigation on last step
     if(step == last_step) {
+      $('footer').removeClass('hidden-el');
+      $('.js-tool-nav').addClass('hidden-el');
+      $('.js-tool-back').addClass('hidden-el');
+      $('.s-tool__sidebar').removeClass('hidden-el');
       $('.js-tool-print-mvp').addClass('is-active');
     } else {
+      $('.js-tool-back').removeClass('hidden-el');
+      $('.js-tool-nav').removeClass('hidden-el');
+      $('footer').addClass('hidden-el');
+      $('.s-tool__sidebar').addClass('hidden-el');
       $('.js-tool-print-mvp').removeClass('is-active');
     }
 
@@ -428,6 +437,7 @@
 
     $('.js-tool-next').click(function() {
       goNextStep();
+
     });
 
     $('.js-tool-back').click(function() {
@@ -523,5 +533,12 @@
       updateMainHeight();
       updateProgress();
     });
+
+    if (window.location.hash === '#step=grid') {
+      $('footer').removeClass('hidden-el');
+
+      $('.s-tool__sidebar').removeClass('hidden-el');
+      
+    }
 
   }

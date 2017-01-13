@@ -16,9 +16,10 @@
 .c-hero__sub-title {
   @include wcss-font-size(epsilon);
 
-  @media (min-width: 2000px) {
+  @include wcss-media(large) {
     @include wcss-font-size(damma);
   }
+  
 }
 
 
