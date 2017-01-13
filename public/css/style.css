@@ -1806,8 +1806,8 @@ hr {
 
 .c-icon-button {
   font-weight: bold;
-  width: 55px;
-  height: 55px;
+  width: 60px;
+  height: 60px;
   padding: 0;
   cursor: pointer;
   text-align: center;
@@ -1947,6 +1947,8 @@ hr {
       transform: none;
       overflow: visible;
       height: auto; } }
+  .c-modal .bp40 {
+    padding-bottom: 40px; }
 
 .c-modal.is-active {
   z-index: 9999;
@@ -2337,6 +2339,11 @@ html.is-modal-active {
   font-size: 20px ;
   font-size: calc(18px + (20 - 18) * (100vw - 300px ) / (1200 - 300) ) ;
   line-height: 1.6; }
+  @media (min-width: 2000px) {
+    .c-hero__sub-title {
+      font-size: 30px ;
+      font-size: calc(22px + (30 - 22) * (100vw - 300px ) / (1200 - 300) ) ;
+      line-height: 1.6; } }
 
 .c-hero--contrast {
   color: #494949; }
@@ -4359,6 +4366,11 @@ html.is-modal-active {
 .u-text-gamma {
   font-size: 36px !important;
   font-size: calc(20px + (36 - 20) * (100vw - 300px ) / (1200 - 300) ) !important;
+  line-height: 1.6; }
+
+.u-text-damma {
+  font-size: 30px !important;
+  font-size: calc(22px + (30 - 22) * (100vw - 300px ) / (1200 - 300) ) !important;
   line-height: 1.6; }
 
 .u-text-delta {
