@@ -1556,7 +1556,7 @@ hr {
   font-family: "bodoni", Georgia, serif;
   color: #FFFFFF;
   margin-bottom: 0; }
-  @media (min-width: 320px) {
+  @media (max-width: 320px) {
     .c-top-nav__title {
       font-size: 16px; } }
 
@@ -2518,6 +2518,14 @@ html.is-modal-active {
   align-items: center;
   text-align: center;
   color: #FFFFFF; }
+  @media (min-width: 1200px) {
+    .c-hero {
+      max-width: 900px;
+      max-width: 56.25rem; } }
+  @media (min-width: 2000px) {
+    .c-hero {
+      max-width: 1150px;
+      max-width: 71.875rem; } }
 
 .c-hero__title {
   font-size: 48px ;
@@ -2528,11 +2536,9 @@ html.is-modal-active {
   font-size: 20px ;
   font-size: calc(18px + (20 - 18) * (100vw - 300px ) / (1200 - 300) ) ;
   line-height: 1.6; }
-  @media (min-width: 1200px) {
+  @media (min-width: 800px) {
     .c-hero__sub-title {
-      font-size: 30px ;
-      font-size: calc(22px + (30 - 22) * (100vw - 300px ) / (1200 - 300) ) ;
-      line-height: 1.6; } }
+      font-size: 22px; } }
 
 .c-hero--contrast {
   color: #494949; }

@@ -24,3 +24,15 @@
 		}
 	}
 }
+
+@mixin wcss-media-max($value) {
+	@if (type-of($value) == number) {
+		@media (max-width: #{$value}) {
+			@content;
+		}
+	} @else {
+		@media (max-width: map-get($wcss-breakpoints, $value)) {
+			@content;
+		}
+	}
+}

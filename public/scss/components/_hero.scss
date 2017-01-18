@@ -7,6 +7,15 @@
   align-items: center;
   text-align: center;
   color: $color-white;
+
+  @include wcss-media(large) {
+    @include wcss-rem(max-width, 900px);
+  }
+
+  @include wcss-media(extra-large) {
+    @include wcss-rem(max-width, 1150px);
+  }
+
 }
 
 .c-hero__title {
@@ -16,8 +25,8 @@
 .c-hero__sub-title {
   @include wcss-font-size(epsilon);
 
-  @include wcss-media(large) {
-    @include wcss-font-size(damma);
+  @include wcss-media(medium) {
+    font-size: 22px;
   }
   
 }
