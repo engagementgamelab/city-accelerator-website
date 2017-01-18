@@ -2718,6 +2718,9 @@ html.is-modal-active {
   @media (min-width: 800px) {
     .c-hero__sub-title {
       font-size: 22px; } }
+  @media (max-width: 800px) {
+    .c-hero__sub-title {
+      font-size: 14px; } }
 
 .c-hero--contrast {
   color: #494949; }
@@ -2917,8 +2920,6 @@ html.is-modal-active {
 }*/
 .s-tool__prev {
   font-weight: bold;
-  position: fixed;
-  top: 60vh;
   left: 6px;
   transform: translateY(-50%);
   text-transform: uppercase;

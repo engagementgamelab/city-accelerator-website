@@ -28,6 +28,10 @@
   @include wcss-media(medium) {
     font-size: 22px;
   }
+
+  @include wcss-media-max(medium) {
+    font-size: 14px;
+  }
   
 }
 
