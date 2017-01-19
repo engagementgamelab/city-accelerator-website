@@ -1,5 +1,17 @@
 .c-article {
+  &#about-page {
+    .c-article__main {
+      a {
+        color: $color-blue-56;
+        font-family: "bodoni", Georgia, serif;
+      }
 
+      h2 {
+        font-family: "bodoni", Georgia, serif;
+        font-size: 22px;
+      }
+    }
+  }
 }
 
 .c-article__header {
@@ -35,6 +47,8 @@
   > h1, > h2, > h3, > h4, > h5, > h6 {
     font-family: $font-serif;
   }
+
+
 
   > a {
     @include wcss-theme-var(color, --tertiary);

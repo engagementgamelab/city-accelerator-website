@@ -2597,7 +2597,7 @@ html.is-modal-active {
   font-size: calc(12px + (14 - 12) * (100vw - 300px ) / (1200 - 300) ) ;
   line-height: 1.6;
   text-transform: uppercase;
-  color: #494949;
+  color: #FFFFFF;
   font-weight: bold;
   outline: 0;
   width: 100vw;
@@ -2605,7 +2605,7 @@ html.is-modal-active {
   position: absolute;
   bottom: 0;
   right: 0;
-  background: #FFFFFF;
+  background: #D6EDDF;
   border: 0;
   padding: 12px 24px;
   cursor: pointer; }
@@ -2624,7 +2624,9 @@ html.is-modal-active {
       border-bottom-right-radius: 30px;
       transition: all 0.2s ease-in-out;
       box-shadow: 10px 0px 20px rgba(0, 0, 0, 0.15);
-      transform: translate3d(100%, 0, 0); }
+      transform: translate3d(100%, 0, 0);
+      background: #FFFFFF !important;
+      color: #494949; }
       .c-off-canvas__toggle[aria-pressed="true"] {
         width: auto;
         left: auto; } }
@@ -2724,6 +2726,13 @@ html.is-modal-active {
 
 .c-hero--contrast {
   color: #494949; }
+
+.c-article#about-page .c-article__main a {
+  color: #24408E;
+  font-family: "bodoni", Georgia, serif; }
+.c-article#about-page .c-article__main h2 {
+  font-family: "bodoni", Georgia, serif;
+  font-size: 22px; }
 
 .c-article__header {
   text-align: center;

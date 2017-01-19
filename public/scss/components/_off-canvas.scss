@@ -54,7 +54,7 @@
 .c-off-canvas__toggle {
   @include wcss-font-size(eta);
   text-transform: uppercase;
-  color: $color-gray;
+  color: $color-white;
   font-weight: bold;
   outline: 0;
   width: 100vw;
@@ -63,8 +63,8 @@
   position: absolute;
   bottom: 0;
   right: 0;
+  background: $color-green-93;
 
-  background: $color-white;
   border: 0;
   padding: $wcss-spacing-unit-small $wcss-spacing-unit;
 
@@ -89,6 +89,9 @@
     transition: $wcss-base-transition;
     box-shadow: 10px 0px 20px rgba(#000, .15);
     transform: translate3d(100%, 0, 0);
+  background: $color-white !important;
+  color: $color-gray;
+
 
     &[aria-pressed="true"] {
       width: auto;
