@@ -19,6 +19,9 @@
 				<div class="o-layout__item o-layout__item--6/12@large">
 					<h1 class="u-text-serif u-text-beta u-color-primary u-marg-bottom-none">{{title}}</h1>
 					<p class="u-text-epsilon">{{{byline}}}</p>
+					{{#each this.modalities}}
+						<img src="{{{cloudinaryUrl this.icon.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}">
+					{{/each}}
 					{{#each caseStudy.modalities}}
 						<p class="u-marg-bottom-tiny u-text-bold">{{this.name}}</p>
 					{{/each}}

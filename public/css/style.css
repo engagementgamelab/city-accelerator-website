@@ -2920,6 +2920,7 @@ html.is-modal-active {
 }*/
 .s-tool__prev {
   font-weight: bold;
+  margin: 20px 0px 0px 0px;
   left: 6px;
   transform: translateY(-50%);
   text-transform: uppercase;

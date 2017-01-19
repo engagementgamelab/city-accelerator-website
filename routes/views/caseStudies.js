@@ -28,7 +28,7 @@ exports = module.exports = function(req, res) {
 
         var queryCaseStudy = CaseStudy.model.find({}, {}, {
             sort: {
-                'orderNo': -1
+                name: -1
             }
         })
         .populate('modalities');

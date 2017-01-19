@@ -35,8 +35,9 @@ var Meta = new keystone.List('Meta',
  */
 Meta.add({
 	name: { type: String, label: "Title", required: true, initial: true },
+	image: { type: Types.CloudinaryImage, label: 'Image' },
 	description: { type: Types.Textarea, label: "Description", required: true, initial: true },
-	metaSection: { type: String, label: "Section", note: "Needs to match the page's section. Capitalization matters!!"},
+	metaSection: { type: String, label: "Section", note: "Needs to match the page's local variable 'section'. Capitalization matters!!"},
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });

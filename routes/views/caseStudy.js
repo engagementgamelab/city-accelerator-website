@@ -37,6 +37,7 @@ exports = module.exports = function(req, res) {
                 return res.notfound('Cannot find that case study', 'Sorry, but it looks like the case study you were looking for does not exist!');
 
             locals.caseStudy = result;
+            locals.modalities = result.modalities;
             locals.backgroundImage = result.image;
             locals.title = result.name;
             locals.byline = result.byline.html;
@@ -47,8 +48,12 @@ exports = module.exports = function(req, res) {
             locals.team = result.team.html;
             locals.readMore = result.readMore.html;
 
-            next();
-
+            _.each(result.modalities, function (modality) {
+                modality.populate('icon', function(err, newResult) {
+                    locals.modalities.icon = newResult.icon.image;
+                    next();
+                });
+            });
         });
     });
 
