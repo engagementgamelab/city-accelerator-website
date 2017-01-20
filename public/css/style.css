@@ -3011,11 +3011,11 @@ html.is-modal-active {
 
 .s-tool__print-mvp {
   position: fixed;
-  bottom: 48px;
+  bottom: 6px;
   left: 6px; }
-  @media (min-width: 1200px) {
+  @media (max-width: 800px) {
     .s-tool__print-mvp {
-      bottom: 6px; } }
+      display: none; } }
 
 .s-tool__mvp {
   display: none; }

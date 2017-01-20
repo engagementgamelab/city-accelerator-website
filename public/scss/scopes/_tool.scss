@@ -208,11 +208,11 @@
 
 .s-tool__print-mvp {
   position: fixed;
-  bottom: $wcss-spacing-unit-large;
+  bottom: $wcss-spacing-unit-tiny;
   left: $wcss-spacing-unit-tiny;
 
-  @include wcss-media(large) {
-    bottom: $wcss-spacing-unit-tiny;
+  @include wcss-media-max(medium) {
+    display:none;
   }
 }
 

@@ -312,10 +312,11 @@
   function updateSidebar() {
     var sidebar_html = "";
     if($('.js-tool-grid-item').length) {
-      console.log($('.js-tool-grid-item').length + "is the length");
+
       $('.js-tool-grid-block').each(function() {
         var block_title = $(this).find('.js-tool-grid-block-title').html();
         var items = $(this).find('.js-tool-grid-item .js-tool-card:not(.is-disabled)');
+        console.log(items.length + "length")
 
         if(items.length) {
           $('.js-tool-sidebar-empty').attr('aria-hidden', 'true');
@@ -324,13 +325,13 @@
             var item_title = $(this).find('.js-tool-card-title').html();
             sidebar_html = sidebar_html + '<p class="c-off-canvas__link">' + item_title + '</p>';
           });
+        } else {
+          $('.js-tool-sidebar-empty').attr('aria-hidden', 'false');
         }
       });
 
       $('.js-tool-sidebar-content').empty().html(sidebar_html);
-    } else {
-      $('.js-tool-sidebar-empty').attr('aria-hidden', 'false');
-    }
+    } 
   }
 
   //This function will check if the current page has the query param of 'step' & call the modal
