@@ -54,9 +54,10 @@ exports = module.exports = function(req, res) {
                 _.each(result.modalities, function (modality) {
                     modality.populate('icon', function(err, newResult) {
                         locals.modalities.icon = newResult.icon.image;
-                        next();
+                        
                     });
                 });
+                next();
             } else {
                 console.log('nope none here');
                 next ();
