@@ -312,6 +312,7 @@
   function updateSidebar() {
     var sidebar_html = "";
     if($('.js-tool-grid-item').length) {
+      console.log($('.js-tool-grid-item').length + "is the length");
       $('.js-tool-grid-block').each(function() {
         var block_title = $(this).find('.js-tool-grid-block-title').html();
         var items = $(this).find('.js-tool-grid-item .js-tool-card:not(.is-disabled)');
@@ -464,8 +465,8 @@
       event.stopPropagation();
       parent_step = $(this).closest('.js-tool-card').attr('data-linked-step');
       parent_sub_step = $(this).closest('.js-tool-card').attr('data-linked-sub-step');
-      console.log(parent_step);
-      console.log(parent_sub_step);
+      // console.log(parent_step);
+      // console.log(parent_sub_step);
       modal = $('.js-tool-modal[data-linked-step="' + parent_step + '"][data-linked-sub-step="' + parent_sub_step + '"]');
       $('.js-tool-printable').removeClass('js-tool-printable');
       modal.addClass('is-active').addClass('js-tool-printable');

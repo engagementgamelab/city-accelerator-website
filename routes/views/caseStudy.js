@@ -48,12 +48,20 @@ exports = module.exports = function(req, res) {
             locals.team = result.team.html;
             locals.readMore = result.readMore.html;
 
-            _.each(result.modalities, function (modality) {
-                modality.populate('icon', function(err, newResult) {
-                    locals.modalities.icon = newResult.icon.image;
-                    next();
+            if (locals.modalities.length !== 0) {
+                console.log('we found a modality');
+                console.log (locals.modalities.length);
+                _.each(result.modalities, function (modality) {
+                    modality.populate('icon', function(err, newResult) {
+                        locals.modalities.icon = newResult.icon.image;
+                        next();
+                    });
                 });
-            });
+            } else {
+                console.log('nope none here');
+                next ();
+            }
+            
         });
     });
 

@@ -54,9 +54,7 @@ CaseStudy.add({
 		type: Types.Relationship, 
 		label: "Modalities",
 		ref: 'Activity',
-		many: true,
-		required: true,
-		initial: true
+		many: true
 	},
 	phaseI: { type: Types.Markdown, label: 'Phase I Implementation', note: ''},
 	phaseII: { type: Types.Markdown, label: 'Phase II Implementation', note: ''},
