@@ -77,6 +77,8 @@ Image.schema.statics.removeRef = function(refId, callback) {
 
 };
 
+
+
 /**
  * Model Registration
  */

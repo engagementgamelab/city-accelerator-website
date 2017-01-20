@@ -37,6 +37,9 @@ Partner.add({
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
 
+Partner.relationship({ ref: 'About', refPath: 'partners' });
+
+
 /**
  * Model Registration
  */

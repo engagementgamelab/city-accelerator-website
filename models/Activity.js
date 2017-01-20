@@ -122,6 +122,9 @@ Activity.schema.pre('remove', function(next) {
 
 });
 
+Activity.relationship({ ref: 'CaseStudy', refPath: 'modalities' });
+
+
 
 /**
  * Model Registration

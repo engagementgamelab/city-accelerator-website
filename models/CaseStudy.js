@@ -66,6 +66,34 @@ CaseStudy.add({
 
 });
 
+// Remove a link or image reference if removed from database
+CaseStudy.schema.statics.removeRef = function(refId, callback) {
+
+    CaseStudy.model.update({
+             'modalities': refId
+        },
+
+        {
+            $pull: {
+                'modalities': refId
+            }
+        },
+
+        {
+            multi: true
+        },
+
+        function(err, result) {
+
+            callback(err, result);
+
+            if (err)
+                console.error(err);
+        }
+    );
+
+};
+
 /**
  * Model Registration
  */
