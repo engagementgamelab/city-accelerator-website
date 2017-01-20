@@ -18,7 +18,7 @@
     translateX: '-200%',
   };
 
-  
+
 
 
   function addToPrintable(object) {
@@ -355,6 +355,16 @@
 
       // If user is asking for an activity modal
       } else {
+
+        // Make Grid an active view anyway
+        active_view = $('.js-tool-step:last-child').index() + '.0';
+        $('.js-tool-back').remove();
+        $('.js-tool-steps-container').remove();
+        updateView();
+        updateSidebar();
+        $('.js-tool-print-mvp').addClass('is-active');
+
+        // Then proceed to fire up the modal
         var data = requestedStep.split('.');
         var step = data[0];
         var sub_step = data[1];
@@ -540,7 +550,7 @@
       $('footer').removeClass('hidden-el');
 
       $('.s-tool__sidebar').removeClass('hidden-el');
-      
+
     }
 
   }

@@ -6,8 +6,8 @@
 
   display: inline-block;
 
-  width: 280px;
-  height: 280px;
+  width: 200px;
+  height: 200px;
 
   text-align: center;
 
@@ -16,6 +16,11 @@
   background: $color-neutral-95;
   background-image: linear-gradient(to right, transparent 50%, $color-blue 0);
   background-clip: padding-box;
+
+  @media (min-width: 450px) {
+    width: 280px;
+    height: 280px;
+  }
 }
 
 @keyframes spin {
@@ -50,7 +55,7 @@
 }
 
 .c-circle-graph__content {
-  line-height: 200px;
+  line-height: 120px;
 
   position: absolute;
   top: 50%;
@@ -58,8 +63,8 @@
 
   display: flex;
 
-  width: 230px;
-  height: 230px;
+  width: 150px;
+  height: 150px;
 
   content: '';
   transform: translate(-50%, -50%);
@@ -68,6 +73,12 @@
   background: $color-white;
 
   align-items: center;
+
+  @media (min-width: 450px) {
+    line-height: 200px;
+    width: 230px;
+    height: 230px;
+  }
 }
 
 .c-circle-graph__title {
@@ -78,4 +89,5 @@
   color: $color-blue;
 
   @include wcss-font-size(delta);
+
 }
