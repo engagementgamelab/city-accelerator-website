@@ -10,7 +10,7 @@
 */
 --}}
 
-<article class="c-article t-green">
+<article class="c-article t-green" id="guide">
 
   {{> nav contrast="true"}}
 
@@ -18,8 +18,8 @@
     <h1 class="c-article__title">{{content.header}}</h1>
   </div>
 
-  {{> articleNav pages}}
-  
+  {{> articleNav pages top=true}}
+
   <div class="c-article__main">
 {{!--     <div class="c-article__content">
         <p class="c-article__intro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos saepe nulla eligendi excepturi, id in ullam, eum consectetur amet atque deserunt placeat labore dicta nihil magni. Ipsa et voluptates nesciunt.</p>
@@ -39,9 +39,15 @@
 
   </div>
 
-  {{> articleNav pages}}
+  {{> articleNav pages top=false}}
 </article>
 
 {{> guideSidebar}}
 
 {{> footer}}
+
+<script>
+
+
+  
+  </script>

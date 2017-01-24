@@ -40,6 +40,14 @@
   margin: 0 auto;
   color: $color-gray;
 
+  @include wcss-media-max(large) {
+    padding-top: 60px;
+  }
+
+  &.p100 {
+    padding-top: 100px;
+  }
+
   > * + * {
     margin-top: $wcss-spacing-unit;
   }
@@ -89,11 +97,34 @@
   display: flex;
   flex-wrap: wrap;
 
+  &#top-article-nav {
+    @include wcss-media-max(large) {
+      display: none;
+    }
+
+  }
+
+  &.fixed-nav {
+    width: -webkit-calc(100% - 48px);
+    width:    -moz-calc(100% - 48px);
+    width:         calc(100% - 48px);
+    position:fixed;
+    top: 4px;
+  }
+
+  &#bottom-article-nav {
+    @include wcss-media(large) {
+      display: none;
+    }
+  }
+
   &:last-child {
     margin-top: 0;
     margin-bottom: $wcss-spacing-unit-large;
   }
 }
+
+
 
 .c-article__nav + .c-article__main {
   padding-top: 0;
