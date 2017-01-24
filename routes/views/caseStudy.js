@@ -49,8 +49,6 @@ exports = module.exports = function(req, res) {
             locals.readMore = result.readMore.html;
 
             if (locals.modalities.length !== 0) {
-                console.log('we found a modality');
-                console.log (locals.modalities.length);
                 _.each(result.modalities, function (modality) {
                     modality.populate('icon', function(err, newResult) {
                         locals.modalities.icon = newResult.icon.image;
@@ -59,7 +57,6 @@ exports = module.exports = function(req, res) {
                 });
                 next();
             } else {
-                console.log('nope none here');
                 next ();
             }
             
