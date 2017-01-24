@@ -20,7 +20,7 @@
 					<h1 class="u-text-serif u-text-beta u-color-primary u-marg-bottom-none">{{title}}</h1>
 					<div class="u-text-eta u-text-uppercase u-color-primary u-text-bold">{{{byline}}}</div>
 					{{#each this.modalities}}
-						<a href="{{}}"><img src="{{{cloudinaryUrl this.icon.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}"></a>
+						<img src="{{{cloudinaryUrl this.icon.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}">
 					{{/each}}
 {{!-- 					{{#each caseStudy.modalities}}
 						<p class="u-marg-bottom-tiny u-text-bold">{{this.name}}</p>
