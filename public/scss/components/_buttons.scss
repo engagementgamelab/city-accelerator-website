@@ -23,6 +23,8 @@
   border: 0;
   border-radius: $wcss-base-radius;
 
+  box-shadow: $base-shadow;
+
   @include wcss-font-size(eta);
 
   backface-visibility: hidden;
