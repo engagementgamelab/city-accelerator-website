@@ -13,14 +13,14 @@
 <article class="c-article t-purple">
 	{{> nav contrast="true"}}
 
-	<div class="c-article__header u-text-left c-box c-box--repeater" style="background:url({{cloudinaryUrl backgroundImage width=auto crop='scale' g='center' quality=100}}) center no-repeat;">
+	<div class="c-article__header u-text-left c-box" style="background-color: var(--secondary);"{{!-- background:url({{cloudinaryUrl backgroundImage width=auto crop='scale' g='center' quality=100}}) center no-repeat; --}}>
 		<div class="o-wrapper u-pad-top-large u-pad-bottom-large">
 			<div class="o-layout">
 				<div class="o-layout__item o-layout__item--6/12@large">
 					<h1 class="u-text-serif u-text-beta u-color-primary u-marg-bottom-none">{{title}}</h1>
 					<div class="u-text-eta u-text-uppercase u-color-primary u-text-bold">{{{byline}}}</div>
 					{{#each this.modalities}}
-						<img src="{{{cloudinaryUrl this.icon.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}">
+						<img src="{{{cloudinaryUrl this.icon.image width=75 height=75 crop='scale' quality=100}}}" alt="{{this.name}}">
 					{{/each}}
 {{!-- 					{{#each caseStudy.modalities}}
 						<p class="u-marg-bottom-tiny u-text-bold">{{this.name}}</p>
