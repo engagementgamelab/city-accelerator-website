@@ -32,14 +32,8 @@ var MainNav = new keystone.List('MainNav',
  * @main MainNav
  */
 MainNav.add({
-	name: { type: String, default: "Nav Title", label: 'Navigation Title Text', hidden: true, required: true, initial: true },
-	mainLink: { 
-		type: Types.Relationship, 
-		ref: 'Link',
-		label: 'Home Page Link', 
-		many: false
-	},
-	description: { type: Types.Markdown, label: "Description",  initial: true, required: true },
+	name: { type: String, default: "Main Navigation Bar", label: 'Navigation Title Text', hidden: true, required: true, initial: true },
+	// description: { type: Types.Markdown, label: "Description",  initial: true, required: true },
 	links: { 
 		type: Types.Relationship, 
 		ref: 'Link',
@@ -50,8 +44,16 @@ MainNav.add({
 	logo: {
 		type: Types.Relationship, 
 		ref: 'Image', 
-		label: 'Logo', 
-		many: false
+		label: 'Logo Image', 
+		many: false, 
+		note: 'Appears only on the home page. Will link to the home page.'
+	},
+	logoAlt: {
+		type: Types.Relationship, 
+		ref: 'Image', 
+		label: 'Alternate Logo Image', 
+		many: false, 
+		note: 'Appears on every page *except* the home page. Will link to the home page.'
 	},
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }

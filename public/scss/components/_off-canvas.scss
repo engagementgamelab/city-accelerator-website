@@ -81,7 +81,7 @@
   }
 
   @include wcss-media(medium) {
-    top: $wcss-spacing-unit-huge;
+    top: $wcss-spacing-unit-huge + 30px;
     bottom: auto;
     width: auto;
     border-top-right-radius: 30px;

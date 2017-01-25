@@ -160,7 +160,7 @@ exports.MainNav = function (req, res, next) {
         }
     })
     .populate('links')
-    .populate('images');
+    .populate('logo');
 
     queryMainNav.exec(function(err, resultNav) {
         if (err) throw err;

@@ -21,7 +21,8 @@ exports = module.exports = function(req, res) {
         locals = res.locals;
 
     // Init locals
-    locals.section = req.params.case_key;
+    locals.subSection = req.params.case_key;
+    locals.section = "caseStudy";
 
     view.on('init', function(next) {
 

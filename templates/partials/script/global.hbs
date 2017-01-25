@@ -12,7 +12,11 @@
 
 <script type="text/javascript">
 
+
 $(document).ready(function() {
+
+	{{#ifeq section 'guide'}}
+
 
     $(document).on('scroll', function() {
 
@@ -28,8 +32,11 @@ $(document).ready(function() {
       }
 
     });
+    {{/ifeq}}
+
 
 
 });
+
 
 </script>

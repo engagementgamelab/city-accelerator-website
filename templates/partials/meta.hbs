@@ -1,12 +1,24 @@
 {{#each data}}
-	{{#ifeq this.metaSection ../section}}
-		<meta property="og:image" content="{{{cloudinaryUrl this.image quality=100}}}" />
+	{{#if subSection}}
+		{{#ifeq this.metaSection ../subSection}}
+			<meta property="og:image" content="{{{cloudinaryUrl this.image quality=100}}}" />
 
-		<meta property="og:description" content="{{this.description}}" />
+			<meta property="og:description" content="{{this.description}}" />
 
-		{{!-- <meta property="og:url" content="" /> --}}
+			{{!-- <meta property="og:url" content="" /> --}}
 
-		<meta property="og:title" content="{{this.name}}" />
-	{{/ifeq}}
+			<meta property="og:title" content="{{this.name}}" />
+		{{/ifeq}}
+	{{else}}
+		{{#ifeq this.metaSection ../section}}
+			<meta property="og:image" content="{{{cloudinaryUrl this.image quality=100}}}" />
+
+			<meta property="og:description" content="{{this.description}}" />
+
+			{{!-- <meta property="og:url" content="" /> --}}
+
+			<meta property="og:title" content="{{this.name}}" />
+		{{/ifeq}}
+	{{/if}}
 {{/each}}
 

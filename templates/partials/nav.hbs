@@ -1,20 +1,19 @@
-{{#if contrast}}
-<header class="c-top-nav c-top-nav--contrast">
-{{else}}
-<header class="c-top-nav">
-{{/if}}
+<header class="c-top-nav {{#if contrast}}c-top-nav--contrast{{/if}}">
   <div class="c-top-nav__wrapper o-wrapper">
+
     <a class="c-top-nav__branding" href="/">
+    {{#ifeq section home}}
       {{> image mainNav.logo}}
+    {{else}}
+      {{> image mainNav.logoAlt}}
+    {{/ifeq}}
     </a>
     <button class="c-top-nav__toggle js-top-nav-toggle c-btn c-btn--ghost" aria-expanded="false">Menu</button>
     <nav class="c-top-nav__menu js-top-nav-menu" aria-hidden="true">
       <ul class="c-top-nav__list">
-          <li class="c-top-nav__item"><a class="c-top-nav__link" href="/toolkit">Toolkit</a></li>
-          <li class="c-top-nav__item"><a class="c-top-nav__link" href="/guide">Guide</a></li>
-          <li class="c-top-nav__item"><a class="c-top-nav__link" href="/case-studies">Case Studies</a></li>
-          <li class="c-top-nav__item"><a class="c-top-nav__link" href="/game">Game</a></li>
-          <li class="c-top-nav__item"><a class="c-top-nav__link" href="/about">About</a></li>
+      {{#each mainNav.links}}
+          <li class="c-top-nav__item"><a class="c-top-nav__link" href="{{URL}}">{{name}}</a></li>
+      {{/each}}
       </ul>
     </nav>
   </div>

@@ -21,7 +21,8 @@ exports = module.exports = function(req, res) {
         locals = res.locals;
 
     // Init locals
-    locals.section = req.params.guide_key;
+    locals.section = "guide";
+    locals.subSection = req.params.guide_key;
     console.log(locals.section);
 
     var categorize = function(val, cat) {
@@ -57,7 +58,6 @@ exports = module.exports = function(req, res) {
                 if (errTOC) throw errTOC;
 
                 locals.guides = resultTOC;
-                console.log(locals.guides);
                 locals.chartingGuides = categorize(resultTOC, 'Charting');
                 locals.calibratingGuides = categorize(resultTOC, 'Calibrating');
                 locals.goingGuides = categorize(resultTOC, 'Going Places');
@@ -65,7 +65,6 @@ exports = module.exports = function(req, res) {
                 var pages = _.pluck(locals.guides, 'guide_key');
                 var ind = _.indexOf(pages, req.params.guide_key);
                 locals.pages = {'next': locals.guides[ind + 1], 'back': locals.guides[ind - 1]};
-                console.log(locals.pages);
                 next();
 
             });
