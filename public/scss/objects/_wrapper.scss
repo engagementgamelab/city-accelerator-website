@@ -14,12 +14,12 @@ $wcss-wrapper-width: 1200px !default;
 
   .o-wrapper#{$breakpoint} {
     @include wcss-clearfix();
-    padding-right: $wcss-spacing-unit;
-    padding-left:  $wcss-spacing-unit;
+    padding-right: $wcss-spacing-unit + 20px;
+    padding-left:  $wcss-spacing-unit + 20px;
     margin-right: auto;
     margin-left:  auto;
     width: 100%;
-    max-width: $wcss-wrapper-width;
+    // max-width: $wcss-wrapper-width;
   }
 
 

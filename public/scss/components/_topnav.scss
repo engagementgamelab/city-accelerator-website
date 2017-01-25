@@ -1,4 +1,4 @@
-$top-nav-height: 90px;
+$top-nav-height: 160px;
 
 .c-top-nav {
   position: absolute;
@@ -13,13 +13,14 @@ $top-nav-height: 90px;
 }
 
 .c-top-nav__wrapper {
-  @include wcss-rem(height, $top-nav-height);
+  @include wcss-rem(height, 90px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
 .c-top-nav__branding {
+  padding-top:70px;
   margin-right: auto;
   flex: 0 1 50%;
   text-decoration: none;
