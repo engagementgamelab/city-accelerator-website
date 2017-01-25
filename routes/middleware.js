@@ -166,7 +166,7 @@ exports.MainNav = function (req, res, next) {
         if (err) throw err;
 
         locals.mainNav = resultNav;
-        // console.log(locals.mainNav);
+        console.log(locals.mainNav);
         next(err);
     });
 

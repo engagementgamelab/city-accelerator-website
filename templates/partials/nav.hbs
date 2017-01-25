@@ -2,10 +2,12 @@
   <div class="c-top-nav__wrapper o-wrapper">
 
     <a class="c-top-nav__branding" href="/">
-    {{#ifeq section home}}
-      {{> image mainNav.logo}}
+          
+
+    {{#ifeq section 'index'}}
+      {{> image ../mainNav.logo}}
     {{else}}
-      {{> image mainNav.logoAlt}}
+      {{> image ../mainNav.logoAlt}}
     {{/ifeq}}
     </a>
     <button class="c-top-nav__toggle js-top-nav-toggle c-btn c-btn--ghost" aria-expanded="false">Menu</button>
