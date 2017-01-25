@@ -160,7 +160,8 @@ exports.MainNav = function (req, res, next) {
         }
     })
     .populate('links')
-    .populate('logo');
+    .populate('logo')
+    .populate('logoAlt');
 
     queryMainNav.exec(function(err, resultNav) {
         if (err) throw err;
