@@ -9,7 +9,7 @@
 
   color: $color-gray;
 
-  
+
 }
 
 .c-footer__text {
@@ -36,13 +36,13 @@
 .c-footer__logo {
   max-width: 100px;
   filter: grayscale(100%);
-  opacity: 0.5;
+  mix-blend-mode: multiply;
+  opacity: 0.3;
   transition: $wcss-base-transition;
   margin: $wcss-spacing-unit-small;
 
   &:hover,
   &:focus {
-    filter: grayscale(0%);
     opacity: 1;
   }
 }
