@@ -2620,7 +2620,7 @@ html.is-modal-active {
     left: 0; }
   @media (min-width: 800px) {
     .c-off-canvas__toggle {
-      top: 126px;
+      top: 166px;
       bottom: auto;
       width: auto;
       border-top-right-radius: 30px;
@@ -2758,13 +2758,14 @@ html.is-modal-active {
   padding: 48px 12px;
   position: relative; }
 
+@media (max-width: 1200px) {
+  #guide .c-article__content {
+    padding-top: 60px; } }
+
 .c-article__content {
   max-width: 600px;
   margin: 0 auto;
   color: #494949; }
-  @media (max-width: 1200px) {
-    .c-article__content {
-      padding-top: 60px; } }
   .c-article__content.p100 {
     padding-top: 100px; }
   .c-article__content > * + * {

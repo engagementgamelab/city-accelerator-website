@@ -35,14 +35,18 @@
   position: relative;
 }
 
+#guide {
+  .c-article__content {
+    @include wcss-media-max(large) {
+      padding-top: 60px;
+    }
+  }
+}
+
 .c-article__content {
   max-width: 600px;
   margin: 0 auto;
   color: $color-gray;
-
-  @include wcss-media-max(large) {
-    padding-top: 60px;
-  }
 
   &.p100 {
     padding-top: 100px;
