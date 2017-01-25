@@ -13,25 +13,25 @@
 <article class="c-article t-purple">
 	{{> nav contrast="true"}}
 
-	<div class="c-article__header u-text-left c-box c-box--repeater">
+	<div class="c-article__header u-text-left c-box c-box--repeater" style="background:url({{cloudinaryUrl backgroundImage width=auto crop='scale' g='center' quality=100}}) center no-repeat;">
 		<div class="o-wrapper u-pad-top-large u-pad-bottom-large">
 			<div class="o-layout">
 				<div class="o-layout__item o-layout__item--6/12@large">
 					<h1 class="u-text-serif u-text-beta u-color-primary u-marg-bottom-none">{{title}}</h1>
-					<p class="u-text-epsilon">{{{byline}}}</p>
+					<div class="u-text-eta u-text-uppercase u-color-primary u-text-bold">{{{byline}}}</div>
 					{{#each this.modalities}}
 						<img src="{{{cloudinaryUrl this.icon.image width=150 height=150 crop='scale' quality=100}}}" alt="{{this.name}}">
 					{{/each}}
-					{{#each caseStudy.modalities}}
+{{!-- 					{{#each caseStudy.modalities}}
 						<p class="u-marg-bottom-tiny u-text-bold">{{this.name}}</p>
-					{{/each}}
+					{{/each}} --}}
 					<p class="u-color-primary u-text-uppercase u-text-eta u-text-bold">Modalities Explored</p>
 				</div>
 				<div class="o-layout__item o-layout__item--6/12@large">
-					<h3 class="u-text-eta u-color-primary u-text-uppercase u-marg-bottom-none">Phase I Implementation</h3>
+{{!-- 					<h3 class="u-text-eta u-color-primary u-text-uppercase u-marg-bottom-none">Phase I Implementation</h3>
 					{{{phaseI}}}
 					<h3 class="u-text-eta u-color-primary u-text-uppercase u-marg-bottom-none">Phase II Implementation</h3>
-					{{{phaseII}}}
+					{{{phaseII}}} --}}
 				</div>
 			</div>
 		</div>
@@ -41,16 +41,7 @@
 		<div class="s-gallery">
 			<img id="{{this.key}}" src="{{{cloudinaryUrl caseStudy.teamImage width=auto height=auto crop='scale' quality=100}}}" alt="{{this.name}}">
 		</div>
-		<div class="c-article__content c-article__content--medium">
-			<div class="o-layout">
-				<div class="o-layout__item o-layout__item--3/12@medium">
-					<h2 class="u-text-eta u-text-uppercase">Fund Allocation</h2>
-				</div>
-				<div class="o-layout__item o-layout__item--9/12@medium">
-					<p>{{{funds}}}</p>
-				</div>
-			</div>
-		</div>
+
 		<div class="c-article__content c-article__content--medium">
 			<div class="o-layout">
 				<div class="o-layout__item o-layout__item--3/12@medium">
@@ -61,6 +52,16 @@
 				</div>
 			</div>
 		</div>
+		<div class="c-article__content c-article__content--medium">
+			<div class="o-layout">
+				<div class="o-layout__item o-layout__item--3/12@medium">
+					<h2 class="u-text-eta u-text-uppercase">Phase Implementation</h2>
+				</div>
+				<div class="o-layout__item o-layout__item--9/12@medium">
+					{{{funds}}}
+				</div>
+			</div>
+		</div>		
 		<div class="c-article__content c-article__content--medium">
 			<div class="o-layout">
 				<div class="o-layout__item o-layout__item--3/12@medium">

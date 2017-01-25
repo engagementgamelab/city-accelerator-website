@@ -10,4 +10,26 @@
  */
 --}}
 
+<script type="text/javascript">
 
+$(document).ready(function() {
+
+    $(document).on('scroll', function() {
+
+      console.log($(document).scrollTop())
+      if ($(document).scrollTop() > 158) {
+      	console.log("dicks")
+      	$('#top-article-nav').addClass('fixed-nav');
+      	$('.c-article__content').addClass('p100');
+      } else {
+      	console.log("nodicks")
+				$('#top-article-nav').removeClass('fixed-nav');
+				$('.c-article__content').removeClass('p100');
+      }
+
+    });
+
+
+});
+
+</script>

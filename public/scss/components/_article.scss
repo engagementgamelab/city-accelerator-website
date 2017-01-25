@@ -1,15 +1,13 @@
 .c-article {
-  &#about-page {
-    .c-article__main {
-      a {
-        color: $color-blue-56;
-        font-family: "bodoni", Georgia, serif;
-      }
+  .c-article__main {
+    a {
+      color: $color-blue-56;
+      font-family: "bodoni", Georgia, serif;
+    }
 
-      h2 {
-        font-family: "bodoni", Georgia, serif;
-        font-size: 22px;
-      }
+    h2 {
+      font-family: "bodoni", Georgia, serif;
+      font-size: 22px;
     }
   }
 }
@@ -39,6 +37,14 @@
   max-width: 600px;
   margin: 0 auto;
   color: $color-gray;
+
+  @include wcss-media-max(large) {
+    padding-top: 60px;
+  }
+
+  &.p100 {
+    padding-top: 100px;
+  }
 
   > * + * {
     margin-top: $wcss-spacing-unit;
@@ -89,11 +95,34 @@
   display: flex;
   flex-wrap: wrap;
 
+  &#top-article-nav {
+    @include wcss-media-max(large) {
+      display: none;
+    }
+
+  }
+
+  &.fixed-nav {
+    width: -webkit-calc(100% - 48px);
+    width:    -moz-calc(100% - 48px);
+    width:         calc(100% - 48px);
+    position:fixed;
+    top: 4px;
+  }
+
+  &#bottom-article-nav {
+    @include wcss-media(large) {
+      display: none;
+    }
+  }
+
   &:last-child {
     margin-top: 0;
     margin-bottom: $wcss-spacing-unit-large;
   }
 }
+
+
 
 .c-article__nav + .c-article__main {
   padding-top: 0;
@@ -143,7 +172,7 @@
 
 .c-article__header--bg-repeater {
   background-color: var(--secondary);
-  background-image: url(../images/bg-repeater.png);
+  // background-image: url(../images/bg-repeater.png);
   background-repeat: repeat;
   background-size: 25%;
   background-blend-mode: luminosity;

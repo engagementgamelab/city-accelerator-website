@@ -14,7 +14,7 @@
 
   {{> nav contrast="true"}}
 
-  <div class="c-article__header c-article__header--bg-repeater">
+  <div class="c-article__header c-article__header--bg-repeater" style="background:url({{cloudinaryUrl backgroundImage width=auto crop='scale' g='center' quality=100}}) center no-repeat;">
     <h1 class="c-article__title">{{pageTitle}}</h1>
   </div>
 
@@ -30,16 +30,14 @@
 	    {{!-- HEADER IMAGES --}}
 	    {{#each headerImages}}
 
-	    	<img src="{{cloudinaryUrl this width=800}}" />
+	    	<img src="{{cloudinaryUrl this width=auto}}" />
 
 	    {{/each}}
 
 		</div>
 	</div>
-   </div>
 
-  <div class="c-article__main">
-    <div class="c-article__content">
+    <div class="c-article__content  c-article__content--medium">
         <p class="c-article__intro">{{{description.html}}}</p>
     </div>
     <div class="c-article__content c-article__content--full">
@@ -48,7 +46,7 @@
 		    {{!-- IMAGES --}}
 		    {{#each images}}
 
-		    	<img src="{{cloudinaryUrl this width=1000}}">
+		    	<img src="{{cloudinaryUrl this width=auto}}">
 
 		    {{/each}}
 

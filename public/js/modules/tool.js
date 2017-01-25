@@ -18,9 +18,6 @@
     translateX: '-200%',
   };
 
-
-
-
   function addToPrintable(object) {
     if($.inArray(object, print_array) == -1) {
       print_array.push(object);
@@ -34,11 +31,6 @@
     }
     print_array = print_array.sort(function(a, b){return a > b});
   }
-
-
-
-
-
 
   function transitionIn(object) {
     object.addClass('is-active');
@@ -446,6 +438,9 @@
       // Remove the loading screen
       container.addClass('is-loaded');
     });
+
+
+  
 
     $('.js-tool-next').click(function() {
       goNextStep();
