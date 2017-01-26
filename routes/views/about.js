@@ -48,8 +48,8 @@ exports = module.exports = function(req, res) {
             locals.images = resultAbout.images;
             locals.headerImages = resultAbout.headerImages;
             locals.partners = resultAbout.partners;
-            locals.credits = resultAbout.aboutCredits
-            local.contact = resultAbout.aboutContact
+            locals.credits = resultAbout.aboutCredits;
+            local.contact = resultAbout.aboutContact;
 
             next();
 
