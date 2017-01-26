@@ -46,7 +46,15 @@
     // Update main height, and give spacing for the box shadow not to be cropped out
     // Not cheap to animate. Experimental
     //main.velocity({ height: 64 + $('.js-tool-view.is-active').outerHeight()});
-    main.css('height', 64 + + $('.js-tool-view.is-active').outerHeight());
+    // main.css('height', 64 + + $('.js-tool-view.is-active').outerHeight());
+
+    var heights = $('.js-tool-view .js-tool-card').not($('js-tool-grid .js-tool-card')).map(function ()
+    {
+        return $(this).height();
+    }).get(),
+
+    maxHeight = Math.max.apply(null, heights);
+    $('.js-tool-view .js-tool-card').not($('.js-tool-grid .js-tool-card')).height(maxHeight);
   }
 
   function updateView() {
@@ -323,7 +331,7 @@
       });
 
       $('.js-tool-sidebar-content').empty().html(sidebar_html);
-    } 
+    }
   }
 
   //This function will check if the current page has the query param of 'step' & call the modal
@@ -440,7 +448,7 @@
     });
 
 
-  
+
 
     $('.js-tool-next').click(function() {
       goNextStep();
