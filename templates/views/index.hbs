@@ -22,7 +22,7 @@
 	</div>
 
 	<div id="get-started-hash" class="c-card-list c-card-list--overlapped u-pad-top-large u-pad-bottom-large">
-		<div class="o-wrapper@msmall o-wrapper--large@msmall">
+		<div class="o-wrapper@msmall o-wrapper--large@msmall" style="max-width:1200px;">  {{!--ADDED STYLE OVERRIDE.NEED TO MAKE NEW CLASS IN FUTURE--}} 
 			<div class="c-card-list__item t-light-blue">
 				{{> components/card
 						reverse=true
@@ -64,9 +64,8 @@
 			</div>
 		</div>
 	</div>
-
-	{{> footer contrast=true}}
-
 </div>
+	{{> footer contrast=false}}
+
 
 </div> <!-- .container-fluid -->
