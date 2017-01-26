@@ -47,6 +47,9 @@ About.add({
 		label: "Partners",
 		many: true
 	},
+	aboutCredits: { type: Types.Markdown, label: "credits" },
+	aboutContact: { type: Types.Markdown, label: "contact" },
+
 	
 	createdAt: { type: Date, default: Date.now, noedit: true, hidden: true }
 });
