@@ -49,7 +49,7 @@ exports = module.exports = function(req, res) {
             locals.headerImages = resultAbout.headerImages;
             locals.partners = resultAbout.partners;
             locals.credits = resultAbout.aboutCredits;
-            local.contact = resultAbout.aboutContact;
+            locals.contact = resultAbout.aboutContact;
 
             next();
 
