@@ -2806,7 +2806,8 @@ html.is-modal-active {
     width: -moz-calc(100% - 48px);
     width: calc(100% - 48px);
     position: fixed;
-    top: 4px; }
+    top: 4px;
+    z-index: 1000; }
   @media (min-width: 1200px) {
     .c-article__nav#bottom-article-nav {
       display: none; } }
