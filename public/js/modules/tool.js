@@ -54,10 +54,8 @@
     }).get(),
 
     maxHeight = Math.max.apply(null, heights);
-    // console.log(maxHeight);
     $('.js-tool-view .js-tool-card').not($('.js-tool-grid .js-tool-card')).height(maxHeight);
-    $('.js-tool-main').height(maxHeight);
-    // console.log($('.js-tool-view .js-tool-card').height());
+    // $('.js-tool-main').height(maxHeight);
   }
 
   function updateView() {
