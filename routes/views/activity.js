@@ -33,12 +33,6 @@ exports = module.exports = function(req, res) {
 
         var queryCard = Card.model.find({}, {}, {});
 
-        var queryToolkit = Toolkit.model.findOne({}, {}, {
-            sort: {
-                'createdAt': -1
-            }
-        });
-
         var queryActivity = Activity.model.find({}).sort([
             ['sortOrder', 'ascending']
         ])
@@ -72,23 +66,8 @@ exports = module.exports = function(req, res) {
                 locals.implementActivities = categorize(resultActivity, 'Implementation');
                 locals.iterateActivities = categorize(resultActivity, 'Iteration');
 
-                queryToolkit.exec(function(err, result) {
-                    if (err) throw err;
-
-                    if(result === null)
-                        return res.notfound('Cannot find that part of the toolkit', 'Sorry, but it looks like the card you were looking for does not exist!');
-
-                    locals.startTitle = result.startTitle;
-                    locals.startBlurb = result.startBlurb.html;
-                    locals.planTitle = result.planTitle;
-                    locals.planBlurb = result.planBlurb.html;
-                    locals.implementTitle = result.implementTitle;
-                    locals.implementBlurb = result.implementBlurb.html;
-                    locals.iterateTitle = result.iterateTitle;
-                    locals.iterateBlurb = result.iterateBlurb.html;
-
+               
                     next();
-                });
             });
         });
     });
