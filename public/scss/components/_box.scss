@@ -16,7 +16,15 @@
 
 .c-box--blue-map {
   background: #24408E url("../images/bg-blue-map.jpg") top no-repeat;
-  background-size: 100%;
+  
+
+  @include wcss-media(msmall) {
+    background-size: 100%;
+  }
+
+  @include wcss-media-max(msmall) {
+    background-position: -350px;
+  }
 }
 
 .c-box--green {

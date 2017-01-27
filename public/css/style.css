@@ -2679,8 +2679,13 @@ html.is-modal-active {
   background-size: cover; }
 
 .c-box--blue-map {
-  background: #24408E url("../images/bg-blue-map.jpg") top no-repeat;
-  background-size: 100%; }
+  background: #24408E url("../images/bg-blue-map.jpg") top no-repeat; }
+  @media (min-width: 426px) {
+    .c-box--blue-map {
+      background-size: 100%; } }
+  @media (max-width: 426px) {
+    .c-box--blue-map {
+      background-position: -350px; } }
 
 .c-box--green {
   background: linear-gradient(top, #d4ecde, #b8d6c4); }
@@ -2706,6 +2711,10 @@ html.is-modal-active {
     .c-hero {
       max-width: 900px;
       max-width: 56.25rem; } }
+  @media (max-width: 426px) {
+    .c-hero {
+      min-height: 70vh !important;
+      padding: 0px; } }
 
 .c-hero__title {
   font-size: 48px ;
