@@ -240,10 +240,13 @@ body, html {
 
 body {
   overflow: auto;
-  position: relative; }
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll; }
 
 html {
-  overflow: hidden; }
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch; }
 
 li > ol,
 li > ul {
