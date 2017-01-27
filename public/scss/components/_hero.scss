@@ -12,9 +12,9 @@
     @include wcss-rem(max-width, 900px);
   }
 
-  @include wcss-media(extra-large) {
-    @include wcss-rem(max-width, 1150px);
-  }
+  // @include wcss-media(extra-large) {
+  //   @include wcss-rem(max-width, 1150px);
+  // }
 
 }
 

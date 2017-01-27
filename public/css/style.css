@@ -2709,10 +2709,6 @@ html.is-modal-active {
     .c-hero {
       max-width: 900px;
       max-width: 56.25rem; } }
-  @media (min-width: 2000px) {
-    .c-hero {
-      max-width: 1150px;
-      max-width: 71.875rem; } }
 
 .c-hero__title {
   font-size: 48px ;

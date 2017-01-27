@@ -316,7 +316,6 @@ function updateSidebar() {
     $('.js-tool-grid-block').each(function() {
       var block_title = $(this).find('.js-tool-grid-block-title').html();
       var items = $(this).find('.js-tool-grid-item .js-tool-card:not(.is-disabled)');
-      console.log(items.length + "length")
 
       if(items.length) {
         $('.js-tool-sidebar-empty').attr('aria-hidden', 'true');
