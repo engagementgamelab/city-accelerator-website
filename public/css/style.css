@@ -1718,7 +1718,7 @@ hr {
   margin-right: auto;
   flex: 0 1 50%;
   text-decoration: none; }
-  @media (max-width: 400px) {
+  @media (max-width: 426px) {
     .c-top-nav__branding img {
       display: none; } }
 
