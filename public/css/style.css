@@ -224,7 +224,7 @@ template {
 [hidden] {
   display: none; }
 
-body,
+body, html,
 h1, h2, h3, h4, h5, h6,
 blockquote, p, pre,
 dl, dd, ol, ul,
@@ -233,6 +233,17 @@ hr,
 fieldset, legend {
   margin: 0;
   padding: 0; }
+
+body, html {
+  box-sizing: border-box;
+  height: 100%; }
+
+body {
+  overflow: auto;
+  position: relative; }
+
+html {
+  overflow: hidden; }
 
 li > ol,
 li > ul {
