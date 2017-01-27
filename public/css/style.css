@@ -245,8 +245,7 @@ body {
   overflow-y: scroll; }
 
 html {
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch; }
+  overflow: hidden; }
 
 li > ol,
 li > ul {
