@@ -19,7 +19,13 @@ $wcss-wrapper-width: 1200px !default;
     margin-right: auto;
     margin-left:  auto;
     width: 100%;
-    // max-width: $wcss-wrapper-width;
+
+    &.o-wrapper--mobile {
+      @include wcss-media-max(msmall) {
+        padding-right:10px !important;
+        padding-left: 10px !important;
+      }
+    }
   }
 
 

@@ -30,9 +30,9 @@
 .c-hero__sub-title {
   @include wcss-font-size(epsilon);
 
-  @include wcss-media(medium) {
-    font-size: 22px;
-  }
+  // @include wcss-media(medium) {
+  //   font-size: 22px;
+  // }
 
   @include wcss-media-max(medium) {
     font-size: 14px;

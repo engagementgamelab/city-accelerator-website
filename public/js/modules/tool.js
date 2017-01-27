@@ -312,21 +312,27 @@ function updateGrid() {
 function updateSidebar() {
   var sidebar_html = "";
   if($('.js-tool-grid-item').length) {
+    var items = $('.js-tool-grid-item').find('.js-tool-card:not(.is-disabled)');
+    console.log(items.length + " number of things");
+
+    if (items.length !== 0) {
+      $('.js-tool-sidebar-empty').attr('aria-hidden', 'true');
+    } else {
+       $('.js-tool-sidebar-empty').attr('aria-hidden', 'false');
+
+    }
 
     $('.js-tool-grid-block').each(function() {
       var block_title = $(this).find('.js-tool-grid-block-title').html();
-      var items = $(this).find('.js-tool-grid-item .js-tool-card:not(.is-disabled)');
-
-      if(items.length) {
-        $('.js-tool-sidebar-empty').attr('aria-hidden', 'true');
+      var block_items = $(this).find('.js-tool-card:not(.is-disabled)');
+      if(block_items.length !== 0) {
+        
         sidebar_html = sidebar_html + '<h4 class="c-off-canvas__sub-title"><p class="c-off-canvas__link">' + block_title + '</p></h4>';
-        $(items).each(function() {
+        $(block_items).each(function() {
           var item_title = $(this).find('.js-tool-card-title').html();
           sidebar_html = sidebar_html + '<p class="c-off-canvas__link">' + item_title + '</p>';
         });
-      } else {
-        $('.js-tool-sidebar-empty').attr('aria-hidden', 'false');
-      }
+      } 
     });
 
     $('.js-tool-sidebar-content').empty().html(sidebar_html);
@@ -548,11 +554,12 @@ window.onload = function() {
     updateProgress();
   });
 
+
   if (window.location.hash === '#step=grid') {
+    // console.log(" Welcome to the MVP grid ");
     $('footer').removeClass('hidden-el');
 
     $('.s-tool__sidebar').removeClass('hidden-el');
-
   }
 
 }

@@ -344,6 +344,10 @@ hr {
     content: "" !important;
     display: block !important;
     clear: both !important; }
+  @media (max-width: 426px) {
+    .o-wrapper.o-wrapper--mobile {
+      padding-right: 10px !important;
+      padding-left: 10px !important; } }
 
 .o-wrapper--tiny {
   padding-right: 6px;
@@ -371,8 +375,13 @@ hr {
     .o-wrapper\@xsmall:after {
       content: "" !important;
       display: block !important;
-      clear: both !important; }
+      clear: both !important; } }
+  @media (min-width: 320px) and (max-width: 426px) {
+    .o-wrapper\@xsmall.o-wrapper--mobile {
+      padding-right: 10px !important;
+      padding-left: 10px !important; } }
 
+@media (min-width: 320px) {
   .o-wrapper--tiny\@xsmall {
     padding-right: 6px;
     padding-left: 6px; }
@@ -398,8 +407,13 @@ hr {
     .o-wrapper\@small:after {
       content: "" !important;
       display: block !important;
-      clear: both !important; }
+      clear: both !important; } }
+  @media (min-width: 400px) and (max-width: 426px) {
+    .o-wrapper\@small.o-wrapper--mobile {
+      padding-right: 10px !important;
+      padding-left: 10px !important; } }
 
+@media (min-width: 400px) {
   .o-wrapper--tiny\@small {
     padding-right: 6px;
     padding-left: 6px; }
@@ -425,8 +439,13 @@ hr {
     .o-wrapper\@msmall:after {
       content: "" !important;
       display: block !important;
-      clear: both !important; }
+      clear: both !important; } }
+  @media (min-width: 426px) and (max-width: 426px) {
+    .o-wrapper\@msmall.o-wrapper--mobile {
+      padding-right: 10px !important;
+      padding-left: 10px !important; } }
 
+@media (min-width: 426px) {
   .o-wrapper--tiny\@msmall {
     padding-right: 6px;
     padding-left: 6px; }
@@ -452,8 +471,13 @@ hr {
     .o-wrapper\@medium:after {
       content: "" !important;
       display: block !important;
-      clear: both !important; }
+      clear: both !important; } }
+  @media (min-width: 800px) and (max-width: 426px) {
+    .o-wrapper\@medium.o-wrapper--mobile {
+      padding-right: 10px !important;
+      padding-left: 10px !important; } }
 
+@media (min-width: 800px) {
   .o-wrapper--tiny\@medium {
     padding-right: 6px;
     padding-left: 6px; }
@@ -479,8 +503,13 @@ hr {
     .o-wrapper\@large:after {
       content: "" !important;
       display: block !important;
-      clear: both !important; }
+      clear: both !important; } }
+  @media (min-width: 1200px) and (max-width: 426px) {
+    .o-wrapper\@large.o-wrapper--mobile {
+      padding-right: 10px !important;
+      padding-left: 10px !important; } }
 
+@media (min-width: 1200px) {
   .o-wrapper--tiny\@large {
     padding-right: 6px;
     padding-left: 6px; }
@@ -506,8 +535,13 @@ hr {
     .o-wrapper\@extra-large:after {
       content: "" !important;
       display: block !important;
-      clear: both !important; }
+      clear: both !important; } }
+  @media (min-width: 2000px) and (max-width: 426px) {
+    .o-wrapper\@extra-large.o-wrapper--mobile {
+      padding-right: 10px !important;
+      padding-left: 10px !important; } }
 
+@media (min-width: 2000px) {
   .o-wrapper--tiny\@extra-large {
     padding-right: 6px;
     padding-left: 6px; }
@@ -2725,9 +2759,6 @@ html.is-modal-active {
   font-size: 20px ;
   font-size: calc(18px + (20 - 18) * (100vw - 300px ) / (1200 - 300) ) ;
   line-height: 1.6; }
-  @media (min-width: 800px) {
-    .c-hero__sub-title {
-      font-size: 22px; } }
   @media (max-width: 800px) {
     .c-hero__sub-title {
       font-size: 14px; } }
