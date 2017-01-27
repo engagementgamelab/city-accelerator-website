@@ -9,9 +9,9 @@ html {
   -webkit-font-smoothing: antialiased; // [1]
   -moz-osx-font-smoothing: grayscale; // [1]
 
-  @include wcss-media(extra-large) {
-    font-size: 1.2vw;
-  }
+  // @include wcss-media(extra-large) {
+  //   font-size: 1.2vw;
+  // }
 }
 
 body {

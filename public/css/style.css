@@ -259,9 +259,6 @@ html {
   font-size: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
-  @media (min-width: 2000px) {
-    html {
-      font-size: 1.2vw; } }
 
 body {
   font-family: "halis", "Helvetica Neue", Helvetica, sans-serif;
