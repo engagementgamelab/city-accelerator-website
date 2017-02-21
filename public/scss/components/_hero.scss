@@ -12,9 +12,14 @@
     @include wcss-rem(max-width, 900px);
   }
 
-  @include wcss-media(extra-large) {
-    @include wcss-rem(max-width, 1150px);
+  @include wcss-media-max(msmall) {
+    min-height: 70vh !important;
+    padding: 0px;
   }
+
+  // @include wcss-media(extra-large) {
+  //   @include wcss-rem(max-width, 1150px);
+  // }
 
 }
 
@@ -25,9 +30,9 @@
 .c-hero__sub-title {
   @include wcss-font-size(epsilon);
 
-  @include wcss-media(medium) {
-    font-size: 22px;
-  }
+  // @include wcss-media(medium) {
+  //   font-size: 22px;
+  // }
 
   @include wcss-media-max(medium) {
     font-size: 14px;

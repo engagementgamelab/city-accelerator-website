@@ -101,6 +101,7 @@
   display: flex;
   flex-wrap: wrap;
 
+
   &#top-article-nav {
     @include wcss-media-max(large) {
       display: none;
@@ -114,6 +115,7 @@
     width:         calc(100% - 48px);
     position:fixed;
     top: 4px;
+    z-index: 1000;
   }
 
   &#bottom-article-nav {

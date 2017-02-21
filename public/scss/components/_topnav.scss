@@ -26,7 +26,7 @@ $top-nav-height: 160px;
   text-decoration: none;
 
   img {
-    @include wcss-media-max(small) {
+    @include wcss-media-max(msmall) {
       display: none;
     }
   }

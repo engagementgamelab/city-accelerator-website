@@ -117,6 +117,7 @@ exports.metaProperties = function(req, res, next) {
         if (err) throw err;
 
         locals.meta = resultMeta;
+        console.log(locals.meta);
 
         next(err);
     });
@@ -167,7 +168,6 @@ exports.MainNav = function (req, res, next) {
         if (err) throw err;
 
         locals.mainNav = resultNav;
-        console.log(locals.mainNav);
         next(err);
     });
 
