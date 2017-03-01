@@ -26,13 +26,15 @@
 
 {{/ifeq}}
 
-{{!-- <!-- Favicons -->
-<link rel="shortcut icon" href="/images/favicons/favicon.ico">
-<!-- For third-generation iPad with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/favicons/favicon_144.png">
-<!-- For iPhone with high-resolution Retina display: -->
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/favicons/favicon_114.png">
-<!-- For first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/favicons/favicon_72.png">
-<!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="/images/favicons/favicon_57.png"> --}}
+{{!-- FAVICONS --}}
+{{!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png{{cdnAsset product='city-accelerator-website' path='styles/group-bootstrap.min' type='css' }}"> --}}
+
+<link class="favicon" rel="icon" type="image/png" href="{{cdnAsset product='city-accelerator-website' path='images/favicons/favicon_32' type='ico' fetch='image'}}" sizes="32x32">
+<link class="favicon" rel="icon" type="image/png" href="{{cdnAsset product='city-accelerator-website' path='images/favicons/favicon_16' type='ico' fetch='image'}}" sizes="16x16">
+
+<link class="favicon" rel="shortcut icon" href="{{cdnAsset product='city-accelerator-website' path='images/favicons/favicon_32' type='ico' fetch='image'}}">
+<link class="favicon" rel="apple-touch-icon-precomposed" sizes="144x144" href="{{cdnAsset product='city-accelerator-website' path='images/favicons/favicon_144' type='png' fetch='image'}}">
+<link class="favicon" rel="apple-touch-icon-precomposed" sizes="114x114" href="{{cdnAsset product='city-accelerator-website' path='images/favicons/favicon_114' type='png' fetch='image'}}">
+<link class="favicon" rel="apple-touch-icon-precomposed" sizes="72x72" href="{{cdnAsset product='city-accelerator-website' path='images/favicons/favicon_72' type='png' fetch='image'}}">
+{{!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: --}}
+<link class="favicon" rel="apple-touch-icon-precomposed" href="{{cdnAsset product='city-accelerator-website' path='images/favicons/favicon_57' type='png' fetch='image'}}">
