@@ -11,7 +11,18 @@
 --}}
 
 <script type="text/javascript">
+{{#ifeq environment "production"}}
+  
+  // GA include
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
+  ga('create', 'UA-64617433-5', 'auto');
+  ga('send', 'pageview');
+
+{{/ifeq}}
 
 $(document).ready(function() {
 
@@ -20,7 +31,6 @@ $(document).ready(function() {
 
     $(document).on('scroll', function() {
 
-      console.log($(document).scrollTop())
       if ($(document).scrollTop() > 230) {
       	$('#top-article-nav').addClass('fixed-nav');
       	$('.c-article__content').addClass('p100');
@@ -31,8 +41,6 @@ $(document).ready(function() {
 
     });
     {{/ifeq}}
-
-
 
 });
 
